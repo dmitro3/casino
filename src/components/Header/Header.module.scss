@@ -1,0 +1,73 @@
+.root {
+  box-sizing: border-box;
+  max-height: 50px;
+  background-color: #11131A;
+  display: flex;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+
+
+}
+
+.navigationContainer {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  width: 60%;
+
+  &Item {
+
+    &Link {
+      text-decoration: none;
+      color:#fff;
+      font-weight: 400;
+       font-size: 12px;
+    }
+  }
+}
+
+.link {
+
+}
+
+
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+
+  &Label {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+}
+
+.contentContainer {
+  display: flex;
+  flex: 0.7;
+}
+
+.controlContainer {
+  display: flex;
+
+  svg {
+    align-self: center;
+    margin-left: 10px;
+  }
+}
+
+
+
+.selectLanguage {
+  margin-left: 22px;
+  min-width: 40px;
+  background-color: #2D3340;
+  border-radius: 6px;
+}
+
