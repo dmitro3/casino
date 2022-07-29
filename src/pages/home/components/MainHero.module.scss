@@ -36,26 +36,26 @@
 
   &Buttons {
     display: flex;
-  padding-top: 35px;
+    padding-top: 35px;
   }
 
   &Ad {
     display: flex;
-  width: 210px;
-  height: 58px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 0 15px 15px 0;
-  align-items: center;
-  padding-left: 10px;
+    width: 210px;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0 15px 15px 0;
+    align-items: center;
+    padding-left: 10px;
 
-   p {
-    color: white;
-    font-weight: 700px;
-    font-size: 13px;
-  }
-  
-  img {
-    padding-right: 10px;
-  }
+    p {
+      color: white;
+      font-weight: 700px;
+      font-size: 13px;
+    }
+
+    img {
+      padding-right: 10px;
+    }
   }
 }
