@@ -10,7 +10,7 @@ type Props = {
 
 const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.root}>
       <Header />
       {children}
       <Footer />

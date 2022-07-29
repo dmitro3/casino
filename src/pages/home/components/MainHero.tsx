@@ -6,7 +6,7 @@ import styles from './MainHero.module.scss';
 
 const MainHero = () => {
   return (
-    <div className={styles.hero}>
+    <section className={styles.hero}>
       <div className={styles.heroText}>
         <h1>Leading Crypto Casino</h1>
         <p>
@@ -25,7 +25,7 @@ const MainHero = () => {
         <div className={styles.heroBlur} />
         <Image src={Hero} width={500} height={500} />
       </div>
-    </div>
+    </section>
   );
 };
 

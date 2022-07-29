@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import HomeContainer from 'src/pages/home';
 import React from 'react';
+import HomeContainer from './Home/index';
 import MainLayout from '../components/MainLayout';
 
 const Home: NextPage = () => {
