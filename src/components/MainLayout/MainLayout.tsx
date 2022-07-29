@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import styles from './MainLayout.module.scss';
 
 type Props = {
   children: React.ReactNode;
@@ -9,11 +10,11 @@ type Props = {
 
 const MainLayout: FC<Props> = ({ children }) => {
   return (
-    <>
+    <div className={styles.mainContainer}>
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 
