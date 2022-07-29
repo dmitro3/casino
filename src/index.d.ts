@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-declare module "*.css" {
+declare module '*.css' {
   interface IClassNames {
     [className: string]: string;
   }
@@ -7,11 +7,11 @@ declare module "*.css" {
   export = classNames;
 }
 
-declare module "*.scss" {
+declare module '*.scss' {
   const content: { [className: string]: string };
   export = content;
 }
 
-declare module "*.jpg";
+declare module '*.jpg';
 
-declare module "*.png";
+declare module '*.png';
