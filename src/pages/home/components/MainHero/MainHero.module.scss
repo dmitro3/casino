@@ -1,6 +1,5 @@
 .hero {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 
   &Text {
@@ -32,6 +31,7 @@
     transform: translate(-50%, -50%);
 
     &Wrapper {
+      padding-left: 280px;
       position: relative;
     }
   }
