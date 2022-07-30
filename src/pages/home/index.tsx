@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { currencyData } from 'src/utils/mockData';
 import CurrencyCard from 'src/pages/home/components/CurrencyCard';
-import MainHero from './components/MainHero';
+import MainHero from 'src/pages/home/components/MainHero';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {

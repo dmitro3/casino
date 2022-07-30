@@ -1,7 +1,6 @@
 .currencyCard {
   display: flex;
   flex-direction: column;
-
   box-sizing: border-box;
   background-color: #181A20;
   width: 290px;
@@ -9,7 +8,6 @@
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   font: 700  15px 'Montserrat';
-  
 
   &Header {
     display: flex;

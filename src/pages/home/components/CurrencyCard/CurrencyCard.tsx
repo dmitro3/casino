@@ -5,7 +5,6 @@ import { PriceUpIcon } from 'src/assets/svg';
 import styles from './CurrencyCard.module.scss';
 
 type Props = {
-  key: number;
   imageUrl: any;
   name: string;
   priceChange: string;
@@ -14,7 +13,6 @@ type Props = {
 };
 
 const CurrencyCard: FC<Props> = ({
-  id,
   imageUrl,
   name,
   priceChange,
