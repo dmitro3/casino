@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Hero from 'src/assets/Hero.png';
-import Bitcoin from 'src/assets/Bitcoin.png';
+import Hero from 'src/assets/images/Hero.png';
+import Bitcoin from 'src/assets/images/Bitcoin.png';
 import styles from './MainHero.module.scss';
 
 const MainHero = () => {
