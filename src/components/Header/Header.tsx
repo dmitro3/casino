@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-import Cube from 'src/assets/Cube.svg';
+import Cube from 'src/assets/svg/Cube.svg';
 import Image from 'next/image';
-import Person from 'src/assets/Person';
-import Message from 'src/assets/Message';
+import { PersonIcon, MessageIcon, ArrowDownIcon } from 'src/assets/svg';
+import usaFlag from 'src/assets/images/usaFlag.png';
 import Button from '../Button';
 import styles from './Header.module.scss';
 
@@ -59,10 +59,13 @@ const Header = () => {
         </ul>
       </div>
       <div className={styles.controlContainer}>
-        <Button label="Log in" />
-        <Button label="Register" icon={<Person />} />
-        <div className={styles.selectLanguage}>22</div>
-        <Message />
+        <Button label="Log in" customStyles={styles.loginButton} />
+        <Button label="Register" icon={<PersonIcon />} />
+        <div className={styles.selectLanguage}>
+          <Image src={usaFlag} height={20} width={20} />
+          <ArrowDownIcon />
+        </div>
+        <MessageIcon />
       </div>
     </div>
   );

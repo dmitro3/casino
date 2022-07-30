@@ -1,18 +1,17 @@
 import React from 'react';
 
-import Image from 'next/image';
-import classnames from 'classnames';
 import styles from './Button.module.scss';
 
 type Props = {
   label: string;
   icon?: React.ReactNode;
-  variant?: `primary` | `transparent`;
+  customStyles?: any;
+  onClick?: () => void;
 };
 
-const Button = ({ label, icon, variant = `primary` }: Props) => {
+const Button = ({ label, icon, customStyles, onClick }: Props) => {
   return (
-    <button className={(classnames({ type: variant }), styles.root)}>
+    <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
       {label}
       {icon}
     </button>
