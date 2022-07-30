@@ -1,9 +1,14 @@
-import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from 'src/components/MainLayout';
+import React from 'react';
+import HomeContainer from './Home/index';
+import MainLayout from '../components/MainLayout';
 
 const Home: NextPage = () => {
-  return <MainLayout>Code here</MainLayout>;
+  return (
+    <MainLayout>
+      <HomeContainer />
+    </MainLayout>
+  );
 };
 
 export default Home;

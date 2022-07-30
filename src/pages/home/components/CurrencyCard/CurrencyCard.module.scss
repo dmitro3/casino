@@ -1,0 +1,52 @@
+.currencyCard {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #181A20;
+  width: 290px;
+  padding: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font: 700  15px 'Montserrat';
+
+  &Header {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  &Name {
+    color: white;
+    margin-top: 7px;
+  }
+
+  &Price {
+
+    &Change {
+      background-color: #3C2733;
+      font-size: 12px;
+      color: #CB3D42;
+      padding: 3px 6px;
+      margin-top: 7px;
+      border-radius: 5px;
+    }
+
+    &Current {
+      font-weight: 700;
+      color: #4ED254;
+      margin-top: -8px;
+    }
+  }
+
+  &Vol {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 10px ;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 59px;
+  }
+}
