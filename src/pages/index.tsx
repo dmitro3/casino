@@ -5,7 +5,7 @@ import MainLayout from '../components/MainLayout';
 
 const Home: NextPage = () => {
   return (
-    <MainLayout>
+    <MainLayout hasMaxWidth>
       <HomeContainer />
     </MainLayout>
   );

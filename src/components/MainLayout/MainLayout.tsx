@@ -6,13 +6,20 @@ import styles from './MainLayout.module.scss';
 
 type Props = {
   children: React.ReactNode;
+  hasMaxWidth?: boolean;
 };
 
-const MainLayout: FC<Props> = ({ children }) => {
+const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   return (
     <>
       <Header />
-      <div className={styles.root}>{children} </div>
+      <div
+        className={styles.root}
+        style={hasMaxWidth ? { maxWidth: `100%` } : {}}
+      >
+        {children}
+        {` `}
+      </div>
       <Footer />
     </>
   );
