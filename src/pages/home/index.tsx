@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import { currencyData } from 'src/utils/mockData';
 import CurrencyCard from 'src/pages/home/components/CurrencyCard';
 import MainHero from 'src/pages/home/components/MainHero';
+import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
 import styles from './index.module.scss';
 
@@ -23,6 +24,7 @@ const HomeContainer: FC = () => {
           />
         ))}
       </section>
+      <FeatureSection />
     </>
   );
 };
