@@ -25,8 +25,8 @@ const HomeContainer: FC = () => {
             />
           ))}
         </section>
+        <FeatureSection />
       </section>
-      <FeatureSection />
     </>
   );
 };

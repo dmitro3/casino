@@ -1,5 +1,6 @@
 .featureSection {
     display: grid;
+    margin-top: 50px !important;
     width: 100%;
     grid-gap: 15px;
     grid-template-columns: 2fr 2fr 1fr 1fr;
@@ -18,7 +19,7 @@
     height: auto;
     padding: 5px;
     overflow: hidden;
-    
+
     span {
         background: #FFFFFF1A;
         border-radius: 10px;
@@ -45,7 +46,7 @@
 .one {
     grid-area: one;
     height: 113px;
-    
+
 
     p {
         max-width: 140px;
@@ -69,9 +70,9 @@
 .four {
     grid-area: four;
     background-image: url('../../../../assets/images/FeatureSection4.png');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 420px;
 
     p {
@@ -85,7 +86,7 @@
 .five {
     grid-area: five;
     width: 200px;
-    
+
     p {
         max-width: 52px;
     }
@@ -97,7 +98,7 @@
     align-items: center;
     width: 200px;
 
-    p { 
+    p {
         max-width: 52px;
         padding-right: 30px;
     }
@@ -118,5 +119,5 @@
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
-    
+
 }
