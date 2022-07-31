@@ -9,13 +9,15 @@
                          "two three four four seven seven";
     padding: 15px;
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .featureCard {
     background-color: #18202A;
-    border-radius: 10px;
+    border-radius: 12px;
     height: auto;
     padding: 5px;
+    overflow: hidden;
     
     span {
         background: #FFFFFF1A;
@@ -23,6 +25,7 @@
         color: white;
         font-size: 10px;
         padding: 3px;
+
     }
 
     p {
@@ -31,18 +34,32 @@
         color: #FFF;
         line-height: 23px;
     }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+    }
 }
 
 .one {
     grid-area: one;
+    height: 113px;
+    
 
     p {
         max-width: 140px;
+    }
+
+    .featureContent {
+        margin-top: -10px;
     }
 }
 
 .two {
     grid-area: two;
+    display: flex;
+    align-items: center;
 }
 
 .three {
@@ -67,7 +84,8 @@
 
 .five {
     grid-area: five;
-
+    width: 200px;
+    
     p {
         max-width: 52px;
     }
@@ -77,9 +95,11 @@
     grid-area: six;
     display: flex;
     align-items: center;
+    width: 200px;
 
-    p {
+    p { 
         max-width: 52px;
+        padding-right: 30px;
     }
 
 }
@@ -96,4 +116,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    
 }
