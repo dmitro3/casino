@@ -1,0 +1,133 @@
+.root {
+  box-sizing: border-box;
+  max-height: 50px;
+  background-color: #11131A;
+  display: flex;
+  padding: 10px 40px;
+  border-radius: 0 0 10px 10px;
+  justify-content: space-between;
+}
+
+.navigationContainer {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  width: 60%;
+
+  &Item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+      width: 6px;
+      padding-left: 3px;
+      padding-top: 3px;
+    }
+
+    &Link {
+      text-decoration: none;
+      color:#fff;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  
+  &Label {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+    padding-left: 5px;
+  }
+
+}
+
+.contentContainer {
+  display: flex;
+  flex: 0.7;
+}
+
+.controlContainer {
+  display: flex;
+
+  > svg {
+    align-self: center;
+    margin-left: 10px;
+  }
+}
+
+.selectLanguage {
+  margin-left: 22px;
+  min-width: 40px;
+  background-color: #2D3340;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 4px;
+  
+  > svg {
+    padding-left: 5px;
+  }
+}
+
+.loginButton {
+  background-color: inherit;
+  color: white;
+}
+
+.speechBubble {
+	position: relative;
+	background: #FCD535;
+	border-radius: 1px;
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 13px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    border-right-color: #FCD535;
+    border-left: 0;
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+
+  &Blur {
+    width: 30px;
+    height: 11px;
+    background-color: #fcd535;
+    border-radius: 50%;
+    filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
