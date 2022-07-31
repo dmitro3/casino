@@ -40,6 +40,7 @@
   &Buttons {
     display: flex;
     padding-top: 35px;
+    align-items: center;
   }
 
   &Ad {
@@ -50,15 +51,20 @@
     border-radius: 0 15px 15px 0;
     align-items: center;
     padding-left: 10px;
+    padding-right: 10px;
 
     p {
       color: white;
-      font-weight: 700px;
       font-size: 13px;
-    }
-
-    img {
-      padding-right: 10px;
+      max-width: 150px;
     }
   }
 }
+
+.button {
+  height: 66px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
