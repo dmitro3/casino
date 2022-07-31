@@ -14,7 +14,7 @@
   list-style: none;
   display: flex;
   gap: 30px;
-  width: 60%;
+  margin-left: 37px;
 
   &Item {
     display: flex;
@@ -32,6 +32,7 @@
       color:#fff;
       font-weight: 400;
       font-size: 12px;
+      white-space: nowrap;
     }
   }
 }
@@ -63,6 +64,10 @@
   > svg {
     align-self: center;
     margin-left: 10px;
+  }
+
+  @media (max-width: 1124px) {
+    display: none;
   }
 }
 

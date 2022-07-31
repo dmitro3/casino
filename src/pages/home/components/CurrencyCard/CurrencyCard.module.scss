@@ -9,6 +9,10 @@
   border-radius: 10px;
   font: 700  15px 'Montserrat';
 
+  @media (max-width: 1262px) {
+    width: 400px
+  }
+
   &Header {
     display: flex;
     align-items: flex-start;

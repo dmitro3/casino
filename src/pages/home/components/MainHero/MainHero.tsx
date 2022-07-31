@@ -20,7 +20,7 @@ const MainHero = () => {
             <p>
               Spin Free Fury Wheel and Win up to <b>1 BTC</b>
             </p>
-            <Image src={Bitcoin} width={49} height={49} />
+            <Image src={Bitcoin} width={49} height={49} layout="fixed" />
           </div>
         </div>
       </div>

@@ -50,10 +50,19 @@ const SliderContainer = () => {
       slidesToSlide: 1, // optional, default to 1.
     },
   });
-  const isTabletOrMobile = useMediaQuery({ query: `(max-width: 1224px)` });
+  const isLaptop = useMediaQuery({ query: `(max-width: 1224px)` });
+  const isTablet = useMediaQuery({ query: `(max-width: 1000px)` });
 
   useEffect(() => {
-    if (isTabletOrMobile) {
+    if (isTablet) {
+      setResponsive({
+        desktop: {
+          breakpoint: { max: 3000, min: 0 },
+          items: 1,
+          slidesToSlide: 1, // optional, default to 1.
+        },
+      });
+    } else if (isLaptop) {
       setResponsive({
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
@@ -70,7 +79,7 @@ const SliderContainer = () => {
         },
       });
     }
-  }, [isTabletOrMobile]);
+  }, [isLaptop, isTablet]);
 
   return (
     <div className={styles.slider}>
