@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Hero from 'src/assets/images/Hero.png';
 import Bitcoin from 'src/assets/images/Bitcoin.png';
+import Button from 'src/components/Button';
 import styles from './MainHero.module.scss';
 
 const MainHero = () => {
@@ -14,10 +15,12 @@ const MainHero = () => {
           best of the superior Bitcoin Casino.
         </p>
         <div className={styles.heroButtons}>
-          <button>Sign up</button>
+          <Button label="Sign up" customStyles={styles.button} />
           <div className={styles.heroAd}>
-            <p>Spin Free Fury Wheel and Win up to 1 BTC</p>
-            <Image src={Bitcoin} width={100} height={100} />
+            <p>
+              Spin Free Fury Wheel and Win up to <b>1 BTC</b>
+            </p>
+            <Image src={Bitcoin} width={49} height={49} />
           </div>
         </div>
       </div>

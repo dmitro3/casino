@@ -1,0 +1,108 @@
+.slider {
+  position: relative;
+
+  &Arrow {
+    &Left {
+      border: none;
+      background-color: #FCD535;
+      width: 27px;
+      height: 27px;
+      position: absolute;
+      left: -35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &Right {
+      border: none;
+      background-color: #FCD535;
+      width: 27px;
+      height: 27px;
+      position: absolute;
+      right: -35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(180deg);
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    @media(max-width: 1335px) {
+      &Left {
+        left: 0;
+      }
+
+      &Right {
+        right: 0;
+      }
+    }
+  }
+}
+
+.item {
+  width: 402px;
+  height: 182px;
+  background-color: #1c1d23;
+  border-radius: 9px;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+
+  &Text {
+    &Container {
+      margin-top: 41px;
+      color: #fff;
+      margin-bottom: 28px;
+      margin-left: 39px;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &Main {
+      font-weight: 700;
+      font-weight: bold;
+      max-width: 120px;
+    }
+  }
+
+  &Image {
+    flex: 1;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.dot {
+  &Active {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #FCD535;
+    border: none;
+    margin-right: 6px;
+  }
+
+  &Inactive {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    margin-right: 6px;
+  }
+}

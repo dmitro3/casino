@@ -70,7 +70,7 @@ const Header: FC = () => {
         </div>
         <ul className={styles.navigationContainer}>
           {links.map((link) => (
-            <li className={styles.navigationContainerItem}>
+            <li key={link.id} className={styles.navigationContainerItem}>
               <Link passHref href={link.url}>
                 <a href="/#" className={styles.navigationContainerItemLink}>
                   {link.label}
