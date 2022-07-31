@@ -51,15 +51,12 @@
     border-radius: 0 15px 15px 0;
     align-items: center;
     padding-left: 10px;
+    padding-right: 10px;
 
     p {
       color: white;
-      font-weight: 700px;
       font-size: 13px;
-    }
-
-    img {
-      padding-right: 10px;
+      max-width: 150px;
     }
   }
 }
@@ -70,3 +67,4 @@
   font-weight: 600;
   border-radius: 12px;
 }
+
