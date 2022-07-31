@@ -5,17 +5,26 @@
   background-color: #181a20;
   overflow: hidden;
 
-  >* {
+  >div {
     max-width: 1280px;
     margin: auto;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-    padding-top: 30px;
+    @media (max-width: 1280px) {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      padding-top: 30px;
+    }
   }
 
   &Text {
+
 
     p {
       width: 406px;
