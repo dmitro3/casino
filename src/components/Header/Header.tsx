@@ -77,10 +77,10 @@ const Header: FC = () => {
                 </a>
               </Link>
               {link.bubble && (
-                <>
+                <div className={styles.speechBubble}>
+                  {link.bubble}
                   <div className={styles.speechBubbleBlur} />
-                  <div className={styles.speechBubble}>{link.bubble}</div>
-                </>
+                </div>
               )}
               {link.dropdown && <HeaderDownIcon />}
             </li>
