@@ -10,4 +10,4 @@ export { default as FacebookIcon } from './FacebookIcon';
 export { default as SpaceXIcon } from './SpaceXIcon';
 export { default as TikTokIcon } from './TikTokIcon';
 export { default as InstagramIcon } from './InstagramIcon';
-export { default as Twitter } from './Twitter';
+export { default as TwitterIcon } from './TwitterIcon';

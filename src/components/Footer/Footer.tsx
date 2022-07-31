@@ -9,7 +9,7 @@ import {
   SpaceXIcon,
   TelegramIcon,
   TikTokIcon,
-  Twitter,
+  TwitterIcon,
 } from 'src/assets/svg';
 import styles from './Footer.module.scss';
 
@@ -31,7 +31,7 @@ const Footer = () => {
             and have fun on BetFury.
           </p>
         </div>
-        {/* <div className={styles.footerContent}> */}
+
         <div className={styles.footerColumn}>
           <p>I-GAMING</p>
           <Link passHref href="aaa">
@@ -110,7 +110,7 @@ const Footer = () => {
             <a href="/#">Live Support</a>
           </Link>
         </div>
-        {/* </div> */}
+
         <div className={styles.iconContainer}>
           <p>Community</p>
           <div className={styles.iconTop}>
@@ -121,7 +121,7 @@ const Footer = () => {
           <div className={styles.iconTop}>
             <TikTokIcon />
             <InstagramIcon />
-            <Twitter />
+            <TwitterIcon />
           </div>
           <SpaceXIcon />
         </div>
