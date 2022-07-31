@@ -1,6 +1,12 @@
 .hero {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding-top: 30px;
+  }
 
   &Text {
 
@@ -32,7 +38,6 @@
     z-index: -1;
 
     &Wrapper {
-      padding-left: 280px;
       position: relative;
     }
   }
