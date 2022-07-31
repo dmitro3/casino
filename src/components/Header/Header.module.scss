@@ -14,7 +14,6 @@
   list-style: none;
   display: flex;
   gap: 30px;
-
   width: 60%;
 
   &Item {
@@ -41,7 +40,6 @@
   display: flex;
   align-items: center;
   
-
   &Label {
     font-weight: 400;
     font-size: 16px;
@@ -67,8 +65,6 @@
     margin-left: 10px;
   }
 }
-
-
 
 .selectLanguage {
   margin-left: 22px;

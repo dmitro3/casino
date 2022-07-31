@@ -68,7 +68,6 @@ const Header = () => {
             <Link href="/blog/hello-world">
               <a className={styles.navigationContainerItemLink}>Activity</a>
             </Link>
-
             <div className={styles.speechBubble}>
               soon
               <div className={styles.speechBubbleBlur} />
