@@ -1,0 +1,99 @@
+.featureSection {
+    display: grid;
+    width: 100%;
+    grid-gap: 15px;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    margin-top: 50px;
+    background-color: #1D2027;
+    grid-template-areas: "one one four four five six"
+                         "two three four four seven seven";
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.featureCard {
+    background-color: #18202A;
+    border-radius: 10px;
+    height: auto;
+    padding: 5px;
+    
+    span {
+        background: #FFFFFF1A;
+        border-radius: 10px;
+        color: white;
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 16px;
+        color: #FFF;
+        line-height: 23px;
+    }
+}
+
+.one {
+    grid-area: one;
+
+    p {
+        max-width: 140px;
+    }
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+    background-image: url('../../../../assets/images/FeatureSection4.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    width: 420px;
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 40px;
+        font-size: 18px;
+    }
+}
+
+.five {
+    grid-area: five;
+
+    p {
+        max-width: 52px;
+    }
+}
+
+.six {
+    grid-area: six;
+    display: flex;
+    align-items: center;
+
+    p {
+        max-width: 52px;
+    }
+
+}
+
+.seven {
+    grid-area: seven;
+
+    p {
+        max-width: 150px;
+    }
+}
+
+.featureContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
