@@ -7,3 +7,15 @@ body {
   background-color: #15161c;
   font-family: 'Montserrat';
 }
+
+.react-multi-carousel-dot-list {
+  position: relative !important;
+  justify-content: left !important;
+  align-items: center !important;
+  margin-top: 25px !important;
+  margin-bottom: 67px !important;
+}
+
+.react-multi-carousel-list{
+  position: unset !important;
+}
