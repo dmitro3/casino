@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
 
@@ -90,7 +90,7 @@ const sliderItems = [
 ];
 
 type SliderItemProps = {
-  image: string;
+  image: StaticImageData;
   text: string;
   color: string;
   filterRadius: number;
