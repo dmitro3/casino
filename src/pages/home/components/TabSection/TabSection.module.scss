@@ -1,0 +1,50 @@
+.tabSection {
+    padding-top: 45px;
+    border-radius: 15px;
+
+    &Navbar {
+        display: flex;
+        background-color: #1D2027;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 12px;
+
+        &Input {
+            margin-left: auto;
+            margin-right: 10px;
+            background-color: inherit;
+            border-radius: 12px;
+            border: 1px solid #5E6670;
+            width: 300px;
+            background: url('../../../../assets/svg/SearchIcon.svg') no-repeat scroll 20px ;
+            padding: 10px;
+            color: white;
+            text-indent: 50px;
+            font-size: 18px;
+
+            &::placeholder {
+                font-family: 'Montserrat';
+                font-weight: 400;
+                font-size: 14px;
+                padding-left: 50px;
+            }
+        }
+    }
+
+    &Button {
+        padding-left: 12px;
+        svg {
+            padding-right: 10px;
+        }
+
+        &Clicked {
+            background-color: #1D2027;
+            color: #5E6670;
+            padding-left: 12px;
+            svg {
+                padding-right: 10px;
+            }
+        }
+
+    }
+}

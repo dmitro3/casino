@@ -3,17 +3,27 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type Props = {
-  label: string;
+  label: any;
   icon?: React.ReactNode;
   customStyles?: any;
   onClick?: () => void;
+  isIconFirst?: boolean;
 };
 
-const Button = ({ label, icon, customStyles, onClick }: Props) => {
+const Button = ({ label, icon, customStyles, onClick, isIconFirst }: Props) => {
   return (
     <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
-      {label}
-      {icon}
+      {/* {label}
+      {icon} */}
+      {isIconFirst ? (
+        <>
+          {icon} {label}
+        </>
+      ) : (
+        <>
+          {label} {icon}
+        </>
+      )}
     </button>
   );
 };
