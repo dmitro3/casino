@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: center;
   }
-
 }
 
 .footerContent {
@@ -16,20 +15,40 @@
   display: flex;
   justify-content: space-between;
 
-
   &Card {
     display: flex;
     width: 330px;
+    background-color:#15161c;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .span {
+    &Label {
       font-weight: 700;
       font-size: 15px;
-      color: #fff;
+      color:#fff;
+    }
+
+    &Description {
+      margin-left: 25px;
+
+      >p {
+        margin-top: 12px;
+        color: #d0d0d2;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 130%;
+        margin-bottom: 25px;
+      }
+    }
+
+    &Image {
+      align-self: flex-start;
+      margin-top: 15px;
     }
   }
 }
-
-
 
 .containerCards {
   margin-top: 72px;
@@ -44,21 +63,14 @@
   display: flex;
   justify-content: space-between;
 
-
-
   &Image {
-
-
-
-  &:nth-child(4),  &:nth-child(2), &:nth-child(10){
-
-    padding-right: 25px;
-    border-right: 1px solid;
-    border-color: #2b2e36;
-  }
+    &:nth-child(4),  &:nth-child(2), &:nth-child(10){
+      padding-right: 25px;
+      border-right: 1px solid;
+      border-color: #2b2e36;
+    }
   }
 }
-
 
 .containerBtn {
   display: flex;
@@ -72,16 +84,12 @@
   font-size: 12px;
   background-color: #1c1e24;
 
-
   &Text{
     margin-right: 5px;
     font-weight: 400;
     color:#fff;
     text-decoration: none;
-
-
   }
-
 }
 
 .containerBtnChat {
@@ -94,42 +102,6 @@
   }
 }
 
-.footerContentCard {
-  background-color:#15161c;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &Image {
-    align-self: flex-start;
-    margin-top: 15px;
-  }
-
-  &Description {
-
-    margin-left: 25px;
-
-    >p {
-      margin-top: 12px;
-      color: #d0d0d2;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 130%;
-      margin-bottom: 25px;
-    }
-  }
-
-
-
-
-  &Label {
-    font-weight: 700;
-    font-size: 15px;
-    color:#fff;
-  }
-}
-
 .helpText {
   height: 50px;
   display: flex;
@@ -138,8 +110,3 @@
   font-weight: 700;
   margin-bottom: 32px;
 }
-
-
-
-
-
