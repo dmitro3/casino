@@ -1,0 +1,68 @@
+.tabSection {
+    padding-top: 45px;
+    border-radius: 15px;
+
+    &Navbar {
+        display: flex;
+        background-color: #1D2027;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        border-radius: 12px;
+    }
+
+    &Button {
+        padding-left: 12px;
+        svg {
+            padding-right: 10px;
+        }
+
+        &Clicked {
+            background-color: #1D2027;
+            color: #5E6670;
+            padding-left: 12px;
+            svg {
+                padding-right: 10px;
+            }
+        }
+
+    }
+
+    &Icon {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: white;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            padding-left: 11px;
+        }
+    }
+
+    &SelectedImage {
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 1280px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &Images {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1280px) {
+            flex-wrap: wrap;
+            gap: 20%;
+            justify-content: space-around;
+        }
+    }
+}
