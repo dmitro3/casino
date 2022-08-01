@@ -57,6 +57,10 @@
     font-weight: 700;
     margin-bottom: 15px;
   }
+
+  >svg {
+    margin-top: 37px;
+  }
 }
 
 .iconTop {
@@ -73,14 +77,10 @@
   }
 }
 
-
-
-
 .footerColumn {
   display: flex;
   flex-direction: column;
   height: 300px;
-
 
   >p {
     color:#d1d1d2;
@@ -110,11 +110,11 @@
     >a {
       color:#fff;
       text-decoration: none;
-     padding:0 20px;
+      padding:0 20px;
       border-right: 2px solid;
       border-color: #fff;
-
     }
+
     >a:nth-child(3n) {
       border-width: 0;
     }
