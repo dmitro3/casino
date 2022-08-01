@@ -89,7 +89,7 @@ const Header: FC = () => {
       </div>
       <div className={styles.controlContainer}>
         <Button label="Log in" customStyles={styles.loginButton} />
-        <Button label="Register" icon={<PersonIcon />} />
+        <Button label="Register" rightIcon={<PersonIcon />} />
         <div className={styles.selectLanguage}>
           <Image src={usaFlag} height={20} width={20} />
           <ArrowDownIcon />

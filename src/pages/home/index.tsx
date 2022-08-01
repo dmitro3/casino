@@ -6,6 +6,7 @@ import MainHero from 'src/pages/home/components/MainHero';
 import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
 import ContentFooter from 'src/pages/home/components/ContentFooter';
+import TabSection from 'src/pages/home/components/TabSection';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
@@ -27,6 +28,7 @@ const HomeContainer: FC = () => {
           ))}
         </section>
         <FeatureSection />
+        <TabSection />
         <ContentFooter />
       </section>
     </>
