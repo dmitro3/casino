@@ -33,6 +33,11 @@
       font-weight: 400;
       font-size: 12px;
       white-space: nowrap;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
     }
   }
 }

@@ -51,6 +51,8 @@ const sliderItems = [
     color: `#C4E277`,
     filterRadius: 100,
     id: 1,
+    height: 120,
+    width: 170,
   },
   {
     image: rocket,
@@ -58,6 +60,8 @@ const sliderItems = [
     color: `#D94D63`,
     filterRadius: 90,
     id: 2,
+    height: 180,
+    width: 210,
   },
   {
     image: bitcoinIsland,
@@ -65,6 +69,8 @@ const sliderItems = [
     color: `#E9C600`,
     filterRadius: 80,
     id: 3,
+    height: 120,
+    width: 120,
   },
   {
     image: bitcoinLake,
@@ -72,6 +78,8 @@ const sliderItems = [
     color: `#C4E277`,
     filterRadius: 100,
     id: 4,
+    height: 120,
+    width: 170,
   },
   {
     image: rocket,
@@ -79,6 +87,8 @@ const sliderItems = [
     color: `#D94D63`,
     filterRadius: 90,
     id: 5,
+    height: 180,
+    width: 210,
   },
   {
     image: bitcoinIsland,
@@ -86,6 +96,8 @@ const sliderItems = [
     color: `#E9C600`,
     filterRadius: 80,
     id: 6,
+    height: 120,
+    width: 120,
   },
 ];
 
@@ -94,6 +106,8 @@ type SliderItemProps = {
   text: string;
   color: string;
   filterRadius: number;
+  width: number;
+  height: number;
 };
 
 const SliderItem: FC<SliderItemProps> = ({
@@ -101,6 +115,8 @@ const SliderItem: FC<SliderItemProps> = ({
   text,
   color,
   filterRadius,
+  width,
+  height,
 }) => {
   return (
     <div className={styles.item}>
@@ -110,7 +126,7 @@ const SliderItem: FC<SliderItemProps> = ({
       </div>
       <div className={styles.itemImage}>
         <Blur color={color} right filterRadius={filterRadius}>
-          <Image src={image} />
+          <Image src={image} width={width} height={height} />
         </Blur>
       </div>
     </div>
@@ -195,6 +211,8 @@ const SliderContainer = () => {
             text={item.text}
             color={item.color}
             filterRadius={item.filterRadius}
+            width={item.width}
+            height={item.height}
           />
         ))}
       </Carousel>

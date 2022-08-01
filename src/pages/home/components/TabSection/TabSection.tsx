@@ -111,7 +111,12 @@ const TabSection: FC = () => {
       <div className={styles.tabSectionImages}>
         {tabImages.map((tabImg) => (
           <div className={styles.tabSectionSelectedImage}>
-            <Image src={tabImg.image} key={tabImg.id} />
+            <Image
+              src={tabImg.image}
+              key={tabImg.id}
+              width={190}
+              height={260}
+            />
           </div>
         ))}
       </div>

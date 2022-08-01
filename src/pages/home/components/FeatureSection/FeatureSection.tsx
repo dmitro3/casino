@@ -18,7 +18,7 @@ const FeatureSection = () => {
         <div className={styles.featureContent}>
           <p>Win Real Crypto by Free Play</p>
           <Blur color="#ED1D5B" bottom filterRadius={100}>
-            <Image src={FeatureSection1} />
+            <Image src={FeatureSection1} width={125} height={125} />
           </Blur>
         </div>
       </div>
@@ -26,7 +26,7 @@ const FeatureSection = () => {
         <div className={styles.featureContent}>
           <p>Cashback up to 25%</p>
           <Blur color="#E9C600" bottom right filterRadius={50}>
-            <Image src={FeatureSection2} />
+            <Image src={FeatureSection2} width={100} height={100} />
           </Blur>
         </div>
       </div>
@@ -35,7 +35,7 @@ const FeatureSection = () => {
         <div className={styles.featureContent}>
           <p>Rakeback</p>
           <Blur color="#4800FF" bottom right filterRadius={40}>
-            <Image src={FeatureSection3} />
+            <Image src={FeatureSection3} width={90} height={90} />
           </Blur>
         </div>
       </div>
@@ -51,7 +51,7 @@ const FeatureSection = () => {
           <p>Our Charge</p>
           <div className={styles.featureImg}>
             <Blur color="#D94D63" right filterRadius={50}>
-              <Image src={FeatureSection5} />
+              <Image src={FeatureSection5} width={100} height={100} />
             </Blur>
           </div>
         </div>
@@ -61,7 +61,7 @@ const FeatureSection = () => {
           <p>Our Charge</p>
           <div className={styles.featureImg}>
             <Blur color="#2283F6" right filterRadius={50}>
-              <Image src={FeatureSection6} />
+              <Image src={FeatureSection6} width={87} height={87} />
             </Blur>
           </div>
         </div>
@@ -70,7 +70,7 @@ const FeatureSection = () => {
         <div className={styles.featureContent}>
           <p>Mining & Staking up to 100% APY</p>
           <Blur color="#C4E277" filterRadius={70}>
-            <Image src={FeatureSection7} />
+            <Image src={FeatureSection7} width={100} height={100} />
           </Blur>
         </div>
       </div>

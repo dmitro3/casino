@@ -26,7 +26,6 @@
     background-color: #18202A;
     border-radius: 12px;
     height: auto;
-    padding: 5px;
     overflow: hidden;
 
     span {
@@ -119,6 +118,11 @@
 
     p {
         max-width: 150px;
+    }
+
+    > div {
+        margin-right: 30px;
+        padding-top: 5px;
     }
 }
 
