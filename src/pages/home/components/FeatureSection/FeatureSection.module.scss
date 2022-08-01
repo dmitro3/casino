@@ -69,6 +69,16 @@
     grid-area: two;
     display: flex;
     align-items: center;
+
+    .featureContent {
+      >p {
+        max-width: 82px;
+      }
+
+      >div {
+        width: 139px;
+      }
+    }
 }
 
 .three {

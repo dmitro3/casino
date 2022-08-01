@@ -78,16 +78,16 @@ const ContentFooter = () => {
       </div>
       <div className={styles.labelContainer}>
         <div className={styles.labelContainerImage}>
-          <Image src={Twelve} width={30} height={32} layout="fixed" />
+          <Image src={Twelve} width={30} height={28} layout="fixed" />
         </div>
         <div className={styles.labelContainerImage}>
-          <Image src={CryptoNetworks} width={72} height={36} layout="fixed" />
+          <Image src={CryptoNetworks} width={72} height={34} layout="fixed" />
         </div>
         <div className={styles.labelContainerImage}>
-          <Image src={FifthyThree} width={36} height={32} layout="fixed" />
+          <Image src={FifthyThree} width={36} height={28} layout="fixed" />
         </div>
         <div className={styles.labelContainerImage}>
-          <Image src={CryptoCurrencies} width={81} height={36} layout="fixed" />
+          <Image src={CryptoCurrencies} width={81} height={34} layout="fixed" />
         </div>
         <div className={styles.labelContainerImage}>
           <Image src={BitcoinTwo} width={70} height={13} layout="fixed" />
