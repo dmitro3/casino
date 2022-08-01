@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
 
 import Blur from 'src/components/Blur';
 import bitcoinLake from 'src/assets/images/bitcoin-lake.png';
+import rocket from 'src/assets/images/rocket.png';
+import bitcoinIsland from 'src/assets/images/bitcoinIsland.png';
 import { SliderArrow } from 'src/assets/svg';
 import styles from './Slider.module.scss';
 import 'react-multi-carousel/lib/styles.css';
@@ -39,6 +41,79 @@ const CustomDot = ({
     >
       {` `}
     </button>
+  );
+};
+
+const sliderItems = [
+  {
+    image: bitcoinLake,
+    text: `Mining & Staking up to 100% APY`,
+    color: `#C4E277`,
+    filterRadius: 100,
+    id: 1,
+  },
+  {
+    image: rocket,
+    text: `Leading Crypto Casino. Our Charge`,
+    color: `#D94D63`,
+    filterRadius: 90,
+    id: 2,
+  },
+  {
+    image: bitcoinIsland,
+    text: `Cashback up to`,
+    color: `#E9C600`,
+    filterRadius: 80,
+    id: 3,
+  },
+  {
+    image: bitcoinLake,
+    text: `Mining & Staking up to 100% APY`,
+    color: `#C4E277`,
+    filterRadius: 100,
+    id: 4,
+  },
+  {
+    image: rocket,
+    text: `Leading Crypto Casino. Our Charge`,
+    color: `#D94D63`,
+    filterRadius: 90,
+    id: 5,
+  },
+  {
+    image: bitcoinIsland,
+    text: `Cashback up to`,
+    color: `#E9C600`,
+    filterRadius: 80,
+    id: 6,
+  },
+];
+
+type SliderItemProps = {
+  image: string;
+  text: string;
+  color: string;
+  filterRadius: number;
+};
+
+const SliderItem: FC<SliderItemProps> = ({
+  image,
+  text,
+  color,
+  filterRadius,
+}) => {
+  return (
+    <div className={styles.item}>
+      <div className={styles.itemTextContainer}>
+        <p className={styles.itemTextMain}>{text}</p>
+        <p className={styles.itemTextSub}>binobi</p>
+      </div>
+      <div className={styles.itemImage}>
+        <Blur color={color} right filterRadius={filterRadius}>
+          <Image src={image} />
+        </Blur>
+      </div>
+    </div>
   );
 };
 
@@ -114,27 +189,15 @@ const SliderContainer = () => {
         slidesToSlide={1}
         swipeable
       >
-        <SliderItem />
-        <SliderItem />
-        <SliderItem />
-        <SliderItem />
+        {sliderItems.map((item) => (
+          <SliderItem
+            image={item.image}
+            text={item.text}
+            color={item.color}
+            filterRadius={item.filterRadius}
+          />
+        ))}
       </Carousel>
-    </div>
-  );
-};
-
-const SliderItem = () => {
-  return (
-    <div className={styles.item}>
-      <div className={styles.itemTextContainer}>
-        <p className={styles.itemTextMain}>Mining & Staking up to 100% APY</p>
-        <p className={styles.itemTextSub}>binobi</p>
-      </div>
-      <div className={styles.itemImage}>
-        <Blur color="#ADDA61" right filterRadius={90}>
-          <Image src={bitcoinLake} />
-        </Blur>
-      </div>
     </div>
   );
 };
