@@ -5,6 +5,7 @@ import CurrencyCard from 'src/pages/home/components/CurrencyCard';
 import MainHero from 'src/pages/home/components/MainHero';
 import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
+import ContentFooter from 'src/pages/home/components/ContentFooter';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
@@ -26,6 +27,7 @@ const HomeContainer: FC = () => {
           ))}
         </section>
         <FeatureSection />
+        <ContentFooter />
       </section>
     </>
   );

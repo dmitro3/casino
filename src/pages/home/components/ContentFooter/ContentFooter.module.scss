@@ -1,0 +1,145 @@
+.root {
+  width: 100%;
+
+  >span {
+    width: 100%;
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.footerContent {
+  background-color:#15161c;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+
+
+  &Card {
+    display: flex;
+    width: 330px;
+
+    .span {
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+
+
+
+.containerCards {
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.labelContainer {
+  align-items: center;
+  margin-top:65px;
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: space-between;
+
+
+
+  &Image {
+
+
+
+  &:nth-child(4),  &:nth-child(2), &:nth-child(10){
+
+    padding-right: 25px;
+    border-right: 1px solid;
+    border-color: #2b2e36;
+  }
+  }
+}
+
+
+.containerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 94px;
+  height: 21px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  background-color: #1c1e24;
+
+
+  &Text{
+    margin-right: 5px;
+    font-weight: 400;
+    color:#fff;
+    text-decoration: none;
+
+
+  }
+
+}
+
+.containerBtnChat {
+  width: 116px;
+
+  &Text {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+  }
+}
+
+.footerContentCard {
+  background-color:#15161c;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &Image {
+    align-self: flex-start;
+    margin-top: 15px;
+  }
+
+  &Description {
+
+    margin-left: 25px;
+
+    >p {
+      margin-top: 12px;
+      color: #d0d0d2;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 130%;
+      margin-bottom: 25px;
+    }
+  }
+
+
+
+
+  &Label {
+    font-weight: 700;
+    font-size: 15px;
+    color:#fff;
+  }
+}
+
+.helpText {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+
+
+
+

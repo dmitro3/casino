@@ -12,3 +12,4 @@ export { default as TikTokIcon } from './TikTokIcon';
 export { default as InstagramIcon } from './InstagramIcon';
 export { default as TwitterIcon } from './TwitterIcon';
 export { default as SliderArrow } from './SliderArrow';
+export { default as ArrowBackIcon } from './ArrowBackIcon';

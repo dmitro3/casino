@@ -1,0 +1,44 @@
+.root {
+  width: 290px;
+  height: 104px;
+  display: flex;
+  background-color:  #1d2027;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+  >div {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    >p {
+
+    }
+  }
+
+  >img {
+    margin-right: 24px;
+  }
+}
+
+.cardLabel {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 13px;
+  color: #969693;
+  padding-bottom: 10px;
+}
+
+.cardPrice {
+  font-family: 'Montserrat';
+  color: #fff;
+  font-weight: 700;
+}
