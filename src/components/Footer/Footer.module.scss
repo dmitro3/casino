@@ -50,11 +50,7 @@
 
 
 .iconContainer {
-
   justify-content: space-between;
-
-
-
 
   >p {
     color:#fff;
@@ -66,10 +62,14 @@
 .iconTop {
   justify-content: space-around;
 
-
   >svg {
     margin-right: 25px;
     margin-top: 12px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 }
 

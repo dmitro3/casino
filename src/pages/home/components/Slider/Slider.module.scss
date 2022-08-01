@@ -1,6 +1,28 @@
 .slider {
   position: relative;
 
+  &NavButton {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 21px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    background-color: #1c1e24;
+
+    &Text{
+      margin-right: 5px;
+      font-weight: 400;
+      color:#fff;
+      text-decoration: none;
+    }
+  }
+
   &Arrow {
     &Left {
       border: none;
@@ -76,6 +98,14 @@
       font-weight: 700;
       font-weight: bold;
       max-width: 120px;
+
+      span {
+        font-size: 27px;
+        position: relative;
+        top: 8px;
+        line-height: 16px;
+        left: 5px;
+      }
     }
   }
 

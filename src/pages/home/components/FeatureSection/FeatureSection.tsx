@@ -14,7 +14,7 @@ const FeatureSection = () => {
   return (
     <section className={styles.featureSection}>
       <div className={`${styles.featureCard} ${styles.one}`}>
-        <span>Free to Play</span>
+        <span>Free-to-Play</span>
         <div className={styles.featureContent}>
           <p>Win Real Crypto by Free Play</p>
           <Blur color="#ED1D5B" bottom filterRadius={100}>
@@ -31,7 +31,7 @@ const FeatureSection = () => {
         </div>
       </div>
       <div className={`${styles.featureCard} ${styles.three}`}>
-        <span>Free to Play</span>
+        <span>Free-to-Play</span>
         <div className={styles.featureContent}>
           <p>Rakeback</p>
           <Blur color="#4800FF" bottom right filterRadius={40}>
@@ -40,13 +40,13 @@ const FeatureSection = () => {
         </div>
       </div>
       <div className={`${styles.featureCard} ${styles.four}`}>
-        <span>Free to Play</span>
+        <span>Free-to-Play</span>
         <div className={styles.featureContent}>
           <p>Spin to Get Free Crypto</p>
         </div>
       </div>
       <div className={`${styles.featureCard} ${styles.five}`}>
-        <span>Free to Play</span>
+        <span>Free-to-Play</span>
         <div className={styles.featureContent}>
           <p>Our Charge</p>
           <div className={styles.featureImg}>

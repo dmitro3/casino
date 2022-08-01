@@ -2,12 +2,13 @@ import React, { FC, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 import Blur from 'src/components/Blur';
 import bitcoinLake from 'src/assets/images/bitcoin-lake.png';
 import rocket from 'src/assets/images/rocket.png';
 import bitcoinIsland from 'src/assets/images/bitcoinIsland.png';
-import { SliderArrow } from 'src/assets/svg';
+import { ArrowBackIcon, SliderArrow } from 'src/assets/svg';
 import styles from './Slider.module.scss';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -47,7 +48,9 @@ const CustomDot = ({
 const sliderItems = [
   {
     image: bitcoinLake,
-    text: `Mining & Staking up to 100% APY`,
+    text: (
+      <p className={styles.itemTextMain}>Mining & Staking up to 100% APY</p>
+    ),
     color: `#C4E277`,
     filterRadius: 100,
     id: 1,
@@ -56,7 +59,9 @@ const sliderItems = [
   },
   {
     image: rocket,
-    text: `Leading Crypto Casino. Our Charge`,
+    text: (
+      <p className={styles.itemTextMain}>Leading Crypto Casino. Our Charge</p>
+    ),
     color: `#D94D63`,
     filterRadius: 90,
     id: 2,
@@ -65,7 +70,11 @@ const sliderItems = [
   },
   {
     image: bitcoinIsland,
-    text: `Cashback up to`,
+    text: (
+      <p className={styles.itemTextMain}>
+        Cashback up to <span>25%</span>
+      </p>
+    ),
     color: `#E9C600`,
     filterRadius: 80,
     id: 3,
@@ -74,7 +83,9 @@ const sliderItems = [
   },
   {
     image: bitcoinLake,
-    text: `Mining & Staking up to 100% APY`,
+    text: (
+      <p className={styles.itemTextMain}>Mining & Staking up to 100% APY</p>
+    ),
     color: `#C4E277`,
     filterRadius: 100,
     id: 4,
@@ -83,7 +94,9 @@ const sliderItems = [
   },
   {
     image: rocket,
-    text: `Leading Crypto Casino. Our Charge`,
+    text: (
+      <p className={styles.itemTextMain}>Leading Crypto Casino. Our Charge</p>
+    ),
     color: `#D94D63`,
     filterRadius: 90,
     id: 5,
@@ -92,7 +105,11 @@ const sliderItems = [
   },
   {
     image: bitcoinIsland,
-    text: `Cashback up to`,
+    text: (
+      <p className={styles.itemTextMain}>
+        Cashback up to <span>25%</span>
+      </p>
+    ),
     color: `#E9C600`,
     filterRadius: 80,
     id: 6,
@@ -103,7 +120,7 @@ const sliderItems = [
 
 type SliderItemProps = {
   image: StaticImageData;
-  text: string;
+  text: React.ReactNode;
   color: string;
   filterRadius: number;
   width: number;
@@ -121,7 +138,7 @@ const SliderItem: FC<SliderItemProps> = ({
   return (
     <div className={styles.item}>
       <div className={styles.itemTextContainer}>
-        <p className={styles.itemTextMain}>{text}</p>
+        {text}
         <p className={styles.itemTextSub}>binobi</p>
       </div>
       <div className={styles.itemImage}>
@@ -216,6 +233,14 @@ const SliderContainer = () => {
           />
         ))}
       </Carousel>
+      <div className={styles.sliderNavButton}>
+        <Link passHref href="sad">
+          <a href="/#" className={styles.sliderNavButtonText}>
+            Show all news
+          </a>
+        </Link>
+        <ArrowBackIcon />
+      </div>
     </div>
   );
 };

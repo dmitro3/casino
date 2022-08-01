@@ -26,17 +26,17 @@ const tabs = [
     id: 1,
   },
   {
-    icon: TabLive,
+    icon: TabSlots,
     label: `Slots`,
     id: 2,
   },
   {
-    icon: TabLiveTwo,
+    icon: TabLive,
     label: `Live`,
     id: 3,
   },
   {
-    icon: TabSlots,
+    icon: TabLiveTwo,
     label: `Live`,
     id: 4,
   },
