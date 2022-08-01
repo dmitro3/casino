@@ -7,7 +7,7 @@ import Safe from 'src/assets/images/Safe.png';
 import Lightning from 'src/assets/images/Lightning.png';
 import ContentFooterCurrencyCard from 'src/pages/home/components/ContentFooter/ContentFooterCurrencyCard';
 
-import Twelve from 'src/assets/images/Twelve.png';
+import Twelve from 'src/assets/images/twelve.png';
 import FifthyThree from 'src/assets/images/FifthyThree.png';
 
 import CryptoNetworks from 'src/assets/images/CryptoNetworks.png';
