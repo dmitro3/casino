@@ -26,4 +26,43 @@
         }
 
     }
+
+    &Icon {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        span {
+            color: white;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            padding-left: 11px;
+        }
+    }
+
+    &SelectedImage {
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 1280px) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &Images {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1280px) {
+            flex-wrap: wrap;
+            gap: 20%;
+            justify-content: space-around;
+        }
+    }
 }

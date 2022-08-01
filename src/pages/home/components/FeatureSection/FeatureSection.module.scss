@@ -11,6 +11,15 @@
     padding: 15px;
     border-radius: 12px;
     box-sizing: border-box;
+
+    @media (max-width: 1300px) {
+        grid-template-areas: 'one one four four'
+                             'two three four four'
+                             'seven seven five six'
+                             ;
+        width: calc(100% - 40px);
+        margin-bottom: 30px;
+     };
 }
 
 .featureCard {
