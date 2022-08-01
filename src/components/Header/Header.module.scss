@@ -1,11 +1,15 @@
 .root {
   box-sizing: border-box;
-  max-height: 50px;
+  height: 64px;
   background-color: #11131A;
   display: flex;
   padding: 10px 40px;
   border-radius: 0 0 10px 10px;
   justify-content: space-between;
+
+  button {
+    font-size: 14px;
+  }
 }
 
 .navigationContainer {
@@ -31,7 +35,7 @@
       text-decoration: none;
       color:#fff;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 14px;
       white-space: nowrap;
 
       &:hover {
@@ -48,7 +52,7 @@
 
   &Label {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Montserrat';
     font-size: 17px;
     color: white;
@@ -78,7 +82,7 @@
 
 .selectLanguage {
   margin-left: 22px;
-  min-width: 40px;
+  width: 44px;
   background-color: #2D3340;
   border-radius: 6px;
   display: flex;

@@ -91,7 +91,7 @@ const Header: FC = () => {
         <Button label="Log in" customStyles={styles.loginButton} />
         <Button label="Register" rightIcon={<PersonIcon />} />
         <div className={styles.selectLanguage}>
-          <Image src={usaFlag} height={20} width={20} />
+          <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
         </div>
         <MessageIcon />

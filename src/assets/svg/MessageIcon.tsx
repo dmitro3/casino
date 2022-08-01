@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const Message = () => (
-  <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
+  <svg width="25" height="24" viewBox="0 0 21 20" fill="none">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
