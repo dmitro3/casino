@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
 import {
   TabHome,
   TabLive,
-  TabLive2,
+  TabLiveTwo,
   TabSlots,
   TabSpecial,
+  SearchIcon,
 } from 'src/assets/svg';
 import Button from 'src/components/Button';
+import Input from 'src/components/Input';
 import styles from './TabSection.module.scss';
 
 const tabs = [
@@ -22,7 +24,7 @@ const tabs = [
     id: 2,
   },
   {
-    icon: <TabLive2 />,
+    icon: <TabLiveTwo />,
     label: `Live`,
     id: 3,
   },
@@ -38,11 +40,11 @@ const tabs = [
   },
 ];
 
-const TabSection = () => {
-  const [isClicked, setIsClicked] = useState(1);
+const TabSection: FC = () => {
+  const [selectedTabId, setSelectedTabId] = useState(1);
 
-  const onChoose = (id) => {
-    setIsClicked(id);
+  const onChoose = (id: number) => {
+    setSelectedTabId(id);
   };
 
   return (
@@ -51,21 +53,17 @@ const TabSection = () => {
         {tabs.map((tab) => (
           <Button
             label={tab.label}
-            icon={tab.icon}
+            leftIcon={tab.icon}
             key={tab.id}
-            isIconFirst
             customStyles={`${
-              isClicked === tab.id
+              selectedTabId === tab.id
                 ? styles.tabSectionButton
                 : styles.tabSectionButtonClicked
             }`}
             onClick={() => onChoose(tab.id)}
           />
         ))}
-        <input
-          className={styles.tabSectionNavbarInput}
-          placeholder="Search For Games"
-        />
+        <Input placeholder="Search For Games" icon={<SearchIcon />} />
       </nav>
     </section>
   );

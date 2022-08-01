@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TabLive2 = () => {
+const TabLiveTwo = () => {
   return (
     <svg
       width="22"
@@ -80,4 +80,4 @@ const TabLive2 = () => {
   );
 };
 
-export default TabLive2;
+export default TabLiveTwo;

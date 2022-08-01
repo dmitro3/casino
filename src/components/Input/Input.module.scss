@@ -1,0 +1,29 @@
+.rootInput {
+    background-color: inherit;
+    border-radius: 12px;
+    border: 1px solid #5E6670;
+    width: 300px;
+    padding: 10px;
+    color: white;
+    text-indent: 40px;
+    font-size: 18px;
+
+    &::placeholder {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 50px;
+      }
+}
+
+.inputContainer {
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 9px;
+    left: 20px;
+}
