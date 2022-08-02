@@ -1,0 +1,31 @@
+.userIcon {
+    display: flex;
+    width: 70px;
+    background-color: #1D1F25;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 113px;
+    overflow: hidden;
+    margin-left: 15px;
+    position: relative;
+
+      > svg {
+        margin-right: 15px;
+      }
+  }
+
+    .button {
+    border: none;
+    background-color: inherit;
+    
+    &:hover {
+        cursor: pointer;
+    }
+  }
+
+  .modalWrapper {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+  }

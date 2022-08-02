@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Image from 'next/image';
 import {
   PersonIcon,
@@ -7,9 +7,14 @@ import {
   ArrowDownIcon,
   HeaderDownIcon,
   Logo,
+  Wallet,
+  WhitePerson,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
 import Button from 'src/components/Button';
+import Dropdown from 'src/components/Dropdown';
+import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
+import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
 import styles from './Header.module.scss';
 
 const links = [
@@ -61,6 +66,12 @@ const links = [
 ];
 
 const Header: FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  const onSwitchLoggedIn = () => {
+    setIsLoggedIn(!isLoggedIn);
+  };
+
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
@@ -88,8 +99,29 @@ const Header: FC = () => {
         </ul>
       </div>
       <div className={styles.controlContainer}>
-        <Button label="Log in" customStyles={styles.loginButton} />
-        <Button label="Register" rightIcon={<PersonIcon />} />
+        {isLoggedIn ? (
+          <>
+            <Button
+              label="Wallet"
+              leftIcon={<Wallet />}
+              onClick={onSwitchLoggedIn}
+            />
+            <Dropdown
+              buttonComponent={<UserDropdownButton />}
+              dropdownComponent={<UserDropdownWindow />}
+            />
+          </>
+        ) : (
+          <>
+            <Button
+              label="Log in"
+              customStyles={styles.loginButton}
+              onClick={onSwitchLoggedIn}
+            />
+            <Button label="Register" rightIcon={<PersonIcon />} />
+          </>
+        )}
+
         <div className={styles.selectLanguage}>
           <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
