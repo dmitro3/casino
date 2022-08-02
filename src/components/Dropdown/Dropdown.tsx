@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react';
 
-import Blur from 'src/components/Blur';
 import { HeaderDownIcon } from 'src/assets/svg';
 import styles from './Dropdown.module.scss';
 
@@ -10,10 +9,10 @@ type Props = {
 };
 
 const Dropdown: FC<Props> = ({ buttonComponent, dropdownComponent }) => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
   const showDropdown = () => {
-    setIsClicked(!isClicked);
+    setIsOpened(!isOpened);
   };
 
   return (
@@ -24,7 +23,7 @@ const Dropdown: FC<Props> = ({ buttonComponent, dropdownComponent }) => {
           <HeaderDownIcon width="7px" height="4px" />
         </div>
       </button>
-      {!isClicked && (
+      {isOpened && (
         <div className={styles.modalWrapper}>{dropdownComponent}</div>
       )}
     </>

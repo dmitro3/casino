@@ -16,9 +16,9 @@ import styles from './UserDropdownWindow.module.scss';
 
 const UserDropdownWindow = () => {
   return (
-    <div className={styles.dropdownWindow}>
-      <div className={styles.iconImgContainer}>
-        <div className={styles.userIconImgContainer}>
+    <div className={styles.dropdown}>
+      <div className={styles.dropdownIcon}>
+        <div className={styles.dropdownIconUser}>
           <BlackPerson />
         </div>
         <div className={styles.userLevel}>1 lvl</div>
@@ -33,7 +33,6 @@ const UserDropdownWindow = () => {
           bgColor="#FCD535"
           height="4px"
           className={styles.barContainer}
-          /* completedClassName={styles.bar} */
           isLabelVisible
           customLabel=" "
           completed={60}
