@@ -8,7 +8,7 @@ import styles from './Modal.module.scss';
 type Props = {
   children: React.ReactNode;
   toggleModal: () => void;
-  customStyles: any;
+  customStyles?: any;
 };
 
 const Modal: FC<Props> = ({ children, toggleModal, customStyles }) => {

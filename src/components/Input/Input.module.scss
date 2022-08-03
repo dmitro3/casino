@@ -12,7 +12,6 @@
         font-family: 'Montserrat';
         font-weight: 400;
         font-size: 14px;
-        
       }
 }
 
@@ -24,6 +23,14 @@
 
 .inputIcon {
     position: absolute;
-    top: 9px;
+    top: 55%;
+    transform: translateY(-50%);
     left: 20px;
+}
+
+.inputIconRight {
+  position: absolute;
+  top:  60%;
+  transform: translateY(-50%);
+  right: 0px;
 }

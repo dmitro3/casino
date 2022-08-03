@@ -117,7 +117,7 @@ const Header: FC = () => {
               customStyles={styles.loginButton}
               onClick={onSwitchLoggedIn}
             />
-            <Button label="Register" rightIcon={<PersonIcon />} />
+            <Button label="Register" rightIcon={<PersonIcon color="#000" />} />
           </>
         )}
 
