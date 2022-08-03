@@ -8,7 +8,7 @@ const Account: NextPage = () => {
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
-        <span className={styles.backButton}>qwe</span>
+        <span className={styles.backButton}>{`< Back`}</span>
         <p className={styles.mainLabel}>Account</p>
         <Navigation />
       </section>
