@@ -29,7 +29,6 @@ export { default as Transaction } from './Transaction';
 export { default as Sessions } from './Sessions';
 export { default as Vault } from './Vault';
 export { default as Exit } from './Exit';
-<<<<<<< HEAD
 export { default as TetherSmol } from './TetherSmol';
 export { default as BnbToken } from './BnbToken';
 export { default as BtcToken } from './BtcToken';
@@ -37,11 +36,9 @@ export { default as EosToken } from './EosToken';
 export { default as EthToken } from './EthToken';
 export { default as SolToken } from './SolToken';
 export { default as TetherToken } from './TetherToken';
-=======
 export { default as BigTelegramIcon } from './BigTelegramIcon';
 export { default as BigGoogleIcon } from './BigGoogleIcon';
 export { default as MetaMaskFox } from './MetaMaskFox';
 export { default as TronLogo } from './TronLogo';
 export { default as BinanceChain } from './BinanceChain';
 export { default as PasswordAyes } from './PasswordAyes';
->>>>>>> master
