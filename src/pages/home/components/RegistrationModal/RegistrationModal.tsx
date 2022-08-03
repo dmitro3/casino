@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import Modal from 'src/components/Modal/Modal';
 import RegistrationSafe from 'src/assets/images/RegistrationSafe.png';
 import Image from 'next/image';
-import Blur from 'src/components/Blur';
 import Input from 'src/components/Input';
 import {
   ArrowBackIcon,
@@ -41,6 +40,7 @@ const RegistrationModal: FC<Props> = ({ toggleModal }: Props) => {
           <div className={styles.inputContainersContainer}>
             <p>User name</p>
             <Input
+              password={false}
               customStyles={styles.input}
               icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter user name"
@@ -49,6 +49,7 @@ const RegistrationModal: FC<Props> = ({ toggleModal }: Props) => {
           <div className={styles.inputContainersContainer}>
             <p>Your E-mail</p>
             <Input
+              password={false}
               customStyles={styles.input}
               icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter user name"

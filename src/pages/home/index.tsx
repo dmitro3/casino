@@ -7,7 +7,7 @@ import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
 import ContentFooter from 'src/pages/home/components/ContentFooter';
 import TabSection from 'src/pages/home/components/TabSection';
-import Modal from 'src/components/Modal';
+
 import RegistrationModal from 'src/pages/home/components/RegistrationModal';
 import styles from './index.module.scss';
 

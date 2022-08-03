@@ -7,7 +7,7 @@ type Props = {
   placeholder: string;
   icon: React.ReactNode;
   customStyles?: any;
-  password: boolean;
+  password?: boolean;
 };
 
 const Input: FC<Props> = ({ placeholder, icon, customStyles, password }) => {
