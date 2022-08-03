@@ -18,7 +18,6 @@ const Checkbox = ({ label, onClick }: Props) => {
           setIsChecked(!isChecked);
         }}
       />
-
       <span
         className={`${styles.checkmark} ${
           isChecked ? styles.checkmarkConfirm : ``
