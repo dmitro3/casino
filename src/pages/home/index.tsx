@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { currencyData } from 'src/utils/mockData';
 import CurrencyCard from 'src/pages/home/components/CurrencyCard';
@@ -12,6 +12,12 @@ import RegistrationModal from 'src/pages/home/components/RegistrationModal';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
+  const [modalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(!modalVisible);
+  };
+
   return (
     <>
       <MainHero />
@@ -32,7 +38,7 @@ const HomeContainer: FC = () => {
         <FeatureSection />
         <TabSection />
         <ContentFooter />
-        <RegistrationModal />
+        {modalVisible && <RegistrationModal toggleModal={showModal} />}
       </section>
     </>
   );

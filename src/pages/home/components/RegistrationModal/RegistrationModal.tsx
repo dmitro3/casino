@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Modal from 'src/components/Modal/Modal';
 import RegistrationSafe from 'src/assets/images/RegistrationSafe.png';
 import Image from 'next/image';
@@ -18,9 +18,13 @@ import Link from 'next/link';
 import Button from 'src/components/Button';
 import styles from './RegistrationModal.module.scss';
 
-const RegistrationModal = () => {
+type Props = {
+  toggleModal: () => void;
+};
+
+const RegistrationModal: FC<Props> = ({ toggleModal }: Props) => {
   return (
-    <Modal toggleModal={() => {}}>
+    <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
         <div className={styles.imageContainer}>
           <div className={styles.blurWrapper}>
