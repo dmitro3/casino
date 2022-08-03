@@ -1,0 +1,32 @@
+.container {
+    background-color: #15161C;
+    border-radius: 20px;
+    padding-top: 34px;
+  
+    > * {
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      @media (max-width: 1300px) {
+        max-width: 1240px;
+        padding: 0 20px;
+      }
+    }
+  
+    .backButton {
+      color: #FFFFFF4D;
+      font-size: 12px;
+      border: none;
+      background-color: inherit;
+      font-family: inherit;
+      margin-left: 130px;
+  
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  
