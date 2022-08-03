@@ -8,11 +8,20 @@
   justify-content: center;
 }
 
-.inputContainers {
-
+.inputContainer {
   margin-bottom: 25px;
 
-  &Container {
+  &Block {
+
+    input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 330px;
+      background-color: #181A20;
+      padding: 10px;
+      margin-top: 10px;
+    }
 
     >p {
       color:#fff;
@@ -22,17 +31,6 @@
      margin-top: 20px;
      }
   }
-
-}
-
-.input {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 330px;
-  background-color: #181A20;
-  padding: 10px;
-  margin-top: 10px;
 }
 
 
@@ -43,7 +41,7 @@
   font-weight: 700;
 }
 
-.btn {
+.createAccountButton {
   width: 350px;
   padding: 14px 118px;
   border-radius: 12px;
@@ -57,7 +55,6 @@
   align-items: center;
   margin-top: 8px;
   margin-bottom: 20px;
-
 }
 
 .containerSignUpText {
