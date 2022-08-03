@@ -6,16 +6,16 @@ import styles from './Dropdown.module.scss';
 type Props = {
   buttonComponent: React.ReactNode;
   dropdownComponent: React.ReactNode;
-  customStyles?: any;
-  customButtonDropdownStyles?: any;
+  customButtonStyles?: any;
+  customWalletDropdownStyles?: any;
   customUserDropdownStyles?: any;
 };
 
 const Dropdown: FC<Props> = ({
   buttonComponent,
   dropdownComponent,
-  customStyles,
-  customButtonDropdownStyles,
+  customButtonStyles,
+  customWalletDropdownStyles,
   customUserDropdownStyles,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -41,14 +41,14 @@ const Dropdown: FC<Props> = ({
   return (
     <div className={styles.dropdownContainer} ref={ref}>
       <button onClick={showDropdown} className={styles.button}>
-        <div className={`${styles.userIcon} ${customStyles}`}>
+        <div className={`${styles.userIcon} ${customButtonStyles}`}>
           {buttonComponent}
           <HeaderDownIcon width="7px" height="4px" />
         </div>
       </button>
       {isOpened && (
         <div
-          className={`${styles.modalWrapper} ${customButtonDropdownStyles} ${customUserDropdownStyles}`}
+          className={`${styles.modalWrapper} ${customWalletDropdownStyles} ${customUserDropdownStyles}`}
         >
           {dropdownComponent}
         </div>

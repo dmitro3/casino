@@ -3,46 +3,52 @@ import React from 'react';
 import Input from 'src/components/Input';
 import {
   SearchIcon,
-  bnbToken,
-  btcToken,
-  eosToken,
-  ethToken,
-  tetherToken,
-  solToken,
+  BnbToken,
+  BtcToken,
+  EosToken,
+  EthToken,
+  TetherToken,
+  SolToken,
 } from 'src/assets/svg';
 import Switch from 'src/components/Switch';
 import styles from './WalletDropdownWindow.module.scss';
 
 const tokenBalance = [
   {
-    icon: tetherToken,
+    icon: TetherToken,
     label: `Tether`,
     balance: `0.000000000`,
+    id: 1,
   },
   {
-    icon: bnbToken,
+    icon: BnbToken,
     label: `Binance`,
     balance: `0.000000000`,
+    id: 2,
   },
   {
-    icon: btcToken,
+    icon: BtcToken,
     label: `Bitcoin`,
     balance: `0.000000000`,
+    id: 3,
   },
   {
-    icon: ethToken,
+    icon: EthToken,
     label: `Ethereum`,
     balance: `0.000000000`,
+    id: 4,
   },
   {
-    icon: solToken,
+    icon: SolToken,
     label: `Solana`,
     balance: `0.000000000`,
+    id: 5,
   },
   {
-    icon: eosToken,
+    icon: EosToken,
     label: `EOS`,
     balance: `0.000000000`,
+    id: 6,
   },
 ];
 
@@ -55,7 +61,7 @@ const WalletDropdownWindow = () => {
         customStyles={styles.searchBar}
       />
       {tokenBalance.map((token) => (
-        <div className={styles.walletDropdownWindowCurrencies}>
+        <div key={token.id} className={styles.walletDropdownWindowCurrencies}>
           <token.icon />
           <span>{token.label}</span>
           <span className={styles.tokenBalance}>{token.balance}</span>

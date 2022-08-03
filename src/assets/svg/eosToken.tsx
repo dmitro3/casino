@@ -1,6 +1,6 @@
 import React from 'react';
 
-const eosToken = () => {
+const EosToken = () => {
   return (
     <svg
       width="34"
@@ -25,4 +25,4 @@ const eosToken = () => {
   );
 };
 
-export default eosToken;
+export default EosToken;

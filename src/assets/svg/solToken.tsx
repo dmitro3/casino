@@ -1,6 +1,6 @@
 import React from 'react';
 
-const solToken = () => {
+const SolToken = () => {
   return (
     <svg
       width="34"
@@ -45,4 +45,4 @@ const solToken = () => {
   );
 };
 
-export default solToken;
+export default SolToken;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ethToken = () => {
+const EthToken = () => {
   return (
     <svg
       width="34"
@@ -44,4 +44,4 @@ const ethToken = () => {
   );
 };
 
-export default ethToken;
+export default EthToken;

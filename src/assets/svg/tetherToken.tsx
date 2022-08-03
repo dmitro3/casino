@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tetherToken = () => {
+const TetherToken = () => {
   return (
     <svg
       width="34"
@@ -36,4 +36,4 @@ const tetherToken = () => {
   );
 };
 
-export default tetherToken;
+export default TetherToken;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const bnbToken = () => {
+const BnbToken = () => {
   return (
     <svg
       width="34"
@@ -24,4 +24,4 @@ const bnbToken = () => {
   );
 };
 
-export default bnbToken;
+export default BnbToken;

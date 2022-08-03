@@ -105,8 +105,8 @@ const Header: FC = () => {
             <Dropdown
               buttonComponent={<WalletDropdownButton />}
               dropdownComponent={<WalletDropdownWindow />}
-              customStyles={styles.walletDropdown}
-              customButtonDropdownStyles={styles.windowDropdown}
+              customButtonStyles={styles.walletDropdown}
+              customWalletDropdownStyles={styles.windowDropdown}
             />
             <Button
               label="Wallet"

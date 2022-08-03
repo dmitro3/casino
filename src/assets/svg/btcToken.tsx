@@ -1,6 +1,6 @@
 import React from 'react';
 
-const btcToken = () => {
+const BtcToken = () => {
   return (
     <svg
       width="34"
@@ -24,4 +24,4 @@ const btcToken = () => {
   );
 };
 
-export default btcToken;
+export default BtcToken;
