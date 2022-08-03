@@ -36,30 +36,30 @@ const RegistrationModal: FC<Props> = ({ toggleModal }: Props) => {
             />
           </div>
         </div>
-        <div className={styles.inputContainer}>
-          <div className={styles.inputContainerBlock}>
+        <div className={styles.inputContainers}>
+          <div className={styles.inputContainersContainer}>
             <p>User name</p>
             <Input
               password={false}
-              customStyles={styles.inputContainerBlockInput}
+              customStyles={styles.input}
               icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter user name"
             />
           </div>
-          <div className={styles.inputContainerBlock}>
+          <div className={styles.inputContainersContainer}>
             <p>Your E-mail</p>
             <Input
               password={false}
-              customStyles={styles.inputContainerBlockInput}
+              customStyles={styles.input}
               icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter user name"
             />
           </div>
-          <div className={styles.inputContainerBlock}>
+          <div className={styles.inputContainersContainer}>
             <p>Password</p>
             <Input
               password
-              customStyles={styles.inputContainerBlockInput}
+              customStyles={styles.input}
               icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter your password"
             />
@@ -78,10 +78,7 @@ const RegistrationModal: FC<Props> = ({ toggleModal }: Props) => {
           }
         />
         <Checkbox label={<p>Receive Email Promos</p>} />
-        <Button
-          label="Create an account"
-          customStyles={styles.createAccountButton}
-        />
+        <Button label="Create an account" customStyles={styles.btn} />
         <span className={styles.containerSignUpText}>Or Sign up with</span>
         <div className={styles.authorizationContainer}>
           <div>

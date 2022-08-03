@@ -12,11 +12,10 @@ import RegistrationModal from 'src/pages/home/components/RegistrationModal';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
-  const [registrationModalVisible, setRegistrationModalVisible] =
-    useState(true);
+  const [modalVisible, setIsModalVisible] = useState(false);
 
-  const toggleModal = () => {
-    setRegistrationModalVisible(!registrationModalVisible);
+  const showModal = () => {
+    setIsModalVisible(!modalVisible);
   };
 
   return (
@@ -39,9 +38,7 @@ const HomeContainer: FC = () => {
         <FeatureSection />
         <TabSection />
         <ContentFooter />
-        {registrationModalVisible && (
-          <RegistrationModal toggleModal={toggleModal} />
-        )}
+        {modalVisible && <RegistrationModal toggleModal={showModal} />}
       </section>
     </>
   );
