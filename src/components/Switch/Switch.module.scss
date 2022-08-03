@@ -1,0 +1,50 @@
+.button {
+    border: none;
+    background-color: inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.switchBody {
+    height: 13px;
+    width: 24px;
+    border-radius: 130px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFFFFF73;
+    overflow: hidden;
+
+    &On {
+        background-color: #16171D;
+    }
+
+    &Off {
+        background-color: #FFFFFF1A;
+    }
+
+    .switchHandleOff {
+        height: 10px;
+        width: 10px;
+        background-color: #FFFFFF80;
+        border-radius: 100%;
+        margin: 1px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .switchHandleOn {
+        height: 10px;
+        width: 10px;
+        background-color: #FCD535;
+        border-radius: 100%;
+        margin-left: 13px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

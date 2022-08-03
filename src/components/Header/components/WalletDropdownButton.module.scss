@@ -1,0 +1,21 @@
+.walletButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+        padding-left: 16px;
+    }
+
+    > span {
+        padding-left: 10px;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: white;
+
+    }
+}

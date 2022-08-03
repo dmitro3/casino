@@ -144,3 +144,26 @@
     z-index: -1;
   }
 }
+
+.wallet {
+  z-index: 2;
+
+   &Dropdown {
+    border-radius: 5px;
+    width: 190px;
+    margin-right: -10px;
+
+    > svg {
+      padding-right: 11px;
+    }
+  
+  }
+}
+
+.windowDropdown {
+  left: 20px;
+}
+
+.userWindowDropdown {
+  right: 0;
+}

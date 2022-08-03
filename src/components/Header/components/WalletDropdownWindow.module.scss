@@ -1,0 +1,60 @@
+.walletDropdownWindow {
+    height: 425px;
+    width: 254px;
+    background-color: #181A20;
+    border-radius: 10px;
+    padding: 10px 10px 20px 10px;
+
+    .searchBar {
+        width: 100%;
+        
+    }
+
+    .actions {
+        height: 84px;
+        background-color: #FFFFFF0D;
+        border-radius: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &Item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px 0 14px;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 12px;
+            letter-spacing: 0.02em;
+            color: white;
+
+            &:last-child {
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    &Currencies {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 15px;
+        color: #FFFFFF80;
+        font-size: 12px;
+        font-weight: 500;
+
+        > label > div > div > div {
+            height: 13px !important;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        
+        .tokenBalance {
+            margin-left: auto;
+        }
+    }
+}
