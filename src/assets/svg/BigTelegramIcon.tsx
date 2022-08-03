@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowDownIcon = () => {
+const BigTelegramIcon = () => {
   return (
     <svg
       width="45"
@@ -29,4 +29,4 @@ const ArrowDownIcon = () => {
   );
 };
 
-export default ArrowDownIcon;
+export default BigTelegramIcon;
