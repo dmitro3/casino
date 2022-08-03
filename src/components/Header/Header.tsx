@@ -14,6 +14,8 @@ import Button from 'src/components/Button';
 import Dropdown from 'src/components/Dropdown';
 import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
+import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
+import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
 import styles from './Header.module.scss';
 
 const links = [
@@ -100,14 +102,22 @@ const Header: FC = () => {
       <div className={styles.controlContainer}>
         {isLoggedIn ? (
           <>
+            <Dropdown
+              buttonComponent={<WalletDropdownButton />}
+              dropdownComponent={<WalletDropdownWindow />}
+              customButtonStyles={styles.walletDropdown}
+              customWalletDropdownStyles={styles.windowDropdown}
+            />
             <Button
               label="Wallet"
               leftIcon={<Wallet />}
               onClick={onSwitchLoggedIn}
+              customStyles={styles.wallet}
             />
             <Dropdown
               buttonComponent={<UserDropdownButton />}
               dropdownComponent={<UserDropdownWindow />}
+              customUserDropdownStyles={styles.userWindowDropdown}
             />
           </>
         ) : (
