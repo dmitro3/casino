@@ -4,7 +4,6 @@ import Navigation from 'src/pages/account/components/Navigation';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/account/transactions/Transactions.module.scss';
 import Table from 'src/pages/account/sessions/components/Table';
-import Dropdown from 'src/components/Dropdown';
 
 const columns = [`Дата`, `IP`, `Browser`];
 

@@ -9,10 +9,6 @@ body {
   color: #fff;
 }
 
-a {
-  text-decoration: none;
-}
-
 a:hover {
   opacity: .7;
 }
