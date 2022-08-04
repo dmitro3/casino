@@ -20,8 +20,10 @@ const Account: NextPage = () => {
         >{`< Back`}</button>
         <p className={styles.mainLabel}>Account</p>
         <Navigation />
-        <ProfileInfo />
-        <ProfileCards />
+        <div className={styles.userContainer}>
+          <ProfileInfo />
+          <ProfileCards />
+        </div>
       </section>
     </MainLayout>
   );

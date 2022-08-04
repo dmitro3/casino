@@ -18,7 +18,7 @@ import styles from './ProfileInfo.module.scss';
 
 const ProfileInfo = () => {
   return (
-    <>
+    <section>
       <section className={styles.sectionContainer}>
         <div className={styles.profileContainer}>
           <div className={styles.profileImageContainer}>
@@ -99,7 +99,7 @@ const ProfileInfo = () => {
           }
         />
       </section>
-    </>
+    </section>
   );
 };
 
