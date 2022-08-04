@@ -40,7 +40,7 @@ const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
             <Input
               password={false}
               customStyles={styles.inputContainerBlockInput}
-              icon={<EmailIcon color="#8C8D90" />}
+              icon={<EmailIcon />}
               placeholder="Enter Your e-mail"
             />
           </div>
@@ -49,7 +49,7 @@ const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
             <Input
               password
               customStyles={styles.inputContainerBlockInput}
-              icon={<KeyIcon color="#8C8D90" />}
+              icon={<KeyIcon />}
               placeholder="Enter your password"
             />
           </div>

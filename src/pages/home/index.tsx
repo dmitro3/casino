@@ -17,12 +17,17 @@ const HomeContainer: FC = () => {
   const [registrationModalVisible, setRegistrationModalVisible] =
     useState(false);
   const [signInModalVisible, setSignInModalVisible] = useState(false);
+  const [successfulModalVisible, setSuccessfulModalVisible] = useState(false);
 
   const toggleRegistrationModal = () => {
     setRegistrationModalVisible(!registrationModalVisible);
   };
   const toggleSignInModal = () => {
     setSignInModalVisible(!signInModalVisible);
+  };
+
+  const toggleSuccessfulModal = () => {
+    setSuccessfulModalVisible(!successfulModalVisible);
   };
 
   return (
@@ -51,7 +56,9 @@ const HomeContainer: FC = () => {
         {signInModalVisible && (
           <SignInModal toggleModal={toggleRegistrationModal} />
         )}
-        <SuccessfulModal />
+        {successfulModalVisible && (
+          <SuccessfulModal toggleModal={toggleSuccessfulModal} />
+        )}
       </section>
     </>
   );
