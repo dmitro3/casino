@@ -14,6 +14,10 @@ type Props = {
 };
 
 const Table: FC<Props> = ({ columns, data }) => {
+  if (!columns || !data) {
+    return null;
+  }
+
   return (
     <div className={styles.table}>
       <div className={styles.tableHeader}>
