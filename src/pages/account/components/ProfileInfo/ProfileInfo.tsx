@@ -88,7 +88,13 @@ const ProfileInfo = () => {
                   }
                 />
               </div>
-              <Input />
+              <Input
+                placeholder=""
+                icon
+                disabled
+                value="657897363999@gmail.com"
+                customStyles={styles.input}
+              />
             </div>
           }
         />
