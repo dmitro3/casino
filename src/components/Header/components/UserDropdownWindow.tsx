@@ -12,6 +12,7 @@ import {
   Vault,
   Exit,
 } from 'src/assets/svg';
+import Link from 'next/link';
 import styles from './UserDropdownWindow.module.scss';
 
 const UserDropdownWindow = () => {
@@ -49,7 +50,9 @@ const UserDropdownWindow = () => {
             </li>
             <li>
               <Account />
-              Account
+              <Link href="/account" passHref>
+                <a href="/account">Account</a>
+              </Link>
             </li>
             <li>
               <Transaction />

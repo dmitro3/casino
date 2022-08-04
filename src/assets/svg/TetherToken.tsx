@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const TetherToken = () => {
+type Props = {
+  width?: number;
+  height?: number;
+};
+
+const TetherToken: FC<Props> = ({ width, height }) => {
   return (
     <svg
-      width="34"
-      height="34"
+      width={width || `34`}
+      height={height || `34`}
       viewBox="0 0 34 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

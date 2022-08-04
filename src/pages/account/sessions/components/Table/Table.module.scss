@@ -1,0 +1,88 @@
+.table {
+  width: 100%;
+  padding-top: 21px;
+  min-height: 250px;
+
+  &Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 12px;
+
+    &Label {
+      color: #FFFFFF80;
+      font-weight: 700;
+      font-size: 10px;
+      flex: 1;
+
+      &:first-child {
+        flex: 0.5;
+      }
+
+      &Empty {
+        width: 17%;
+      }
+    }
+  }
+
+  &Body {
+
+    &Row {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0 14px 0;
+
+      &Element {
+        flex: 1;
+        font-weight: 700;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 10px;
+        }
+
+        &:first-child {
+          flex: 0.5;
+        }
+
+        &:nth-child(2) {
+          color: #fff;
+        }
+
+        &:nth-child(3) {
+          color: #FCD73F;
+        }
+
+        &Control {
+          display: flex;
+          align-items: center;
+          font-size: 10px;
+          color: #4ED254;
+          font-weight: bold;
+          position: relative;
+          width: 17%;
+          justify-content: space-evenly;
+
+          button {
+            padding: 5px 15px;
+            font-size: 11px;
+          }
+
+          &::before {
+            position: absolute;
+            content: '';
+            left: 10%;
+            width: 7px;
+            height: 7px;
+            background-color: #4ED254;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
