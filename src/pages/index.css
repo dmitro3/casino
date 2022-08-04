@@ -6,10 +6,16 @@
 body {
   background-color: #15161c;
   font-family: 'Montserrat';
+  color: #fff;
 }
 
 a:hover {
-  opacity: .7
+  opacity: .7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .react-multi-carousel-dot-list {

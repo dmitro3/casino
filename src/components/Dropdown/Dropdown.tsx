@@ -9,6 +9,7 @@ type Props = {
   customButtonStyles?: any;
   customWalletDropdownStyles?: any;
   customUserDropdownStyles?: any;
+  customDropdownStyles?: string;
 };
 
 const Dropdown: FC<Props> = ({
@@ -17,6 +18,7 @@ const Dropdown: FC<Props> = ({
   customButtonStyles,
   customWalletDropdownStyles,
   customUserDropdownStyles,
+  customDropdownStyles,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -48,7 +50,11 @@ const Dropdown: FC<Props> = ({
       </button>
       {isOpened && (
         <div
-          className={`${styles.modalWrapper} ${customWalletDropdownStyles} ${customUserDropdownStyles}`}
+          className={`${
+            styles.modalWrapper
+          } ${customWalletDropdownStyles} ${customUserDropdownStyles} ${
+            customDropdownStyles || ``
+          }`}
         >
           {dropdownComponent}
         </div>

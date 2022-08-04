@@ -1,5 +1,6 @@
 .dropdownContainer {
   position: relative;
+  font-family: 'Montserrat'
 }
 
 .userIcon {
@@ -12,7 +13,7 @@
     border-radius: 113px;
     overflow: hidden;
     margin-left: 15px;
-    
+
       > svg {
         margin-right: 15px;
       }
@@ -22,7 +23,7 @@
     border: none;
     background-color: inherit;
     height: 100%;
-    
+
     &:hover {
         cursor: pointer;
     }

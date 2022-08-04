@@ -42,3 +42,4 @@ export { default as MetaMaskFox } from './MetaMaskFox';
 export { default as TronLogo } from './TronLogo';
 export { default as BinanceChain } from './BinanceChain';
 export { default as PasswordAyes } from './PasswordAyes';
+export { default as CalendarIcon } from './CalendarIcon';
