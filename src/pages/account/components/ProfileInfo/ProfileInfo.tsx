@@ -8,14 +8,8 @@ import {
   QuestionCircle,
   HeartIcon,
 } from 'src/assets/svg';
+import { mockUser } from 'src/utils/mockData';
 import styles from './ProfileInfo.module.scss';
-
-const mockUser = {
-  username: `User483768574`,
-  likes: 145,
-  level: 1,
-  userRank: `Junior`,
-};
 
 const ProfileInfo = () => {
   return (
