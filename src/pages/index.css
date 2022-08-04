@@ -8,8 +8,12 @@ body {
   font-family: 'Montserrat';
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
-  opacity: .7
+  opacity: 0.7;
 }
 
 .react-multi-carousel-dot-list {
@@ -20,6 +24,6 @@ a:hover {
   margin-bottom: 67px !important;
 }
 
-.react-multi-carousel-list{
+.react-multi-carousel-list {
   position: unset !important;
 }
