@@ -10,7 +10,7 @@ type Props = {
   subIconText?: string;
   tabContent: React.ReactNode;
   customStyles?: any;
-  positive?: boolean;
+  isPositive?: boolean;
 };
 
 const TabTemplate: FC<Props> = ({
@@ -21,7 +21,7 @@ const TabTemplate: FC<Props> = ({
   subIconText,
   tabContent,
   customStyles,
-  positive,
+  isPositive,
 }) => {
   return (
     <div className={`${styles.root} ${customStyles || ``}`}>
@@ -31,7 +31,7 @@ const TabTemplate: FC<Props> = ({
         {subIcon}
         <span
           className={`${styles.subIconText} ${
-            positive ? styles.subIconTextGreen : styles.subIconTextRed
+            isPositive ? styles.subIconTextGreen : styles.subIconTextRed
           }`}
         >
           {subIconText}

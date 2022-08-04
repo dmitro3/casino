@@ -28,7 +28,6 @@ const Input: FC<Props> = ({
         className={`${styles.rootInput} ${customStyles}`}
         value={value}
         disabled={disabled}
-        /* {{disabled} && disabled} */
       />
       <div className={styles.inputIconRight}>
         {password && <PasswordAyes />}

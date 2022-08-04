@@ -73,7 +73,7 @@ const ProfileInfo = () => {
           mainIcon={<EmailIcon />}
           subIcon={<Checkmark />}
           subIconText="Проверено"
-          positive
+          isPositive
           tabContent={
             <div>
               <div>
