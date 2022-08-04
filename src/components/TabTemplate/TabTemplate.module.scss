@@ -1,0 +1,46 @@
+.root {
+    background-color: #D9D9D908;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin-top: 20px;
+
+    .labelWrapper {
+        display: flex;
+        align-items: center;
+        padding-bottom: 18px;
+
+        .label {
+            font-weight: 700;
+            font-size: 15px;
+            padding-left: 11px;
+            padding-right: 39px;
+            color: white;
+    }
+
+        .subIconText {
+            font-weight: 500;
+            font-size: 10px;
+
+            &Red {
+                color: #BE4450;
+            }
+
+            &Green {
+                color: #4ED254;
+            }
+        }
+    }
+
+    .text {
+        font-weight: 500;
+        font-size: 13px;
+        text-align: left;
+        color: #5E6670;
+        padding-bottom: 20px;
+    }
+}

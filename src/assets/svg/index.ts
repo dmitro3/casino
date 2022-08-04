@@ -44,3 +44,8 @@ export { default as BinanceChain } from './BinanceChain';
 export { default as PasswordAyes } from './PasswordAyes';
 export { default as CalendarIcon } from './CalendarIcon';
 export { default as UserProfilePic } from './UserProfilePic';
+export { default as TipIcon } from './TipIcon';
+export { default as QuestionCircle } from './QuestionCircle';
+export { default as HeartIcon } from './HeartIcon';
+export { default as Checkmark } from './Checkmark';
+export { default as EmailIcon } from './EmailIcon';
