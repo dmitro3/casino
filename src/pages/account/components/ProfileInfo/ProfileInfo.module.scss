@@ -178,3 +178,21 @@
         }
     }
 }
+
+.tabMail {
+    width: 338px;
+    height: 212px;
+}
+
+.userAgreement {
+    width: 340px;
+    display: flex;
+
+    > span {
+        font-size: 13px;
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 18px;
+        margin-top: -5px;
+    }
+}

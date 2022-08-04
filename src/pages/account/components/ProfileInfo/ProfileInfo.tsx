@@ -7,58 +7,93 @@ import {
   ArrowBackIcon,
   QuestionCircle,
   HeartIcon,
+  Checkmark,
+  EmailIcon,
 } from 'src/assets/svg';
 import { mockUser } from 'src/utils/mockData';
+import TabTemplate from 'src/components/TabTemplate';
+import Checkbox from 'src/components/Checkbox';
+import Input from 'src/components/Input';
 import styles from './ProfileInfo.module.scss';
 
 const ProfileInfo = () => {
   return (
-    <section className={styles.sectionContainer}>
-      <div className={styles.profileContainer}>
-        <div className={styles.profileImageContainer}>
-          <UserProfilePic />
-          <div className={styles.userLevel}>{`${mockUser.level} lvl`}</div>
-        </div>
-        <div className={styles.userProfileContainer}>
-          <span>User Profile</span>
-          <button className={styles.tipButton}>
-            <TipIcon />
-            <span> Leave a tip</span>
-          </button>
-        </div>
-        <div className={styles.nicknameContainer}>
-          <span>18 days on the platform</span>
-          <p>{mockUser.username}</p>
-          <div className={styles.editButton}>
-            <Link passHref href="sad">
-              <a href="/#" className={styles.editButtonText}>
-                Edit
-              </a>
-            </Link>
-            <ArrowBackIcon />
+    <>
+      <section className={styles.sectionContainer}>
+        <div className={styles.profileContainer}>
+          <div className={styles.profileImageContainer}>
+            <UserProfilePic />
+            <div className={styles.userLevel}>{`${mockUser.level} lvl`}</div>
           </div>
-        </div>
-      </div>
-      <div className={styles.userStatsContainer}>
-        <div className={styles.userActivity}>
-          <p>Chat Activity</p>
-          <div className={styles.userActivityStats}>
-            <span>1/5</span>
-            <div>
-              <span>{mockUser.userRank}</span>
+          <div className={styles.userProfileContainer}>
+            <span>User Profile</span>
+            <button className={styles.tipButton}>
+              <TipIcon />
+              <span> Leave a tip</span>
+            </button>
+          </div>
+          <div className={styles.nicknameContainer}>
+            <span>18 days on the platform</span>
+            <p>{mockUser.username}</p>
+            <div className={styles.editButton}>
+              <Link passHref href="sad">
+                <a href="/#" className={styles.editButtonText}>
+                  Edit
+                </a>
+              </Link>
+              <ArrowBackIcon />
             </div>
-            <QuestionCircle />
           </div>
         </div>
-        <div className={styles.userActivity}>
-          <p>Likes received</p>
-          <div className={styles.userActivityStats}>
-            <HeartIcon />
-            <span>{mockUser.likes}</span>
+        <div className={styles.userStatsContainer}>
+          <div className={styles.userActivity}>
+            <p>Chat Activity</p>
+            <div className={styles.userActivityStats}>
+              <span>1/5</span>
+              <div>
+                <span>{mockUser.userRank}</span>
+              </div>
+              <QuestionCircle />
+            </div>
+          </div>
+          <div className={styles.userActivity}>
+            <p>Likes received</p>
+            <div className={styles.userActivityStats}>
+              <HeartIcon />
+              <span>{mockUser.likes}</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section>
+        <TabTemplate
+          customStyles={styles.tabMail}
+          label="Моя электронная почта"
+          text="Ваши данные для входа в аккаунт Binobi.com. Используйте этот адрес электронной почтыбъ, чтобы открыть платформу с любого устройства"
+          mainIcon={<EmailIcon />}
+          subIcon={<Checkmark />}
+          subIconText="Проверено"
+          positive
+          tabContent={
+            <div>
+              <div>
+                <Checkbox
+                  label={
+                    <div className={styles.userAgreement}>
+                      <span>
+                        Получать промо-материалы
+                        <br /> по электронной почте
+                      </span>
+                    </div>
+                  }
+                />
+              </div>
+              <Input />
+            </div>
+          }
+        />
+      </section>
+    </>
   );
 };
 
