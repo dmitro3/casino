@@ -1,0 +1,30 @@
+.accountNavBar {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 21px;
+
+  .navTab {
+      background-color: #FFFFFF08;
+      border-radius: 10px;
+      height: 118px;
+      width: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      overflow: hidden;
+
+      > span {
+          padding-top: 5px;
+      }
+
+      &:hover {
+          cursor: pointer;
+          opacity: 0.6;
+      }
+  }
+}
