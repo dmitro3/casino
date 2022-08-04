@@ -36,7 +36,11 @@ const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.inputContainerBlock}>
-            <p>Your E-mail</p>
+            <div className={styles.inputContainerBlockText}>
+              <p>Your E-mail</p>
+              <span>You forgot to enter your email!</span>
+            </div>
+
             <Input
               password={false}
               customStyles={styles.inputContainerBlockInput}

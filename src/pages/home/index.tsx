@@ -16,7 +16,7 @@ import styles from './index.module.scss';
 const HomeContainer: FC = () => {
   const [registrationModalVisible, setRegistrationModalVisible] =
     useState(false);
-  const [signInModalVisible, setSignInModalVisible] = useState(false);
+  const [signInModalVisible, setSignInModalVisible] = useState(true);
   const [successfulModalVisible, setSuccessfulModalVisible] = useState(false);
 
   const toggleRegistrationModal = () => {
