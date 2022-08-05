@@ -16,7 +16,7 @@ const Input: FC<Props> = ({ placeholder, icon, customStyles, password }) => {
       <div className={styles.inputIcon}>{icon}</div>
       <input
         placeholder={placeholder}
-        className={`${styles.rootInput}  ${styles.invalidRootInput} ${styles.validRootInput} ${customStyles}`}
+        className={`${styles.rootInput}  ${customStyles}`}
       />
       <div className={styles.inputIconRight}>
         {password && <PasswordAyes />}

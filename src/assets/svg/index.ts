@@ -46,3 +46,5 @@ export { default as CalendarIcon } from './CalendarIcon';
 export { default as UserProfilePic } from './UserProfilePic';
 export { default as EmailIcon } from './EmailIcon';
 export { default as KeyIcon } from './KeyIcon';
+export { default as BigTwitterIcon } from './BigTwitterIcon';
+export { default as BigDiscordIcon } from './BigDiscordIcon';
