@@ -12,7 +12,14 @@
     .labelWrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding-bottom: 18px;
+        width: 100%;
+
+        > div {
+            display: flex;
+            align-items: center;
+        }
 
         .label {
             font-weight: 700;

@@ -20,7 +20,7 @@ const Button = ({
   return (
     <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
       {leftIcon}
-      {label}
+      <span>{label}</span>
       {rightIcon}
     </button>
   );

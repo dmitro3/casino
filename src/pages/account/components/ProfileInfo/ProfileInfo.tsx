@@ -18,7 +18,7 @@ import styles from './ProfileInfo.module.scss';
 
 const ProfileInfo = () => {
   return (
-    <>
+    <section>
       <section className={styles.sectionContainer}>
         <div className={styles.profileContainer}>
           <div className={styles.profileImageContainer}>
@@ -71,7 +71,7 @@ const ProfileInfo = () => {
           label="Моя электронная почта"
           text="Ваши данные для входа в аккаунт Binobi.com. Используйте этот адрес электронной почтыбъ, чтобы открыть платформу с любого устройства"
           mainIcon={<EmailIcon />}
-          subIcon={<Checkmark />}
+          subIcon={<Checkmark isPositive />}
           subIconText="Проверено"
           isPositive
           tabContent={
@@ -99,7 +99,7 @@ const ProfileInfo = () => {
           }
         />
       </section>
-    </>
+    </section>
   );
 };
 
