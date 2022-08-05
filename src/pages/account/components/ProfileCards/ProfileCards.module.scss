@@ -1,0 +1,134 @@
+.cardsContainer {
+    margin-top: 20px;
+    margin-left: 42px;
+
+    .rankImage {
+        width: 74px;
+        height: 74px;
+        border-radius: 100%;
+        background-color: #FFFFFF08;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .level {
+            position: absolute;
+            width: 19px;
+            height: 19px;
+            border-radius: 100%;
+            background-color: #FCD535;
+            font-size: 13px;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 55px;
+            left: 50px;
+        }
+    }
+
+    .rankStats {
+        width: 218px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+
+        > p {
+            color: #4ED254;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        > span {
+            font-size: 12px;
+            font-weight: 700;
+
+            > span {
+                color: #4ED254;
+            }
+        }
+
+        > div > div {
+            background-color: #FFFFFF1A !important;
+            
+        }
+
+        .progressBarEnd {
+            font-size: 9px;
+            font-weight: 400;
+            color: #FFFFFF33;
+            z-index: 3;
+            position: absolute;
+            top: 22px;
+            left: 210px;
+        }
+    }
+    
+    .userRank {
+        width: 315px;
+        height: 66px;
+        background-color: #D9D9D905;
+        border-radius: 10px;
+        padding: 24px 54px 24px 29px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        border: 1px solid #FFFFFF33;
+    }
+
+    .button {
+        width: 120px;
+        height: 20px;
+        border-radius: 122px;
+
+        > svg {
+            width: 9px;
+            height: 10px;
+        }
+    }
+}
+
+.cardsContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 44px;
+}
+
+.tabs {
+    display: flex;
+    padding-left: 45px;
+    gap: 40px;
+
+    &Individual {
+        width: 338px;
+        height: 251px;
+    }
+}
+
+.tabsButton {
+    height: 45px;
+    width: 342px;
+    color: #1E2026;
+    margin-top: 95px;
+
+    &Negative {
+    margin-top: 45px;
+    height: 45px;
+    width: 342px;
+    color: #1E2026;
+    background-color: #D7525F;
+    
+    > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
+    > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

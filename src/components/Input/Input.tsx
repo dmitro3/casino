@@ -8,15 +8,26 @@ type Props = {
   icon: React.ReactNode;
   customStyles?: any;
   password?: boolean;
+  value?: string;
+  disabled?: boolean;
 };
 
-const Input: FC<Props> = ({ placeholder, icon, customStyles, password }) => {
+const Input: FC<Props> = ({
+  placeholder,
+  icon,
+  customStyles,
+  password,
+  value,
+  disabled,
+}) => {
   return (
     <div className={styles.inputContainer}>
       <div className={styles.inputIcon}>{icon}</div>
       <input
         placeholder={placeholder}
-        className={`${styles.rootInput}  ${customStyles}`}
+        className={`${styles.rootInput} ${customStyles}`}
+        value={value}
+        disabled={disabled}
       />
       <div className={styles.inputIconRight}>
         {password && <PasswordAyes />}

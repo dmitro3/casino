@@ -266,3 +266,10 @@ export const gameHistoryData = [
     ),
   },
 ];
+
+export const mockUser = {
+  username: `User483768574`,
+  likes: 145,
+  level: 1,
+  userRank: `Junior`,
+};
