@@ -51,3 +51,4 @@ export { default as Checkmark } from './Checkmark';
 export { default as EmailIcon } from './EmailIcon';
 export { default as KeyIcon } from './KeyIcon';
 export { default as GoogleIcon } from './GoogleIcon';
+export { default as SettingsIcon } from './SettingsIcon';
