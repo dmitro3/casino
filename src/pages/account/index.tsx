@@ -4,6 +4,7 @@ import React from 'react';
 import Navigation from 'src/pages/account/components/Navigation';
 import ProfileInfo from 'src/pages/account/components/ProfileInfo';
 import ProfileCards from 'src/pages/account/components/ProfileCards';
+import ProfileSettings from 'src/pages/account/components/ProfileSettings';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/account/index.module.scss';
 
@@ -24,6 +25,7 @@ const Account: NextPage = () => {
           <ProfileInfo />
           <ProfileCards />
         </div>
+        <ProfileSettings />
       </section>
     </MainLayout>
   );
