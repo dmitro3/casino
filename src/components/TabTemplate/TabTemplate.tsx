@@ -25,17 +25,21 @@ const TabTemplate: FC<Props> = ({
 }) => {
   return (
     <div className={`${styles.root} ${customStyles || ``}`}>
-      <div className={styles.labelWrapper}>
-        {mainIcon}
-        <span className={styles.label}>{label}</span>
-        {subIcon}
-        <span
-          className={`${styles.subIconText} ${
-            isPositive ? styles.subIconTextGreen : styles.subIconTextRed
-          }`}
-        >
-          {subIconText}
-        </span>
+      <div className={`${styles.labelWrapper}`}>
+        <div>
+          {mainIcon}
+          <span className={styles.label}>{label}</span>
+        </div>
+        <div>
+          {subIcon}
+          <span
+            className={`${styles.subIconText} ${
+              isPositive ? styles.subIconTextGreen : styles.subIconTextRed
+            }`}
+          >
+            {subIconText}
+          </span>
+        </div>
       </div>
       <div>
         <p className={styles.text}>{text}</p>

@@ -36,6 +36,12 @@
         gap: 12px;
         position: relative;
 
+        > p {
+            color: #4ED254;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
         > span {
             font-size: 12px;
             font-weight: 700;
@@ -84,3 +90,45 @@
         }
     }
 }
+
+.cardsContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 44px;
+}
+
+.tabs {
+    display: flex;
+    padding-left: 45px;
+    gap: 40px;
+
+    &Individual {
+        width: 338px;
+        height: 251px;
+    }
+}
+
+.tabsButton {
+    height: 45px;
+    width: 342px;
+    color: #1E2026;
+    margin-top: 95px;
+
+    &Negative {
+    margin-top: 45px;
+    height: 45px;
+    width: 342px;
+    color: #1E2026;
+    background-color: #D7525F;
+    
+    > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    }
+    > span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+

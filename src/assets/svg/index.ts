@@ -49,3 +49,5 @@ export { default as QuestionCircle } from './QuestionCircle';
 export { default as HeartIcon } from './HeartIcon';
 export { default as Checkmark } from './Checkmark';
 export { default as EmailIcon } from './EmailIcon';
+export { default as KeyIcon } from './KeyIcon';
+export { default as GoogleIcon } from './GoogleIcon';
