@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 type Props = {
-  isPositive: boolean;
+  isPositive?: boolean;
 };
 
 const Checkmark: FC<Props> = ({ isPositive }) => {
