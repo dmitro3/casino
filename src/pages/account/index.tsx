@@ -7,6 +7,8 @@ import ProfileCards from 'src/pages/account/components/ProfileCards';
 import ProfileSettings from 'src/pages/account/components/ProfileSettings';
 import StatsGaming from 'src/pages/account/components/Stats/StatsGaming';
 import StatsActivity from 'src/pages/account/components/Stats/StatsActivity';
+import StatsTop from 'src/pages/account/components/Stats/StatsTop';
+import StatsRewards from 'src/pages/account/components/Stats/StatsRewards';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/account/index.module.scss';
 
@@ -32,6 +34,8 @@ const Account: NextPage = () => {
             <ProfileCards />
             <StatsGaming />
             <StatsActivity />
+            <StatsTop />
+            <StatsRewards />
           </div>
         </div>
       </section>
