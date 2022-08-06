@@ -1,0 +1,16 @@
+.statsTemplate {
+    padding-left: 48px;
+    padding-top: 31px;
+
+    > span {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .statsContent {
+        width: 800px;
+        border-radius: 10px;
+        background-color: #D9D9D908;
+        margin-top: 16px;
+    }
+}
