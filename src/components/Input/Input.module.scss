@@ -15,6 +15,39 @@
       }
 }
 
+.invalidRootInput {
+  background-color: inherit;
+  border-radius: 12px;
+  border: 1px solid #E2574B;
+  width: 300px;
+  padding: 10px;
+  color: white;
+  text-indent: 40px;
+  font-size: 18px;
+
+  &::placeholder {
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 14px;
+    }
+}
+.validRootInput {
+  background-color: inherit;
+  border-radius: 12px;
+  border: 1px solid #4ED254;
+  width: 300px;
+  padding: 10px;
+  color: white;
+  text-indent: 40px;
+  font-size: 18px;
+
+  &::placeholder {
+      font-family: 'Montserrat';
+      font-weight: 400;
+      font-size: 14px;
+    }
+}
+
 .inputContainer {
     margin-left: auto;
     margin-right: 20px;

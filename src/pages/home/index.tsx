@@ -9,14 +9,25 @@ import ContentFooter from 'src/pages/home/components/ContentFooter';
 import TabSection from 'src/pages/home/components/TabSection';
 
 import RegistrationModal from 'src/pages/home/components/RegistrationModal';
+import SignInModal from 'src/pages/home/components/SignInModal';
+import SuccessfulModal from 'src/pages/home/components/SuccessfulModal';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
   const [registrationModalVisible, setRegistrationModalVisible] =
-    useState(true);
+    useState(false);
+  const [signInModalVisible, setSignInModalVisible] = useState(true);
+  const [successfulModalVisible, setSuccessfulModalVisible] = useState(false);
 
-  const toggleModal = () => {
+  const toggleRegistrationModal = () => {
     setRegistrationModalVisible(!registrationModalVisible);
+  };
+  const toggleSignInModal = () => {
+    setSignInModalVisible(!signInModalVisible);
+  };
+
+  const toggleSuccessfulModal = () => {
+    setSuccessfulModalVisible(!successfulModalVisible);
   };
 
   return (
@@ -40,7 +51,13 @@ const HomeContainer: FC = () => {
         <TabSection />
         <ContentFooter />
         {registrationModalVisible && (
-          <RegistrationModal toggleModal={toggleModal} />
+          <RegistrationModal toggleModal={toggleRegistrationModal} />
+        )}
+        {signInModalVisible && (
+          <SignInModal toggleModal={toggleRegistrationModal} />
+        )}
+        {successfulModalVisible && (
+          <SuccessfulModal toggleModal={toggleSuccessfulModal} />
         )}
       </section>
     </>
