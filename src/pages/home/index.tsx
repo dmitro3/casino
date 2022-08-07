@@ -7,7 +7,7 @@ import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
 import ContentFooter from 'src/pages/home/components/ContentFooter';
 import TabSection from 'src/pages/home/components/TabSection';
-
+import UserModal from 'src/components/UserModal';
 import RegistrationModal from 'src/pages/home/components/RegistrationModal';
 import SignInModal from 'src/pages/home/components/SignInModal';
 import SuccessfulModal from 'src/pages/home/components/SuccessfulModal';
@@ -22,6 +22,7 @@ const HomeContainer: FC = () => {
   const toggleRegistrationModal = () => {
     setRegistrationModalVisible(!registrationModalVisible);
   };
+
   const toggleSignInModal = () => {
     setSignInModalVisible(!signInModalVisible);
   };

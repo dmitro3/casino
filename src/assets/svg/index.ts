@@ -53,3 +53,6 @@ export { default as KeyIcon } from './KeyIcon';
 export { default as GoogleIcon } from './GoogleIcon';
 export { default as SettingsIcon } from './SettingsIcon';
 export { default as Gamepad } from './Gamepad';
+export { default as Controller } from './Controller';
+export { default as Stats } from './Stats';
+export { default as Rocket } from './Rocket';

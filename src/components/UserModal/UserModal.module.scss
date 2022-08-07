@@ -1,0 +1,189 @@
+.root {
+    width: 660px;
+    height: 800px;
+    overflow: scroll;
+    padding: 25px 40px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    hr {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+        margin-bottom: -7px;
+    }
+
+    .statsContainer {
+        padding-top: 30px;
+
+        > span {
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF4D;
+        }
+
+        .statItem {
+            width: 230px;
+            height: 81px;
+            background-color: #FFFFFF0D;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 7px;
+            gap: 8px;
+
+            &Container {
+                display: flex;
+                gap: 10px;
+            }
+
+            .sumContainer {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            > span {
+                color: #FFFFFF4D;
+                font-weight: 700;
+                font-size: 10px;
+            }
+
+            > div > p {
+                font-size: 12px;
+                font-weight: 700;
+                color: #FFFFFF80;
+
+                &::first-letter {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .userInfo {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > span {
+            font-weight: 700;
+            font-size: 13px;
+            color: #FFFFFF4D;
+        }
+    }
+
+    .nicknameContainer {
+        grid-area: nickname;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: -10px;
+        margin-left: 10px;
+
+
+        > span {
+            color: #FFFFFF4D;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        > p {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            padding-top: 5px;
+        }
+    }
+
+    .gamesSpan {
+        margin-bottom: 17px;
+    }
+    
+    .userActivity {
+        width: 165px;
+        height: 61px;
+        background-color: #FFFFFF0D;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 10px;
+        color: #FFFFFF4D;
+
+        &:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+
+        > div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 8px;
+        }
+
+        &Stats > div {
+            background-color: #FFFFFF24;
+            width: 53px;
+            height: 21px;
+            border-radius: 100px;
+            color: white;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .cardsContainer {
+        display: flex;
+        width: 500px;
+        gap: 18px;
+        margin-top: 17px;
+
+        > div:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    .emptyTab {
+        width: 111px;
+        height: 152px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF0D;
+        border-radius: 13px;
+        margin-left: 13px;
+        gap: 15px;
+        margin-top: 17px;
+    }
+
+    .emptyField {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 13px;
+        color: #FFFFFF80;
+    }
+}
