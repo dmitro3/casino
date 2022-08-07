@@ -1,9 +1,7 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import Link from 'next/link';
 
 import {
-  UserProfilePic,
-  TipIcon,
   ArrowBackIcon,
   QuestionCircle,
   HeartIcon,
@@ -14,23 +12,30 @@ import { mockUser } from 'src/utils/mockData';
 import TabTemplate from 'src/components/TabTemplate';
 import Checkbox from 'src/components/Checkbox';
 import Input from 'src/components/Input';
+import UserModal from 'src/components/UserModal';
+import ProfileImg from 'src/pages/account/components/ProfileInfo/components/ProfileImg';
+import TipButton from 'src/pages/account/components/ProfileInfo/components/TipButton';
 import styles from './ProfileInfo.module.scss';
 
-const ProfileInfo = () => {
+type Props = {
+  customStyles?: any;
+};
+
+const ProfileInfo: FC<Props> = ({ customStyles }) => {
+  const [isUserModalActive, setIsUserModalActive] = useState(true);
+
+  const userModalToggle = () => {
+    setIsUserModalActive(!isUserModalActive);
+  };
+
   return (
     <section>
       <section className={styles.sectionContainer}>
-        <div className={styles.profileContainer}>
-          <div className={styles.profileImageContainer}>
-            <UserProfilePic />
-            <div className={styles.userLevel}>{`${mockUser.level} lvl`}</div>
-          </div>
+        <div className={`${styles.profileContainer} ${customStyles}`}>
+          <ProfileImg />
           <div className={styles.userProfileContainer}>
             <span>User Profile</span>
-            <button className={styles.tipButton}>
-              <TipIcon />
-              <span> Leave a tip</span>
-            </button>
+            <TipButton />
           </div>
           <div className={styles.nicknameContainer}>
             <span>18 days on the platform</span>
@@ -99,6 +104,7 @@ const ProfileInfo = () => {
           }
         />
       </section>
+      {isUserModalActive && <UserModal toggleModal={userModalToggle} />}
     </section>
   );
 };

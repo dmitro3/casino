@@ -10,7 +10,7 @@ import StatsTemplate from 'src/pages/account/components/Stats/StatsTemplate';
 import { Gamepad } from 'src/assets/svg';
 import styles from './StatsTop.module.scss';
 
-const topGames = [
+export const topGames = [
   {
     image: Bingo,
     id: 1,
@@ -29,7 +29,7 @@ const topGames = [
   },
 ];
 
-const StatsTop = () => {
+export const StatsTop = () => {
   return (
     <StatsTemplate
       label="Top Played Games"

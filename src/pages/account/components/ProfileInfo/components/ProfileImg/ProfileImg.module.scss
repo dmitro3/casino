@@ -1,0 +1,29 @@
+.profileImageContainer {
+    height: 141px;
+    width: 141px;
+    background-color: #FFFFFF1A;
+    border-radius: 100%;
+    position: relative;
+    grid-area: image;
+
+    > svg {
+        position: absolute;
+        left: 40px;
+        top: 22px;
+    }
+
+    .userLevel {
+        color: #181A20;
+        background-color: #FCD535;
+        border-radius: 120px;
+        width: 47px;
+        font-size: 11px;
+        text-align: center;
+        font-weight: 700;
+        position: absolute;
+        z-index: 3;
+        border: 6px solid #181A20;
+        left: 40px;
+        top: 125px;
+    }
+}
