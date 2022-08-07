@@ -273,3 +273,81 @@ export const mockUser = {
   level: 1,
   userRank: `Junior`,
 };
+
+export const referralDataColumns = [
+  `Дата`,
+  `Deposit`,
+  `In_percentages`,
+  `Received`,
+];
+
+export const referralData = [
+  {
+    id: 0,
+    Дата: `26.07.22, 22:28:06`,
+    Deposit: `Вывод на карту`,
+    In_percentages: (
+      <>
+        <TetherToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+    Received: (
+      <>
+        <TetherToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+  },
+  {
+    id: 1,
+    Дата: `26.07.22, 22:28:06`,
+    Deposit: `Вывод на карту`,
+    In_percentages: (
+      <>
+        <EthToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+    Received: (
+      <>
+        <EthToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+  },
+  {
+    id: 2,
+    Дата: `26.07.22, 22:28:06`,
+    Deposit: `Вывод на карту`,
+    In_percentages: (
+      <>
+        <TetherToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+    Received: (
+      <>
+        <TetherToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+  },
+  {
+    id: 3,
+    Дата: `26.07.22, 22:28:06`,
+    Deposit: `Вывод на карту`,
+    In_percentages: (
+      <>
+        <EthToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+    Received: (
+      <>
+        <EthToken width={21} height={21} />
+        0.00000000
+      </>
+    ),
+  },
+];
