@@ -2,8 +2,6 @@ import React, { FC, useState } from 'react';
 import Link from 'next/link';
 
 import {
-  UserProfilePic,
-  TipIcon,
   ArrowBackIcon,
   QuestionCircle,
   HeartIcon,

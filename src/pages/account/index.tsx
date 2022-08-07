@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React from 'react';
 import Navigation from 'src/pages/account/components/Navigation';
 import ProfileInfo from 'src/pages/account/components/ProfileInfo';
 import ProfileCards from 'src/pages/account/components/ProfileCards';
@@ -10,16 +10,10 @@ import StatsActivity from 'src/pages/account/components/Stats/StatsActivity';
 import StatsTop from 'src/pages/account/components/Stats/StatsTop';
 import StatsRewards from 'src/pages/account/components/Stats/StatsRewards';
 import MainLayout from 'src/components/MainLayout';
-import UserModal from 'src/components/UserModal';
 import styles from 'src/pages/account/index.module.scss';
 
 const Account: NextPage = () => {
   const router = useRouter();
-  /*   const [isUserModalVisible, setIsUserModalVisible] = useState(true);
-
-  const toggleUserModal = () => {
-    setIsUserModalVisible(!isUserModalVisible);
-  }; */
 
   return (
     <MainLayout hasMaxWidth>

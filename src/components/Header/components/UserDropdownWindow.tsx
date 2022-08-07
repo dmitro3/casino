@@ -45,10 +45,8 @@ const UserDropdownWindow = () => {
         <div className={styles.modalMenuWrapper}>
           <ul>
             <li>
-              <button>
-                <Profile />
-                My Profile
-              </button>
+              <Profile />
+              My Profile
             </li>
             <li>
               <Account />
