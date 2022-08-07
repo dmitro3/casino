@@ -1,0 +1,105 @@
+.vaultWindow {
+    height: 340px;
+    width: 458px;
+    background-color: #1F2127;
+    border-radius: 15px ;
+    padding: 66px 81px;
+    padding-top: 50px;
+
+    .vaultContainer {
+        padding-top: 18px;
+
+        .bigButton {
+            width: 100%;
+            height: 47px;
+            margin-top: 25px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .input {
+            margin-top: 27px;
+
+            > div > div > svg {
+                margin-top: 9px;
+            }
+
+            > span {
+                font-weight: 700;
+                font-size: 12px;
+            }
+
+            &Field {
+                margin-top: 10px;
+                background-color: #181A20;
+                width: 100%;
+            }
+        }
+
+        > span {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .button {
+            width: 157px;
+            height: 31px;
+            border-radius: 83px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &Container {
+                display: flex;
+                gap: 13px;
+                padding-top: 20px;
+                padding-bottom: 24px;
+            }
+        }
+
+        .dropdown {
+            display: flex;
+            align-items: baseline;
+            flex-direction: column;
+
+            > span {
+                font-weight: 700;
+                font-size: 10px;
+                color: #FFFFFF4D;
+            }
+
+            > div > button > div > div > svg {
+                height: 21px;
+            }
+        }
+
+        .dropdownContainer {
+            display: flex;
+            gap: 30px;
+            
+            button {
+                margin-left: -20px;
+            }
+        }
+    }
+         .walletDropdown {
+          border-radius: 5px;
+          width: 220px;
+          height: 33px;
+          margin-right: -10px;
+          background-color: #FFFFFF0D;
+          margin-top: 10px;
+      
+          > svg {
+            padding-right: 11px;
+          }
+      
+        }
+      
+      .windowDropdown {
+        left: 20px;
+      }
+}

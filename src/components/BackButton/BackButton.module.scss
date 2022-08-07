@@ -1,0 +1,12 @@
+.backButton {
+    color: #FFFFFF4D;
+    font-size: 12px;
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
