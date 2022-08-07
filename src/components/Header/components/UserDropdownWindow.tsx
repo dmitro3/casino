@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import ProgressBar from '@ramonak/react-progress-bar';
 
@@ -15,7 +15,11 @@ import {
 import Link from 'next/link';
 import styles from './UserDropdownWindow.module.scss';
 
-const UserDropdownWindow = () => {
+type Props = {
+  onLogout?: () => void;
+};
+
+const UserDropdownWindow: FC<Props> = ({ onLogout }) => {
   return (
     <div className={styles.dropdown}>
       <div className={styles.dropdownIcon}>
@@ -72,7 +76,13 @@ const UserDropdownWindow = () => {
             </li>
           </ul>
         </div>
-        <div className={styles.exit}>
+        <div
+          className={styles.exit}
+          role="button"
+          tabIndex={0}
+          onKeyDown={onLogout}
+          onClick={onLogout}
+        >
           <Exit />
           Exit
         </div>

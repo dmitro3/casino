@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import {
   PersonIcon,
@@ -66,13 +66,19 @@ const links = [
   },
 ];
 
-const Header: FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+type Props = {
+  toggleRegistrationModal: () => void;
+  toggleSignInModal: () => void;
+  isAuthenticated?: boolean;
+  toggleIsAuthenticated?: () => void;
+};
 
-  const onSwitchLoggedIn = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
-
+const Header: FC<Props> = ({
+  isAuthenticated,
+  toggleRegistrationModal,
+  toggleSignInModal,
+  toggleIsAuthenticated,
+}) => {
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
@@ -100,7 +106,7 @@ const Header: FC = () => {
         </ul>
       </div>
       <div className={styles.controlContainer}>
-        {isLoggedIn ? (
+        {isAuthenticated ? (
           <>
             <Dropdown
               buttonComponent={<WalletDropdownButton />}
@@ -111,12 +117,13 @@ const Header: FC = () => {
             <Button
               label="Wallet"
               leftIcon={<Wallet />}
-              onClick={onSwitchLoggedIn}
               customStyles={styles.wallet}
             />
             <Dropdown
               buttonComponent={<UserDropdownButton />}
-              dropdownComponent={<UserDropdownWindow />}
+              dropdownComponent={
+                <UserDropdownWindow onLogout={toggleIsAuthenticated} />
+              }
               customUserDropdownStyles={styles.userWindowDropdown}
             />
           </>
@@ -125,9 +132,13 @@ const Header: FC = () => {
             <Button
               label="Log in"
               customStyles={styles.loginButton}
-              onClick={onSwitchLoggedIn}
+              onClick={toggleSignInModal}
             />
-            <Button label="Register" rightIcon={<PersonIcon color="#000" />} />
+            <Button
+              label="Register"
+              rightIcon={<PersonIcon color="#000" />}
+              onClick={toggleRegistrationModal}
+            />
           </>
         )}
 

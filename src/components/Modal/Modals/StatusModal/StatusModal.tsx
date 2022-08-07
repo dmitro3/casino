@@ -1,19 +1,18 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 import Check from 'src/assets/images/Check.png';
 import Uncheck from 'src/assets/images/Uncheck.png';
 
 import Modal from 'src/components/Modal';
 import Button from 'src/components/Button';
-import styles from './SuccessfulModal.module.scss';
+import styles from './StatusModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
+  isSuccessful?: boolean;
 };
 
-const SuccessfulModal: FC<Props> = ({ toggleModal }: Props) => {
-  const [isSuccessful, setIsSuccessful] = useState(false);
-
+const StatusModal: FC<Props> = ({ toggleModal, isSuccessful }: Props) => {
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
@@ -33,7 +32,7 @@ const SuccessfulModal: FC<Props> = ({ toggleModal }: Props) => {
           </div>
         )}
         <div className={styles.Text}>
-          {isSuccessful ? `An error occurred!` : `Registration was successful!`}
+          {isSuccessful ? `Registration was successful!` : `An error occurred!`}
         </div>
         <p>
           {isSuccessful
@@ -50,4 +49,4 @@ const SuccessfulModal: FC<Props> = ({ toggleModal }: Props) => {
   );
 };
 
-export default SuccessfulModal;
+export default StatusModal;
