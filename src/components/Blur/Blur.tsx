@@ -10,6 +10,8 @@ type Props = {
   left?: boolean;
   right?: boolean;
   filterRadius?: number;
+  width?: string;
+  height?: string;
 };
 
 const Blur: FC<Props> = ({
@@ -20,6 +22,8 @@ const Blur: FC<Props> = ({
   left,
   right,
   filterRadius,
+  width = `100%`,
+  height = `100%`,
 }) => {
   const [blurOptions, setBlurOptions] = useState(null as null | any);
 
@@ -60,11 +64,13 @@ const Blur: FC<Props> = ({
         ...colorOption,
         ...position,
         filter: `blur(${filterRadius}px)`,
+        width,
+        height,
       });
     } else {
-      setBlurOptions({ ...colorOption, ...position });
+      setBlurOptions({ ...colorOption, ...position, width, height });
     }
-  }, []);
+  }, [color, top, bottom, right, left, width, height, filterRadius]);
 
   return (
     <div className={styles.BlurWrapper}>
