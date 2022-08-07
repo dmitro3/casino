@@ -35,6 +35,7 @@ const Referral: NextPage = () => {
 
         <Navigation />
         <div className={styles.referralLinkContainer}>
+          <div className={styles.blur} />
           <div className={styles.logoContainer}>
             <div className={styles.logoContainerImage}>
               <Logo />
@@ -86,18 +87,22 @@ const Referral: NextPage = () => {
                 <span>Поделиться</span>
                 <div className={styles.linksContainer}>
                   <div className={styles.linksContainerImage}>
-                    <Link passHref href="sad">
-                      <a href="/#">
-                        <BigTelegramIcon />
-                      </a>
-                    </Link>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTelegramIcon />
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                   <div className={styles.linksContainerImage}>
-                    <Link passHref href="sad">
-                      <a href="/#">
-                        <BigTwitterIcon />
-                      </a>
-                    </Link>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTwitterIcon width={42} height={42} />
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                   <div className={styles.linksContainerImage}>
                     <Link passHref href="sad">
