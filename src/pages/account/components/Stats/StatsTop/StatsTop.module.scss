@@ -1,0 +1,36 @@
+.root {
+    height: 195px;
+    width: 840px;
+    padding-top: 22px;
+    padding-left: 29px;
+    padding-bottom: 24px;
+    padding-right: 10px;
+
+    .wrapper {
+        display: flex;
+    }
+
+    .cardsContainer {
+        display: flex;
+        width: 625px;
+        gap: 19px;
+
+        > div:hover {
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+
+    .emptyTab {
+        width: 133px;
+        height: 191px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF0D;
+        border-radius: 13px;
+        margin-left: 20px;
+        gap: 15px;
+    }
+}

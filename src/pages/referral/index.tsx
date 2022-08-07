@@ -47,7 +47,9 @@ const Referral: NextPage = () => {
           <div>
             <div className={styles.referralLinkContainerCase}>
               <div className={styles.referralLinkContainerCaseColumns}>
-                <p>Рефералы</p>
+                <div className={styles.referralLinkContainerCaseColumnsName}>
+                  Рефералы
+                </div>
                 <div className={styles.referralLinkContainerCaseColumnsValue}>
                   <span>0</span>
                 </div>

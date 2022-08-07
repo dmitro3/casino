@@ -57,15 +57,6 @@
   }
 }
 
-.blur {
-  top:10px;
-
-  z-index: -1;
-  width: flex 1;
-  background-color: #FCD535;
-  height: 100px;
-  filter: blur(100px);
-}
 
 
 
@@ -97,6 +88,12 @@ background: linear-gradient(#292a2d, #fcca030c);
 
     &Columns {
 
+      &Name {
+        margin-bottom: 30px;
+        color:#696a6c;
+        font-weight: 700;
+        font-size: 13px;
+      }
       >p {
         margin-bottom: 10px;
       }
@@ -110,6 +107,10 @@ background: linear-gradient(#292a2d, #fcca030c);
 
         >span {
           margin-left: 10px;
+          color: #35373c;
+          &::first-letter {
+            color: #fff;
+          }
         }
       }
 
@@ -120,6 +121,10 @@ background: linear-gradient(#292a2d, #fcca030c);
       }
     }
   }
+}
+
+.infoContainerColumnButton {
+  font-size: 12px;
 }
 
 .infoContainer {
@@ -133,11 +138,10 @@ background: linear-gradient(#292a2d, #fcca030c);
       margin-right: 25px;
 
       &Button {
+        justify-content: center;
 
-
-        >span {
-          font-size: 12px;
-        }
+          align-items: center;
+          font-size: 12px !important;
       }
 
       &Input {
@@ -158,14 +162,6 @@ background: linear-gradient(#292a2d, #fcca030c);
         top: 7px;
         right: 30px;
       }
-      &Input {
-        text-indent: 7px;
-        color:#FCD535;
-        width: 360px;
-        border: 1px solid;
-        border-color: #2f3036;
-      }
-
       &Input {
         text-indent: 7px;
         color:#FCD535;
@@ -197,12 +193,7 @@ background: linear-gradient(#292a2d, #fcca030c);
       display: flex;
       margin-bottom: 20px;
       border-radius: 10px;
-      >span {
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 18px;
-        margin-right: 20px;
-      }
+
     }
   }
 }

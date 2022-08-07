@@ -7,16 +7,12 @@ import FeatureSection from 'src/pages/home/components/FeatureSection';
 import Slider from 'src/pages/home/components/Slider';
 import ContentFooter from 'src/pages/home/components/ContentFooter';
 import TabSection from 'src/pages/home/components/TabSection';
-
-import RegistrationModal from 'src/pages/home/components/RegistrationModal';
-import SignInModal from 'src/pages/home/components/SignInModal';
-import SuccessfulModal from 'src/pages/home/components/SuccessfulModal';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
   const [registrationModalVisible, setRegistrationModalVisible] =
     useState(false);
-  const [signInModalVisible, setSignInModalVisible] = useState(false);
+  const [signInModalVisible, setSignInModalVisible] = useState(true);
   const [successfulModalVisible, setSuccessfulModalVisible] = useState(false);
 
   const toggleRegistrationModal = () => {
@@ -50,15 +46,6 @@ const HomeContainer: FC = () => {
         <FeatureSection />
         <TabSection />
         <ContentFooter />
-        {registrationModalVisible && (
-          <RegistrationModal toggleModal={toggleRegistrationModal} />
-        )}
-        {signInModalVisible && (
-          <SignInModal toggleModal={toggleRegistrationModal} />
-        )}
-        {successfulModalVisible && (
-          <SuccessfulModal toggleModal={toggleSuccessfulModal} />
-        )}
       </section>
     </>
   );
