@@ -1,0 +1,44 @@
+.about {
+
+  &Title {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 39px;
+  }
+
+  &Items {
+    display: flex;
+    flex-direction: column;
+    max-height: 360px;
+    flex-wrap: wrap;
+  }
+
+  &Item {
+    padding: 23px 0 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: calc(50% - 40px);
+    height: fit-content;
+    position: relative;
+    cursor: pointer;
+    padding-right: 10px;
+
+    p {
+      margin-top: 20px;
+      font-size: 15px;
+
+      &:first-child {
+        margin: 0;
+        font-weight: bold;
+      }
+    }
+
+    &Icon {
+      position: absolute;
+      top: 25px;
+      right: 5px;
+    }
+  }
+}

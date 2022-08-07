@@ -1,0 +1,50 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
+
+  &Info {
+    &Title {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 42px;
+      max-width: 330px;
+    }
+
+    &Block {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      div {
+        margin-left: 10px;
+
+        p {
+          margin: 0;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 15px;
+
+
+          &:first-child {
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &Image {
+    flex: 1;
+
+    &Container {
+      width: fit-content;
+      margin: auto;
+    }
+  }
+}
