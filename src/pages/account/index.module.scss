@@ -35,4 +35,10 @@
 
   .userContainer {
     display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  
+  .root {
+    display: flex;
   }

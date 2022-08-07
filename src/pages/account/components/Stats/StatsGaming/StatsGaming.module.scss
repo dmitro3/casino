@@ -1,0 +1,78 @@
+.statSection {
+
+    &Three {
+      padding-left: 150px;
+    }
+
+    &Two {
+      padding-left: 30px;
+
+      > div > span {
+        padding-bottom: 10px;
+      }
+
+      > div:nth-child(2) > span {
+        padding-left: 5px;
+      }
+    }
+
+    &Container {
+      display: flex;
+    }
+
+    &Label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      > span {
+        color: #FFFFFF4D;
+        font-size: 13px;
+        font-weight: 700;
+        margin-left: 3px;
+      }
+    }
+
+    &Balance {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding-top: 9px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+
+  .statsContent {
+    padding-top: 31px;
+    padding-left: 41px;
+    padding-bottom: 19px;
+  }
+
+  .button {
+    width: 120px;
+    height: 20px;
+    border-radius: 122px;
+    background-color: #FFFFFF1A;
+    color: white;
+    font-weight: 500;
+    font-size: 11px;
+
+    > svg {
+        width: 9px;
+        height: 10px;
+    }
+}
+
+
+.line {
+  border-left: 1px solid #FFFFFF33;
+  height: 61px;
+  margin-left: 122px;
+
+    &Two {
+      border-left: 1px solid #FFFFFF33;
+    height: 61px;
+    margin-left: 105px;
+    }
+}
