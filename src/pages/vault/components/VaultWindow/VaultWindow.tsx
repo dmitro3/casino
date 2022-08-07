@@ -1,12 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import BackButton from 'src/components/BackButton';
 import Button from 'src/components/Button';
-import Dropdown from 'src/components/Dropdown';
-import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
-import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
-import Input from 'src/components/Input';
-import { DepositArrowIcon, TetherToken } from 'src/assets/svg';
+import VaultDeposit from 'src/pages/vault/components/VaultDeposit';
+import VaultWithdraw from 'src/pages/vault/components/VaultWithdraw';
+import { DepositArrowIcon, DepositPassiveIcon } from 'src/assets/svg';
 import styles from './VaultWindow.module.scss';
 
 type Props = {
@@ -14,53 +12,44 @@ type Props = {
 };
 
 const VaultWindow: FC<Props> = ({ customStyles }) => {
+  const [isWithdrawOpen, setIsWithDrawOpen] = useState(false);
+  const [isDepositOpen, setIsDepositOpen] = useState(true);
+
+  const toggleVaultWithdraw = () => {
+    setIsWithDrawOpen(true);
+    setIsDepositOpen(false);
+  };
+
+  const toggleVaultDeposit = () => {
+    setIsDepositOpen(true);
+    setIsWithDrawOpen(false);
+  };
+
   return (
     <section className={`${styles.vaultWindow} ${customStyles || ``}`}>
       <BackButton />
       <div className={styles.vaultContainer}>
-        <span>Vault</span>
         <div className={styles.buttonContainer}>
           <Button
-            customStyles={styles.button}
-            leftIcon={<DepositArrowIcon />}
+            customStyles={isDepositOpen ? styles.button : styles.buttonPassive}
+            leftIcon={
+              isDepositOpen ? <DepositArrowIcon /> : <DepositPassiveIcon />
+            }
             label="Deposit"
+            onClick={toggleVaultDeposit}
           />
           <Button
-            customStyles={styles.button}
-            leftIcon={<DepositArrowIcon />}
+            customStyles={isWithdrawOpen ? styles.button : styles.buttonPassive}
+            leftIcon={
+              isWithdrawOpen ? <DepositArrowIcon /> : <DepositPassiveIcon />
+            }
             label="Withdraw"
+            onClick={toggleVaultWithdraw}
           />
         </div>
-        <div className={styles.dropdownContainer}>
-          <div className={styles.dropdown}>
-            <span>Main balance</span>
-            <Dropdown
-              buttonComponent={<WalletDropdownButton />}
-              dropdownComponent={<WalletDropdownWindow />}
-              customButtonStyles={styles.walletDropdown}
-              customWalletDropdownStyles={styles.windowDropdown}
-            />
-          </div>
-          <div className={styles.dropdown}>
-            <span>Vault balance</span>
-            <Dropdown
-              buttonComponent={<WalletDropdownButton />}
-              dropdownComponent={<WalletDropdownWindow />}
-              customButtonStyles={styles.walletDropdown}
-              customWalletDropdownStyles={styles.windowDropdown}
-            />
-          </div>
-        </div>
-        <div className={styles.input}>
-          <span>Сумма</span>
-          <Input
-            customStyles={styles.inputField}
-            icon={<TetherToken width={21} height={21} />}
-            placeholder="Сумма"
-          />
-        </div>
-        <Button label="Deposit to Vault" customStyles={styles.bigButton} />
       </div>
+      {(isDepositOpen && <VaultDeposit />) ||
+        (isWithdrawOpen && <VaultWithdraw />)}
     </section>
   );
 };

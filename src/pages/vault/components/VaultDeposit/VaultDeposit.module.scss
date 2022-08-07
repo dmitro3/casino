@@ -1,0 +1,97 @@
+.root {
+
+    > span {
+        font-weight: 700;
+        font-size: 22px;
+    }
+}
+
+.dropdown {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+
+    > span {
+        font-weight: 700;
+        font-size: 10px;
+        color: #FFFFFF4D;
+    }
+
+    > div > button > div > div > svg {
+        height: 21px;
+    }
+}
+
+.dropdownContainer {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+    
+    button {
+        margin-left: -20px;
+    }
+}
+
+ .walletDropdown {
+  border-radius: 5px;
+  width: 188px;
+  height: 33px;
+  margin-right: -10px;
+  background-color: #FFFFFF0D;
+  margin-top: 10px;
+
+  > svg {
+    padding-right: 11px;
+  }
+
+}
+
+.windowDropdown {
+    right: -10px;
+  }
+
+.button {
+    width: 157px;
+    height: 31px;
+    border-radius: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &Container {
+        display: flex;
+        gap: 13px;
+        padding-top: 20px;
+        padding-bottom: 24px;
+    }
+}
+
+.input {
+    margin-top: 27px;
+
+    > div > div > svg {
+        margin-top: 9px;
+    }
+
+    > span {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    &Field {
+        margin-top: 10px;
+        background-color: #181A20;
+        width: 100%;
+    }
+}
+
+.bigButton {
+    width: 100%;
+    height: 47px;
+    margin-top: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}

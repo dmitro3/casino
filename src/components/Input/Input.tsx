@@ -5,11 +5,12 @@ import styles from './Input.module.scss';
 
 type Props = {
   placeholder: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   customStyles?: any;
   password?: boolean;
   value?: string;
   disabled?: boolean;
+  additionalButton?: React.ReactNode;
 };
 
 const Input: FC<Props> = ({
@@ -19,6 +20,7 @@ const Input: FC<Props> = ({
   password,
   value,
   disabled,
+  additionalButton,
 }) => {
   return (
     <div className={styles.inputContainer}>
@@ -29,9 +31,13 @@ const Input: FC<Props> = ({
         value={value}
         disabled={disabled}
       />
+
       <div className={styles.inputIconRight}>
         {password && <PasswordAyes />}
       </div>
+      {additionalButton && (
+        <div className={styles.additionalButton}>{additionalButton}</div>
+      )}
     </div>
   );
 };

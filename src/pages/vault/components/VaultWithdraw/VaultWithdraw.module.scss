@@ -1,0 +1,136 @@
+.root {
+
+  .walletDropdown {
+    border-radius: 5px;
+    width: 180px;
+    height: 33px;
+    margin-right: -10px;
+    background-color: #FFFFFF0D;
+    margin-top: 10px;
+
+    > div > svg {
+      height: 21px;
+    }
+  
+    > svg {
+      padding-right: 11px;
+    }
+  
+  }
+  
+  .windowDropdown {
+    right: -10px;
+  }
+
+  .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -10px;
+    gap: 20px;
+}
+
+.sumContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 7px;
+
+  > div > div:last-child > svg {
+    padding-right: 10px;
+    margin-bottom: 3px;
+  }
+}
+
+.input {
+  text-indent: 0px;
+  background-color: #181A20;
+  border-color: #FFFFFF33;
+  width: 100%;
+  margin-top: 8px;
+
+  &Amount {
+    text-indent: 0px;
+  }
+
+  &Container {
+    font-weight: 600;
+    font-size: 12px;
+    font-family: inherit;
+    width: 165px;
+    background-color: #181A20;
+    border-color: #FFFFFF33;
+
+    &Wide {
+      padding-top: 18px;
+
+      > span {
+        font-weight: 500;
+        font-size: 11px;
+        color: #5E6670;
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+.button {
+  width: calc(100% + 5px);
+  height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &Additional {
+    width: 35px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF1A;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF80;
+    font-family: inherit;
+    margin-right: 17px;
+    margin-bottom: 6px;
+  
+    &:hover {
+      cursor: pointer;
+      opacity: .7;
+    }
+  }
+}
+
+.attentionTab {
+  width: calc(100% - 20px);
+  background-color: #FFFFFF0D;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 12px;
+
+  > span {
+    padding-left: 9px;
+  }
+}
+
+  > span {
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .smallText {
+    padding-top: 12px;
+
+    > span {
+      font-size: 11px;
+    }
+  }
+}
+
