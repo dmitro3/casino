@@ -4,6 +4,7 @@
     padding-top: 34px;
     max-width: 1280px;
     margin-left: auto;
+    height: 777px;
     margin-right: auto;
     display: flex;
     align-items: center;
@@ -17,5 +18,6 @@
 
     .vaultWindow {
       position: absolute;
+      height: fit-content;
     }
 }

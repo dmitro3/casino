@@ -47,9 +47,9 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
             onClick={toggleVaultWithdraw}
           />
         </div>
+        {isDepositOpen && <VaultDeposit />}
+        {isWithdrawOpen && <VaultWithdraw />}
       </div>
-      {isDepositOpen && <VaultDeposit />}
-      {isWithdrawOpen && <VaultWithdraw />}
     </section>
   );
 };
