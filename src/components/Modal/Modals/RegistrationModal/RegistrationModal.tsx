@@ -1,51 +1,59 @@
 import React, { FC } from 'react';
-import Modal from 'src/components/Modal';
+import Modal from 'src/components/Modal/Modal';
+import RegistrationSafe from 'src/assets/images/RegistrationSafe.png';
 import Image from 'next/image';
-import SignInImage from 'src/assets/images/SignInImage.png';
 import Input from 'src/components/Input';
-
-import Message from 'src/assets/svg/MessageIcon';
-import Link from 'next/link';
 import {
-  KeyIcon,
-  EmailIcon,
   ArrowBackIcon,
   BigGoogleIcon,
   BigTelegramIcon,
   BinanceChain,
   MetaMaskFox,
+  PersonIcon,
   TronLogo,
 } from 'src/assets/svg';
+import Checkbox from 'src/components/Checkbox';
+import Link from 'next/link';
 import Button from 'src/components/Button';
-
-import styles from './SignInModal.module.scss';
+import styles from './RegistrationModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
+  onSuccess?: () => void;
 };
 
-const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
+const RegistrationModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
         <div className={styles.imageContainer}>
           <div className={styles.blurWrapper}>
             <div className={styles.blur} />
-            <Image src={SignInImage} width={204} height={118} layout="fixed" />
+            <Image
+              src={RegistrationSafe}
+              width={204}
+              height={118}
+              layout="fixed"
+            />
           </div>
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.inputContainerBlock}>
-            <div className={styles.inputContainerBlockText}>
-              <p>Your E-mail</p>
-              <span>You forgot to enter your email!</span>
-            </div>
-
+            <p>User name</p>
             <Input
               password={false}
               customStyles={styles.inputContainerBlockInput}
-              icon={<EmailIcon />}
-              placeholder="Enter Your e-mail"
+              icon={<PersonIcon color="#8C8D90" />}
+              placeholder="Enter user name"
+            />
+          </div>
+          <div className={styles.inputContainerBlock}>
+            <p>Your E-mail</p>
+            <Input
+              password={false}
+              customStyles={styles.inputContainerBlockInput}
+              icon={<PersonIcon color="#8C8D90" />}
+              placeholder="Enter user name"
             />
           </div>
           <div className={styles.inputContainerBlock}>
@@ -53,19 +61,29 @@ const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
             <Input
               password
               customStyles={styles.inputContainerBlockInput}
-              icon={<KeyIcon />}
+              icon={<PersonIcon color="#8C8D90" />}
               placeholder="Enter your password"
             />
           </div>
         </div>
-        <div>
-          <Link passHref href="sad">
-            <a href="/#" className={styles.bottomText}>
-              <span> Forgot your password?</span>
-            </a>
-          </Link>
-        </div>
-        <Button label="Login" customStyles={styles.loginButton} />
+        <Checkbox
+          label={
+            <p>
+              I confirm that I am 18 years old and I have read the{` `}
+              <Link passHref href="sad">
+                <a href="/#" className={styles.checkboxText}>
+                  Terms of service
+                </a>
+              </Link>
+            </p>
+          }
+        />
+        <Checkbox label={<p>Receive Email Promos</p>} />
+        <Button
+          label="Create an account"
+          customStyles={styles.createAccountButton}
+          onClick={onSuccess}
+        />
         <span className={styles.containerSignUpText}>Or Sign up with</span>
         <div className={styles.authorizationContainer}>
           <div>
@@ -122,4 +140,4 @@ const SignInModal: FC<Props> = ({ toggleModal }: Props) => {
   );
 };
 
-export default SignInModal;
+export default RegistrationModal;
