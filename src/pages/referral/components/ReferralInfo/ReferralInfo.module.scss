@@ -47,14 +47,15 @@
     &Columns {
 
       &Name {
-        margin-bottom: 15px;
         color:#696a6c;
         font-weight: 700;
         font-size: 13px;
       }
+
       >p {
         margin-bottom: 10px;
       }
+
       &Value {
         margin-top: 14px;
         font-weight: 500;
@@ -63,10 +64,24 @@
         align-items: center;
         display: flex;
 
+        &:first-child {
+          height: 100px;
+        }
+
         >span {
           font-weight: 700;
           margin-left: 10px;
           color: #35373c;
+
+          &:first-child {
+            margin: 0;
+            height: 34px;
+
+          }
+          >span {
+            color:#fff;
+            font-weight: 500;
+          }
 
           &::first-letter {
             color: #fff;

@@ -10,7 +10,7 @@ const Card = () => {
     <div className={styles.bonusContainer}>
       <div className={styles.bonusContainerCard}>
         <div className={styles.bonusContainerCardImage}>
-          <Blur color="#FCD535" filterRadius={100}>
+          <Blur width="30%" color="#FCD535" filterRadius={100}>
             <Image src={Hero} width={316} height={303} />
           </Blur>
         </div>
@@ -28,7 +28,7 @@ const Card = () => {
       </div>
       <div className={styles.bonusContainerCard}>
         <div className={styles.bonusContainerCardImage}>
-          <Blur color="#745c41" filterRadius={100}>
+          <Blur width="70%" color="#745c41" filterRadius={100}>
             <Image src={Hero} width={316} height={303} />
           </Blur>
         </div>
@@ -46,7 +46,7 @@ const Card = () => {
       </div>
       <div className={styles.bonusContainerCard}>
         <div className={styles.bonusContainerCardImage}>
-          <Blur color="#6f443a" filterRadius={100}>
+          <Blur width="50%" color="#6f443a" filterRadius={100}>
             <Image src={Hero} width={316} height={303} />
           </Blur>
         </div>

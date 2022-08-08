@@ -277,7 +277,7 @@ export const mockUser = {
 export const referralDataColumns = [
   `Дата`,
   `Deposit`,
-  `In_percentages`,
+  `In percentages`,
   `Received`,
 ];
 
@@ -286,7 +286,7 @@ export const referralData = [
     id: 0,
     Дата: `26.07.22, 22:28:06`,
     Deposit: `Вывод на карту`,
-    In_percentages: (
+    'In percentages': (
       <>
         <TetherToken width={21} height={21} />
         0.00000000
@@ -303,7 +303,7 @@ export const referralData = [
     id: 1,
     Дата: `26.07.22, 22:28:06`,
     Deposit: `Вывод на карту`,
-    In_percentages: (
+    'In percentages': (
       <>
         <EthToken width={21} height={21} />
         0.00000000
@@ -320,7 +320,7 @@ export const referralData = [
     id: 2,
     Дата: `26.07.22, 22:28:06`,
     Deposit: `Вывод на карту`,
-    In_percentages: (
+    'In percentages': (
       <>
         <TetherToken width={21} height={21} />
         0.00000000
@@ -337,7 +337,7 @@ export const referralData = [
     id: 3,
     Дата: `26.07.22, 22:28:06`,
     Deposit: `Вывод на карту`,
-    In_percentages: (
+    'In percentages': (
       <>
         <EthToken width={21} height={21} />
         0.00000000

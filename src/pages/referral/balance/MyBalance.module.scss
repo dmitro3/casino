@@ -12,7 +12,6 @@
       padding: 0 20px;
     }
 
-
   .backButton {
     color: #FFFFFF4D;
     font-size: 12px;
@@ -40,7 +39,6 @@
   display: flex;
   justify-content: space-between;
 }
-
 
 .rankImage {
   width: 74px;
@@ -93,7 +91,6 @@
 
   > div > div {
       background-color: #FFFFFF1A !important;
-
   }
 
   .progressBarEnd {
@@ -166,7 +163,44 @@
   }
 }
 
-.cardFirst {
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 110px;
+  background-color: #24262b;
+  border-radius: 15px;
+
+  >p {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #65676a;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &Value {
+    display: flex;
+    align-items: center;
+
+    >span {
+      margin-left: 10px;
+      color: rgba(255, 255, 255, 0.5019607843);
+      font-weight: 700;
+
+      &::first-letter {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.cardCount {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,21 +214,7 @@
     font-weight: 700;
     font-size: 13px;
     color: #65676a;
-
-  }
-
-  &Value {
-    display: flex;
-    align-items: center;
-
-    >span {
-      margin-left: 10px;
-      color: rgba(255, 255, 255, 0.5019607843);
-      font-weight: 700;
-      &::first-letter {
-        color: #fff;
-      }
-    }
+    margin-bottom: 17px;
   }
 }
 

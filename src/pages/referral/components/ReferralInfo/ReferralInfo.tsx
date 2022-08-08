@@ -39,14 +39,18 @@ const ReferralInfo = () => {
             <p>Общий Вейджер</p>
             <div className={styles.referralLinkContainerCaseColumnsValue}>
               <BtcToken />
-              <span>0.000000000 BTC</span>
+              <span>
+                0.000000000 <span>BTC</span>
+              </span>
             </div>
           </div>
           <div className={styles.referralLinkContainerCaseColumns}>
             <p>Общий Вейджер</p>
             <div className={styles.referralLinkContainerCaseColumnsValue}>
               <BtcToken />
-              <span>0.000000000 BTC</span>
+              <span>
+                0.000000000 <span>BTC</span>
+              </span>
             </div>
           </div>
         </div>

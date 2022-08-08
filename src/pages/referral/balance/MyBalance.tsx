@@ -58,22 +58,22 @@ const MyBalance: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className={styles.cardFirst}>
+          <div className={styles.card}>
             <p>Calculated</p>
-            <div className={styles.cardFirstValue}>
+            <div className={styles.cardValue}>
               <TetherToken />
               <span>0.000000000</span>
             </div>
           </div>
-          <div className={styles.cardFirst}>
+          <div className={styles.cardCount}>
             <p>Received</p>
-            <div className={styles.cardFirstValue}>
+            <div className={styles.cardValue}>
               <span>0</span>
             </div>
           </div>
-          <div className={styles.cardFirst}>
+          <div className={styles.card}>
             <p>In percentages</p>
-            <div className={styles.cardFirstValue}>
+            <div className={styles.cardValue}>
               <TetherToken />
               <span>0.000000000</span>
             </div>
