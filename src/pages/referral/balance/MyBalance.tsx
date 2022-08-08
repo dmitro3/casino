@@ -5,7 +5,6 @@ import Navigation from 'src/pages/referral/components/Navigation';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/referral/balance/MyBalance.module.scss';
 import ProgressBar from '@ramonak/react-progress-bar';
-// import ProfileCards from 'src/pages/account/components/ProfileCards';
 import Image from 'next/image';
 import Lightning from 'src/assets/images/Lightning.png';
 import Button from 'src/components/Button';
@@ -67,14 +66,13 @@ const MyBalance: NextPage = () => {
             </div>
           </div>
           <div className={styles.cardFirst}>
-            <p>Calculated</p>
+            <p>Received</p>
             <div className={styles.cardFirstValue}>
-              <TetherToken />
-              <span>0.000000000</span>
+              <span>0</span>
             </div>
           </div>
           <div className={styles.cardFirst}>
-            <p>Calculated</p>
+            <p>In percentages</p>
             <div className={styles.cardFirstValue}>
               <TetherToken />
               <span>0.000000000</span>
