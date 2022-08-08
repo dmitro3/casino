@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import Dropdown from 'src/components/Dropdown';
 import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
@@ -8,7 +8,11 @@ import Button from 'src/components/Button';
 import { TetherToken } from 'src/assets/svg';
 import styles from './VaultDeposit.module.scss';
 
-const VaultDeposit = ({ onClick }) => {
+type Props = {
+  onClick?: () => void;
+};
+
+const VaultDeposit: FC<Props> = ({ onClick }) => {
   return (
     <section className={styles.root}>
       <span>Vault</span>

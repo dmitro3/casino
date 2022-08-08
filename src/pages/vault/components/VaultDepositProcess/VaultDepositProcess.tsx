@@ -21,7 +21,13 @@ const VaultDepositProcess = () => {
         <DepositDropdown />
       </div>
       {isCurtainOn && (
-        <div className={styles.frontdrop} onClick={toggleFrontdrop}>
+        <div
+          className={styles.frontdrop}
+          onClick={toggleFrontdrop}
+          role="button"
+          tabIndex={-1}
+          onKeyDown={toggleFrontdrop}
+        >
           To continue, select network
         </div>
       )}
