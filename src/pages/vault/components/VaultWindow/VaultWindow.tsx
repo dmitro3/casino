@@ -15,15 +15,24 @@ type Props = {
 const VaultWindow: FC<Props> = ({ customStyles }) => {
   const [isWithdrawOpen, setIsWithDrawOpen] = useState(false);
   const [isDepositOpen, setIsDepositOpen] = useState(true);
+  const [isDepositProcessOpen, setIsDepositProcessOpen] = useState(false);
 
   const toggleVaultWithdraw = () => {
     setIsWithDrawOpen(true);
     setIsDepositOpen(false);
+    setIsDepositProcessOpen(false);
   };
 
   const toggleVaultDeposit = () => {
     setIsDepositOpen(true);
     setIsWithDrawOpen(false);
+    setIsDepositProcessOpen(false);
+  };
+
+  const toggleDepositProcess = () => {
+    setIsDepositProcessOpen(true);
+    setIsWithDrawOpen(false);
+    setIsDepositOpen(false);
   };
 
   return (
@@ -32,9 +41,17 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
       <div className={styles.vaultContainer}>
         <div className={styles.buttonContainer}>
           <Button
-            customStyles={isDepositOpen ? styles.button : styles.buttonPassive}
+            customStyles={
+              isDepositOpen || isDepositProcessOpen
+                ? styles.button
+                : styles.buttonPassive
+            }
             leftIcon={
-              isDepositOpen ? <DepositArrowIcon /> : <DepositPassiveIcon />
+              isDepositOpen || isDepositProcessOpen ? (
+                <DepositArrowIcon />
+              ) : (
+                <DepositPassiveIcon />
+              )
             }
             label="Deposit"
             onClick={toggleVaultDeposit}
@@ -48,9 +65,9 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
             onClick={toggleVaultWithdraw}
           />
         </div>
-        {/* {isDepositOpen && <VaultDeposit />}
-        {isWithdrawOpen && <VaultWithdraw />} */}
-        <VaultDepositProcess />
+        {isDepositOpen && <VaultDeposit onClick={toggleDepositProcess} />}
+        {isWithdrawOpen && <VaultWithdraw />}
+        {isDepositProcessOpen && <VaultDepositProcess />}
       </div>
     </section>
   );

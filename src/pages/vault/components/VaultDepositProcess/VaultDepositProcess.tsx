@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import { DepositDropdown } from 'src/pages/vault/components/VaultWithdraw/VaultWithdraw';
@@ -8,12 +8,23 @@ import QrCode from 'src/assets/images/QrCode.png';
 import styles from './VaultDepositProcess.module.scss';
 
 const VaultDepositProcess = () => {
+  const [isCurtainOn, setIsCurtainOn] = useState(true);
+
+  const toggleFrontdrop = () => {
+    setIsCurtainOn(false);
+  };
+
   return (
     <section className={styles.root}>
       <div className={styles.header}>
         <span>Deposit</span>
         <DepositDropdown />
       </div>
+      {isCurtainOn && (
+        <div className={styles.frontdrop} onClick={toggleFrontdrop}>
+          To continue, select network
+        </div>
+      )}
       <div className={styles.content}>
         <span>Ваш USDT адрес депозита</span>
         <p>

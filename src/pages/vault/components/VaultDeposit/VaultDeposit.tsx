@@ -8,7 +8,7 @@ import Button from 'src/components/Button';
 import { TetherToken } from 'src/assets/svg';
 import styles from './VaultDeposit.module.scss';
 
-const VaultDeposit = () => {
+const VaultDeposit = ({ onClick }) => {
   return (
     <section className={styles.root}>
       <span>Vault</span>
@@ -40,7 +40,11 @@ const VaultDeposit = () => {
           placeholder="Сумма"
         />
       </div>
-      <Button label="Deposit to Vault" customStyles={styles.bigButton} />
+      <Button
+        onClick={onClick}
+        label="Deposit to Vault"
+        customStyles={styles.bigButton}
+      />
     </section>
   );
 };
