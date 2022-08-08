@@ -204,5 +204,14 @@
   font-weight: 700;
 }
 
+.table {
+  overflow: hidden;
+  >div {
+    >div {
+      padding-left: 100px;
+    }
+  }
+}
+
 
 

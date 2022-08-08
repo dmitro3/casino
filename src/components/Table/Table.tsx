@@ -10,15 +10,16 @@ type Data = {
 type Props = {
   columns: string[];
   data: Data[];
+  customStyles?: any;
 };
 
-const Table: FC<Props> = ({ columns, data }) => {
+const Table: FC<Props> = ({ columns, data, customStyles }) => {
   if (!columns || !data) {
     return null;
   }
 
   return (
-    <div className={styles.table}>
+    <div className={`${styles.table} ${customStyles}`}>
       <div className={styles.tableHeader}>
         {columns.map((column) => (
           <div key={column} className={styles.tableHeaderLabel}>

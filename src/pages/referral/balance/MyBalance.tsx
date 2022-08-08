@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import Navigation from 'src/pages/referral/components/Navigation';
 import MainLayout from 'src/components/MainLayout';
-import styles from 'src/pages/referral/components/balance/MyBalance.module.scss';
+import styles from 'src/pages/referral/balance/MyBalance.module.scss';
 import ProgressBar from '@ramonak/react-progress-bar';
-import ProfileCards from 'src/pages/account/components/ProfileCards';
+// import ProfileCards from 'src/pages/account/components/ProfileCards';
 import Image from 'next/image';
 import Lightning from 'src/assets/images/Lightning.png';
 import Button from 'src/components/Button';
@@ -82,7 +82,7 @@ const MyBalance: NextPage = () => {
           </div>
         </div>
         <p className={styles.tableLabel}>Balance history</p>
-        <Table columns={columns} data={data} />
+        <Table customStyles={styles.table} columns={columns} data={data} />
       </section>
     </MainLayout>
   );
