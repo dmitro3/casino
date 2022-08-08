@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react';
 import BackButton from 'src/components/BackButton';
 import Button from 'src/components/Button';
 import VaultDeposit from 'src/pages/vault/components/VaultDeposit';
+import VaultDepositProcess from 'src/pages/vault/components/VaultDepositProcess';
 import VaultWithdraw from 'src/pages/vault/components/VaultWithdraw';
 import { DepositArrowIcon, DepositPassiveIcon } from 'src/assets/svg';
 import styles from './VaultWindow.module.scss';
@@ -47,8 +48,9 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
             onClick={toggleVaultWithdraw}
           />
         </div>
-        {isDepositOpen && <VaultDeposit />}
-        {isWithdrawOpen && <VaultWithdraw />}
+        {/* {isDepositOpen && <VaultDeposit />}
+        {isWithdrawOpen && <VaultWithdraw />} */}
+        <VaultDepositProcess />
       </div>
     </section>
   );

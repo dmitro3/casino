@@ -9,10 +9,9 @@ import Button from 'src/components/Button';
 import { TetherToken, CloseIcon, AttentionIcon } from 'src/assets/svg';
 import styles from './VaultWithdraw.module.scss';
 
-const VaultWithdraw = () => {
+export const DepositDropdown = () => {
   return (
-    <section className={styles.root}>
-      <span>Withdraw</span>
+    <div className={styles.root}>
       <div className={styles.dropdown}>
         <Dropdown
           buttonComponent={<WalletDropdownButton />}
@@ -27,6 +26,15 @@ const VaultWithdraw = () => {
           customWalletDropdownStyles={styles.windowDropdown}
         />
       </div>
+    </div>
+  );
+};
+
+const VaultWithdraw = () => {
+  return (
+    <section className={styles.root}>
+      <span>Withdraw</span>
+      <DepositDropdown />
       <div className={styles.inputContainerWide}>
         <span>Адрес вашего кошелька</span>
         <Input placeholder="Enter address" customStyles={styles.input} />

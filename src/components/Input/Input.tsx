@@ -4,7 +4,7 @@ import { PasswordAyes } from 'src/assets/svg';
 import styles from './Input.module.scss';
 
 type Props = {
-  placeholder: string;
+  placeholder?: string;
   icon?: React.ReactNode;
   customStyles?: any;
   password?: boolean;
