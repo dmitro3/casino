@@ -1,0 +1,215 @@
+.logoContainer {
+
+  margin: 40px 50px 0 30px;
+
+  &Label {
+    margin-top: 3px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    color: white;
+    font-weight: 700;
+  }
+  &Image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+.referralLinkContainer {
+  background: linear-gradient(#15161c, #fcca030c);
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #5d5e62;
+  margin-top: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex:1;
+  height: 290px;
+  background-color: #191b20;
+
+  &Case {
+    align-self: flex-start;
+    padding: 27px 147px 40px 0px;
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+    height: 10%;
+    background-color:#292a2d;
+    justify-content: space-around;
+    margin-top: 32px;
+    align-items: center;
+    margin-right: 36px;
+
+    &Columns {
+
+      &Name {
+        color:#696a6c;
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      >p {
+        margin-bottom: 10px;
+      }
+
+      &Value {
+        margin-top: 14px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        align-items: center;
+        display: flex;
+
+        &:first-child {
+          height: 100px;
+        }
+
+        >span {
+          font-weight: 700;
+          margin-left: 10px;
+          color: #35373c;
+
+          &:first-child {
+            margin: 0;
+            height: 34px;
+
+          }
+          >span {
+            color:#fff;
+            font-weight: 500;
+          }
+
+          &::first-letter {
+            color: #fff;
+
+          }
+          &::nth-child(5) {
+            color: red;
+          }
+        }
+
+      }
+
+      >p {
+        color:#696a6c;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.infoContainerColumnButton {
+  font-size: 12px;
+}
+
+.infoContainer {
+  flex:1 ;
+  align-items: baseline;
+  margin-top: 27px;
+  display: flex;
+  justify-content: space-between;
+
+  &Column {
+      margin-right: 25px;
+
+      &BigButton {
+        justify-content: center;
+        align-items: center;
+        width: 188px;
+        height: 38px;
+        color: #15161C;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+
+      &Button {
+          color:#15161C;
+          justify-content: center;
+          align-items: center;
+          font-size: 8px;
+
+          >p {
+            color: #fff;
+            font-weight: 700 ;
+            font-size: 15px ;
+          }
+      }
+
+      &Input {
+        color:#FCD535;
+        background-color: #181a20;
+        text-indent: 10px;
+        width: 357px;
+      }
+    &Case {
+      position: relative;
+
+      .button {
+        background-color: #292a2d;
+        color: #97979a;
+      }
+
+      &Button {
+        position: absolute;
+        top: 7px;
+        right: 30px;
+      }
+      &Input {
+        text-indent: 7px;
+        color:#FCD535;
+        width: 360px;
+        border: 1px solid;
+        border-color: #2f3036;
+      }
+    }
+
+
+    &Button {
+
+      height: 37px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      margin-right: 90px;
+    }
+    >span {
+      font-weight: 700;
+      font-size: 15px;
+
+    }
+
+    &Button {
+
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      margin-bottom: 20px;
+      border-radius: 10px;
+
+    }
+  }
+}
+
+.linksContainer {
+  display: flex;
+  margin-top: 20px;
+
+  &Image{
+    margin-right: 20px;
+
+    &Case {
+      overflow: hidden;
+      height: 45px;
+      width: 45px;
+      border-radius: 10px;
+    }
+  }
+}
+

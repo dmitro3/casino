@@ -50,6 +50,8 @@ export { default as HeartIcon } from './HeartIcon';
 export { default as Checkmark } from './Checkmark';
 export { default as EmailIcon } from './EmailIcon';
 export { default as KeyIcon } from './KeyIcon';
+export { default as BigTwitterIcon } from './BigTwitterIcon';
+export { default as BigDiscordIcon } from './BigDiscordIcon';
 export { default as GoogleIcon } from './GoogleIcon';
 export { default as SettingsIcon } from './SettingsIcon';
 export { default as Gamepad } from './Gamepad';

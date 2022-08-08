@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import { currencyData } from 'src/utils/mockData';
 import CurrencyCard from 'src/pages/home/components/CurrencyCard';

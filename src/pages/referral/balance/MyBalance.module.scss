@@ -1,0 +1,237 @@
+.container {
+  background-color: #15161C;
+  border-radius: 20px;
+  padding-top: 34px;
+  max-width: 1280px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+    @media (max-width: 1300px) {
+      max-width: 1240px;
+      padding: 0 20px;
+    }
+
+  .backButton {
+    color: #FFFFFF4D;
+    font-size: 12px;
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+
+  .mainLabel {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    padding-top: 23px;
+  }
+}
+
+.mainContainerCard {
+  margin-top: 42px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rankImage {
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  background-color: #FFFFFF08;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .level {
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      border-radius: 100%;
+      background-color: #FCD535;
+      font-size: 13px;
+      font-weight: 600;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 55px;
+      left: 50px;
+  }
+}
+
+.rankStats {
+  width: 218px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+
+  > p {
+      color: #4ED254;
+      font-size: 25px;
+      font-weight: 700;
+  }
+
+  > span {
+      font-size: 12px;
+      font-weight: 700;
+
+      > span {
+          color: #4ED254;
+      }
+  }
+
+  > div > div {
+      background-color: #FFFFFF1A !important;
+  }
+
+  .progressBarEnd {
+      font-size: 9px;
+      font-weight: 400;
+      color: #FFFFFF33;
+      position: absolute;
+      top: 22px;
+      left: 210px;
+  }
+}
+
+.rankStats {
+  width: 218px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+
+  > p {
+      color: #4ED254;
+      font-size: 25px;
+      font-weight: 700;
+  }
+
+  > span {
+      font-size: 12px;
+      font-weight: 700;
+
+      > span {
+          color: #4ED254;
+      }
+  }
+
+  > div > div {
+      background-color: #FFFFFF1A !important;
+
+  }
+
+  .progressBarEnd {
+      font-size: 9px;
+      font-weight: 400;
+      color: #FFFFFF33;
+      position: absolute;
+      top: 22px;
+      left: 210px;
+  }
+}
+
+.userRank {
+  width: 315px;
+  height: 66px;
+  background-color: #D9D9D905;
+  border-radius: 10px;
+  padding: 24px 54px 24px 29px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid #FFFFFF33;
+}
+
+.button {
+  width: 120px;
+  height: 20px;
+  border-radius: 122px;
+
+  > svg {
+      width: 9px;
+      height: 10px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 110px;
+  background-color: #24262b;
+  border-radius: 15px;
+
+  >p {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #65676a;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &Value {
+    display: flex;
+    align-items: center;
+
+    >span {
+      margin-left: 10px;
+      color: rgba(255, 255, 255, 0.5019607843);
+      font-weight: 700;
+
+      &::first-letter {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.cardCount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 110px;
+  background-color: #24262b;
+  border-radius: 15px;
+
+  >p {
+    font-weight: 700;
+    font-size: 13px;
+    color: #65676a;
+    margin-bottom: 17px;
+  }
+}
+
+.tableLabel {
+  margin-top: 36px;
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-weight: 700;
+}
+
+.table {
+  overflow: hidden;
+  >div {
+    >div {
+      padding-left: 100px;
+    }
+  }
+}
+
+
+
