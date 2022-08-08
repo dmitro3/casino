@@ -8,16 +8,13 @@ import {
   campaingsData as data,
   campaingsDataColumns as columns,
 } from 'src/utils/mockData';
+import BackButton from 'src/components/BackButton';
 
 const Referral = () => {
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
-        <button
-          type="button"
-          className={styles.backButton}
-          onClick={() => router.back()}
-        >{`< Back`}</button>
+        <BackButton />
         <p className={styles.mainLabel}>Referral Program</p>
         <Navigation />
         <div className={styles.tableContainer}>

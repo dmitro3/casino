@@ -4,21 +4,6 @@ import Navigation from 'src/pages/referral/components/Navigation';
 import MainLayout from 'src/components/MainLayout';
 import BackButton from 'src/components/BackButton';
 import styles from 'src/pages/referral/index.module.scss';
-import {
-  BigTelegramIcon,
-  BigTwitterIcon,
-  BtcToken,
-  BigDiscordIcon,
-  Logo,
-} from 'src/assets/svg';
-import Image from 'next/image';
-import Speaker from 'src/assets/images/Speaker.png';
-import Button from 'src/components/Button';
-import Input from 'src/components/Input';
-import Link from 'next/link';
-import Hero from 'src/assets/images/Hero.png';
-import BitcoinUp from 'src/assets/images/BitcoinUp.png';
-import Blur from 'src/components/Blur';
 import ReferralInfo from 'src/pages/referral/components/ReferralInfo';
 import Card from 'src/pages/referral/components/Card';
 import ReferralBottomInfo from 'src/pages/referral/components/ReferralBottomInfo';
