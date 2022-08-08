@@ -56,3 +56,7 @@ export { default as Gamepad } from './Gamepad';
 export { default as Controller } from './Controller';
 export { default as Stats } from './Stats';
 export { default as Rocket } from './Rocket';
+export { default as DepositArrowIcon } from './DepositArrowIcon';
+export { default as CloseIcon } from './CloseIcon';
+export { default as AttentionIcon } from './AttentionIcon';
+export { default as DepositPassiveIcon } from './DepositPassiveIcon';

@@ -1,0 +1,23 @@
+.container {
+    background-color: #15161C;
+    border-radius: 20px;
+    padding-top: 34px;
+    max-width: 1280px;
+    margin-left: auto;
+    height: 777px;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: 1300px) {
+      max-width: 1240px;
+      padding: 0 20px;
+    }
+
+    .vaultWindow {
+      position: absolute;
+      height: fit-content;
+    }
+}
