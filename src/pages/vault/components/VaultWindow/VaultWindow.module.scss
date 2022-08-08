@@ -1,0 +1,51 @@
+.vaultWindow {
+    height: auto;
+    width: 460px;
+    background-color: #1F2127;
+    border-radius: 15px ;
+    padding: 66px 81px;
+    padding-top: 50px;
+    top: 10%;
+    bottom: 10%;
+
+    .vaultContainer {
+
+        > span {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .button {
+            width: 157px;
+            height: 31px;
+            border-radius: 83px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+
+            > svg {
+                transform: rotate(180deg);
+            }
+
+            &Passive {
+                width: 157px;
+                height: 31px;
+                border-radius: 83px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #969699;
+                background-color: #2C2D32;
+                gap: 7px;
+            }
+
+            &Container {
+                display: flex;
+                gap: 13px;
+                padding-top: 20px;
+                padding-bottom: 24px;
+            }
+        }
+    }
+}
