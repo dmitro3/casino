@@ -48,8 +48,8 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
           />
         </div>
       </div>
-      {(isDepositOpen && <VaultDeposit />) ||
-        (isWithdrawOpen && <VaultWithdraw />)}
+      {isDepositOpen && <VaultDeposit />}
+      {isWithdrawOpen && <VaultWithdraw />}
     </section>
   );
 };
