@@ -136,6 +136,7 @@ const Header: FC<Props> = ({
             />
             <Button
               label="Register"
+              customStyles={styles.registerButton}
               rightIcon={<PersonIcon color="#000" />}
               onClick={toggleRegistrationModal}
             />
@@ -145,6 +146,11 @@ const Header: FC<Props> = ({
         <div className={styles.selectLanguage}>
           <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
+        </div>
+        <div className={styles.burgerMenuIcon}>
+          <div />
+          <div />
+          <div />
         </div>
         <MessageIcon />
       </div>
