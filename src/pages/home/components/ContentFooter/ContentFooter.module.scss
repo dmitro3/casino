@@ -1,11 +1,17 @@
 .root {
   width: 100%;
 
+  @media (max-width: 768px) {
+    width: auto;
+  }
+
   .labelContainerMobile {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 60px;
+
+
 
     .header {
       margin-top: 30px;
@@ -19,14 +25,18 @@
       gap: 20px;
       width: calc(100% - 60px);
       margin-left: 15px;
-      
+
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+
       .currencyRow {
         display: flex;
         justify-content: space-between;
     }
     }
 
-   
+
   }
 
   >span {
@@ -100,7 +110,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
-    margin-right: 40px;
   }
 }
 
