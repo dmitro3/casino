@@ -64,7 +64,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
         />
       )}
       {statusModalVisible && (
-        <StatusModal toggleModal={toggleStatusModal} isSuccessful />
+        <StatusModal toggleModal={toggleStatusModal} isSuccessful={false} />
       )}
       <div
         className={styles.root}

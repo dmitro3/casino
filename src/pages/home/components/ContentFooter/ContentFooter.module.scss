@@ -1,6 +1,10 @@
 .root {
   width: 100%;
 
+  @media(max-width: 768px) {
+    width: auto;
+  }
+
   .labelContainerMobile {
     display: flex;
     flex-direction: column;
@@ -25,8 +29,6 @@
         justify-content: space-between;
     }
     }
-
-   
   }
 
   >span {

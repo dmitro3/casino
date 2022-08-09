@@ -3,6 +3,11 @@
   padding: 35px;
 
   @media(max-width: 768px) {
+    width: 100%;
+    font-size: 10px;
+  }
+
+  @media(max-width: 768px) {
     padding: 0;
   }
 }
@@ -33,6 +38,10 @@
      font-size: 12px;
      font-family: 'Montserrat';
      margin-top: 20px;
+
+     @media(max-width: 768px) {
+      font-size: 10px;
+    }
      }
   }
 }
@@ -67,12 +76,26 @@
   align-items: center;
   margin-top: 8px;
   margin-bottom: 20px;
+
+  @media(max-width: 768px) {
+  }
+}
+
+@media(max-width: 768px) {
+
+  .authorizationContainer > div > a > svg {
+    height: 35px;
+  }
 }
 
 .containerSignUpText {
   font-family: 'Montserrat';
   color:#8a8a8d;
   font-size: 12px;
+
+  @media(max-width: 768px) {
+    font-size: 10px;
+  }
 }
 
 .containerBtn {
@@ -87,12 +110,26 @@
   font-size: 12px;
   background-color: #1c1e24;
 
+  @media(max-width: 768px) {
+    width: 40px;
+    padding: 2px 5px;
+    height: 18px;
+
+    > a {
+    font-size: 9px !important;
+    }
+  }
+
   &Text{
     margin-right: 5px;
     font-weight: 600;
     color:#5E6670;
     font-size: 12px;
     text-decoration: none;
+
+    @media(max-width: 768px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -102,6 +139,10 @@
   color:#8a8a8d;
   font-weight: 400;
   font-size: 12px;
+
+  @media(max-width: 768px) {
+    font-size: 10px;
+  }
 
     >span {
       color:#FCD535;
