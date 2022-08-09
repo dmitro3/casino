@@ -45,6 +45,12 @@
   margin-top: 129px;
   gap: 40px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 67px;
+    gap: 87px;
+  }
+
   &Card {
     background-color: #1f2127;
     background-image: url('../../../../assets/images/rankCardBG.png');
