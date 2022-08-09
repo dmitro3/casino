@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   TabHome,
@@ -77,6 +78,8 @@ const tabImages = [
 const TabSection: FC = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   const onChoose = (id: number) => {
     const newSelectedTab = tabs.find((tab) => tab.id === id);
     setSelectedTab(newSelectedTab!);
@@ -84,26 +87,43 @@ const TabSection: FC = () => {
 
   return (
     <section className={styles.tabSection}>
-      <nav className={styles.tabSectionNavbar}>
-        {tabs.map((tab) => (
+      {isMobile ? (
+        <>
+          <div className={styles.inputContainer}>
+            <Input
+              placeholder="Search For Games"
+              icon={<SearchIcon />}
+              customStyles={styles.input}
+            />
+          </div>
           <Button
-            label={tab.label}
-            leftIcon={
-              <tab.icon
-                color={selectedTab.id === tab.id ? `#1D2027` : `#5E6670`}
-              />
-            }
-            key={tab.id}
-            customStyles={`${
-              selectedTab.id === tab.id
-                ? styles.tabSectionButton
-                : styles.tabSectionButtonClicked
-            }`}
-            onClick={() => onChoose(tab.id)}
+            label="Filter: In-house"
+            leftIcon={<TabHome color="#1D2027" />}
+            customStyles={styles.button}
           />
-        ))}
-        <Input placeholder="Search For Games" icon={<SearchIcon />} />
-      </nav>
+        </>
+      ) : (
+        <nav className={styles.tabSectionNavbar}>
+          {tabs.map((tab) => (
+            <Button
+              label={tab.label}
+              leftIcon={
+                <tab.icon
+                  color={selectedTab.id === tab.id ? `#1D2027` : `#5E6670`}
+                />
+              }
+              key={tab.id}
+              customStyles={`${
+                selectedTab.id === tab.id
+                  ? styles.tabSectionButton
+                  : styles.tabSectionButtonClicked
+              }`}
+              onClick={() => onChoose(tab.id)}
+            />
+          ))}
+          <Input placeholder="Search For Games" icon={<SearchIcon />} />
+        </nav>
+      )}
       <div className={styles.tabSectionIcon}>
         <selectedTab.icon color="#FFF" />
         <span>{selectedTab.label}</span>
