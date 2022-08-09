@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import ProgressBar from '@ramonak/react-progress-bar';
+import Link from 'next/link';
 
 import Lightning from 'src/assets/images/Lightning.png';
 import Bucket from 'src/assets/images/Bucket.png';
@@ -33,11 +34,15 @@ const ProfileCards = () => {
               completed={0}
             />
             <span className={styles.progressBarEnd}>🎁%</span>
-            <Button
-              label="See all ranks"
-              customStyles={styles.button}
-              rightIcon={<ArrowBackIcon />}
-            />
+            <Link href="/rank" passHref>
+              <a href="/rank">
+                <Button
+                  label="See all ranks"
+                  customStyles={styles.button}
+                  rightIcon={<ArrowBackIcon />}
+                />
+              </a>
+            </Link>
           </div>
         </div>
         <div className={styles.userRank}>

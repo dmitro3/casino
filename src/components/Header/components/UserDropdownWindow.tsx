@@ -17,9 +17,10 @@ import styles from './UserDropdownWindow.module.scss';
 
 type Props = {
   onLogout?: () => void;
+  toggleUserModal: () => void;
 };
 
-const UserDropdownWindow: FC<Props> = ({ onLogout }) => {
+const UserDropdownWindow: FC<Props> = ({ onLogout, toggleUserModal }) => {
   return (
     <div className={styles.dropdown}>
       <div className={styles.dropdownIcon}>
@@ -50,7 +51,7 @@ const UserDropdownWindow: FC<Props> = ({ onLogout }) => {
           <ul>
             <li>
               <Profile />
-              My Profile
+              <button onClick={toggleUserModal}>My Profile</button>
             </li>
             <li>
               <Account />
@@ -60,19 +61,27 @@ const UserDropdownWindow: FC<Props> = ({ onLogout }) => {
             </li>
             <li>
               <Transaction />
-              Transaction
+              <Link href="/account/transactions" passHref>
+                <a href="/account/transactions">Transaction</a>
+              </Link>
             </li>
             <li>
               <History />
-              Game History
+              <Link href="/account/gameHistory" passHref>
+                <a href="/account/gameHistory">Game History</a>
+              </Link>
             </li>
             <li>
               <Sessions />
-              Sessions
+              <Link href="/account/sessions" passHref>
+                <a href="/account/sessions">Sessions</a>
+              </Link>
             </li>
             <li>
               <Vault />
-              Vault
+              <Link href="/vault" passHref>
+                <a href="/vault">Vault</a>
+              </Link>
             </li>
           </ul>
         </div>
