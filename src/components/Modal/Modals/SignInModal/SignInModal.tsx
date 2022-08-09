@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Modal from 'src/components/Modal';
 import Image from 'next/image';
 import SignInImage from 'src/assets/images/SignInImage.png';
@@ -25,6 +26,8 @@ type Props = {
 };
 
 const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
@@ -107,14 +110,16 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
               </a>
             </Link>
           </div>
-          <div className={styles.containerBtn}>
-            <Link passHref href="sad">
-              <a href="/#" className={styles.containerBtnText}>
-                More
-              </a>
-            </Link>
-            <ArrowBackIcon />
-          </div>
+          {!isMobile && (
+            <div className={styles.containerBtn}>
+              <Link passHref href="sad">
+                <a href="/#" className={styles.containerBtnText}>
+                  More
+                </a>
+              </Link>
+              <ArrowBackIcon />
+            </div>
+          )}
         </div>
         <Link passHref href="sad">
           <a href="/#" className={styles.bottomText}>
