@@ -4,6 +4,13 @@
     justify-content: space-between;
     margin-top: 21px;
 
+      @media (max-width:768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
     .navTab {
         background-color: #FFFFFF08;
         border-radius: 10px;
@@ -17,6 +24,12 @@
         font-size: 13px;
         font-weight: 700;
         overflow: hidden;
+
+        @media (max-width:768px) {
+          width: 165px;
+          height: 120px;
+        }
+
 
         > span {
             padding-top: 5px;

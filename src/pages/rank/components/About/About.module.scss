@@ -13,6 +13,11 @@
     flex-direction: column;
     max-height: 360px;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-wrap: nowrap;
+      max-height: 100%;
+    }
   }
 
   &Item {
@@ -24,6 +29,10 @@
     position: relative;
     cursor: pointer;
     padding-right: 10px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     p {
       margin-top: 20px;

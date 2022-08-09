@@ -6,6 +6,7 @@ import {
   RegistrationModal,
   SignInModal,
   StatusModal,
+  UserModal,
 } from 'src/components/Modal/Modals';
 import styles from './MainLayout.module.scss';
 
@@ -20,6 +21,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const [signInModalVisible, setSignInModalVisible] = useState(false);
   const [statusModalVisible, setStatusModalVisible] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userModalVisible, setUserModalVisible] = useState(false);
 
   const toggleRegistrationModal = () => {
     setRegistrationModalVisible(!registrationModalVisible);
@@ -37,6 +39,10 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
     setIsAuthenticated(!isAuthenticated);
   };
 
+  const toggleUserModal = () => {
+    setUserModalVisible(!userModalVisible);
+  };
+
   return (
     <>
       <Header
@@ -44,6 +50,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
         toggleSignInModal={toggleSignInModal}
         isAuthenticated={isAuthenticated}
         toggleIsAuthenticated={toggleIsAuthenticated}
+        toggleUserModal={toggleUserModal}
       />
       {registrationModalVisible && (
         <RegistrationModal
@@ -66,6 +73,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
       {statusModalVisible && (
         <StatusModal toggleModal={toggleStatusModal} isSuccessful={false} />
       )}
+      {userModalVisible && <UserModal toggleModal={toggleUserModal} />}
       <div
         className={styles.root}
         style={hasMaxWidth ? { maxWidth: `100%` } : {}}

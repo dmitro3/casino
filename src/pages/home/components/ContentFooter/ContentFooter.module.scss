@@ -1,7 +1,7 @@
 .root {
   width: 100%;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: auto;
   }
 
@@ -23,7 +23,11 @@
       gap: 20px;
       width: calc(100% - 60px);
       margin-left: 15px;
-      
+
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+
       .currencyRow {
         display: flex;
         justify-content: space-between;
@@ -102,7 +106,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
-    margin-right: 40px;
   }
 }
 
