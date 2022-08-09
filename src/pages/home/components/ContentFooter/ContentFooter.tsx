@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 
 import Bucket from 'src/assets/images/Bucket.png';
 import User from 'src/assets/images/User.png';
@@ -62,6 +63,8 @@ export const currencyCardData = [
 ];
 
 const ContentFooter = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <div className={styles.root}>
       <div className={styles.containerCards}>
@@ -76,47 +79,116 @@ const ContentFooter = () => {
           />
         ))}
       </div>
-      <div className={styles.labelContainer}>
-        <div className={styles.labelContainerImage}>
-          <Image src={Twelve} width={30} height={28} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={CryptoNetworks} width={72} height={34} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={FifthyThree} width={36} height={28} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={CryptoCurrencies} width={81} height={34} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={BitcoinTwo} width={70} height={13} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={Ethereum} width={71} height={25} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={BinanceChain} width={135} height={22} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={Tron} width={64} height={21} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={Tether} width={78} height={25} layout="fixed" />
-        </div>
-        <div className={styles.labelContainerImage}>
-          <Image src={Biswap} width={95} height={29} layout="fixed" />
-        </div>
+      {isMobile ? (
+        <div className={styles.labelContainerMobile}>
+          <div className={styles.header}>
+            <div className={styles.labelContainerImage}>
+              <Image src={Twelve} width={30} height={28} layout="fixed" />
+            </div>
+            <div className={styles.labelContainerImage}>
+              <Image
+                src={CryptoNetworks}
+                width={72}
+                height={34}
+                layout="fixed"
+              />
+            </div>
+            <div className={styles.labelContainerImage}>
+              <Image src={FifthyThree} width={36} height={28} layout="fixed" />
+            </div>
+            <div className={styles.labelContainerImage}>
+              <Image
+                src={CryptoCurrencies}
+                width={81}
+                height={34}
+                layout="fixed"
+              />
+            </div>
+          </div>
+          <div className={styles.currencies}>
+            <div className={styles.currencyRow}>
+              <div className={styles.labelContainerImage}>
+                <Image src={BitcoinTwo} width={70} height={13} layout="fixed" />
+              </div>
+              <div className={styles.labelContainerImage}>
+                <Image src={Ethereum} width={71} height={25} layout="fixed" />
+              </div>
+              <div className={styles.labelContainerImage}>
+                <Image
+                  src={BinanceChain}
+                  width={135}
+                  height={22}
+                  layout="fixed"
+                />
+              </div>
+            </div>
+            <div className={styles.currencyRow}>
+              <div className={styles.labelContainerImage}>
+                <Image src={Tron} width={64} height={21} layout="fixed" />
+              </div>
+              <div className={styles.labelContainerImage}>
+                <Image src={Tether} width={78} height={25} layout="fixed" />
+              </div>
 
-        <div className={styles.containerBtn}>
-          <Link passHref href="sad">
-            <a href="/#" className={styles.containerBtnText}>
-              Show all
-            </a>
-          </Link>
-          <ArrowBackIcon />
+              <div className={styles.containerBtn}>
+                <Link passHref href="sad">
+                  <a href="/#" className={styles.containerBtnText}>
+                    Show all
+                  </a>
+                </Link>
+                <ArrowBackIcon />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={styles.labelContainer}>
+          <div className={styles.labelContainerImage}>
+            <Image src={Twelve} width={30} height={28} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={CryptoNetworks} width={72} height={34} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={FifthyThree} width={36} height={28} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image
+              src={CryptoCurrencies}
+              width={81}
+              height={34}
+              layout="fixed"
+            />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={BitcoinTwo} width={70} height={13} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={Ethereum} width={71} height={25} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={BinanceChain} width={135} height={22} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={Tron} width={64} height={21} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={Tether} width={78} height={25} layout="fixed" />
+          </div>
+          <div className={styles.labelContainerImage}>
+            <Image src={Biswap} width={95} height={29} layout="fixed" />
+          </div>
+
+          <div className={styles.containerBtn}>
+            <Link passHref href="sad">
+              <a href="/#" className={styles.containerBtnText}>
+                Show all
+              </a>
+            </Link>
+            <ArrowBackIcon />
+          </div>
+        </div>
+      )}
       <span className={styles.helpText}>Need help?</span>
       <div className={styles.footerContent}>
         <div className={styles.footerContentCard}>
