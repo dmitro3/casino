@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   DiscordIcon,
@@ -14,6 +15,8 @@ import {
 import styles from './Footer.module.scss';
 
 const Footer = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
+
   return (
     <div className={styles.root}>
       <div className={styles.topFooter}>
@@ -62,69 +65,142 @@ const Footer = () => {
             <a href="/#">Daily taska</a>
           </Link>
         </div>
-        <div className={styles.footerColumn}>
-          <p>PROMO</p>
-          <Link passHref href="aaa">
-            <a href="/#">Promotion</a>
-          </Link>
-        </div>
-        <div className={styles.footerColumn}>
-          <p>About us</p>
-          <Link passHref href="aaa">
-            <a href="/#">News</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">About BFG</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">About BetFury team</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">BetFury Docs</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Official Mirrors</a>
-          </Link>
-        </div>
-        <div className={styles.footerColumn}>
-          <p>Help</p>
-          <Link passHref href="aaa">
-            <a href="/#">News</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Fairness</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Privacy Policy</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Terms of Service</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">{` Sportsbetting T&C`}</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Bug Bounty Program</a>
-          </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Live Support</a>
-          </Link>
-        </div>
+        {!isMobile ? (
+          <>
+            <div className={styles.footerColumn}>
+              <p>PROMO</p>
+              <Link passHref href="aaa">
+                <a href="/#">Promotion</a>
+              </Link>
+            </div>
+            <div className={styles.footerColumn}>
+              <p>About us</p>
+              <Link passHref href="aaa">
+                <a href="/#">News</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">About BFG</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">About BetFury team</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">BetFury Docs</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Official Mirrors</a>
+              </Link>
+            </div>
+            <div className={styles.footerColumn}>
+              <p>Help</p>
+              <Link passHref href="aaa">
+                <a href="/#">News</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Fairness</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Privacy Policy</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Terms of Service</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">{` Sportsbetting T&C`}</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Bug Bounty Program</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Live Support</a>
+              </Link>
+            </div>
 
-        <div className={styles.iconContainer}>
-          <p>Community</p>
-          <div className={styles.iconTop}>
-            <DiscordIcon />
-            <TelegramIcon />
-            <FacebookIcon />
-          </div>
-          <div className={styles.iconTop}>
-            <TikTokIcon />
-            <InstagramIcon />
-            <TwitterIcon />
-          </div>
-          <SpaceXIcon />
-        </div>
+            <div className={styles.iconContainer}>
+              <p>Community</p>
+              <div className={styles.iconTop}>
+                <DiscordIcon />
+                <TelegramIcon />
+                <FacebookIcon />
+              </div>
+              <div className={styles.iconTop}>
+                <TikTokIcon />
+                <InstagramIcon />
+                <TwitterIcon />
+              </div>
+              <SpaceXIcon />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className={styles.footerColumn}>
+              <p>About us</p>
+              <Link passHref href="aaa">
+                <a href="/#">News</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">About BFG</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">About BetFury team</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">BetFury Docs</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Official Mirrors</a>
+              </Link>
+            </div>
+            <div className={styles.footerColumn}>
+              <p>Help</p>
+              <Link passHref href="aaa">
+                <a href="/#">News</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Fairness</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Privacy Policy</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Terms of Service</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">{` Sportsbetting T&C`}</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Bug Bounty Program</a>
+              </Link>
+              <Link passHref href="aaa">
+                <a href="/#">Live Support</a>
+              </Link>
+            </div>
+            <div className={styles.footerColumn}>
+              <p>PROMO</p>
+              <Link passHref href="aaa">
+                <a href="/#">Promotion</a>
+              </Link>
+            </div>
+
+            <div className={styles.iconContainer}>
+              <div>
+                <p>Community</p>
+                <div className={styles.iconTop}>
+                  <DiscordIcon />
+                  <TelegramIcon />
+                  <FacebookIcon />
+                </div>
+                <div className={styles.iconTop}>
+                  <TikTokIcon />
+                  <InstagramIcon />
+                  <TwitterIcon />
+                </div>
+              </div>
+
+              <SpaceXIcon />
+            </div>
+          </>
+        )}
       </div>
       <div className={styles.bottomFooterBorder}>
         <div className={styles.bottomFooter}>
