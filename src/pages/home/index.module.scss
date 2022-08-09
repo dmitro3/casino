@@ -19,12 +19,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 19px;
 
     @media (max-width: 1262px) {
       justify-content: space-around;
-
-      div {
-        margin-bottom: 20px;
-      }
     }
 }
