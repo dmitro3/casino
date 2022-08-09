@@ -54,6 +54,13 @@
   margin-top: 72px;
   display: flex;
   justify-content: space-between;
+
+  @media(max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    margin-right: 40px;
+  }
 }
 
 .labelContainer {
