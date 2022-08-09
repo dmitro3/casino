@@ -129,6 +129,19 @@
         border-radius: 10px;
         margin-left: 12px;
         margin-right: 12px;
+
+        ul > li > button {
+            border: none;
+            background: inherit;
+            color: #FFFFFF99;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 13px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
     .exit {

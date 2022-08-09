@@ -71,6 +71,7 @@ type Props = {
   toggleSignInModal: () => void;
   isAuthenticated?: boolean;
   toggleIsAuthenticated?: () => void;
+  toggleUserModal: () => void;
 };
 
 const Header: FC<Props> = ({
@@ -78,6 +79,7 @@ const Header: FC<Props> = ({
   toggleRegistrationModal,
   toggleSignInModal,
   toggleIsAuthenticated,
+  toggleUserModal,
 }) => {
   return (
     <div className={styles.root}>
@@ -122,7 +124,10 @@ const Header: FC<Props> = ({
             <Dropdown
               buttonComponent={<UserDropdownButton />}
               dropdownComponent={
-                <UserDropdownWindow onLogout={toggleIsAuthenticated} />
+                <UserDropdownWindow
+                  toggleUserModal={toggleUserModal}
+                  onLogout={toggleIsAuthenticated}
+                />
               }
               customUserDropdownStyles={styles.userWindowDropdown}
             />
