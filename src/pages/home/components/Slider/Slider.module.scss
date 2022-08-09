@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-
+  
   &NavButton {
     position: absolute;
     right: 0;
@@ -14,6 +14,14 @@
     border-radius: 50px;
     font-size: 12px;
     background-color: #1c1e24;
+
+    @media(max-width: 768px) {
+      right: 150px;
+    }
+
+    @media (max-width: 576px) {
+        right: 50px;;
+    }
 
     &Text{
       margin-right: 5px;
@@ -55,6 +63,10 @@
       align-items: center;
       transform: rotate(180deg);
       cursor: pointer;
+
+      @media(max-width: 768px) {
+        right: 25px;
+      }
 
       &:hover {
         opacity: .7;
