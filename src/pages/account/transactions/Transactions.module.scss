@@ -38,10 +38,18 @@
   border-radius: 10px;
   padding: 25px 64px 33px 67px;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 
   &Header {
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      justify-content: space-around;
+      padding-top: 21px;
+    }
 
     &Date {
       &Button {
@@ -52,6 +60,11 @@
         width: 234px;
         height: 31px;
         border-radius: 5px;
+
+        @media (max-width: 768px) {
+          width: 58vw;
+          margin: 0;
+        }
 
         div {
           display: flex;
