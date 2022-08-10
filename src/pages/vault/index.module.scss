@@ -11,6 +11,16 @@
     justify-content: center;
     position: relative;
 
+    @media(max-width: 768px) {
+      box-sizing: border-box;
+      width: 100%;
+      height: unset;
+
+      > div {
+        display: none;
+      }
+    }
+
     @media (max-width: 1300px) {
       max-width: 1240px;
       padding: 0 20px;
@@ -19,5 +29,9 @@
     .vaultWindow {
       position: absolute;
       height: fit-content;
+
+      @media(max-width: 768px) {
+        position: unset;
+      }
     }
 }
