@@ -74,50 +74,49 @@ const ReferralInfo = () => {
             </div>
           </div>
 
-          {!isMobile && (
-            <div className={styles.infoContainerColumn}>
-              <span>Поделиться</span>
-              <div className={styles.linksContainer}>
-                <div className={styles.linksContainerImage}>
-                  <div className={styles.linksContainerImageCase}>
+          {!isMobile ? (
+            <>
+              <div className={styles.infoContainerColumn}>
+                <span>Поделиться</span>
+                <div className={styles.linksContainer}>
+                  <div className={styles.linksContainerImage}>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTelegramIcon />
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles.linksContainerImage}>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTwitterIcon width={47} height={45} />
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles.linksContainerImage}>
                     <Link passHref href="sad">
                       <a href="/#">
-                        <BigTelegramIcon />
+                        <BigDiscordIcon />
                       </a>
                     </Link>
                   </div>
-                </div>
-                <div className={styles.linksContainerImage}>
-                  <div className={styles.linksContainerImageCase}>
-                    <Link passHref href="sad">
-                      <a href="/#">
-                        <BigTwitterIcon width={47} height={45} />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className={styles.linksContainerImage}>
-                  <Link passHref href="sad">
-                    <a href="/#">
-                      <BigDiscordIcon />
-                    </a>
-                  </Link>
                 </div>
               </div>
-            </div>
-          )}
-          {!isMobile && (
-            <div className={styles.infoContainerColumn}>
-              <span>Промо</span>
-              <Button
-                customStyles={styles.infoContainerColumnBigButton}
-                label="Get promo materials"
-              />
-            </div>
-          )}
-          {isMobile && (
+              <div className={styles.infoContainerColumn}>
+                <span>Промо</span>
+                <Button
+                  customStyles={styles.infoContainerColumnBigButton}
+                  label="Get promo materials"
+                />
+              </div>
+            </>
+          ) : (
             <div className={styles.mobileInfoContainer}>
-              {isMobile && <Image src={Speaker} width={140} height={136} />}
+              <Image src={Speaker} width={140} height={136} />
               <div>
                 <div className={styles.infoContainerColumn}>
                   <span>Поделиться</span>
