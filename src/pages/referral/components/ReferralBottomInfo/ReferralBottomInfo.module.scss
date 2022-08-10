@@ -7,16 +7,31 @@
   background-color: #1f2127;
   margin-top: 38px;
 
+    @media (max-width:768px) {
+      flex-direction: column-reverse;
+      height: fit-content;
+    }
+
   &Image {
     margin-top: 20px;
     height: 206px;
     width: 206px;
     margin-left: 30px;
+
+      @media (max-width:768px) {
+        height: 190px;
+      }
   }
 
   &Text {
     width: 70%;
     margin:36px 50px 36px 70px;
+
+      @media (max-width:768px) {
+        width: 90%;
+        padding: 27px 21px 10px 27px;
+        margin: 0;
+      }
 
     &One {
       font-size: 15px;

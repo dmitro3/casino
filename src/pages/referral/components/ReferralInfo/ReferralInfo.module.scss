@@ -2,6 +2,9 @@
 
   margin: 40px 50px 0 30px;
 
+  @media (max-width:768px) {
+    position: relative;
+  }
   &Label {
     margin-top: 3px;
     margin-left: 10px;
@@ -16,88 +19,138 @@
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+
+    @media (max-width:768px) {
+      margin: -18px 50px 0 -24px;
+    }
   }
 }
 
-.referralLinkContainer {
-  background: linear-gradient(#15161c, #fcca030c);
-  overflow: hidden;
-  border: 1px solid;
-  border-color: #5d5e62;
-  margin-top: 40px;
-  border-radius: 10px;
-  display: flex;
-  flex:1;
-  height: 290px;
-  background-color: #191b20;
+.referralLink {
 
-  &Case {
-    align-self: flex-start;
-    padding: 27px 147px 40px 0px;
-    display: flex;
-    width: 90%;
+  &Container {
+    background: linear-gradient(#15161c, #fcca030c);
+    overflow: hidden;
+    border: 1px solid;
+    border-color: #5d5e62;
+    margin-top: 40px;
     border-radius: 10px;
-    height: 10%;
-    background-color:#292a2d;
-    justify-content: space-around;
-    margin-top: 32px;
-    align-items: center;
-    margin-right: 36px;
+    display: flex;
+    flex:1;
+    height: 290px;
+    background-color: #191b20;
 
-    &Columns {
-
-      &Name {
-        color:#696a6c;
-        font-weight: 700;
-        font-size: 13px;
+      @media (max-width:768px) {
+        flex-direction: column;
+        height: fit-content;
+        padding: 0px 20px 40px  20px ;
       }
 
-      >p {
-        margin-bottom: 10px;
-      }
+    &Case {
+      align-self: flex-start;
+      padding: 27px 147px 40px 0px;
+      display: flex;
+      width: 90%;
+      border-radius: 10px;
+      height: 10%;
+      background-color:#292a2d;
+      justify-content: space-around;
+      margin-top: 32px;
+      align-items: center;
+      margin-right: 36px;
 
-      &Value {
-        margin-top: 14px;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
-        align-items: center;
-        display: flex;
-
-        &:first-child {
-          height: 100px;
+        @media (max-width:768px) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: fit-content;
+          margin-right: 0;
+          padding-top:25px ;
+          padding-right: 0;
+          padding-left: 12px;
+          padding-bottom: 10px;
         }
 
-        >span {
-          font-weight: 700;
-          margin-left: 10px;
-          color: #35373c;
+      &Columns {
+
+          &:last-child {
+            position: relative;
+            left: -45px;
+          }
 
           &:first-child {
-            margin: 0;
-            height: 34px;
 
-          }
-          >span {
-            color:#fff;
-            font-weight: 500;
-          }
+            @media (max-width:768px){
+              width: 20%;
+              margin-right: 10px;
 
-          &::first-letter {
-            color: #fff;
-
-          }
-          &::nth-child(5) {
-            color: red;
+              &Name {
+                margin-bottom: 10px;
+              }
           }
         }
 
-      }
+        @media (max-width:768px) {
+          width: 70%;
+          margin-bottom: 10px;
+        }
 
-      >p {
-        color:#696a6c;
-        font-weight: 700;
-        font-size: 13px;
+        &Name {
+          color:#696a6c;
+          font-weight: 700;
+          font-size: 13px;
+
+          @media (max-width:768px) {
+
+
+          }
+        }
+
+        >p {
+          margin-bottom: 10px;
+        }
+
+        &Value {
+          margin-top: 14px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          align-items: center;
+          display: flex;
+
+          &:first-child {
+            height: 100px;
+          }
+
+          >span {
+            font-weight: 700;
+            margin-left: 10px;
+            color: #35373c;
+
+            &:first-child {
+              margin: 0;
+              height: 34px;
+
+            }
+            >span {
+              color:#fff;
+              font-weight: 500;
+            }
+
+            &::first-letter {
+              color: #fff;
+            }
+            &::nth-child(5) {
+              color: red;
+            }
+          }
+
+        }
+
+        >p {
+          color:#696a6c;
+          font-weight: 700;
+          font-size: 13px;
+        }
       }
     }
   }
@@ -105,6 +158,10 @@
 
 .infoContainerColumnButton {
   font-size: 12px;
+
+    @media (max-width:768px) {
+      align-items: center;
+    }
 }
 
 .infoContainer {
@@ -114,8 +171,17 @@
   display: flex;
   justify-content: space-between;
 
+    @media (max-width:768px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
   &Column {
       margin-right: 25px;
+
+      @media (max-width:768px) {
+        margin: 0;
+      }
 
       &BigButton {
         justify-content: center;
@@ -127,6 +193,9 @@
         font-weight: 700;
         border-radius: 12px;
         margin-top: 20px;
+
+          @media (max-width:768px) {
+          }
       }
 
       &Button {
@@ -134,6 +203,10 @@
           justify-content: center;
           align-items: center;
           font-size: 8px;
+
+            @media (max-width:768px) {
+              width: 100%;
+            }
 
           >p {
             color: #fff;
@@ -147,6 +220,10 @@
         background-color: #181a20;
         text-indent: 10px;
         width: 357px;
+
+        @media (max-width:768px) {
+          width: 100%;
+        }
       }
     &Case {
       position: relative;
@@ -160,6 +237,10 @@
         position: absolute;
         top: 7px;
         right: 30px;
+
+        @media (max-width:768px) {
+          right: 10px;
+        }
       }
       &Input {
         text-indent: 7px;
@@ -170,9 +251,7 @@
       }
     }
 
-
     &Button {
-
       height: 37px;
       align-items: center;
       justify-content: center;
@@ -182,11 +261,9 @@
     >span {
       font-weight: 700;
       font-size: 15px;
-
     }
 
     &Button {
-
       justify-content: space-between;
       align-items: center;
       display: flex;
@@ -201,15 +278,27 @@
   display: flex;
   margin-top: 20px;
 
-  &Image{
+  &Image {
     margin-right: 20px;
 
-    &Case {
-      overflow: hidden;
-      height: 45px;
-      width: 45px;
-      border-radius: 10px;
-    }
+      &Case {
+        overflow: hidden;
+        height: 45px;
+        width: 45px;
+        border-radius: 10px;
+      }
   }
+}
+
+.mobileInfoContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+    >span{
+      position: absolute;
+      left:-30px;
+    }
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Button from 'src/components/Button';
 import Speaker from 'src/assets/images/Speaker.png';
+import { useMediaQuery } from 'react-responsive';
 import {
   BigDiscordIcon,
   BigTelegramIcon,
@@ -14,6 +15,8 @@ import Input from 'src/components/Input';
 import Link from 'next/link';
 
 const ReferralInfo = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <div className={styles.referralLinkContainer}>
       <div className={styles.blur} />
@@ -22,10 +25,10 @@ const ReferralInfo = () => {
           <Logo />
           <div className={styles.logoContainerLabel}>Binobi.com</div>
         </div>
-        <Image src={Speaker} width={181} height={180} />
+        {!isMobile && <Image src={Speaker} width={181} height={180} />}
       </div>
 
-      <div>
+      <div className={styles.referralLink}>
         <div className={styles.referralLinkContainerCase}>
           <div className={styles.referralLinkContainerCaseColumns}>
             <div className={styles.referralLinkContainerCaseColumnsName}>
@@ -70,43 +73,91 @@ const ReferralInfo = () => {
               </div>
             </div>
           </div>
-          <div className={styles.infoContainerColumn}>
-            <span>Поделиться</span>
-            <div className={styles.linksContainer}>
-              <div className={styles.linksContainerImage}>
-                <div className={styles.linksContainerImageCase}>
-                  <Link passHref href="sad">
-                    <a href="/#">
-                      <BigTelegramIcon />
-                    </a>
-                  </Link>
+
+          {!isMobile ? (
+            <>
+              <div className={styles.infoContainerColumn}>
+                <span>Поделиться</span>
+                <div className={styles.linksContainer}>
+                  <div className={styles.linksContainerImage}>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTelegramIcon />
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles.linksContainerImage}>
+                    <div className={styles.linksContainerImageCase}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigTwitterIcon width={47} height={45} />
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                  <div className={styles.linksContainerImage}>
+                    <Link passHref href="sad">
+                      <a href="/#">
+                        <BigDiscordIcon />
+                      </a>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className={styles.linksContainerImage}>
-                <div className={styles.linksContainerImageCase}>
-                  <Link passHref href="sad">
-                    <a href="/#">
-                      <BigTwitterIcon width={47} height={45} />
-                    </a>
-                  </Link>
-                </div>
+              <div className={styles.infoContainerColumn}>
+                <span>Промо</span>
+                <Button
+                  customStyles={styles.infoContainerColumnBigButton}
+                  label="Get promo materials"
+                />
               </div>
-              <div className={styles.linksContainerImage}>
-                <Link passHref href="sad">
-                  <a href="/#">
-                    <BigDiscordIcon />
-                  </a>
-                </Link>
+            </>
+          ) : (
+            <div className={styles.mobileInfoContainer}>
+              <Image src={Speaker} width={140} height={136} />
+              <div>
+                <div className={styles.infoContainerColumn}>
+                  <span>Поделиться</span>
+                  <div className={styles.linksContainer}>
+                    <div className={styles.linksContainerImage}>
+                      <div className={styles.linksContainerImageCase}>
+                        <Link passHref href="sad">
+                          <a href="/#">
+                            <BigTelegramIcon />
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className={styles.linksContainerImage}>
+                      <div className={styles.linksContainerImageCase}>
+                        <Link passHref href="sad">
+                          <a href="/#">
+                            <BigTwitterIcon width={47} height={45} />
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className={styles.linksContainerImage}>
+                      <Link passHref href="sad">
+                        <a href="/#">
+                          <BigDiscordIcon />
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.infoContainerColumn}>
+                  <span>Промо</span>
+                  <Button
+                    customStyles={styles.infoContainerColumnBigButton}
+                    label="Get promo materials"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className={styles.infoContainerColumn}>
-            <span>Промо</span>
-            <Button
-              customStyles={styles.infoContainerColumnBigButton}
-              label="Get promo materials"
-            />
-          </div>
+          )}
         </div>
       </div>
     </div>
