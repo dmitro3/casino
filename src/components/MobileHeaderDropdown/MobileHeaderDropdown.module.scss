@@ -1,0 +1,161 @@
+.navigationContainerItem {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #FFFFFF1A;
+}
+
+.customDropdownContainerStyles {
+    border-radius: 1px !important;
+
+    > button svg {
+        display: none;
+      }
+
+}
+
+.walletDropdown {
+    height: 100%;
+
+     svg {
+        height: 20px !important;
+    }
+
+    > svg {
+        display: none;
+    }
+}
+
+.windowDropdown {
+
+    svg {
+        height: 20px !important;
+    }
+}
+
+.speechBubble {
+	position: relative;
+  color: #000;
+	background: #FCD535;
+	border-radius: 1px;
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 13px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 2px solid transparent;
+    border-right-color: #FCD535;
+    border-left: 0;
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+
+  &Blur {
+    width: 30px;
+    height: 11px;
+    background-color: #fcd535;
+    border-radius: 50%;
+    filter: blur(5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
+.loginButtons {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 8px 20px;
+    margin-right: 40px;
+    padding: 8px;
+    border-radius: 12px;
+    position: relative;
+
+    .loginButton {
+        background-color: #FFFFFF0D !important;
+        color: white;
+        font-size: 11px;
+    }
+
+    .registerButton {
+        font-size: 11px;
+
+        > svg {
+            height: 20px;
+        }
+    }
+    
+    svg {
+            height: 20px;
+        }
+
+    > svg {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        height: 25px !important;
+    }
+}
+
+.walletButtons {
+    display: flex;
+    background-color: #FFFFFF0D;
+    margin: 15px;
+    padding: 9px;
+    margin-right: 20px;
+    border-radius: 10px;
+    align-items: center;
+    position: relative;
+
+    > svg {
+        height: 20px !important;
+        position: absolute;
+        right: 20px;
+    }
+
+    .userWindowDropdown {
+       
+        > svg {
+            height: 27px;
+        }
+    }
+
+    .wallet {
+        width: 130px !important;
+        height: 29px;
+        font-size: 11px;
+        border-radius: 1px;
+
+        > svg {
+            height: 11px;
+        }
+    }
+}
+
+.customDropdownUserContainerStyles {
+
+    .customButtonStyles {
+        width: 52px;
+        border-radius: 12px;
+    }
+}

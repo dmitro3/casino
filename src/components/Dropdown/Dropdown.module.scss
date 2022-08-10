@@ -1,6 +1,6 @@
 .dropdownContainer {
   position: relative;
-  font-family: 'Montserrat'
+  font-family: 'Montserrat';
 }
 
 .userIcon {
@@ -15,7 +15,20 @@
     margin-left: 15px;
 
       > svg {
-        margin-right: 15px;
+        margin-right: 10px !important;
+      }
+
+      @media(max-width: 768px){
+        height: 30px;
+
+        &:nth-child(1) {
+          border-radius: 4px;
+        }
+
+         svg {
+          margin-right: 1px;
+          height: 14px !important;
+        }
       }
   }
 
@@ -32,5 +45,4 @@
   .modalWrapper {
     position: absolute;
     z-index: 2;
-    top: 50px;
-  }
+    }

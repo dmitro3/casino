@@ -18,6 +18,14 @@
   }
 }
 
+.walletDropdown {
+
+  @media  (max-width: 768px){
+    display: none;
+  }
+
+}
+
 .navigationContainer {
   align-items: center;
   justify-content: center;
@@ -80,8 +88,6 @@
 .controlContainer {
   display: flex;
 
-
-
   > svg {
     align-self: center;
     margin-left: 10px;
@@ -103,9 +109,9 @@
   justify-content: flex-start;
   padding-left: 4px;
 
-  @media (max-width: 1160px) {
-    width: 55px;
-    justify-content: space-around;
+  @media (max-width: 768px) {
+    display: none;
+
   }
 
   > svg {
@@ -178,6 +184,10 @@
 .wallet {
   z-index: 2;
 
+  @media(max-width: 768px) {
+    display: none;
+  }
+
    &Dropdown {
     border-radius: 5px;
     width: 190px;
@@ -191,11 +201,27 @@
 }
 
 .windowDropdown {
-  left: 20px;
+
+  @media(max-width: 768px) {
+     position: relative;
+     left: 20px;
+  }
+ 
+
 }
 
 .userWindowDropdown {
   right: 0;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.userDropdown {
+  @media(max-width: 768px) {
+    display: none;
+  }
 }
 
 .burgerMenuIcon {
@@ -215,5 +241,17 @@
 
   @media (min-width: 1160px) {
     display: none;
+  }
+}
+
+.windowDropdownContainer {
+  position: static;
+
+  > button svg {
+    display: none;
+  }
+
+  > button > div {
+    background-color: inherit;
   }
 }
