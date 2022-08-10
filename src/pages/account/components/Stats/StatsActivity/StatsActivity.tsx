@@ -1,10 +1,13 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import StatsTemplate from 'src/pages/account/components/Stats/StatsTemplate';
 import { TetherToken } from 'src/assets/svg';
 import styles from './StatsActivity.module.scss';
 
 const StatsActivity = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <StatsTemplate
       label="Activity"
@@ -30,7 +33,7 @@ const StatsActivity = () => {
             </div>
           </div>
 
-          <div className={styles.lineTwo} />
+          {!isMobile && <div className={styles.lineTwo} />}
           <div className={`${styles.statSection} ${styles.statSectionTwo}`}>
             <div className={styles.statSectionLabel}>
               <span>Messages in chat</span>

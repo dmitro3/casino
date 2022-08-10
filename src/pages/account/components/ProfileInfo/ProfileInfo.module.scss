@@ -7,6 +7,10 @@
     margin-top: 20px;
     padding: 32px 29px 39px 29px;
 
+    @media(max-width: 768px) {
+        width: inherit;
+    }
+
     .profileContainer {
         display: grid;
         grid-template-areas: 'image profile'
@@ -167,26 +171,4 @@
             }
         }
     }
-}
-
-.tabMail {
-    width: 338px;
-    height: 212px;
-}
-
-.userAgreement {
-    width: 340px;
-    display: flex;
-
-    > span {
-        font-size: 13px;
-        color: white;
-        padding-left: 25px;
-        padding-bottom: 18px;
-        margin-top: -5px;
-    }
-}
-
-.input {
-    text-indent: 0;
 }

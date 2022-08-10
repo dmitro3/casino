@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import styles from './StatsTemplate.module.scss';
 
@@ -9,10 +10,17 @@ type Props = {
 };
 
 const StatsTemplate: FC<Props> = ({ label, content, customStyles }) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <section className={styles.statsTemplate}>
-      <span>{label}</span>
+      {!isMobile && <span>{label}</span>}
       <div className={`${styles.statsContent} ${customStyles || ``}`}>
+        {isMobile && (
+          <div className={styles.label}>
+            <span>{label}</span>
+          </div>
+        )}
         {content}
       </div>
     </section>

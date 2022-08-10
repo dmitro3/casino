@@ -8,7 +8,8 @@ import styles from './ProfileSettings.module.scss';
 
 const ProfileSettings = () => {
   return (
-    <section>
+    <section className={styles.root}>
+      <span>Настройки</span>
       <TabTemplate
         mainIcon={<SettingsIcon />}
         label="Personal Info Settings"

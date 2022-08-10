@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { useMediaQuery } from 'react-responsive';
 
 import Bingo from 'src/assets/images/Bingo.png';
 import Book from 'src/assets/images/Book.png';
@@ -30,6 +31,8 @@ export const topGames = [
 ];
 
 export const StatsTop = () => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   return (
     <StatsTemplate
       label="Top Played Games"
@@ -47,11 +50,19 @@ export const StatsTop = () => {
                 />
               </div>
             ))}
+            {isMobile && (
+              <div className={styles.emptyTab}>
+                <Gamepad />
+                <Button label="All games" />
+              </div>
+            )}
           </div>
-          <div className={styles.emptyTab}>
-            <Gamepad />
-            <Button label="All games" />
-          </div>
+          {!isMobile && (
+            <div className={styles.emptyTab}>
+              <Gamepad />
+              <Button label="All games" />
+            </div>
+          )}
         </div>
       }
     />
