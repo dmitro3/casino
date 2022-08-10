@@ -88,21 +88,10 @@ const Table: FC<Props> = ({ columns, data }) => {
                 }
                 return null;
               })}
-              {!isMobile ? (
-                <div className={styles.tableBodyRowElementControl}>
-                  <div>Active</div>
-                  <Button label="Выйти" />
-                </div>
-              ) : (
-                <div className={styles.tableBodyRowElementControl}>
-                  <p>Session 01</p>
-                  <div>
-                    <Button label="Выйти" />
-                    <div>Active</div>
-                  </div>
-                </div>
-              )}
-              {/* <div className={styles.tableBodyRowElementControl}>Kek</div> */}
+              <div className={styles.tableBodyRowElementControl}>
+                <div>Active</div>
+                <Button label="Выйти" />
+              </div>
             </div>
           );
         })}
