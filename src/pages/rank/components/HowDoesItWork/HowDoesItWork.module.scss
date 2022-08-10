@@ -4,6 +4,7 @@
   > button {
     margin: auto;
     padding: 10px 58px;
+    font-size: 15px;
   }
 }
 
@@ -31,11 +32,24 @@
   gap: 40px;
   margin-bottom: 47px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    margin-top: 33px;
+    margin-bottom: 43px;
+  }
+
   >svg {
     position: relative;
     z-index: 20;
     margin: 0 -65px;
     margin-top: 35px;
+
+    @media (max-width: 768px) {
+      margin: -33px 0;
+      transform: rotate(90deg);
+    }
   }
 
   &Card {
@@ -47,6 +61,10 @@
     box-sizing: border-box;
     overflow: hidden;
     margin-top: 46px;
+
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
 
     &Header {
       display: flex;

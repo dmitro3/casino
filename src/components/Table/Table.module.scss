@@ -9,6 +9,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 12px;
 
+    @media (max-width: 768px) {
+      padding-left: 30px;
+      width: calc(100% - 30px);
+    }
+
     &Label {
       color: #FFFFFF80;
       font-weight: 700;
@@ -25,6 +30,14 @@
       justify-content: space-evenly;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding: 11px 0 14px 0;
+
+      @media (max-width: 768px) {
+        position: relative;
+        min-height: 80px;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 11px 0 14px 30px;
+      }
 
       &Element {
         flex: 1;
@@ -53,6 +66,18 @@
             color: rgba(255, 255, 255, 0.7);
           }
         }
+      }
+
+      &Button {
+        background-color: #23262c;
+        border-radius: 10px;
+        border: none;
+        padding: 4px 14px;
+        color: #fff;
+        font-size: 13px;
+        position: absolute;
+        top: 42px;
+        left: 30px;
       }
     }
   }

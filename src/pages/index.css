@@ -10,7 +10,7 @@ body {
 }
 
 a:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 a {
@@ -24,6 +24,18 @@ a {
   align-items: center !important;
   margin-top: 25px !important;
   margin-bottom: 67px !important;
+}
+
+@media (max-width: 768px) {
+  .react-multi-carousel-dot-list {
+    padding-left: 150px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .react-multi-carousel-dot-list {
+    padding-left: 60px !important;
+  }
 }
 
 .react-multi-carousel-list {

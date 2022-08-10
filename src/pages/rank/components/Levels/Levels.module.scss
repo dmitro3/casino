@@ -27,6 +27,11 @@
 
   &Image {
     position: absolute;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     &:first-child {
       left: -80px;
       top: -30px;
@@ -44,6 +49,13 @@
   display: flex;
   margin-top: 129px;
   gap: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 67px;
+    gap: 87px;
+  }
 
   &Card {
     background-color: #1f2127;

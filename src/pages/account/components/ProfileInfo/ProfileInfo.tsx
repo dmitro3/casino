@@ -12,7 +12,6 @@ import { mockUser } from 'src/utils/mockData';
 import TabTemplate from 'src/components/TabTemplate';
 import Checkbox from 'src/components/Checkbox';
 import Input from 'src/components/Input';
-import UserModal from 'src/components/UserModal';
 import ProfileImg from 'src/pages/account/components/ProfileInfo/components/ProfileImg';
 import TipButton from 'src/pages/account/components/ProfileInfo/components/TipButton';
 import styles from './ProfileInfo.module.scss';
@@ -104,7 +103,6 @@ const ProfileInfo: FC<Props> = ({ customStyles }) => {
           }
         />
       </section>
-      {isUserModalActive && <UserModal toggleModal={userModalToggle} />}
     </section>
   );
 };
