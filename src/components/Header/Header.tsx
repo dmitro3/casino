@@ -71,7 +71,7 @@ type Props = {
   toggleRegistrationModal: () => void;
   toggleSignInModal: () => void;
   isAuthenticated?: boolean;
-  toggleIsAuthenticated?: () => void;
+  toggleIsAuthenticated: () => void;
   toggleUserModal: () => void;
 };
 
