@@ -10,6 +10,8 @@ type Props = {
   customWalletDropdownStyles?: any;
   customUserDropdownStyles?: any;
   customDropdownStyles?: string;
+  customDropdownContainerStyles?: any;
+  isDropdownState?: boolean;
 };
 
 const Dropdown: FC<Props> = ({
@@ -19,10 +21,16 @@ const Dropdown: FC<Props> = ({
   customWalletDropdownStyles,
   customUserDropdownStyles,
   customDropdownStyles,
+  customDropdownContainerStyles,
+  isDropdownState,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isOpened, setIsOpened] = useState(false);
+
+  useEffect(() => {
+    setIsOpened(isDropdownState);
+  }, [isDropdownState]);
 
   useEffect(() => {
     const checkIfClickedOutside = (e: any) => {
@@ -41,7 +49,10 @@ const Dropdown: FC<Props> = ({
   };
 
   return (
-    <div className={styles.dropdownContainer} ref={ref}>
+    <div
+      className={`${styles.dropdownContainer} ${customDropdownContainerStyles}`}
+      ref={ref}
+    >
       <button onClick={showDropdown} className={styles.button}>
         <div className={`${styles.userIcon} ${customButtonStyles}`}>
           {buttonComponent}

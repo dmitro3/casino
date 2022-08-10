@@ -3,6 +3,11 @@
     padding: 10px 13px;
     border-radius: 100%;
     margin-left: 2px;
+
+    @media(max-width: 768px) {
+      padding: 6px;
+      
+    }
     
    /*  > svg {
       margin-right: 15px;

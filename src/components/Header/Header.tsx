@@ -16,9 +16,10 @@ import UserDropdownButton from 'src/components/Header/components/UserDropDownBut
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
 import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
+import MobileHeaderDropdown from 'src/components/MobileHeaderDropdown';
 import styles from './Header.module.scss';
 
-const links = [
+export const links = [
   {
     url: `/#`,
     label: `Home`,
@@ -129,6 +130,7 @@ const Header: FC<Props> = ({
                   onLogout={toggleIsAuthenticated}
                 />
               }
+              customDropdownContainerStyles={styles.userDropdown}
               customUserDropdownStyles={styles.userWindowDropdown}
             />
           </>
@@ -152,11 +154,27 @@ const Header: FC<Props> = ({
           <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
         </div>
-        <div className={styles.burgerMenuIcon}>
-          <div />
-          <div />
-          <div />
-        </div>
+        <Dropdown
+          buttonComponent={
+            <div className={styles.burgerMenuIcon}>
+              <div />
+              <div />
+              <div />
+            </div>
+          }
+          dropdownComponent={
+            <MobileHeaderDropdown
+              toggleSignInModal={toggleSignInModal}
+              isAuthenticated={isAuthenticated}
+              toggleRegistrationModal={toggleRegistrationModal}
+              toggleUserModal={toggleUserModal}
+              toggleIsAuthenticated={toggleIsAuthenticated}
+            />
+          }
+          customWalletDropdownStyles={styles.windowDropdownHeader}
+          customDropdownContainerStyles={styles.windowDropdownContainer}
+        />
+
         <MessageIcon />
       </div>
     </div>
