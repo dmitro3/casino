@@ -39,9 +39,17 @@
   display: flex;
   justify-content: space-between;
 
-    @media (max-width:768px) {
-      flex-direction: column;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+
+    >div {
+      margin-bottom: 10px;
     }
+  }
+
+  @media (max-width:768px) {
+    flex-direction: column;
+  }
 }
 
 .rankImage {
@@ -251,6 +259,10 @@
   >div {
     >div {
       padding-left: 100px;
+
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
     }
   }
 }

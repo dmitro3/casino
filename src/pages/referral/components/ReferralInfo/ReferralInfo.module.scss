@@ -2,7 +2,7 @@
 
   margin: 40px 50px 0 30px;
 
-  @media (max-width:768px) {
+  @media (max-width:1100px) {
     position: relative;
   }
   &Label {
@@ -20,7 +20,7 @@
     align-items: center;
     margin-bottom: 50px;
 
-    @media (max-width:768px) {
+    @media (max-width:1100px) {
       margin: -18px 50px 0 -24px;
     }
   }
@@ -40,10 +40,10 @@
     height: 290px;
     background-color: #191b20;
 
-      @media (max-width:768px) {
+      @media (max-width:1100px) {
         flex-direction: column;
         height: fit-content;
-        padding: 0px 20px 40px  20px ;
+        padding: 0px 20px 40px  20px;
       }
 
     &Case {
@@ -59,7 +59,7 @@
       align-items: center;
       margin-right: 36px;
 
-        @media (max-width:768px) {
+        @media (max-width:1100px) {
           flex-direction: row;
           flex-wrap: wrap;
           width: fit-content;
@@ -68,6 +68,7 @@
           padding-right: 0;
           padding-left: 12px;
           padding-bottom: 10px;
+          width: 100%;
         }
 
       &Columns {
@@ -79,7 +80,7 @@
 
           &:first-child {
 
-            @media (max-width:768px){
+            @media (max-width:1100px){
               width: 20%;
               margin-right: 10px;
 
@@ -89,7 +90,7 @@
           }
         }
 
-        @media (max-width:768px) {
+        @media (max-width:1100px) {
           width: 70%;
           margin-bottom: 10px;
         }
@@ -99,7 +100,7 @@
           font-weight: 700;
           font-size: 13px;
 
-          @media (max-width:768px) {
+          @media (max-width:1100px) {
 
 
           }
@@ -129,6 +130,7 @@
             &:first-child {
               margin: 0;
               height: 34px;
+              line-height: 30px;
 
             }
             >span {
@@ -159,7 +161,7 @@
 .infoContainerColumnButton {
   font-size: 12px;
 
-    @media (max-width:768px) {
+    @media (max-width:1100px) {
       align-items: center;
     }
 }
@@ -171,15 +173,20 @@
   display: flex;
   justify-content: space-between;
 
-    @media (max-width:768px) {
+    @media (max-width:1100px) {
       flex-direction: column;
       align-items: flex-end;
+      width: 100%;
+
+      > div {
+        width: 100%;
+      }
     }
 
   &Column {
       margin-right: 25px;
 
-      @media (max-width:768px) {
+      @media (max-width:1100px) {
         margin: 0;
       }
 
@@ -193,9 +200,6 @@
         font-weight: 700;
         border-radius: 12px;
         margin-top: 20px;
-
-          @media (max-width:768px) {
-          }
       }
 
       &Button {
@@ -204,7 +208,7 @@
           align-items: center;
           font-size: 8px;
 
-            @media (max-width:768px) {
+            @media (max-width:1100px) {
               width: 100%;
             }
 
@@ -221,7 +225,7 @@
         text-indent: 10px;
         width: 357px;
 
-        @media (max-width:768px) {
+        @media (max-width:1100px) {
           width: 100%;
         }
       }
@@ -238,7 +242,7 @@
         top: 7px;
         right: 30px;
 
-        @media (max-width:768px) {
+        @media (max-width:1100px) {
           right: 10px;
         }
       }
@@ -295,6 +299,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
+  @media (min-width: 1100px) {
+    min-width: max-content;
+  }
 
     >span{
       position: absolute;

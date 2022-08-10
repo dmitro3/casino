@@ -49,6 +49,8 @@
     @media (max-width: 768px) {
       justify-content: space-around;
       padding-top: 21px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
 
     &Date {
@@ -60,10 +62,12 @@
         width: 234px;
         height: 31px;
         border-radius: 5px;
+        font-weight: bold;
 
         @media (max-width: 768px) {
           width: 58vw;
           margin: 0;
+          padding: 17px 16px ;
         }
 
         div {
@@ -89,6 +93,11 @@
       width: 111px;
       height: 31px;
       border-radius: 5px;
+      font-weight: bold;
+
+      @media (max-width: 768px) {
+        padding: 17px 16px ;
+      }
 
       >svg {
         margin: 0;

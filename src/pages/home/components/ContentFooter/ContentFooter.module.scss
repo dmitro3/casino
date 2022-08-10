@@ -1,6 +1,10 @@
 .root {
   width: 100%;
 
+  @media (max-width: 1240px) {
+    box-sizing: border-box;
+  }
+
   @media (max-width: 768px) {
     width: auto;
   }
@@ -126,6 +130,11 @@
   margin-bottom: 75px;
   display: flex;
   justify-content: space-between;
+
+  @media(max-width: 1240px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
   &Image {
     &:nth-child(4),  &:nth-child(2), &:nth-child(10){
