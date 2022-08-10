@@ -154,17 +154,8 @@
 
 .customDropdownUserContainerStyles {
 
-    button > div {
-        border-radius: 12px !important;
-    }
-    
-     div {
+    .customButtonStyles {
         width: 52px;
-        border-radius: 10px;
-    }
-
-    div div {
-        width: 15px;
-        border-radius: 100%;
+        border-radius: 12px;
     }
 }

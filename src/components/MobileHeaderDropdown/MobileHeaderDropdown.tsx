@@ -57,6 +57,7 @@ const MobileHeaderDropdown: FC<Props> = ({
             customDropdownContainerStyles={
               styles.customDropdownUserContainerStyles
             }
+            customButtonStyles={styles.customButtonStyles}
           />
           <MessageIcon />
         </div>
