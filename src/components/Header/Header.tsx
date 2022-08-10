@@ -124,10 +124,7 @@ const Header: FC<Props> = ({
             <Dropdown
               buttonComponent={<UserDropdownButton />}
               dropdownComponent={
-                <UserDropdownWindow
-                  toggleUserModal={toggleUserModal}
-                  onLogout={toggleIsAuthenticated}
-                />
+                <UserDropdownWindow onLogout={toggleIsAuthenticated} />
               }
               customUserDropdownStyles={styles.userWindowDropdown}
             />

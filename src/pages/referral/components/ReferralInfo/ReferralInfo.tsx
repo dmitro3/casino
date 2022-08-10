@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from 'src/components/Button';
-import SpeakerMobile from 'src/assets/images/Speaker.png';
 import Speaker from 'src/assets/images/Speaker.png';
 import { useMediaQuery } from 'react-responsive';
 import {
@@ -118,9 +117,7 @@ const ReferralInfo = () => {
           )}
           {isMobile && (
             <div className={styles.mobileInfoContainer}>
-              {isMobile && (
-                <Image src={SpeakerMobile} width={140} height={136} />
-              )}
+              {isMobile && <Image src={Speaker} width={140} height={136} />}
               <div>
                 <div className={styles.infoContainerColumn}>
                   <span>Поделиться</span>
