@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  
+
   &NavButton {
     position: absolute;
     right: 0;
@@ -16,11 +16,11 @@
     background-color: #1c1e24;
 
     @media(max-width: 768px) {
-      right: 150px;
+      right: 50px;
     }
 
     @media (max-width: 576px) {
-        right: 50px;;
+        right: 10px;
     }
 
     &Text{

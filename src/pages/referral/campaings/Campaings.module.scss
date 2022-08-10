@@ -58,9 +58,18 @@
   padding: 25px 64px 33px 67px;
 
 
+  @media (max-width: 768px) {
+    padding: 31px 0 !important;
+  }
+
+
   &Header {
     display: flex;
     justify-content: flex-start;
+
+    @media (max-width: 768px) {
+      padding-left: 30px;
+    }
 
     &Date {
 
@@ -73,6 +82,7 @@
         box-sizing: border-box;
         width: 86px;
         height: 31px;
+        font-weight: bold;
         border-radius: 5px;
 
         div {
@@ -97,6 +107,7 @@
       box-sizing: border-box;
       width: 67px;
       height: 31px;
+      font-weight: bold;
       border-radius: 5px;
 
       >svg {

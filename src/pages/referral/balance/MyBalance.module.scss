@@ -38,6 +38,18 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+
+    >div {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width:768px) {
+    flex-direction: column;
+  }
 }
 
 .rankImage {
@@ -150,6 +162,14 @@
   align-items: center;
   gap: 22px;
   border: 1px solid #FFFFFF33;
+
+    @media (max-width:768px) {
+      height: auto;
+      box-sizing:border-box;
+      width: 100%;
+      margin-right: 0;
+      padding: 24px 30px 24px 29px;
+    }
 }
 
 .button {
@@ -172,6 +192,11 @@
   height: 110px;
   background-color: #24262b;
   border-radius: 15px;
+
+    @media (max-width:768px) {
+      margin-top: 20px;
+      width: 100%;
+    }
 
   >p {
     margin-bottom: 10px;
@@ -210,6 +235,11 @@
   background-color: #24262b;
   border-radius: 15px;
 
+    @media (max-width:768px) {
+      margin-top: 20px;
+      width: 100%;
+    }
+
   >p {
     font-weight: 700;
     font-size: 13px;
@@ -229,6 +259,10 @@
   >div {
     >div {
       padding-left: 100px;
+
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
     }
   }
 }
