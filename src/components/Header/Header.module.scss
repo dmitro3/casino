@@ -201,8 +201,12 @@
 }
 
 .windowDropdown {
-  position: relative;
-  left: 20px;
+
+  @media(max-width: 768px) {
+     position: relative;
+     left: 20px;
+  }
+ 
 
 }
 

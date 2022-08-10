@@ -12,6 +12,7 @@ import {
 import Dropdown from 'src/components/Dropdown';
 import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
+import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
 import styles from './MobileHeaderDropdown.module.scss';
 
 type Props = {
@@ -33,10 +34,17 @@ const MobileHeaderDropdown: FC<Props> = ({
     <>
       {isAuthenticated ? (
         <div className={styles.walletButtons}>
-          <Button
-            label="Wallet"
-            leftIcon={<Wallet />}
-            customStyles={styles.wallet}
+          <Dropdown
+            buttonComponent={
+              <Button
+                label="Wallet"
+                leftIcon={<Wallet />}
+                customStyles={styles.wallet}
+              />
+            }
+            dropdownComponent={<WalletDropdownWindow />}
+            customWalletDropdownStyles={styles.windowDropdown}
+            customDropdownContainerStyles={styles.customDropdownContainerStyles}
           />
           <Dropdown
             buttonComponent={<UserDropdownButton />}
@@ -46,7 +54,9 @@ const MobileHeaderDropdown: FC<Props> = ({
                 onLogout={toggleIsAuthenticated}
               />
             }
-            customUserDropdownStyles={styles.userWindowDropdown}
+            customDropdownContainerStyles={
+              styles.customDropdownUserContainerStyles
+            }
           />
           <MessageIcon />
         </div>

@@ -19,8 +19,11 @@
       }
 
       @media(max-width: 768px){
-        width: 52px;
         height: 30px;
+
+        &:nth-child(1) {
+          border-radius: 4px;
+        }
 
          svg {
           margin-right: 1px;
@@ -42,5 +45,4 @@
   .modalWrapper {
     position: absolute;
     z-index: 2;
-    top: 50px;
     }

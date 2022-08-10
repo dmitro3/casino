@@ -8,6 +8,34 @@
     border-bottom: 1px solid #FFFFFF1A;
 }
 
+.customDropdownContainerStyles {
+    border-radius: 1px !important;
+
+    > button svg {
+        display: none;
+      }
+
+}
+
+.walletDropdown {
+    height: 100%;
+
+     svg {
+        height: 20px !important;
+    }
+
+    > svg {
+        display: none;
+    }
+}
+
+.windowDropdown {
+
+    svg {
+        height: 20px !important;
+    }
+}
+
 .speechBubble {
 	position: relative;
   color: #000;
@@ -113,12 +141,30 @@
     }
 
     .wallet {
-        width: 88px;
+        width: 130px !important;
         height: 29px;
         font-size: 11px;
+        border-radius: 1px;
 
         > svg {
             height: 11px;
         }
+    }
+}
+
+.customDropdownUserContainerStyles {
+
+    button > div {
+        border-radius: 12px !important;
+    }
+    
+     div {
+        width: 52px;
+        border-radius: 10px;
+    }
+
+    div div {
+        width: 15px;
+        border-radius: 100%;
     }
 }
