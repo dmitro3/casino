@@ -6,13 +6,12 @@ import Link from 'next/link';
 import Lightning from 'src/assets/images/Lightning.png';
 import Bucket from 'src/assets/images/Bucket.png';
 import Button from 'src/components/Button';
-import TabTemplate from 'src/components/TabTemplate';
-import { ArrowBackIcon, KeyIcon, Checkmark, GoogleIcon } from 'src/assets/svg';
+import { ArrowBackIcon } from 'src/assets/svg';
 import styles from './ProfileCards.module.scss';
 
 const ProfileCards = () => {
   return (
-    <div>
+    <div className={styles.rootCardsContainer}>
       <section className={styles.cardsContainer}>
         <div className={styles.userRank}>
           <div className={styles.rankImage}>
@@ -53,41 +52,6 @@ const ProfileCards = () => {
             <span>My cashback</span>
             <p>2%</p>
           </div>
-        </div>
-      </section>
-      <section className={styles.tabs}>
-        <div>
-          <TabTemplate
-            label="Пароль"
-            mainIcon={<KeyIcon />}
-            subIcon={<Checkmark isPositive />}
-            subIconText="Проверено"
-            text="Must contain at least 8 characters a combination 
-          of letters and characters"
-            tabContent={
-              <Button label="Изменить" customStyles={styles.tabsButton} />
-            }
-            isPositive
-            customStyles={styles.tabsIndividual}
-          />
-        </div>
-        <div>
-          <TabTemplate
-            label="2FA"
-            mainIcon={<GoogleIcon />}
-            subIcon={<Checkmark />}
-            subIconText="2FA не активирован"
-            text="2-й уровень безопасности вашего аккаунта. Установите 2FA для защиты своего аккаунта (доступно только при решистрации в Google 
-или при установке адреса электронной почты 
-и пароля) "
-            tabContent={
-              <Button
-                customStyles={styles.tabsButtonNegative}
-                label="Активировать"
-              />
-            }
-            customStyles={styles.tabsIndividual}
-          />
         </div>
       </section>
     </div>

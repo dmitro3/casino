@@ -1,17 +1,8 @@
 import React, { FC, useState } from 'react';
 import Link from 'next/link';
 
-import {
-  ArrowBackIcon,
-  QuestionCircle,
-  HeartIcon,
-  Checkmark,
-  EmailIcon,
-} from 'src/assets/svg';
+import { ArrowBackIcon, QuestionCircle, HeartIcon } from 'src/assets/svg';
 import { mockUser } from 'src/utils/mockData';
-import TabTemplate from 'src/components/TabTemplate';
-import Checkbox from 'src/components/Checkbox';
-import Input from 'src/components/Input';
 import ProfileImg from 'src/pages/account/components/ProfileInfo/components/ProfileImg';
 import TipButton from 'src/pages/account/components/ProfileInfo/components/TipButton';
 import styles from './ProfileInfo.module.scss';
@@ -68,40 +59,6 @@ const ProfileInfo: FC<Props> = ({ customStyles }) => {
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <TabTemplate
-          customStyles={styles.tabMail}
-          label="Моя электронная почта"
-          text="Ваши данные для входа в аккаунт Binobi.com. Используйте этот адрес электронной почтыбъ, чтобы открыть платформу с любого устройства"
-          mainIcon={<EmailIcon />}
-          subIcon={<Checkmark isPositive />}
-          subIconText="Проверено"
-          isPositive
-          tabContent={
-            <div>
-              <div>
-                <Checkbox
-                  label={
-                    <div className={styles.userAgreement}>
-                      <span>
-                        Получать промо-материалы
-                        <br /> по электронной почте
-                      </span>
-                    </div>
-                  }
-                />
-              </div>
-              <Input
-                placeholder=""
-                icon
-                disabled
-                value="657897363999@gmail.com"
-                customStyles={styles.input}
-              />
-            </div>
-          }
-        />
       </section>
     </section>
   );

@@ -9,6 +9,10 @@
     padding-top: 30px;
     margin-top: 20px;
 
+    @media(max-width: 768px) {
+        align-items: unset;
+    }
+
     .labelWrapper {
         display: flex;
         align-items: center;
