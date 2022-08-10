@@ -3,6 +3,13 @@
   padding-top: 21px;
   min-height: 250px;
 
+    @media (max-width:768px) {
+      width: 90%;
+      padding-left: 26px;
+      padding-right: 26px;
+
+    }
+
   &Header {
     width: 100%;
     display: flex;
@@ -14,6 +21,10 @@
       font-weight: 700;
       font-size: 10px;
       flex: 1;
+
+        @media (max-width:768px ) {
+          flex-direction: column;
+        }
 
       &:first-child {
         flex: 0.5;
@@ -33,6 +44,10 @@
       justify-content: space-evenly;
       padding: 0 0 14px 0;
 
+        @media (max-width:768px ) {
+          flex-direction: column;
+        }
+
       &Element {
         flex: 1;
         font-weight: 700;
@@ -40,6 +55,11 @@
         color: rgba(255, 255, 255, 0.7);
         display: flex;
         align-items: center;
+
+        @media (max-width:768px ) {
+          margin-bottom: 20px;
+        }
+
 
         svg {
           margin-right: 10px;
@@ -49,7 +69,7 @@
           flex: 0.5;
         }
 
-        &:nth-child(2) {
+        &:nth-child(1) {
           color: #fff;
         }
 
@@ -67,9 +87,46 @@
           width: 17%;
           justify-content: space-evenly;
 
+            &Label {
+
+            }
+
+              &:first-child(2) {
+                color: #4ED254;
+              }
+
+            >div {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+
+              >div {
+                margin-right: 3px;
+              }
+            }
+          @media (max-width:768px) {
+            width: 98%;
+            box-sizing: border-box;
+            height: fit-content;
+            justify-content: space-between;
+            align-items: baseline;
+          }
+
+            >p {
+                color:#8e8f92;
+            }
+
+
+
           button {
             padding: 5px 15px;
             font-size: 11px;
+
+              @media (max-width:768px) {
+                margin-bottom: 20px;
+              }
+
+
           }
 
           &::before {
@@ -80,9 +137,101 @@
             height: 7px;
             background-color: #4ED254;
             border-radius: 50%;
+
+            @media (max-width:768px) {
+             display: none;
+            }
+
           }
         }
       }
     }
   }
+}
+
+.tableMobileBodyRow {
+  padding-bottom: 20px;
+
+      &Link {
+        color: #4ED254;
+      }
+      &Active {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+
+          >div {
+            &:nth-child(2) {
+              font-size: 10px;
+              font-weight: bold;
+              color: #4ED254;
+              position: relative;
+              margin-right: 10px;
+              align-self: flex-end;
+              margin-bottom: 3px;
+
+              &::before {
+                position: absolute;
+                content: '';
+                top: 4px;
+                right: 120%;
+                width: 7px;
+                height: 7px;
+                background-color: #4ED254;
+                border-radius: 50%;
+
+                }
+            }
+            >p {
+              color:#bbbbbd;
+              font-weight: 700;
+              font-size: 13px;
+            }
+            >span{
+              font-weight: 700;
+              font-size: 10px;
+              color:#8e8f92;
+              margin-bottom: 6px;
+            }
+          }
+      }
+  // &:nth-child(1) {
+  //   >p {
+  //     margin-bottom: 40px;
+  //   }
+  // }
+  >div {
+      margin-bottom: 20px;
+        &:nth-child(3) {
+
+          margin-bottom: 30px;
+          >p {
+            color: #fff;
+          }
+        }
+        &:nth-child(4) {
+          >p {
+            color: #FCD73F;
+          }
+        }
+    >p{
+      color:#bbbbbd;
+      font-weight: 700;
+      font-size: 13px;
+    }
+      >span {
+        font-weight: 700;
+        font-size: 10px;
+        color:#8e8f92;
+        margin-bottom: 6px;
+      }
+  }
+}
+
+.mobileButton {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-self: baseline;
 }
