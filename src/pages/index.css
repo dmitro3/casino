@@ -28,13 +28,13 @@ a {
 
 @media (max-width: 768px) {
   .react-multi-carousel-dot-list {
-    padding-left: 150px !important;
+    padding-left: 50px !important;
   }
 }
 
 @media (max-width: 576px) {
   .react-multi-carousel-dot-list {
-    padding-left: 60px !important;
+    padding-left: 0px !important;
   }
 }
 

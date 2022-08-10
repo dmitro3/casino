@@ -26,12 +26,19 @@
 
       @media (max-width: 768px) {
         margin: 0;
+        width: 100%;
       }
 
       .currencyRow {
         display: flex;
         justify-content: space-between;
-    }
+
+        @media (max-width: 768px) {
+          > div {
+            border: none !important;
+          }
+        }
+      }
     }
   }
 
@@ -62,6 +69,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 768px) {
+      max-width: 100%;
+    }
 
     &Label {
       font-weight: 700;
@@ -128,10 +139,10 @@
       }
 
       @media(max-width: 768px) {
-        &:nth-child(4) {
+        &:nth-child(2) {
           padding-right: 25px;
-        border-right: 1px solid;
-        border-color: #2b2e36;
+          border-right: 1px solid;
+          border-color: #2b2e36;
         }
       }
     }
