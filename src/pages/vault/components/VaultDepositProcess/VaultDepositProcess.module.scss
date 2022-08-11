@@ -28,6 +28,11 @@
         &:hover {
             cursor: pointer;
         }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            left: 0;
+        }
     }
 
     .content {
@@ -54,7 +59,14 @@
             }
           }
 
-        > span {
+        > div {
+            
+            @media(max-width: 768px) {
+                margin-bottom: 9px;
+            }
+        }
+
+        > div > span {
             font-size: 15px;
             font-weight: 700;
         }
@@ -75,6 +87,11 @@
             font-family: 'Montserrat';
             margin: 15px 0;
             padding: 12px;
+
+            @media(max-width: 768px) {
+                text-indent: 5px;
+                font-size: 11px;
+            }
         }
     }
 
@@ -82,6 +99,15 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @media(max-width: 768px) {
+            gap: 12px;
+
+            img {
+                height: 80px !important;
+                width: 85px !important;
+            }
+        }
 
         &Text {
             display: flex;
@@ -95,6 +121,10 @@
             padding-bottom: 11px;
             width: 366px;
             line-height: 16px;
+
+            @media(max-width: 768px) {
+                width: 70%;
+            }
 
             > p {
                 width: 90%;
@@ -113,6 +143,10 @@
         line-height: 17px;
         width: 470px;
         padding-top: 20px;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
 }
 

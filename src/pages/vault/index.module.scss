@@ -35,3 +35,17 @@
       }
     }
 }
+
+.binance {
+  position: absolute;
+  top: 50px;
+  left: -10px;
+  z-index: 1;
+}
+
+.coin {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  z-index: 1;
+}

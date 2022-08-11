@@ -81,6 +81,12 @@
 .input {
     margin-top: 27px;
 
+    @media(max-width: 768px) {
+       div {
+        margin-right: 0;
+       } 
+    }
+
     > div > div > svg {
         margin-top: 9px;
     }
@@ -94,6 +100,10 @@
         margin-top: 10px;
         background-color: #181A20;
         width: 100%;
+
+        @media(max-width: 768px) {
+            box-sizing: border-box;
+        }
     }
 }
 
