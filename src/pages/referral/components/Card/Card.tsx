@@ -51,7 +51,7 @@ const Card = () => {
           </Blur>
         </div>
 
-        <p>15 %</p>
+        <p>5 %</p>
         <span>From tokens mined by your referrals</span>
         <div className={styles.bonusContainerCardText}>
           Some text about. Let the whole world know about BetFury

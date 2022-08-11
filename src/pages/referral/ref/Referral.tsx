@@ -15,7 +15,7 @@ const Referral = () => {
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
         <BackButton />
-        <p className={styles.mainLabel}>Referral Program</p>
+        <p className={styles.mainLabel}>Referral program</p>
         <Navigation />
         <div className={styles.tableContainer}>
           <div className={styles.tableContainerHeader}>
