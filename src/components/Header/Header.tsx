@@ -88,10 +88,12 @@ const Header: FC<Props> = ({
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
-        <div className={styles.logoContainer}>
-          <Logo />
-          <div className={styles.logoContainerLabel}>Binobi.com</div>
-        </div>
+        <Link href="/">
+          <div className={styles.logoContainer}>
+            <Logo />
+            <div className={styles.logoContainerLabel}>Binobi.com</div>
+          </div>
+        </Link>
         <ul className={styles.navigationContainer}>
           {links.map((link) => (
             <li key={link.id} className={styles.navigationContainerItem}>

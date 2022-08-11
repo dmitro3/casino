@@ -1,43 +1,59 @@
 .accountNavBar {
-    display: flex;
-    gap: 40px;
-    justify-content: space-between;
-    margin-top: 21px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 21px;
 
-      @media (max-width:768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+  @media (max-width: 1300px) {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1240px) {
+    justify-content: center;
+    gap: 20%;
+  }
+
+  @media (max-width:768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 500px) {
+    gap: 20px;
+  }
+
+  .navTab {
+      background-color: #FFFFFF08;
+      border-radius: 10px;
+      height: 118px;
+      width: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      overflow: hidden;
+
+      @media (max-width: 1240px) {
+        margin-bottom: 10px;
       }
 
-    .navTab {
-        background-color: #FFFFFF08;
-        border-radius: 10px;
-        height: 118px;
-        width: 290px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: white;
-        font-size: 13px;
-        font-weight: 700;
-        overflow: hidden;
+      @media (max-width:768px) {
+        width: 175px;
+        height: 120px;
+      }
 
-        @media (max-width:768px) {
-          width: 165px;
-          height: 120px;
-        }
+      > span {
+          padding-top: 5px;
+      }
 
-
-        > span {
-            padding-top: 5px;
-        }
-
-        &:hover {
-            cursor: pointer;
-            opacity: 0.6;
-        }
-    }
+      &:hover {
+          cursor: pointer;
+          opacity: 0.6;
+      }
+  }
 }
