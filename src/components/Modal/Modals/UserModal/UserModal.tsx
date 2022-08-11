@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-
+import { useMediaQuery } from 'react-responsive';
 import Modal from 'src/components/Modal';
 import ProfileImg from 'src/pages/account/components/ProfileInfo/components/ProfileImg';
 import TipButton from 'src/pages/account/components/ProfileInfo/components/TipButton';
 import { mockUser } from 'src/utils/mockData';
 import { topGames } from 'src/pages/account/components/Stats/StatsTop/StatsTop';
 import {
+  CloseIcon,
   QuestionCircle,
   HeartIcon,
   Rocket,
@@ -23,36 +24,77 @@ type Props = {
 };
 
 const UserModal: FC<Props> = ({ toggleModal }) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
   return (
     <Modal customStyles={styles.root} toggleModal={toggleModal}>
-      <div className={styles.header}>
-        <span>User Profile</span>
-        <TipButton />
-      </div>
-      <div className={styles.userInfo}>
-        <ProfileImg />
-        <div className={styles.nicknameContainer}>
-          <span>18 days on the platform</span>
-          <p>{mockUser.username}</p>
-        </div>
-        <div className={styles.userActivity}>
-          <p>Chat Activity</p>
-          <div className={styles.userActivityStats}>
-            <span>1/5</span>
-            <div>
-              <span>{mockUser.userRank}</span>
+      {!isMobile ? (
+        <>
+          <div className={styles.header}>
+            <span>User Profile</span>
+            <TipButton />
+          </div>
+          <div className={styles.userInfo}>
+            <ProfileImg />
+            <div className={styles.nicknameContainer}>
+              <span>18 days on the platform</span>
+              <p>{mockUser.username}</p>
             </div>
-            <QuestionCircle />
+            <div className={styles.userActivity}>
+              <p>Chat Activity</p>
+              <div className={styles.userActivityStats}>
+                <span>1/5</span>
+                <div>
+                  <span>{mockUser.userRank}</span>
+                </div>
+                <QuestionCircle />
+              </div>
+            </div>
+            <div className={styles.userActivity}>
+              <p>Likes received</p>
+              <div className={styles.userActivityStats}>
+                <HeartIcon />
+                <span>{mockUser.likes}</span>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className={styles.mobileRoot}>
+          <div>
+            <span>User Profile</span>
+            <CloseIcon width={14} height={14} />
+          </div>
+          <div className={styles.header}>
+            <ProfileImg />
+            <div className={styles.nicknameContainer}>
+              <TipButton />
+              <span>18 days on the platform</span>
+              <p>{mockUser.username}</p>
+            </div>
+          </div>
+          <div className={styles.userInfo}>
+            <div className={styles.mobileUserActivity}>
+              <div className={styles.userActivity}>
+                <p>Chat Activity</p>
+                <div className={styles.userActivityStats}>
+                  <span>1/5</span>
+                  <div>
+                    <span>{mockUser.userRank}</span>
+                  </div>
+                  <QuestionCircle />
+                </div>
+              </div>
+              <div className={styles.userActivity}>
+                <p>Likes received</p>
+                <div className={styles.userActivityStats}>
+                  <HeartIcon />
+                  <span>{mockUser.likes}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className={styles.userActivity}>
-          <p>Likes received</p>
-          <div className={styles.userActivityStats}>
-            <HeartIcon />
-            <span>{mockUser.likes}</span>
-          </div>
-        </div>
-      </div>
+      )}
       <div className={styles.statsContainer}>
         <span>
           <Stats /> Statictics
@@ -119,16 +161,24 @@ const UserModal: FC<Props> = ({ toggleModal }) => {
                 <Image
                   src={tabImg.image}
                   key={tabImg.id}
-                  width={111}
-                  height={152}
+                  width={100}
+                  height={130}
                 />
               </div>
             ))}
+            {isMobile && (
+              <div className={styles.emptyTab}>
+                <Gamepad />
+                <Button label="All games" />
+              </div>
+            )}
           </div>
-          <div className={styles.emptyTab}>
-            <Gamepad />
-            <Button label="All games" />
-          </div>
+          {!isMobile && (
+            <div className={styles.emptyTab}>
+              <Gamepad />
+              <Button label="All games" />
+            </div>
+          )}
         </div>
       </div>
       <hr />
