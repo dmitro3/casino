@@ -15,7 +15,7 @@ import Input from 'src/components/Input';
 import Link from 'next/link';
 
 const ReferralInfo = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+  const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
 
   return (
     <div className={styles.referralLinkContainer}>

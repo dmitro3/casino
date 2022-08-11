@@ -32,7 +32,9 @@ const VaultDepositProcess = () => {
         </div>
       )}
       <div className={styles.content}>
-        <span>Ваш USDT адрес депозита</span>
+        <div>
+          <span>Ваш USDT адрес депозита</span>
+        </div>
         <p>
           This address accepts only ERC-20, transferring here any other coin
           will result in fund loss. Copy USDT address here:

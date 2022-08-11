@@ -6,14 +6,32 @@
     padding-bottom: 24px;
     padding-right: 10px;
 
+    @media(max-width: 768px) {
+       height: fit-content;
+       box-sizing: border-box;
+       background-color: inherit !important;
+       padding-left: 0;
+       padding-right: 0;
+    }
+
     .wrapper {
         display: flex;
+
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+            padding-top: 20px;
+        }
     }
 
     .cardsContainer {
         display: flex;
         width: 625px;
         gap: 19px;
+
+        @media(max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         > div:hover {
             cursor: pointer;
@@ -32,5 +50,9 @@
         border-radius: 13px;
         margin-left: 20px;
         gap: 15px;
+
+        @media(max-width: 768px) {
+            margin-left: 0;
+        }
     }
 }

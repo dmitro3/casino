@@ -1,8 +1,17 @@
 .tab {
     width: 338px;
 
+    @media(max-width: 768px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     &Settings {
         margin-right: 200px;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
 
         > div {
             padding-bottom: 10px;
@@ -23,9 +32,23 @@
     height: 45px;
     margin-top: 21px;
 
+    @media(max-width: 768px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     > span {
         margin-left: auto;
         margin-right: auto;
         font-size: 12px;
+    }
+}
+
+.root {
+    font-weight: 700;
+    font-size: 15px;
+
+    @media(max-width: 768px) {
+       margin-top: -100px;
     }
 }

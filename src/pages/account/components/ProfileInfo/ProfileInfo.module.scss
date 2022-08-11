@@ -7,17 +7,23 @@
     margin-top: 20px;
     padding: 32px 29px 39px 29px;
 
+    @media(max-width: 768px) {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+
     .profileContainer {
         display: grid;
         grid-template-areas: 'image profile'
                              'image nickname';
-    
+
         .userProfileContainer {
             grid-area: profile;
             display: flex;
             flex-direction: column;
             padding-left: 10px;
-    
+
             > span {
                 color: #FFFFFF4D;
                 font-weight: 600;
@@ -25,7 +31,7 @@
                 padding-bottom: 7px;
             }
         }
-    
+
         .nicknameContainer {
             grid-area: nickname;
             display: flex;
@@ -33,21 +39,21 @@
             position: relative;
             margin-top: -10px;
             margin-left: 10px;
-    
-    
+
+
             > span {
                 color: #FFFFFF4D;
                 font-size: 10px;
                 font-weight: 600;
             }
-    
+
             > p {
                 color: white;
                 font-size: 18px;
                 font-weight: 700;
                 padding-top: 5px;
             }
-    
+
             .editButton {
                 position: absolute;
                 right: 0;
@@ -62,12 +68,12 @@
                 border-radius: 50px;
                 font-size: 11px;
                 background-color: #1c1e24;
-    
+
                 &:hover {
                     cursor: pointer;
                     opacity: .7;
                 }
-            
+
                 &Text{
                   margin-right: 5px;
                   font-weight: 700;
@@ -84,6 +90,8 @@
         padding-top: 20px;
         gap: 10px;
 
+
+
         .userActivity {
             width: 165px;
             height: 61px;
@@ -167,26 +175,4 @@
             }
         }
     }
-}
-
-.tabMail {
-    width: 338px;
-    height: 212px;
-}
-
-.userAgreement {
-    width: 340px;
-    display: flex;
-
-    > span {
-        font-size: 13px;
-        color: white;
-        padding-left: 25px;
-        padding-bottom: 18px;
-        margin-top: -5px;
-    }
-}
-
-.input {
-    text-indent: 0;
 }

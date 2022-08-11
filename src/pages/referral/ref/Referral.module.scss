@@ -40,10 +40,20 @@
   border-radius: 10px;
   padding: 25px 64px 33px 67px;
 
+  @media (max-width: 768px) {
+    padding: 15px 0 !important;
+  }
+
 
   &Header {
     display: flex;
     justify-content: space-around;
+
+    @media (max-width: 768px) {
+      padding-left: 8px;
+      gap: 50%;
+      flex-wrap: wrap;
+    }
 
     >div{
       display: flex;
@@ -62,6 +72,12 @@
         height: 31px;
         border-radius: 5px;
 
+        @media (max-width: 768px) {
+          max-width: 234px;
+          min-width: 200px;
+          width: fit-content;
+        }
+
         div {
           display: flex;
           align-items: center;
@@ -73,6 +89,14 @@
 
         >svg {
           margin: 0;
+        }
+      }
+    }
+
+    @media(max-width: 768px) {
+      > div > button {
+        &:last-child {
+          margin-top: 9px;
         }
       }
     }

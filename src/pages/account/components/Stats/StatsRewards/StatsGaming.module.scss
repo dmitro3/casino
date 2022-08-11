@@ -10,4 +10,13 @@
     font-size: 13px;
     color: #FFFFFF80;
     margin-bottom: 143px;
+
+    @media(max-width: 768px) {
+        box-sizing: border-box;
+    }
+}
+
+.label {
+    font-weight: 700;
+    font-size: 15px;
 }

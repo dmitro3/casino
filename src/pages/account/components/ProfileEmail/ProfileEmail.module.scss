@@ -1,0 +1,37 @@
+.tabMail {
+    width: 338px;
+    height: 212px;
+
+    @media(max-width: 768px) {
+        width: calc(100%  - 60px);
+        height: fit-content;
+
+        > div {
+            width: 100%;
+        }
+    }
+}
+
+.userAgreement {
+    width: 340px;
+    display: flex;
+
+    > span {
+        font-size: 13px;
+        color: white;
+        padding-left: 25px;
+        padding-bottom: 18px;
+        margin-top: -5px;
+    }
+}
+
+.input {
+    text-indent: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+
+    @media(max-width: 768px) {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

@@ -12,6 +12,19 @@
         gap: 8px;
     }
 
+    @media (max-width: 900px) {
+      input {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      input {
+        max-width: 100%;
+      }
+    }
+
     .input {
         width: 100%;
 
@@ -29,6 +42,10 @@
         padding-top: 12px;
         padding-bottom: 12px;
         border-radius: 12px;
+
+        @media (max-width: 900px) {
+          padding: 12px;
+        }
     }
 
     &Button {

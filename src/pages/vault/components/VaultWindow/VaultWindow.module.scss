@@ -8,6 +8,12 @@
     top: 10%;
     bottom: 10%;
 
+    @media(max-width: 768px) {
+        padding: 80px 20px;
+        background-color: inherit;
+        width: 100%;
+      }
+
     .vaultContainer {
 
         > span {
@@ -24,6 +30,10 @@
             justify-content: center;
             gap: 7px;
 
+            @media(max-width: 768px) {
+                width: 175px;
+              }
+
             > svg {
                 transform: rotate(180deg);
             }
@@ -38,6 +48,10 @@
                 color: #969699;
                 background-color: #2C2D32;
                 gap: 7px;
+
+                @media(max-width: 768px) {
+                    width: 175px;
+                  }
             }
 
             &Container {
@@ -45,6 +59,10 @@
                 gap: 13px;
                 padding-top: 20px;
                 padding-bottom: 24px;
+
+                @media(max-width: 768px) {
+                   justify-content: space-evenly;
+                  }
             }
         }
     }

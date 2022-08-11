@@ -18,7 +18,10 @@ const GameHistory: NextPage = () => {
         <p className={styles.mainLabel}>Account</p>
         <Navigation />
         <div className={styles.tableContainer}>
-          <div className={styles.tableContainerHeader}>
+          <div
+            className={styles.tableContainerHeader}
+            style={{ justifyContent: `flex-start` }}
+          >
             <Dropdown
               buttonComponent={<div>In-house</div>}
               dropdownComponent={
