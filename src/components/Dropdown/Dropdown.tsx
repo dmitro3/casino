@@ -29,7 +29,7 @@ const Dropdown: FC<Props> = ({
   const [isOpened, setIsOpened] = useState(false);
 
   useEffect(() => {
-    setIsOpened(isDropdownState);
+    setIsOpened(isDropdownState || false);
   }, [isDropdownState]);
 
   useEffect(() => {
