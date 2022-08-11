@@ -30,6 +30,10 @@
     button {
         margin-left: -20px;
     }
+
+    @media(max-width: 768px) {
+        justify-content: space-evenly;
+    }
 }
 
  .walletDropdown {
@@ -39,6 +43,14 @@
   margin-right: -10px;
   background-color: #FFFFFF0D;
   margin-top: 10px;
+
+  @media(max-width: 768px) {
+    width: 160px;
+    
+    svg:first-child {
+        padding: 0;
+    }
+  }
 
   > svg {
     padding-right: 11px;
@@ -69,6 +81,12 @@
 .input {
     margin-top: 27px;
 
+    @media(max-width: 768px) {
+       div {
+        margin-right: 0;
+       } 
+    }
+
     > div > div > svg {
         margin-top: 9px;
     }
@@ -82,6 +100,10 @@
         margin-top: 10px;
         background-color: #181A20;
         width: 100%;
+
+        @media(max-width: 768px) {
+            box-sizing: border-box;
+        }
     }
 }
 

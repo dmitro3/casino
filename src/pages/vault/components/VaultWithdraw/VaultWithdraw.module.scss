@@ -1,5 +1,12 @@
 .root {
 
+  > span {
+
+    @media(max-width: 768px) { margin-left: 10%;
+    }
+   
+  }
+
   .walletDropdown {
     border-radius: 5px;
     width: 180px;
@@ -7,6 +14,14 @@
     margin-right: -10px;
     background-color: #FFFFFF0D;
     margin-top: 10px;
+
+    @media(max-width: 768px) {
+      width: 160px;
+      
+      svg:first-child {
+          padding: 0;
+      }
+    }
 
     > div > svg {
       height: 21px;
@@ -28,6 +43,11 @@
     justify-content: flex-start;
     margin-left: -10px;
     gap: 20px;
+
+    @media(max-width: 768px) {
+      justify-content: space-evenly;
+      width: 100%;
+    }
 }
 
 .sumContainer {
@@ -35,6 +55,19 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 7px;
+
+  @media(max-width: 768px) {
+    
+    > div {
+      box-sizing: border-box;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    > div:first-child {
+      margin-right: 10px;
+    }
+  }
 
   > div > div:last-child > svg {
     padding-right: 10px;
@@ -49,6 +82,11 @@
   width: 100%;
   margin-top: 8px;
 
+  @media(max-width: 768px) {
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+
   &Amount {
     text-indent: 0px;
   }
@@ -61,8 +99,19 @@
     background-color: #181A20;
     border-color: #FFFFFF33;
 
+    @media(max-width: 768px) {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
     &Wide {
       padding-top: 18px;
+
+      @media(max-width: 768px) {
+        > div {
+          margin-right: 0;
+        }
+      }
 
       > span {
         font-weight: 500;
