@@ -17,6 +17,7 @@ import UserDropdownWindow from 'src/components/Header/components/UserDropdownWin
 import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
 import MobileHeaderDropdown from 'src/components/MobileHeaderDropdown';
+import { useMediaQuery } from 'react-responsive';
 import styles from './Header.module.scss';
 
 export const links = [
@@ -82,6 +83,8 @@ const Header: FC<Props> = ({
   toggleIsAuthenticated,
   toggleUserModal,
 }) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 1160px)` });
+
   return (
     <div className={styles.root}>
       <div className={styles.contentContainer}>
@@ -154,26 +157,28 @@ const Header: FC<Props> = ({
           <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
         </div>
-        <Dropdown
-          buttonComponent={
-            <div className={styles.burgerMenuIcon}>
-              <div />
-              <div />
-              <div />
-            </div>
-          }
-          dropdownComponent={
-            <MobileHeaderDropdown
-              toggleSignInModal={toggleSignInModal}
-              isAuthenticated={isAuthenticated}
-              toggleRegistrationModal={toggleRegistrationModal}
-              toggleUserModal={toggleUserModal}
-              toggleIsAuthenticated={toggleIsAuthenticated}
-            />
-          }
-          customWalletDropdownStyles={styles.windowDropdownHeader}
-          customDropdownContainerStyles={styles.windowDropdownContainer}
-        />
+        {isMobile && (
+          <Dropdown
+            buttonComponent={
+              <div className={styles.burgerMenuIcon}>
+                <div />
+                <div />
+                <div />
+              </div>
+            }
+            dropdownComponent={
+              <MobileHeaderDropdown
+                toggleSignInModal={toggleSignInModal}
+                isAuthenticated={isAuthenticated}
+                toggleRegistrationModal={toggleRegistrationModal}
+                toggleUserModal={toggleUserModal}
+                toggleIsAuthenticated={toggleIsAuthenticated}
+              />
+            }
+            customWalletDropdownStyles={styles.windowDropdownHeader}
+            customDropdownContainerStyles={styles.windowDropdownContainer}
+          />
+        )}
 
         <MessageIcon />
       </div>

@@ -91,6 +91,10 @@
     border-radius: 12px;
     position: relative;
 
+    @media (max-width: 768px) {
+      margin-right: 20px;
+    }
+
     .loginButton {
         background-color: #FFFFFF0D !important;
         color: white;
@@ -104,7 +108,7 @@
             height: 20px;
         }
     }
-    
+
     svg {
             height: 20px;
         }
@@ -134,7 +138,7 @@
     }
 
     .userWindowDropdown {
-       
+
         > svg {
             height: 27px;
         }

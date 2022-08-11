@@ -14,12 +14,12 @@ type Props = {
 const Modal: FC<Props> = ({ children, toggleModal, customStyles }) => {
   useEffect(() => {
     const body = document.querySelector(`body`);
-    body!.style.overflow = `hidden`;
+    // body!.style.overflow = `hidden`;
   }, []);
 
   const onToggleModal = () => {
     const body = document.querySelector(`body`);
-    body!.style.overflow = `auto`;
+    // body!.style.overflow = `auto`;
     toggleModal();
   };
 

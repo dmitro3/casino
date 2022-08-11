@@ -34,6 +34,11 @@
   gap: 30px;
   margin-left: 37px;
 
+  @media (max-width: 1370px) {
+    gap: 10px;
+    margin-left: 10px;
+  }
+
   @media  (max-width: 1160px){
     display: none;
   }
@@ -109,10 +114,6 @@
   justify-content: flex-start;
   padding-left: 4px;
 
-  @media (max-width: 768px) {
-    display: none;
-
-  }
 
   > svg {
     padding-left: 5px;
@@ -184,20 +185,24 @@
 .wallet {
   z-index: 2;
 
-  @media(max-width: 768px) {
+  @media(max-width: 1160px) {
     display: none;
   }
 
-   &Dropdown {
-    border-radius: 5px;
-    width: 190px;
-    margin-right: -10px;
+    &Dropdown {
 
-    > svg {
-      padding-right: 11px;
+      @media(max-width: 1160px) {
+        display: none;
+      }
+
+      border-radius: 5px;
+      width: 190px;
+      margin-right: -10px;
+
+      > svg {
+        padding-right: 11px;
+      }
     }
-
-  }
 }
 
 .windowDropdown {
@@ -206,7 +211,7 @@
      position: relative;
      left: 20px;
   }
- 
+
 
 }
 
@@ -219,7 +224,7 @@
 }
 
 .userDropdown {
-  @media(max-width: 768px) {
+  @media(max-width: 1160px) {
     display: none;
   }
 }
@@ -244,14 +249,29 @@
   }
 }
 
-.windowDropdownContainer {
-  position: static;
+.windowDropdown {
 
-  > button svg {
-    display: none;
+  &Header {
+    left: 0;
+    right: 0;
+    background-color: #15161c;
+
+    > ul svg {
+      width: 8px;
+      height: 4px;
+      margin-left: 5px;
+    }
   }
 
-  > button > div {
-    background-color: inherit;
+  &Container {
+    position: static;
+
+    > button svg {
+      display: none;
+    }
+
+    > button > div {
+      background-color: inherit;
+    }
   }
 }

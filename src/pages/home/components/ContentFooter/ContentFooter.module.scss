@@ -1,9 +1,6 @@
 .root {
   width: 100%;
-
-  @media (max-width: 1240px) {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: auto;
