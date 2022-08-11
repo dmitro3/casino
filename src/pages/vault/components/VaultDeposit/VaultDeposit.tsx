@@ -32,7 +32,8 @@ const VaultDeposit: FC<Props> = ({ onClick }) => {
             buttonComponent={<WalletDropdownButton />}
             dropdownComponent={<WalletDropdownWindow />}
             customButtonStyles={styles.walletDropdown}
-            customWalletDropdownStyles={styles.windowDropdown}
+            // customWalletDropdownStyles={styles.windowDropdown}
+            customDropdownStyles={styles.positionDropdown}
           />
         </div>
       </div>
