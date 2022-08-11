@@ -55,7 +55,7 @@ const VaultWithdraw = () => {
             icon={<TetherToken height={20} />}
             disabled
             customStyles={`${styles.inputContainer}`}
-            additionalButton={<CloseIcon />}
+            additionalButton={<CloseIcon width={14} height={14} />}
           />
         </div>
       </div>
