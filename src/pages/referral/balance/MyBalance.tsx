@@ -26,7 +26,7 @@ const MyBalance: NextPage = () => {
           className={styles.backButton}
           onClick={() => router.back()}
         >{`< Back`}</button>
-        <p className={styles.mainLabel}>Referral Program</p>
+        <p className={styles.mainLabel}>Referral program</p>
         <Navigation />
         <div className={styles.mainContainerCard}>
           <div className={styles.cardsContainer}>
@@ -38,9 +38,7 @@ const MyBalance: NextPage = () => {
                 </div>
               </div>
               <div className={styles.rankStats}>
-                <span>
-                  My rank: <span>Newcomer</span>
-                </span>
+                <span>Your Level</span>
                 <ProgressBar
                   bgColor="#FFFFFF1A"
                   height="4px"

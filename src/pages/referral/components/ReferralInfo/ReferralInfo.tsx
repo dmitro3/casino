@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from 'src/components/Button';
-import Speaker from 'src/assets/images/Speaker.png';
+import SpeakerMobile from 'src/assets/images/SpeakerMobile.png';
 import { useMediaQuery } from 'react-responsive';
 import {
   BigDiscordIcon,
@@ -25,7 +25,7 @@ const ReferralInfo = () => {
           <Logo />
           <div className={styles.logoContainerLabel}>Binobi.com</div>
         </div>
-        {!isMobile && <Image src={Speaker} width={181} height={180} />}
+        {!isMobile && <Image src={SpeakerMobile} width={181} height={180} />}
       </div>
 
       <div className={styles.referralLink}>
@@ -48,7 +48,7 @@ const ReferralInfo = () => {
             </div>
           </div>
           <div className={styles.referralLinkContainerCaseColumns}>
-            <p>Общий Вейджер</p>
+            <p>Всего заработано</p>
             <div className={styles.referralLinkContainerCaseColumnsValue}>
               <BtcToken />
               <span>
@@ -116,7 +116,7 @@ const ReferralInfo = () => {
             </>
           ) : (
             <div className={styles.mobileInfoContainer}>
-              <Image src={Speaker} width={140} height={136} />
+              <Image src={SpeakerMobile} width={140} height={136} />
               <div>
                 <div className={styles.infoContainerColumn}>
                   <span>Поделиться</span>

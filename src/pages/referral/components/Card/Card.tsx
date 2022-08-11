@@ -33,7 +33,7 @@ const Card = () => {
           </Blur>
         </div>
 
-        <p>1.5 %</p>
+        <p>5 %</p>
         <span>From all winnings</span>
         <div className={styles.bonusContainerCardText}>
           Some text about. Let the whole world know about BetFury

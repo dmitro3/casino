@@ -13,7 +13,7 @@ const Referral: NextPage = () => {
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
         <BackButton />
-        <p className={styles.mainLabel}>Referral Program</p>
+        <p className={styles.mainLabel}>Referral program</p>
         <Navigation />
         <ReferralInfo />
         <div className={styles.text}>
