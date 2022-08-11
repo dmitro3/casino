@@ -44,6 +44,14 @@
   background-color: #FFFFFF0D;
   margin-top: 10px;
 
+  @media(max-width: 768px) {
+    width: 160px;
+    
+    svg:first-child {
+        padding: 0;
+    }
+  }
+
   > svg {
     padding-right: 11px;
   }
