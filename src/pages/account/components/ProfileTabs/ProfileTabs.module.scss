@@ -1,20 +1,31 @@
 .tabs {
     display: flex;
-    padding-left: 45px;
-    gap: 40px;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
+    &Class {
+      @media (max-width: 1277px) and (min-width: 1000px) {
+        width: 100%;
+      }
+    }
 
     &Individual {
         width: 338px;
         height: 251px;
 
-        @media(max-width: 768px) {
+        @media(max-width: 1277px) and (min-width: 1000px) {
+          width: calc(100% - 60px);
+        }
+
+        @media(max-width: 1000px) {
            width: inherit;
            margin-top: 8px;
            height: fit-content;
+           padding-bottom: 20px;
         }
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
         flex-direction: column;
         padding-left: 0;
         gap: 12px;
@@ -27,23 +38,29 @@
     color: #1E2026;
     margin-top: 95px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
        width: 100%;
        margin-top: 22px;
+       padding-bottom: 20px;
+
     }
 
     &Negative {
-    margin-top: 45px;
-    height: 45px;
-    width: 342px;
-    color: #1E2026;
-    background-color: #D7525F;
+      margin-top: 45px;
+      height: 45px;
+      width: 342px;
+      color: #1E2026;
+      background-color: #D7525F;
 
-    @media(max-width: 768px) {
-        width: 100%;
-        margin-top: 20px;
-     }
-    
+      // @media(max-width: 1277px) {
+      //   width: calc(100% - 60px);
+      // }
+
+      @media(max-width: 1000px) {
+          width: 100%;
+          margin-top: 20px;
+      }
+
     > span {
         margin-left: auto;
         margin-right: auto;

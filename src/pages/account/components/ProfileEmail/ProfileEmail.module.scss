@@ -2,7 +2,7 @@
     width: 338px;
     height: 212px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
         width: calc(100%  - 60px);
         height: fit-content;
 
@@ -30,7 +30,7 @@
     font-size: 12px;
     font-family: 'Montserrat';
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
         margin-bottom: 10px;
         width: 100%;
     }

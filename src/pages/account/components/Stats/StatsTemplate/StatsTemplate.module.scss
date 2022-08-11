@@ -1,8 +1,7 @@
 .statsTemplate {
-    padding-left: 48px;
     padding-top: 31px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1000px) {
         padding-left: 0;
         padding-top: 0;
         width: 100%;
@@ -14,18 +13,23 @@
     }
 
     .statsContent {
-        width: 800px;
+        width: calc(100% - 41px);
+
+        @media(max-width: 1200px) and (min-width: 1000px) {
+          width: calc(100% - 20px);
+        }
+
         border-radius: 10px;
         background-color: #D9D9D908;
         margin-top: 16px;
 
-        @media(max-width: 768px) {
+        @media(max-width: 1000px) {
             width: 100%;
         }
-        
+
         .label {
 
-            @media(max-width: 768px) {
+            @media(max-width: 1000px) {
                 font-size: 15px;
                 font-weight: 700;
                 margin-bottom: 10px;
