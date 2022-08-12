@@ -1,0 +1,31 @@
+.mainHeader {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 17px;
+    margin-bottom: 33px;
+}
+
+.subText {
+    font-weight: 400;
+    font-size: 13px;
+    color: #FFFFFFB2;
+
+    > p {
+        width: 50%;
+    }
+}
+
+.rankText {
+    font-weight: 400;
+    font-size: 13px;
+    color: #FFFFFFB2;
+
+    .button {
+        border-radius: 100px;
+        margin-top: 24px;
+    }
+
+    > p {
+        width: 67%;
+    }
+}

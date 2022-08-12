@@ -1,0 +1,35 @@
+.heroContainer {
+    width: 100%;
+    display: flex;
+    background: linear-gradient( #1D1E26,#FCD53533);
+    height: 290px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        height: fit-content;
+        padding: 30px 40px 0 20px ;
+}
+
+    .imageContainer {
+        margin-top: 70px;
+    }
+
+    .textContainer {
+        margin-right: 122px;
+
+        > span {
+            font-weight: 700;
+            font-size: 25px;
+        }
+
+        > p {
+            margin-top: 15px;
+            font-weight: 400;
+            font-size: 15px;
+        }
+    }
+}
