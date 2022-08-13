@@ -21,6 +21,10 @@
     .textContainer {
         margin-right: 122px;
 
+        @media(max-width: 768px) {
+            margin-right: unset
+        }
+        
         > span {
             font-weight: 700;
             font-size: 25px;

@@ -12,37 +12,39 @@ import styles from './index.module.scss';
 const index = () => {
   return (
     <MainLayout>
-      <BackButton />
-      <div className={styles.mainHeader}>
-        <span>Cashback</span>
-      </div>
-      <Hero />
-      <section>
+      <section className={styles.container}>
+        <BackButton />
         <div className={styles.mainHeader}>
-          <span>How does it work?</span>
+          <span>Cashback</span>
         </div>
-        <div className={styles.subText}>
-          <p>
-            You play - BetFury returns some lost coins back. This feature is
-            available for everyone from the beginning of using the platform.
-          </p>
-          <Tabs />
-        </div>
-        <div className={styles.mainHeader}>
-          <span>Cashback for rank</span>
-        </div>
-        <div className={styles.rankText}>
-          <p>
-            The more you play on BetFury - the higher Rank and Cashback amount
-            you will get. The most active users may get 25% back and enjoy the
-            excellent gaming experience with the best advantages
-          </p>
-          <Button label="Read more" customStyles={styles.button} />
-        </div>
+        <Hero />
         <section>
-          <Cards />
+          <div className={styles.mainHeader}>
+            <span>How does it work?</span>
+          </div>
+          <div className={styles.subText}>
+            <p>
+              You play - BetFury returns some lost coins back. This feature is
+              available for everyone from the beginning of using the platform.
+            </p>
+            <Tabs />
+          </div>
+          <div className={styles.mainHeader}>
+            <span>Cashback for rank</span>
+          </div>
+          <div className={styles.rankText}>
+            <p>
+              The more you play on BetFury - the higher Rank and Cashback amount
+              you will get. The most active users may get 25% back and enjoy the
+              excellent gaming experience with the best advantages
+            </p>
+            <Button label="Read more" customStyles={styles.button} />
+          </div>
+          <section>
+            <Cards />
+          </section>
+          <About />
         </section>
-        <About />
       </section>
     </MainLayout>
   );

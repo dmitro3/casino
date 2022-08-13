@@ -1,8 +1,17 @@
+.container {
+    padding: 25px 15px;
+}
+
 .mainHeader {
     font-weight: 700;
     font-size: 18px;
     margin-top: 17px;
     margin-bottom: 33px;
+
+    @media(max-width: 768px) {
+        margin-bottom: 11px;
+         margin-top: 40px;
+    }
 }
 
 .subText {
@@ -12,6 +21,10 @@
 
     > p {
         width: 50%;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
 }
 
@@ -27,5 +40,9 @@
 
     > p {
         width: 67%;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
 }
