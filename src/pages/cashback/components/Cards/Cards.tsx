@@ -6,9 +6,9 @@ import styles from './Cards.module.scss';
 
 const Cards = () => {
   return (
-    <section className={styles.cardContainer}>
+    <section className={styles.container}>
       {cards.map((card) => (
-        <div className={styles.card}>
+        <div key={card.id} className={styles.card}>
           <div className={styles.cardImage}>
             <Image src={card.image} height={65} width={65} />
           </div>

@@ -1,0 +1,43 @@
+.hero {
+    display: flex;
+    height: 225px;
+    width: 100%;
+    justify-content: space-between;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        height: fit-content;
+        gap: 70px;
+    }
+
+    &Text {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        width: 55%;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+
+        > span {
+            font-weight: 700;
+            font-size: 25px;
+        }
+
+        > p {
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .button {
+            width: 188px;
+            height: 44px;
+            border-radius: 10px;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
