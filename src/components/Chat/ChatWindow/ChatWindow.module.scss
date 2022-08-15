@@ -1,0 +1,25 @@
+.root {
+
+    > svg {
+        position: relative;
+    }
+}
+
+.cardCount {
+    font-size: 8px;
+    padding-right: 3px;
+    padding-left: 3px;
+    background-color: #FCD535;
+    position: absolute;
+    top: 15%;
+    right: -10%;
+    border-radius: 3px;
+    color: #111319;
+    width: 15px;
+    box-sizing: border-box;
+    border: 1px solid #111319;
+
+    @media(max-width: 1100px) {
+        top: 0;
+    }
+}

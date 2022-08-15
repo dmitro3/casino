@@ -64,3 +64,4 @@ export { default as AttentionIcon } from './AttentionIcon';
 export { default as DepositPassiveIcon } from './DepositPassiveIcon';
 export { default as Bell } from './Bell';
 export { default as MarkCheck } from './MarkCheck';
+export { default as UserProfile } from './UserProfile';

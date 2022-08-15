@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    background-color: #FFFFFF08;
+    border-radius: 10px;
+    justify-content: space-between;
+
+    > div > span:last-child {
+        font-weight: 600;
+        color: #FFFFFF66;
+        margin-left: 14px;
+    }
+
+    &Close:hover {
+        cursor: pointer;
+        opacity: .7;
+    }
+}

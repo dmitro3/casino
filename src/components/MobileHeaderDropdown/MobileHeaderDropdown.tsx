@@ -15,6 +15,8 @@ import UserDropdownWindow from 'src/components/Header/components/UserDropdownWin
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
 import NotificationDropdown from 'src/components/NotificationDropdown';
 import NotificationWindow from 'src/components/NotificationWindow';
+import ChatDropdown from 'src/components/Chat/ChatDropdown';
+import ChatWindow from 'src/components/Chat/ChatWindow';
 import styles from './MobileHeaderDropdown.module.scss';
 
 type Props = {
@@ -72,7 +74,12 @@ const MobileHeaderDropdown: FC<Props> = ({
               customButtonStyles={styles.notificationButton}
               customDropdownStyles={styles.notificationWindow}
             />
-            <MessageIcon />
+            <Dropdown
+              buttonComponent={<ChatWindow />}
+              dropdownComponent={<ChatDropdown />}
+              customButtonStyles={styles.notificationButton}
+              customDropdownStyles={styles.chatWindow}
+            />
           </div>
         </div>
       ) : (
