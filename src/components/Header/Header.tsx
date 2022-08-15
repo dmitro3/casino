@@ -8,7 +8,6 @@ import {
   HeaderDownIcon,
   Logo,
   Wallet,
-  Bell,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
 import Button from 'src/components/Button';
