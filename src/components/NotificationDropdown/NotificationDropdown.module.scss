@@ -6,6 +6,7 @@
     box-sizing: border-box;
     max-height: calc(100vh - 64px);
     overflow: scroll;
+    border-radius: 10px;
 
     &::-webkit-scrollbar {
         display: none;
