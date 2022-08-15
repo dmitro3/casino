@@ -129,7 +129,18 @@
     margin-right: 20px;
     border-radius: 10px;
     align-items: center;
-    position: relative;
+    position: relative; 
+    justify-content: space-between;
+
+    &Wallet {
+        display: flex;
+    }
+
+    &Notifications {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
     > svg {
         height: 20px !important;
@@ -163,3 +174,21 @@
         border-radius: 12px;
     }
 }
+
+.notificationWindow {
+    right: -150%;
+    width: 370px;
+  }
+  
+  .notificationButton {
+    background: none;
+    width: unset !important;
+    
+    > svg {
+        height: 20px !important;
+    }
+  
+    svg:nth-child(2) {
+      display: none;
+    }
+  }

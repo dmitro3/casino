@@ -8,6 +8,7 @@ import {
   HeaderDownIcon,
   Logo,
   Wallet,
+  Bell,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
 import Button from 'src/components/Button';
@@ -16,7 +17,9 @@ import UserDropdownButton from 'src/components/Header/components/UserDropDownBut
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
 import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
+import NotificationDropdown from 'src/components/NotificationDropdown';
 import MobileHeaderDropdown from 'src/components/MobileHeaderDropdown';
+import NotificationWindow from 'src/components/NotificationWindow';
 import { useMediaQuery } from 'react-responsive';
 import styles from './Header.module.scss';
 
@@ -181,7 +184,14 @@ const Header: FC<Props> = ({
             customDropdownContainerStyles={styles.windowDropdownContainer}
           />
         )}
-
+        {!isMobile && (
+          <Dropdown
+            buttonComponent={<NotificationWindow />}
+            dropdownComponent={<NotificationDropdown />}
+            customButtonStyles={styles.notificationButton}
+            customDropdownStyles={styles.notificationWindow}
+          />
+        )}
         <MessageIcon />
       </div>
     </div>

@@ -275,3 +275,18 @@
     }
   }
 }
+
+.notificationWindow {
+  right: 0;
+  width: 370px;
+  top: 55px;
+}
+
+.notificationButton {
+  background: none;
+  width: unset !important;
+
+  svg:nth-child(2) {
+    display: none;
+  }
+}
