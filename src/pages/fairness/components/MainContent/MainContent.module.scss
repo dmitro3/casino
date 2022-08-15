@@ -1,0 +1,123 @@
+.container {
+    width: 100%;
+    padding: 55px 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: linear-gradient( #FCD53533, #FCD53500);
+    margin-top: -4px;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        > span {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        > p {
+            text-align: center;
+            width: 60%;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFFB2;
+        }
+    }
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 56px;
+
+        &Count {
+            margin-right: 14px;
+
+            > span {
+                font-size: 90px;
+                font-weight: 700;
+                background: -webkit-linear-gradient(#FCD535, #EDCB3F00);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &Text {
+            > span {
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            > p {
+                color: #FFFFFFB2;
+                font-weight: 400;
+                font-size: 13px;
+                margin-top: 13px;
+            }
+
+            &Container {
+                display: flex;
+                align-items: flex-start;
+                width: 48%;
+            }
+        }
+
+        &Card {
+            width: 290px;
+            height: 155px;
+            background-color: #181A20;
+            border-radius: 15px;
+            padding: 15px 21px;
+            box-sizing: border-box;
+
+            &Text {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 9px;
+
+                > span {
+                font-weight: 700;
+                font-size: 15px;
+                }
+
+                > p {
+                    font-weight: 400;
+                    font-size: 6px;
+                    color: #FFFFFFB2;
+                    width: 67%;
+                    text-align: center;
+                }
+            }
+
+            &Input {
+               width: 100%; 
+               border-color: #FCD535;
+               text-indent: 10px;
+               margin-top: 9px;
+               
+               &::placeholder {
+                color: #FCD535;
+                font-size: 12px;
+               }
+
+               &Button {
+                color: #FFFFFF80;
+                font-size: 12px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                background-color: #FFFFFF1A;
+                border-radius: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: .7;
+                }
+               }
+            }
+        }
+    }
+}
