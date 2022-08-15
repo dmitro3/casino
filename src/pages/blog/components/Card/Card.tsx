@@ -1,7 +1,7 @@
 import React from 'react';
-import Blur from 'src/components/Blur';
 import Image from 'next/image';
 import styles from 'src/pages/blog/components/Card/Card.module.scss';
+import BigSpaceX from 'src/assets/images/BigSpaceX.png';
 
 type Props = {
   label: string;
@@ -29,14 +29,7 @@ const Card = ({
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardContainerImage}>
-        <div className={styles.cardContainerImageText}>
-          <p>{label}</p>
-          <p>{percent}</p>
-          <span>binobi</span>
-        </div>
-        <Blur color={color}>
-          <Image src={imageUrl} width={width} height={height} layout="fixed" />
-        </Blur>
+        <Image src={imageUrl} />
       </div>
       <span>{secondLabel}</span>
       <p>

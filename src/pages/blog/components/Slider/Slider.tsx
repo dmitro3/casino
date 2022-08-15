@@ -35,6 +35,12 @@ const Slider = () => {
           <span>2022-03-16</span>
           <div>
             <div>
+              <p className={styles.active} />
+            </div>
+            <div>
+              <p />
+            </div>
+            <div>
               <p />
             </div>
             <div>

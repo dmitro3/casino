@@ -5,7 +5,6 @@
   padding: 35px;
   border-radius: 12px;
 
-
     @media(max-width:768px) {
       flex-direction: column;
       height: auto;
@@ -14,6 +13,8 @@
       background-color: #1d1f25;
       border-radius: 12px;
       padding-top: 14px;
+      padding-right: 14px;
+      padding-left: 14px;
       padding-bottom: 42px;
     }
 
@@ -44,9 +45,10 @@
           display: flex;
           margin-top: 38px;
           @media (max-width:768px) {
+            width: 182px;
             margin-top: 57px;
+            margin-bottom: 30px;
             display: flex;
-            width: fit-content;
             justify-content: space-around;
           }
 
@@ -58,11 +60,17 @@
             border: 2px solid;
             border-radius: 10px;
             border-color: #3f4045;
+
           }
          }
         }
       }
 
+      .active {
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: #FCD535;
+      }
 
       >span {
         font-weight: 400;
@@ -80,8 +88,6 @@
     }
   }
 
-
-
   &Image {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -91,7 +97,6 @@
     border-radius: 12px;
     width: 100%;
     background-color: #24262c;
-    // min-width: 570px;
 
         @media (max-width:768px) {
           padding-top: 24px;
@@ -105,7 +110,6 @@
         }
 
     &Text {
-
 
       >span {
         font-weight: 400;
