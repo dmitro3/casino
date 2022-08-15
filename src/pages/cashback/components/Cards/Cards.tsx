@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-import cards from 'src/pages/cashback/components/Cards/cardData';
+import cards from 'src/utils/cardData';
 import styles from './Cards.module.scss';
 
 const Cards = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.cardContainer}>
       {cards.map((card) => (
         <div key={card.id} className={styles.card}>
           <div className={styles.cardImage}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import cardData from 'src/components/NotificationDropdown/Cards/cardData';
+import cardData from 'src/utils/NotificationCardData';
 import { ArrowDownIcon, MarkCheck } from 'src/assets/svg';
 import ShowButton from 'src/components/ShowButton';
 import styles from './Cards.module.scss';

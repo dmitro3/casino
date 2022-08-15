@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import cardData from 'src/pages/daily/components/Cards/cardData';
+import cardData from 'src/utils/dailyCardData';
 import Gift from 'src/pages/daily/components/Cards/images/Gift.png';
 import styles from './Cards.module.scss';
 
