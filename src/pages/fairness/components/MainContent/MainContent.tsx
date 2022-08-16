@@ -24,9 +24,9 @@ const MainContent = () => {
             <span>Press fairness</span>
             <p>
               Before placing a bet you may check the hash of the next round
-              number in the "Fairness" pop-up. Hash is a random result,
-              generated and mixed with random Server seed. Every round has its
-              own hash. No-one knows the result before placing a bet.
+              number in the `&quot;`Fairness`&quot;` pop-up. Hash is a random
+              result, generated and mixed with random Server seed. Every round
+              has its own hash. No-one knows the result before placing a bet.
             </p>
           </div>
         </div>
@@ -35,9 +35,9 @@ const MainContent = () => {
             <span>Fairness</span>
             <p>
               Before placing a bet you may check the hash of the next round
-              number in the "Fairness" pop-up. Hash is a random result,
-              generated and mixed with random Server seed. Every round has its
-              own hash. No-one knows the result before placing a bet.
+              number in the `&quot;`Fairness`&quot;` pop-up. Hash is a random
+              result, generated and mixed with random Server seed. Every round
+              has its own hash. No-one knows the result before placing a bet.
             </p>
           </div>
           <Input
@@ -60,10 +60,10 @@ const MainContent = () => {
           <div className={styles.itemText}>
             <span>Place a bet</span>
             <p>
-              During the bet, the result is fixed in a special "Random Seed"
-              field. By clicking "Fairness" you can find the current round hash
-              (encrypted winning result) and history of completed bets with all
-              the details.
+              During the bet, the result is fixed in a special `&quot;`Random
+              Seed`&quot;` field. By clicking `&quot;`Fairness`&quot;` you can
+              find the current round hash (encrypted winning result) and history
+              of completed bets with all the details.
             </p>
           </div>
         </div>
@@ -90,8 +90,9 @@ const MainContent = () => {
           <div className={styles.itemText}>
             <span>Check hash</span>
             <p>
-              Click "Check". Then in the opened window paste Random Seed you've
-              copied. The issued hash below must match that fixed on BetFury.
+              Click `&quot;`Check`&quot;`. Then in the opened window paste
+              Random Seed you`&apos;`ve copied. The issued hash below must match
+              that fixed on BetFury.
             </p>
           </div>
         </div>
