@@ -4,30 +4,15 @@ import styles from 'src/pages/blog/components/Card/Card.module.scss';
 import BigSpaceX from 'src/assets/images/BigSpaceX.png';
 
 type Props = {
-  label: string;
-  text: string;
   imageUrl: any;
   secondLabel: string;
   postData: string;
-  color: string;
-  percent?: string;
-  width?: number;
-  height?: number;
+  customStyles?: any;
 };
 
-const Card = ({
-  label,
-  text,
-  imageUrl,
-  secondLabel,
-  postData,
-  color,
-  percent,
-  height,
-  width,
-}: Props) => {
+const Card = ({ imageUrl, secondLabel, postData, customStyles }: Props) => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={`${styles.cardContainer} ${styles.customStyles}`}>
       <div className={styles.cardContainerImage}>
         <Image src={imageUrl} />
       </div>

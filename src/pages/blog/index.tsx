@@ -6,25 +6,24 @@ import Card from 'src/pages/blog/components/Card';
 import { cardData } from 'src/pages/blog/mockData';
 import PageCounter from 'src/pages/blog/components/PageCounter';
 import SearchBar from 'src/pages/blog/components/SearchBar';
+import BackButton from 'src/components/BackButton';
 
 const Blog = () => {
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
+        <div className={styles.backButtoncontainer}>
+          <BackButton />
+          <div className={styles.containerLabel}>Blog BINOBI</div>
+        </div>
         <Slider />
         <SearchBar />
         <div className={styles.cardContainer}>
           {cardData.map((card) => (
             <Card
-              label={card.label}
-              text={card.text}
               imageUrl={card.imageUrl}
               secondLabel={card.secondLabel}
               postData={card.postData}
-              color={card.color}
-              width={card.width}
-              height={card.height}
-              // percent={card.percent}
             />
           ))}
         </div>

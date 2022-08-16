@@ -4,10 +4,6 @@ import Image from 'next/image';
 import Lake from 'src/assets/images/bitcoin-lake.png';
 import Blur from 'src/components/Blur';
 
-// type Props = {
-
-// }
-
 const Slider = () => {
   return (
     <div className={styles.sliderContainer}>

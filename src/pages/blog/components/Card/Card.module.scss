@@ -1,12 +1,9 @@
 .cardContainer {
       max-width: 402px;
-      // height: 181px;
-      // // max-height: 181px;
 
       @media (max-width:768px) {
         margin-top: 20px;
         height: auto;
-        // width: 100%;
         height: fit-content;
         margin-bottom: 10px;
 

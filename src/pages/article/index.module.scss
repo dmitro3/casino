@@ -1,0 +1,204 @@
+.container {
+  background-color: #1D1E26;
+  // border-radius: 20px;
+  padding-top: 34px;
+  padding-left: 0;
+  padding-right: 0;
+  // max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+
+  &Contant {
+    border-radius: 15px;
+    background-color: #15161c;
+    display: flex;
+    justify-content: space-around;
+
+    &First {
+      width: 70%;
+      padding-top: 23px;
+
+      @media (max-width:768px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .cardContent {
+    margin-left: 40px;
+    width: 30%;
+  }
+
+ .main {
+  width: 100%;
+  background-color: #15161c;
+  border-radius: 20px;
+
+    @media (max-width:768px) {
+      width: 90%;
+    }
+
+  &Container {
+    padding-top: 40px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+
+ }
+
+  &Label {
+
+    margin: auto;
+    // max-width: 1280px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    padding-left: 0;
+    padding-bottom: 40px;
+  }
+
+    @media (max-width: 768px) {
+      max-width: 1240px;
+      padding-top: 20px;
+    }
+
+  >* {
+
+    @media (max-width: 1300px) {
+      max-width: 1240px;
+      padding: 14px 20px;
+      border-radius: 20px;
+    }
+
+
+  }
+}
+
+.backButtoncontainer {
+
+  >button {
+    margin-bottom: 20px;
+  }
+  max-width: 1280px;
+  margin: auto;
+}
+
+.cardContainer {
+  margin-top: 42px;
+  justify-content: space-around;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+
+    @media (max-width:768px) {
+      display: flex;
+      margin-top: 0;
+    }
+}
+
+.iconContainer {
+
+  >p {
+    margin-top: 28px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+  }
+
+   &Items {
+
+    >svg {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+   }
+}
+
+.counterContainer {
+  margin-top: 32px;
+  display: flex;
+
+    &Likes {
+      width: 85px;
+      height: 28px;
+      background-color: #FCD73F;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 14px;
+      color: black;
+      margin-right: 8px;
+
+        >div {
+
+          margin-left: 5px;
+        }
+    }
+
+    &Views {
+      width: 85px;
+      height: 28px;
+      background-color: #2c2d32;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 14px;
+      color: #fff;
+
+      >div {
+
+        margin-left: 5px;
+      }
+    }
+}
+
+.containerContant {
+
+   &Title {
+
+      >span {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 29px;
+        // margin-bottom: 10px;
+      }
+
+      >p {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        color: #FCD73F;
+      }
+   }
+}
+
+.cardLabel {
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+
+.cardContainer {
+  width: 288px;
+  background-color: #15161c;
+
+    @media (max-width:768px) {
+      width: 100% !important;
+      background-color: #1D1E26;
+    }
+
+    >div{
+      @media (max-width:768px) {
+        background-color: #1D1E26;
+      }
+    }
+}
+
+
