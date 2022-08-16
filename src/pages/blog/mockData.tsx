@@ -3,7 +3,7 @@ import BigSpaceX from 'src/assets/images/BigSpaceX.png';
 import Palm from 'src/assets/images/Palm.png';
 import Temple from 'src/assets/images/Temple.png';
 import Hodl from 'src/assets/images/Hodl.png';
-import HandDaimond from 'src/assets/images/HandDaimond.png';
+import Diamond from 'src/assets/images/Diamond.png';
 import Volcano from 'src/assets/images/Volcano.png';
 import Key from 'src/assets/images/Key.png';
 import BigSafe from 'src/assets/images/BigSafe.png';
@@ -28,54 +28,45 @@ export const cardData = [
     secondLabel: `Как заработать на криптовалютах `,
     postData: `2022-07-23`,
   },
-  // {
-  //   id: 4,
-  //   imageUrl: Temple,
-  //   label: `Cashback up to`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
-  // {
-  //   id: 5,
-  //   imageUrl: Hodl,
-  //   label: `Leading Crypto Casino. Our Charge`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
-  // {
-  //   id: 6,
-  //   imageUrl: HandDaimond,
-  //   label: `Mining & Staking up to 100% APY`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
-  // {
-  //   id: 7,
-  //   imageUrl: Volcano,
-  //   label: `Leading Crypto Casino. Our Charge`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
-  // {
-  //   id: 8,
-  //   imageUrl: Key,
-  //   label: `Mining & Staking up to 100% APY`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
-  // {
-  //   id: 8,
-  //   imageUrl: BigSafe,
-  //   label: `Mining & Staking up to 100% APY`,
-  //   text: `binobi`,
-  //   secondLabel: `Как заработать на криптовалютах `,
-  //   postData: `2022-07-23`,
-  // },
+  {
+    id: 4,
+    imageUrl: BigTemple,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
+  {
+    id: 5,
+    imageUrl: Hodl,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
+  {
+    id: 6,
+    imageUrl: Diamond,
+    label: `Mining & Staking up to 100% APY`,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
+  {
+    id: 7,
+    imageUrl: Volcano,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
+  {
+    id: 8,
+    imageUrl: Key,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
+  {
+    id: 8,
+    imageUrl: BigSafe,
+    label: `Mining & Staking up to 100% APY`,
+    text: `binobi`,
+    secondLabel: `Как заработать на криптовалютах `,
+    postData: `2022-07-23`,
+  },
 ];
 
 export const atricle = [

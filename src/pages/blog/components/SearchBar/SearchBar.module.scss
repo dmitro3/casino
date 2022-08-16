@@ -1,12 +1,13 @@
 .container {
   display: flex;
   display: flex;
-  height: 20px;
+  height: 60px;
   align-items: center;
   background-color: #1d2027;
   border-radius: 10px;
   margin-top: 18px;
   padding: 26px;
+  box-sizing: border-box;
 
     >div {
 
@@ -19,7 +20,7 @@
         background-color: #1d2027;
         border-radius: 10px;
         margin-top: 18px;
-        // height: 72px;
+        height: 60px;
       }
 
   >button {
@@ -28,12 +29,9 @@
     min-width: 160px;
     font-weight: 700;
     font-size: 12px;
-    // margin-right: 100px;
   }
 
-  // >input {
-  //   margin-right: 20px;
-  // }
+
 }
 
 .navigationContainer {

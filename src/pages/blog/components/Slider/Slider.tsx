@@ -3,22 +3,12 @@ import styles from 'src/pages/blog/components/Slider/Slider.module.scss';
 import Image from 'next/image';
 import Lake from 'src/assets/images/bitcoin-lake.png';
 import Blur from 'src/components/Blur';
+import BigBitcoinLake from 'src/assets/images/BigBitcoinLake.png';
 
 const Slider = () => {
   return (
     <div className={styles.sliderContainer}>
-      <div className={styles.sliderContainerImage}>
-        <div className={styles.sliderContainerImageText}>
-          <p>
-            Mining &<br /> Staking up to <br />
-            100% APY
-          </p>
-          <span>binobi</span>
-        </div>
-        <Blur color="#77b40d">
-          <Image src={Lake} width={140} height={100} />
-        </Blur>
-      </div>
+      <Image src={BigBitcoinLake} />
       <div className={styles.sliderContainerDescription}>
         <p>Поход Binobi к соблюдению требований</p>
         <span>
