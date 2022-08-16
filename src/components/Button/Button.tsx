@@ -4,6 +4,7 @@ import styles from './Button.module.scss';
 
 type Props = {
   label: string;
+  subText?: string;
   customStyles?: any;
   onClick?: () => void;
   leftIcon?: React.ReactNode;
@@ -12,6 +13,7 @@ type Props = {
 
 const Button = ({
   label,
+  subText,
   customStyles,
   onClick,
   leftIcon,
@@ -21,6 +23,7 @@ const Button = ({
     <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
       {leftIcon}
       <span>{label}</span>
+      <p>{subText}</p>
       {rightIcon}
     </button>
   );
