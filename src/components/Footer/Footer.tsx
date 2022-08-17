@@ -75,8 +75,8 @@ const Footer = () => {
             </div>
             <div className={styles.footerColumn}>
               <p>About us</p>
-              <Link passHref href="aaa">
-                <a href="/#">News</a>
+              <Link passHref href="/blog">
+                <a href="/blog">News</a>
               </Link>
               <Link passHref href="aaa">
                 <a href="/#">About BFG</a>

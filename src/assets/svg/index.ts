@@ -65,3 +65,5 @@ export { default as DepositPassiveIcon } from './DepositPassiveIcon';
 export { default as Bell } from './Bell';
 export { default as MarkCheck } from './MarkCheck';
 export { default as UserProfile } from './UserProfile';
+export { default as Like } from './Like';
+export { default as Eye } from './Eye';
