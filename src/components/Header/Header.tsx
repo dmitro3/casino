@@ -3,7 +3,6 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import {
   PersonIcon,
-  MessageIcon,
   ArrowDownIcon,
   HeaderDownIcon,
   Logo,
@@ -18,6 +17,7 @@ import WalletDropdownButton from 'src/components/Header/components/WalletDropdow
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
 import NotificationDropdown from 'src/components/NotificationDropdown';
 import MobileHeaderDropdown from 'src/components/MobileHeaderDropdown';
+import EarnDropdown from 'src/components/EarnDropdown';
 import NotificationWindow from 'src/components/NotificationWindow';
 import ChatWindow from 'src/components/Chat/ChatWindow';
 import ChatDropdown from 'src/components/Chat/ChatDropdown';
@@ -45,7 +45,9 @@ export const links = [
     url: `/#`,
     label: `Earn`,
     id: 4,
+    dropdownIcon: true,
     dropdown: true,
+    dropdownContent: <EarnDropdown />,
   },
   {
     url: `/blog`,
@@ -56,13 +58,13 @@ export const links = [
     url: `/#`,
     label: `All games`,
     id: 6,
-    dropdown: true,
+    dropdownIcon: true,
   },
   {
     url: `/#`,
     label: `Boxes`,
     id: 7,
-    dropdown: true,
+    dropdownIcon: true,
   },
   {
     url: `/#`,
@@ -99,22 +101,62 @@ const Header: FC<Props> = ({
           </div>
         </Link>
         <ul className={styles.navigationContainer}>
-          {links.map((link) => (
-            <li key={link.id} className={styles.navigationContainerItem}>
-              <Link passHref href={link.url}>
-                <a href="/#" className={styles.navigationContainerItemLink}>
-                  {link.label}
-                </a>
-              </Link>
-              {link.bubble && (
-                <div className={styles.speechBubble}>
-                  {link.bubble}
-                  <div className={styles.speechBubbleBlur} />
-                </div>
-              )}
-              {link.dropdown && <HeaderDownIcon />}
-            </li>
-          ))}
+          {links.map((link) => {
+            if (link.dropdown) {
+              return (
+                <Dropdown
+                  buttonComponent={
+                    <li
+                      key={link.id}
+                      className={styles.navigationContainerItem}
+                    >
+                      <Link passHref href={link.url}>
+                        <a
+                          href="/#"
+                          className={styles.navigationContainerItemLink}
+                        >
+                          {link.label}
+                        </a>
+                      </Link>
+                      {link.bubble && (
+                        <div className={styles.speechBubble}>
+                          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                          {/* @ts-ignore */}
+                          {link.bubble}
+                          <div className={styles.speechBubbleBlur} />
+                        </div>
+                      )}
+                      {link.dropdownIcon && <HeaderDownIcon />}
+                    </li>
+                  }
+                  dropdownComponent={<EarnDropdown />}
+                  customButtonStyles={
+                    styles.navigationContainerItemDropdownButton
+                  }
+                  customDropdownStyles={
+                    styles.navigationContainerItemDropdownWindow
+                  }
+                />
+              );
+            }
+
+            return (
+              <li key={link.id} className={styles.navigationContainerItem}>
+                <Link passHref href={link.url}>
+                  <a href="/#" className={styles.navigationContainerItemLink}>
+                    {link.label}
+                  </a>
+                </Link>
+                {link.bubble && (
+                  <div className={styles.speechBubble}>
+                    {link.bubble}
+                    <div className={styles.speechBubbleBlur} />
+                  </div>
+                )}
+                {link.dropdownIcon && <HeaderDownIcon />}
+              </li>
+            );
+          })}
         </ul>
       </div>
       <div className={styles.controlContainer}>
