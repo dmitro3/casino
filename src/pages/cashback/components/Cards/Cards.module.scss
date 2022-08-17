@@ -1,0 +1,54 @@
+.card {
+    background: linear-gradient( #1D1E26,#FCD53533);
+    border-radius: 20px;
+    max-width: 180px;
+    width: 100%;
+    height: 199px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 22px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .7;
+    }
+
+    &Container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+
+    &Image {
+        position: absolute;
+        top: -35px
+    }
+
+    &Level {
+        margin-bottom: 30px;
+        background-color: #FCD535;
+        border-radius: 160px;
+        padding: 3px 13px;
+        color: #181A20;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    &Rank {
+        font-weight: 700;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    &Percent {
+        margin-top: 12px;
+        color: #FCD535;
+        font-size: 27px;
+        font-weight: 700;
+    }
+}
