@@ -23,7 +23,7 @@ const Button = ({
     <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
       {leftIcon}
       <span>{label}</span>
-      <p>{subText}</p>
+      {subText && <p>{subText}</p>}
       {rightIcon}
     </button>
   );
