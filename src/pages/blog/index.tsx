@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'src/pages/blog/components/Slider';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/blog/index.module.scss';
@@ -9,6 +9,10 @@ import SearchBar from 'src/pages/blog/components/SearchBar';
 import BackButton from 'src/components/BackButton';
 
 const Blog = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>

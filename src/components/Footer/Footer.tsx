@@ -138,8 +138,8 @@ const Footer = () => {
               <Link passHref href="aaa">
                 <a href="/#">News</a>
               </Link>
-              <Link passHref href="aaa">
-                <a href="/#">About BFG</a>
+              <Link passHref href="/article">
+                <a href="/article">About BFG</a>
               </Link>
               <Link passHref href="aaa">
                 <a href="/#">About BetFury team</a>
