@@ -3,7 +3,7 @@ import Slider from 'src/pages/blog/components/Slider';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/blog/index.module.scss';
 import Card from 'src/pages/blog/components/Card';
-import { cardData } from 'src/pages/blog/mockData';
+import { cardData } from 'src/utils/articleData';
 import PageCounter from 'src/pages/blog/components/PageCounter';
 import SearchBar from 'src/pages/blog/components/SearchBar';
 import BackButton from 'src/components/BackButton';

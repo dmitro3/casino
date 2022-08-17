@@ -44,7 +44,7 @@ export const links = [
     dropdown: true,
   },
   {
-    url: `/#`,
+    url: `/blog`,
     label: `News`,
     id: 5,
   },

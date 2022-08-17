@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/article/index.module.scss';
 
-import { atricle } from 'src/pages/blog/mockData';
+import { atricle } from 'src/utils/articleData';
 import PageCounter from 'src/pages/blog/components/PageCounter';
 
 import BackButton from 'src/components/BackButton';
