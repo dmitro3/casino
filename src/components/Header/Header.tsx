@@ -6,9 +6,7 @@ import {
   MessageIcon,
   ArrowDownIcon,
   HeaderDownIcon,
-  Logo,
   Wallet,
-  // usaFlag,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
 import Logotype from 'src/assets/images/Logo.png';
@@ -97,8 +95,6 @@ const Header: FC<Props> = ({
         <Link href="/">
           <div className={styles.logoContainer}>
             <Image src={Logotype} width={74} height={15} />
-            {/* <Logo /> */}
-            {/* <div className={styles.logoContainerLabel}>Binobi.com</div> */}
           </div>
         </Link>
         <ul className={styles.navigationContainer}>
@@ -166,7 +162,6 @@ const Header: FC<Props> = ({
           <div className={styles.selectLanguageImage}>
             <Image src={usaFlag} height={24} width={26} />
           </div>
-          {/* <usaFlag /> */}
           <ArrowDownIcon />
         </div>
         {isMobile && (
