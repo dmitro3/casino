@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { useMediaQuery } from 'react-responsive';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from 'src/pages/account/components/Navigation';
 import ProfileInfo from 'src/pages/account/components/ProfileInfo';
 import ProfileEmail from 'src/pages/account/components/ProfileEmail';
@@ -17,6 +17,10 @@ import styles from 'src/pages/account/index.module.scss';
 
 const Account: NextPage = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <MainLayout hasMaxWidth>

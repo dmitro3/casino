@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 
@@ -12,6 +12,10 @@ import styles from './index.module.scss';
 
 const Vault = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <MainLayout hasMaxWidth>

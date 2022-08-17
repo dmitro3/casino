@@ -8,8 +8,10 @@ import {
   HeaderDownIcon,
   Logo,
   Wallet,
+  // usaFlag,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
+import Logotype from 'src/assets/images/Logo.png';
 import Button from 'src/components/Button';
 import Dropdown from 'src/components/Dropdown';
 import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
@@ -94,8 +96,9 @@ const Header: FC<Props> = ({
       <div className={styles.contentContainer}>
         <Link href="/">
           <div className={styles.logoContainer}>
-            <Logo />
-            <div className={styles.logoContainerLabel}>Binobi.com</div>
+            <Image src={Logotype} width={74} height={15} />
+            {/* <Logo /> */}
+            {/* <div className={styles.logoContainerLabel}>Binobi.com</div> */}
           </div>
         </Link>
         <ul className={styles.navigationContainer}>
@@ -160,7 +163,10 @@ const Header: FC<Props> = ({
         )}
 
         <div className={styles.selectLanguage}>
-          <Image src={usaFlag} height={24} width={24} />
+          <div className={styles.selectLanguageImage}>
+            <Image src={usaFlag} height={24} width={26} />
+          </div>
+          {/* <usaFlag /> */}
           <ArrowDownIcon />
         </div>
         {isMobile && (

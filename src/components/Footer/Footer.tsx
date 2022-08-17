@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import Image from 'next/image';
+import LogoFooter from 'src/assets/images/LogoFooter.png';
 
 import {
   DiscordIcon,
@@ -22,9 +24,8 @@ const Footer = () => {
       <div className={styles.topFooter}>
         <div className={styles.topFooterDescription}>
           <div className={styles.topFooterDescriptionLogoContainer}>
-            <Logo />
             <div className={styles.topFooterDescriptionLogoContainerLabel}>
-              Binobi.com
+              <Image src={LogoFooter} width={118} height={24} />
             </div>
           </div>
           <p>

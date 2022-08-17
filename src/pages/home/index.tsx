@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import { currencyData } from 'src/utils/mockData';
 import CurrencyCard from 'src/pages/home/components/CurrencyCard';
@@ -10,6 +10,10 @@ import TabSection from 'src/pages/home/components/TabSection';
 import styles from './index.module.scss';
 
 const HomeContainer: FC = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   return (
     <>
       <MainHero />
