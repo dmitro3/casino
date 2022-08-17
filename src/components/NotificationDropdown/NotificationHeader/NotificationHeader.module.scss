@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF08;
+    align-items: center;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    &Buttons {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 11px;
+
+    &Active {
+        border-radius: 120px;
+        padding: 6px 33px;
+
+        &Count {
+            color: #FCD535;
+            background-color: #181A20;
+            padding: 2px 6px;
+            border-radius: 100px;
+            margin-left: 4px;
+        }
+    }
+
+    &Passive {
+        border-radius: 120px;
+        color: #FFFFFF3D;
+        background-color: #FFFFFF0D;
+        margin-left: -5%; 
+        padding: 6px 33px;
+
+        &Count {
+            color: #fff;
+            background-color: #181A20;
+            padding: 2px 6px;
+            border-radius: 100px;
+            margin-left: 4px;
+        }
+    }
+}

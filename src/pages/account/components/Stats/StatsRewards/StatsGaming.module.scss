@@ -11,8 +11,13 @@
     color: #FFFFFF80;
     margin-bottom: 143px;
 
-    @media(max-width: 768px) {
-        box-sizing: border-box;
+    @media(max-width: 1277px) and (min-width: 1000px) {
+      width: 100%;
+      padding: 22px 10px 10px 10px;
+    }
+
+    @media(max-width: 1000px) {
+      box-sizing: border-box;
     }
 }
 

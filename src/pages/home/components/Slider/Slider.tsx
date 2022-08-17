@@ -2,12 +2,12 @@ import React, { FC, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
-import Link from 'next/link';
 
 import Blur from 'src/components/Blur';
 import bitcoinLake from 'src/assets/images/bitcoin-lake.png';
 import rocket from 'src/assets/images/rocket.png';
 import bitcoinIsland from 'src/assets/images/bitcoinIsland.png';
+import ShowButton from 'src/components/ShowButton';
 import { ArrowBackIcon, SliderArrow } from 'src/assets/svg';
 import styles from './Slider.module.scss';
 import 'react-multi-carousel/lib/styles.css';
@@ -233,14 +233,11 @@ const SliderContainer = () => {
           />
         ))}
       </Carousel>
-      <div className={styles.sliderNavButton}>
-        <Link passHref href="sad">
-          <a href="/#" className={styles.sliderNavButtonText}>
-            Show all news
-          </a>
-        </Link>
-        <ArrowBackIcon />
-      </div>
+      <ShowButton
+        title="Show all news"
+        icon={<ArrowBackIcon />}
+        customStyles={styles.showButton}
+      />
     </div>
   );
 };

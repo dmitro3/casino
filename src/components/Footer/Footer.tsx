@@ -46,8 +46,8 @@ const Footer = () => {
           <Link passHref href="aaa">
             <a href="/#">Slots</a>
           </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Rank system</a>
+          <Link passHref href="/rank">
+            <a href="/rank">Rank system</a>
           </Link>
         </div>
         <div className={styles.footerColumn}>
@@ -58,11 +58,11 @@ const Footer = () => {
           <Link passHref href="aaa">
             <a href="/#">BetFury Box</a>
           </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Cashback</a>
+          <Link passHref href="/cashback">
+            <a href="/cashback">Cashback</a>
           </Link>
-          <Link passHref href="aaa">
-            <a href="/#">Daily taska</a>
+          <Link passHref href="/daily">
+            <a href="/daily">Daily taska</a>
           </Link>
         </div>
         {!isMobile ? (
@@ -96,8 +96,8 @@ const Footer = () => {
               <Link passHref href="aaa">
                 <a href="/#">News</a>
               </Link>
-              <Link passHref href="aaa">
-                <a href="/#">Fairness</a>
+              <Link passHref href="/fairness">
+                <a href="/fairness">Fairness</a>
               </Link>
               <Link passHref href="aaa">
                 <a href="/#">Privacy Policy</a>
@@ -156,8 +156,8 @@ const Footer = () => {
               <Link passHref href="aaa">
                 <a href="/#">News</a>
               </Link>
-              <Link passHref href="aaa">
-                <a href="/#">Fairness</a>
+              <Link passHref href="/fairness">
+                <a href="/fairness">Fairness</a>
               </Link>
               <Link passHref href="aaa">
                 <a href="/#">Privacy Policy</a>

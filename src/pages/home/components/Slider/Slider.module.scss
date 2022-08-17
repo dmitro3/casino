@@ -1,36 +1,6 @@
 .slider {
   position: relative;
 
-  &NavButton {
-    position: absolute;
-    right: 0;
-    top: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    height: 21px;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-size: 12px;
-    background-color: #1c1e24;
-
-    @media(max-width: 768px) {
-      right: 50px;
-    }
-
-    @media (max-width: 576px) {
-        right: 10px;
-    }
-
-    &Text{
-      margin-right: 5px;
-      font-weight: 400;
-      color:#fff;
-      text-decoration: none;
-    }
-  }
-
   &Arrow {
     &Left {
       border: none;
@@ -148,4 +118,18 @@
     border: none;
     margin-right: 6px;
   }
+}
+
+.showButton {
+   position: absolute;
+    right: 0;
+    top: 200px;
+
+    @media(max-width: 768px) {
+      right: 50px;
+    }
+
+    @media (max-width: 576px) {
+        right: 10px;
+    }
 }

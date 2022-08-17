@@ -16,7 +16,11 @@ import UserDropdownButton from 'src/components/Header/components/UserDropDownBut
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
 import WalletDropdownButton from 'src/components/Header/components/WalletDropdownButton';
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
+import NotificationDropdown from 'src/components/NotificationDropdown';
 import MobileHeaderDropdown from 'src/components/MobileHeaderDropdown';
+import NotificationWindow from 'src/components/NotificationWindow';
+import ChatWindow from 'src/components/Chat/ChatWindow';
+import ChatDropdown from 'src/components/Chat/ChatDropdown';
 import { useMediaQuery } from 'react-responsive';
 import styles from './Header.module.scss';
 
@@ -181,8 +185,22 @@ const Header: FC<Props> = ({
             customDropdownContainerStyles={styles.windowDropdownContainer}
           />
         )}
-
-        <MessageIcon />
+        {!isMobile && (
+          <>
+            <Dropdown
+              buttonComponent={<NotificationWindow />}
+              dropdownComponent={<NotificationDropdown />}
+              customButtonStyles={styles.notificationButton}
+              customDropdownStyles={styles.notificationWindow}
+            />
+            <Dropdown
+              buttonComponent={<ChatWindow />}
+              dropdownComponent={<ChatDropdown />}
+              customButtonStyles={styles.chatButton}
+              customDropdownStyles={styles.chatWindow}
+            />
+          </>
+        )}
       </div>
     </div>
   );

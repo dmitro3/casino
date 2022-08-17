@@ -13,6 +13,10 @@ import Dropdown from 'src/components/Dropdown';
 import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
 import UserDropdownWindow from 'src/components/Header/components/UserDropdownWindow';
 import WalletDropdownWindow from 'src/components/Header/components/WalletDropdownWindow';
+import NotificationDropdown from 'src/components/NotificationDropdown';
+import NotificationWindow from 'src/components/NotificationWindow';
+import ChatDropdown from 'src/components/Chat/ChatDropdown';
+import ChatWindow from 'src/components/Chat/ChatWindow';
 import styles from './MobileHeaderDropdown.module.scss';
 
 type Props = {
@@ -34,32 +38,49 @@ const MobileHeaderDropdown: FC<Props> = ({
     <>
       {isAuthenticated ? (
         <div className={styles.walletButtons}>
-          <Dropdown
-            buttonComponent={
-              <Button
-                label="Wallet"
-                leftIcon={<Wallet />}
-                customStyles={styles.wallet}
-              />
-            }
-            dropdownComponent={<WalletDropdownWindow />}
-            customWalletDropdownStyles={styles.windowDropdown}
-            customDropdownContainerStyles={styles.customDropdownContainerStyles}
-          />
-          <Dropdown
-            buttonComponent={<UserDropdownButton />}
-            dropdownComponent={
-              <UserDropdownWindow
-                toggleUserModal={toggleUserModal}
-                onLogout={toggleIsAuthenticated}
-              />
-            }
-            customDropdownContainerStyles={
-              styles.customDropdownUserContainerStyles
-            }
-            customButtonStyles={styles.customButtonStyles}
-          />
-          <MessageIcon />
+          <div className={styles.walletButtonsWallet}>
+            <Dropdown
+              buttonComponent={
+                <Button
+                  label="Wallet"
+                  leftIcon={<Wallet />}
+                  customStyles={styles.wallet}
+                />
+              }
+              dropdownComponent={<WalletDropdownWindow />}
+              customWalletDropdownStyles={styles.windowDropdown}
+              customDropdownContainerStyles={
+                styles.customDropdownContainerStyles
+              }
+            />
+            <Dropdown
+              buttonComponent={<UserDropdownButton />}
+              dropdownComponent={
+                <UserDropdownWindow
+                  toggleUserModal={toggleUserModal}
+                  onLogout={toggleIsAuthenticated}
+                />
+              }
+              customDropdownContainerStyles={
+                styles.customDropdownUserContainerStyles
+              }
+              customButtonStyles={styles.customButtonStyles}
+            />
+          </div>
+          <div className={styles.walletButtonsNotifications}>
+            <Dropdown
+              buttonComponent={<NotificationWindow />}
+              dropdownComponent={<NotificationDropdown />}
+              customButtonStyles={styles.notificationButton}
+              customDropdownStyles={styles.notificationWindow}
+            />
+            <Dropdown
+              buttonComponent={<ChatWindow />}
+              dropdownComponent={<ChatDropdown />}
+              customButtonStyles={styles.notificationButton}
+              customDropdownStyles={styles.chatWindow}
+            />
+          </div>
         </div>
       ) : (
         <div className={styles.loginButtons}>

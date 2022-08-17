@@ -6,7 +6,12 @@
     padding-bottom: 24px;
     padding-right: 10px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1277px) and (min-width: 1000px) {
+      width: 100%;
+      padding: 22px 10px 10px 10px;
+    }
+
+    @media(max-width: 1000px) {
        height: fit-content;
        box-sizing: border-box;
        background-color: inherit !important;
@@ -17,7 +22,7 @@
     .wrapper {
         display: flex;
 
-        @media(max-width: 768px) {
+        @media(max-width: 1000px) {
             flex-wrap: wrap;
             padding-top: 20px;
         }
@@ -28,7 +33,14 @@
         width: 625px;
         gap: 19px;
 
-        @media(max-width: 768px) {
+        @media(max-width: 1277px) and (min-width: 1000px) {
+          width: 100%;
+          > div:first-child {
+            display: none;
+          }
+        }
+
+        @media(max-width: 1000px) {
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -51,7 +63,12 @@
         margin-left: 20px;
         gap: 15px;
 
-        @media(max-width: 768px) {
+        @media(max-width: 1277px) and (min-width: 1000px) {
+          width: 141px;
+          margin-left: 0;
+        }
+
+        @media(max-width: 1000px) {
             margin-left: 0;
         }
     }

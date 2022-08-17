@@ -1,0 +1,210 @@
+.container {
+    width: 100%;
+    padding: 55px 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: linear-gradient( #FCD53533, #FCD53500);
+    margin-top: -4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(max-width: 768px) {
+        padding: 35px;
+    }
+
+    .playButton {
+        width: 188px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 50px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        > span {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        > p {
+            text-align: center;
+            width: 60%;
+            font-weight: 400;
+            font-size: 14px;
+            color: #FFFFFFB2;
+
+            @media(max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 56px;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &Count {
+            margin-right: 14px; 
+            margin-top: -20px;
+
+            > span {
+                font-size: 90px;
+               
+                font-weight: 700;
+                background: -webkit-linear-gradient(#FCD535, #EDCB3F00);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &Text {
+            > span {
+                font-size: 15px;
+                font-weight: 700;
+            }
+
+            > p {
+                color: #FFFFFFB2;
+                font-weight: 400;
+                font-size: 13px;
+                margin-top: 13px;
+            }
+
+            &Container {
+                display: flex;
+                align-items: flex-start;
+                width: 48%;
+
+                @media(max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &Card {
+            width: 290px;
+            height: 155px;
+            background-color: #181A20;
+            border-radius: 15px;
+            padding: 15px 21px;
+            box-sizing: border-box;
+
+            &Button {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+                border-radius: 15px;
+
+                > span {
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+            }
+
+            &Gradient {
+                background-image: url('../../../../assets/images/GradientBackground.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                &Subtext > span {
+                    color: #FFFFFF80;
+                    font-weight: 600;
+                    font-size: 10px !important;
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-right: 40%;
+                    transform: translate(-50%, 0);
+                }
+
+                > div:nth-child(2) {
+                    margin-right: 0;
+                    margin-bottom: 11px;
+                }
+
+                > div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                }
+
+                > div > span:first-child {
+                    font-weight: 700;
+                    font-size: 13px;
+                }
+
+                > div > span {
+                    font-weight: 700;
+                    font-size: 60px;
+                }
+            }
+
+            &Text {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 9px;
+
+                > span {
+                font-weight: 700;
+                font-size: 15px;
+                }
+
+                > p {
+                    font-weight: 400;
+                    font-size: 6px;
+                    color: #FFFFFFB2;
+                    width: 67%;
+                    text-align: center;
+                }
+            }
+
+            &Input {
+               width: 100%; 
+               border-color: #FCD535;
+               text-indent: 10px;
+               margin-top: 9px;
+               background-color: #181A20 !important;
+               
+               &::placeholder {
+                color: #FCD535;
+                font-size: 12px;
+               }
+
+               &Button {
+                color: #FFFFFF80;
+                font-size: 12px;
+                padding: 5px 10px;
+                box-sizing: border-box;
+                background-color: #FFFFFF1A;
+                border-radius: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: .7;
+                }
+               }
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
     &Three {
       padding-left: 150px;
 
-      @media(max-width: 768px) {
+      @media(max-width: 1000px) {
         padding-left:0;
         padding-top: 60px;
      }
@@ -12,7 +12,7 @@
     &Two {
       padding-left: 30px;
 
-      @media(max-width: 768px) {
+      @media(max-width: 1000px) {
         padding-left:0;
         padding-top: 10px;
      }
@@ -29,7 +29,7 @@
     &Container {
       display: flex;
 
-      @media(max-width: 768px) {
+      @media(max-width: 1000px) {
         flex-direction: column;
     }
     }
@@ -39,7 +39,7 @@
       align-items: center;
       gap: 9px;
 
-      @media(max-width: 768px) {
+      @media(max-width: 1000px) {
         padding-top: 0;
     }
 
@@ -59,8 +59,8 @@
       font-size: 13px;
       font-weight: 700;
 
-      @media(max-width: 768px) {
-        
+      @media(max-width: 1000px) {
+
         > span:nth-child(1) {
           padding-top: 8px;
         }
@@ -73,7 +73,11 @@
     padding-left: 41px;
     padding-bottom: 19px;
 
-    @media(max-width: 768px) {
+    @media(max-width: 1200px) and (min-width: 1000px) {
+      padding-left: 20px;
+    }
+
+    @media(max-width: 1000px) {
       padding-left:16px;
       box-sizing: border-box;
    }

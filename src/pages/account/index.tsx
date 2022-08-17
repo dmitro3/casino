@@ -16,7 +16,7 @@ import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/account/index.module.scss';
 
 const Account: NextPage = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+  const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
 
   return (
     <MainLayout hasMaxWidth>
@@ -25,7 +25,10 @@ const Account: NextPage = () => {
         <p className={styles.mainLabel}>Account</p>
         <Navigation />
         <div className={styles.root}>
-          <div className={styles.userContainer}>
+          <div
+            className={styles.userContainer}
+            style={isMobile ? {} : { marginRight: `42px` }}
+          >
             <ProfileInfo />
             {isMobile ? (
               <>
@@ -39,7 +42,7 @@ const Account: NextPage = () => {
               </>
             )}
           </div>
-          <div className={styles.userContainer}>
+          <div className={styles.userContainer} style={{ flex: 1 }}>
             {!isMobile && (
               <>
                 <ProfileCards />
