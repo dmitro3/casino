@@ -67,3 +67,7 @@ export { default as MarkCheck } from './MarkCheck';
 export { default as UserProfile } from './UserProfile';
 export { default as Like } from './Like';
 export { default as Eye } from './Eye';
+export { default as UsdIcon } from './UsdIcon';
+export { default as EuroIcon } from './EuroIcon';
+export { default as BtcIcon } from './BtcIcon';
+export { default as SmallSettingsIcon } from './SmallSettingsIcon';
