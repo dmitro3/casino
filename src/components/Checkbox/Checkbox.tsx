@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from './Checkbox.module.scss';
 
 type Props = {
-  label: React.ReactNode;
+  label?: React.ReactNode;
   onClick?: () => void;
 };
 
