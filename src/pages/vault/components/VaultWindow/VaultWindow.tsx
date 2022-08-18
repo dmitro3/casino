@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import VaultDeposit from 'src/pages/vault/components/VaultDeposit';
 import VaultWithdraw from 'src/pages/vault/components/VaultWithdraw';
 import VaultExchange from 'src/pages/vault/components/VaultExchange';
+import VaultTips from 'src/pages/vault/components/VaultTips';
 import {
   DepositIcon,
   WithdrawIcon,
@@ -133,6 +134,7 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
         {isDepositOpen && <VaultDeposit /* onClick={toggleDepositProcess} */ />}
         {isWithdrawOpen && <VaultWithdraw />}
         {isExchangeOpen && <VaultExchange />}
+        {isTipsOpen && <VaultTips />}
         {/* {isDepositProcessOpen && <VaultDepositProcess />} */}
       </div>
     </section>

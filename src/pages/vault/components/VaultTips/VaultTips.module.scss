@@ -1,0 +1,107 @@
+.sidebarContainer {
+    display: flex;
+    gap: 40px;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container {
+        width: 100%;
+
+        .button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 47px;
+            border-radius: 10px;
+            margin-top: 24px;
+        }
+
+        .checkboxText {
+            margin-left: 40px;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        > span {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        > div {
+            margin-top: 20px;
+        }
+
+        .input {
+            margin-top: 20px;
+            display: flex;
+
+            &Username {
+                width: 100%;
+                text-indent: 5px;
+                background-color: #181A20;
+                margin-top: 10px;
+            }
+
+            > span {
+                font-weight: 500;
+                font-size: 11px;
+            }
+    }
+}
+}
+
+.input {
+    display: flex;
+    gap: 10px;
+
+    &Header {
+        color: #FFF;
+        font-size: 11px;
+    }
+
+    &Container {
+
+        > div:last-child {
+            margin-top: -8px;
+        }
+    }
+
+    &Item {
+
+        > span {
+            color: #FFF;
+            font-size: 11px;
+        }
+
+        > p {
+            color: #FFF;
+            font-size: 11px;
+        }
+
+        &Field {
+            width: 99%;
+            padding: 15px 0 15px 16px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            color: #fff;
+            background-color: #181A20;
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
+
+            &Amount {
+                text-indent: 5px;
+            }
+        }
+    }
+}
