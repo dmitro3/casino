@@ -305,3 +305,32 @@
   width: 370px;
   top: 55px;
 }
+
+.languageDropdownButton {
+  width: 40px;
+  border-radius: 6px;
+  padding-left: 5px;
+
+  > svg {
+    margin-right: 5px !important;
+  }
+}
+
+.languageDropdownWindow {
+  right: 0;
+
+  &Container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 13px;
+  border-radius: 6px;
+  background-color: #222730;
+
+  > span > img:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
+}
+

@@ -10,6 +10,9 @@ import {
   Wallet,
 } from 'src/assets/svg';
 import usaFlag from 'src/assets/images/usaFlag.png';
+import USflag from 'src/assets/images/USflag.png';
+import UAflag from 'src/assets/images/UAflag.png';
+import RUflag from 'src/assets/images/RUflag.png';
 import Button from 'src/components/Button';
 import Dropdown from 'src/components/Dropdown';
 import UserDropdownButton from 'src/components/Header/components/UserDropDownButton';
@@ -159,10 +162,21 @@ const Header: FC<Props> = ({
           </>
         )}
 
-        <div className={styles.selectLanguage}>
+        {/* <div className={styles.selectLanguage}>
           <Image src={usaFlag} height={24} width={24} />
           <ArrowDownIcon />
-        </div>
+        </div> */}
+        <Dropdown
+          buttonComponent={<Image src={USflag} height={24} width={24} />}
+          dropdownComponent={
+            <div className={styles.languageDropdownWindowContainer}>
+              <Image src={RUflag} height={20} width={20} />
+              <Image src={UAflag} height={20} width={20} />
+            </div>
+          }
+          customButtonStyles={styles.languageDropdownButton}
+          customDropdownStyles={styles.languageDropdownWindow}
+        />
         {isMobile && (
           <Dropdown
             buttonComponent={
