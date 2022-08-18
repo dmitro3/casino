@@ -1,0 +1,56 @@
+.cardContainer {
+      max-width: 402px;
+
+      @media (max-width:768px) {
+        margin-top: 20px;
+        height: auto;
+        height: fit-content;
+        margin-bottom: 10px;
+
+        border-radius: 12px;
+        padding-top: 14px;
+        padding-bottom: 42px;
+        padding: 0;
+        background-color: #15161c;
+      }
+
+      >span {
+        font-weight: 700;
+        font-size: 15px;
+        color:#fff;
+      }
+
+      >p{
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 147%;
+        color:#7c7e81;
+
+      }
+
+        &Image {
+
+
+          margin-bottom: 20px;
+
+          &Text {
+            width: 100px;
+
+            >span {
+              font-weight: 400;
+              font-size: 12px;
+              // margin-bottom: 20px;
+            }
+
+            >p {
+
+              margin-bottom: 20px;
+              font-weight: 700;
+              font-size: 12px;
+              line-height: 18px;
+              color: #fff;
+            }
+          }
+        }
+}
