@@ -8,8 +8,8 @@ import styles from './index.module.scss';
 const Vault = () => {
   return (
     <MainLayout hasMaxWidth>
-      <BackButton />
       <section className={styles.container}>
+        <BackButton />
         <VaultWindow customStyles={styles.vaultWindow} />
       </section>
     </MainLayout>

@@ -10,11 +10,19 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column;
+
+    > button {
+      margin-right: 60%;
+      margin-bottom: 15px
+    }
 
     @media(max-width: 768px) {
       box-sizing: border-box;
       width: 100%;
       height: unset;
+      padding-right: 15px;
+      padding-left: 15px;
 
       > div {
         display: none;
@@ -27,25 +35,10 @@
     }
 
     .vaultWindow {
-      position: absolute;
       height: fit-content;
 
       @media(max-width: 768px) {
         position: unset;
       }
     }
-}
-
-.binance {
-  position: absolute;
-  top: 50px;
-  left: -10px;
-  z-index: 1;
-}
-
-.coin {
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  z-index: 1;
 }

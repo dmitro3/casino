@@ -1,13 +1,9 @@
 import React, { FC, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
-import BackButton from 'src/components/BackButton';
-import Button from 'src/components/Button';
 import VaultDeposit from 'src/pages/vault/components/VaultDeposit';
-import VaultDepositProcess from 'src/pages/vault/components/VaultDepositProcess';
 import VaultWithdraw from 'src/pages/vault/components/VaultWithdraw';
 import {
-  DepositArrowIcon,
-  DepositPassiveIcon,
   DepositIcon,
   WithdrawIcon,
   ExchangeIcon,
@@ -20,6 +16,8 @@ type Props = {
 };
 
 const VaultWindow: FC<Props> = ({ customStyles }) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
   const [isWithdrawOpen, setIsWithDrawOpen] = useState(false);
   const [isDepositOpen, setIsDepositOpen] = useState(true);
   const [isExchangeOpen, setIsExchangeOpen] = useState(false);
@@ -55,9 +53,12 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
 
   return (
     <section className={`${styles.vaultWindow} ${customStyles || ``}`}>
-      <div className={styles.vaultHeader}>
-        <span>Wallet</span>
-      </div>
+      {!isMobile && (
+        <div className={styles.vaultHeader}>
+          <span>Wallet</span>
+        </div>
+      )}
+
       <div className={styles.vaultContainer}>
         <div className={styles.buttonContainer}>
           <button
@@ -97,6 +98,11 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
             <span>Send Tips</span>
           </button>
         </div>
+        {isMobile && (
+          <div className={styles.vaultHeader}>
+            <span>Wallet</span>
+          </div>
+        )}
         {/* <div className={styles.buttonContainer}>
           <Button
             customStyles={
