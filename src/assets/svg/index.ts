@@ -68,3 +68,7 @@ export { default as UserProfile } from './UserProfile';
 export { default as usaFlag } from './usaFlag';
 export { default as Like } from './Like';
 export { default as Eye } from './Eye';
+export { default as CardIcon } from './CardIcon';
+export { default as WalletIcon } from './WalletIcon';
+export { default as BankIcon } from './BankIcon';
+export { default as PeopleIcon } from './PeopleIcon';
