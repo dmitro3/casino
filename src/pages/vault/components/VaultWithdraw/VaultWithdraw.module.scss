@@ -4,7 +4,7 @@
     @media(max-width: 768px) {
        margin-left: 10%;
     }
-   
+
   }
 
   .walletDropdown {
@@ -17,7 +17,7 @@
 
     @media(max-width: 768px) {
       width: 160px;
-      
+
       svg:first-child {
           padding: 0;
       }
@@ -26,13 +26,13 @@
     > div > svg {
       height: 21px;
     }
-  
+
     > svg {
       padding-right: 11px;
     }
-  
+
   }
-  
+
   .windowDropdown {
     right: -10px;
   }
@@ -43,6 +43,18 @@
     justify-content: flex-start;
     margin-left: -10px;
     gap: 12px;
+
+    > div {
+      width: 100%;
+
+      > button {
+        width: 100% !important;
+
+        > div {
+          width: calc(100% - 16px) !important;
+        }
+      }
+    }
 
     @media(max-width: 768px) {
       justify-content: space-evenly;
@@ -57,7 +69,7 @@
   padding-top: 7px;
 
   @media(max-width: 768px) {
-    
+
     > div {
       box-sizing: border-box;
       width: 100%;
@@ -145,7 +157,7 @@
     font-family: inherit;
     margin-right: 17px;
     margin-bottom: 6px;
-  
+
     &:hover {
       cursor: pointer;
       opacity: .7;

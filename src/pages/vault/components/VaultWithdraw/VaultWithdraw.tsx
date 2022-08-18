@@ -39,7 +39,7 @@ const VaultWithdraw = () => {
       <aside>
         <VaultSidebar />
       </aside>
-      <div>
+      <div style={{ width: `100%` }}>
         <span>Withdraw</span>
         <DepositDropdown />
         <div className={styles.inputContainerWide}>
