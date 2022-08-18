@@ -71,3 +71,7 @@ export { default as UsdIcon } from './UsdIcon';
 export { default as EuroIcon } from './EuroIcon';
 export { default as BtcIcon } from './BtcIcon';
 export { default as SmallSettingsIcon } from './SmallSettingsIcon';
+export { default as DepositIcon } from './DepositIcon';
+export { default as WithdrawIcon } from './WithdrawIcon';
+export { default as ExchangeIcon } from './ExchangeIcon';
+export { default as TipsIcon } from './TipsIcon';
