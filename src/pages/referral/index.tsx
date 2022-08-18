@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navigation from 'src/pages/referral/components/Navigation';
 import MainLayout from 'src/components/MainLayout';
 import BackButton from 'src/components/BackButton';
@@ -9,6 +9,10 @@ import Card from 'src/pages/referral/components/Card';
 import ReferralBottomInfo from 'src/pages/referral/components/ReferralBottomInfo';
 
 const Referral: NextPage = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>
