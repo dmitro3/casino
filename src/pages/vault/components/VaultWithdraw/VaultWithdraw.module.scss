@@ -185,7 +185,7 @@
 
 .sidebarContainer {
   display: flex;
-  justify-content: space-evenly;
+  gap: 40px;
 
   @media (max-width: 768px) {
     flex-direction: column;
