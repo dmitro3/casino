@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import MainLayout from 'src/components/MainLayout';
 import BackButton from 'src/components/BackButton';
@@ -7,6 +7,11 @@ import Cards from 'src/pages/daily/components/Cards';
 import styles from './index.module.scss';
 
 const index = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
     <MainLayout>
       <section className={styles.container}>

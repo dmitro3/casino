@@ -27,7 +27,6 @@
 }
 
 .navigationContainer {
-  align-items: center;
   justify-content: center;
   list-style: none;
   display: flex;
@@ -54,6 +53,29 @@
       padding-top: 3px;
     }
 
+    &DropdownButton {
+      background-color: inherit;
+      width: unset !important;
+      margin-left: 0;
+
+      > li > a {
+      text-decoration: none;
+      color:#fff;
+      font-weight: 400;
+      font-size: 14px !important;
+      white-space: nowrap;
+      font-family: 'Montserrat';
+      }
+
+      > svg {
+        display: none;
+      }
+    }
+
+    &DropdownWindow {
+      top: 55px;
+    }
+
     &Link {
       text-decoration: none;
       color:#fff;
@@ -63,7 +85,8 @@
 
       &:hover {
         cursor: pointer;
-        opacity: 0.6;
+        color: #FCD535;
+        opacity: unset !important;
       }
     }
   }
@@ -114,6 +137,16 @@
   justify-content: flex-start;
   padding-left: 4px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
+    &Image {
+      height: 24px;
+      width: 26px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
 
   > svg {
     padding-left: 5px;
@@ -305,3 +338,32 @@
   width: 370px;
   top: 55px;
 }
+
+.languageDropdownButton {
+  width: 40px;
+  border-radius: 6px;
+  padding-left: 5px;
+
+  > svg {
+    margin-right: 5px !important;
+  }
+}
+
+.languageDropdownWindow {
+  right: 0;
+
+  &Container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 13px;
+  border-radius: 6px;
+  background-color: #222730;
+
+  > span > img:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
+}
+
