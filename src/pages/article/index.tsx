@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from 'src/pages/blog/components/Card';
 import Text from 'src/pages/article/components/Text';
 import { useMediaQuery } from 'react-responsive';
@@ -23,6 +23,11 @@ import {
 
 const index = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return (
     <MainLayout hasMaxWidth>
       <section className={styles.container}>

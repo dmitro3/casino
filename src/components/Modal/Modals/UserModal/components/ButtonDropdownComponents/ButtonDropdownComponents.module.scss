@@ -1,0 +1,30 @@
+.container {
+  width: 115px !important;
+  height: 20px;
+  background-color: #36373c;
+  border-radius: 8px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+   >div {
+    display: flex;
+    align-items: center;
+
+    >span {
+      margin-left: 5px;
+      margin-right: 20px;
+      font-weight: 700;
+      font-size: 9px;
+    }
+   }
+
+    &:nth-last-child(3) {
+      // margin-left: 20px;
+    }
+
+    >svg {
+
+    }
+}
