@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { FC, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -29,6 +30,7 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
 
   const [currentPage, setCurrentPage] = useState<keyof typeof Page>(`deposit`);
 
+  // eslint-disable-next-line consistent-return
   const renderPage = () => {
     switch (currentPage) {
       case Page.withdraw:
