@@ -1,9 +1,10 @@
 .root {
-    width: 660px;
+    width: 530px;
     height: 800px;
     overflow: scroll;
     padding: 25px 40px;
     max-height: calc(100vh - 60px);
+
 
     @media (max-width:768px) {
       width: 80%;
@@ -20,27 +21,95 @@
         margin-bottom: -7px;
     }
 
-    .statsContainer {
-        padding-top: 30px;
+    .headerContainer {
+      height: 56px;
+      position: absolute;
+      top: 1px;
+      left: 0;
+      padding-left: 30px;
+      padding-right: 20px;
+      width: 92%;
+      border-radius: 15px;
+      background-color: #1c1d23;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
 
+        @media (max-width:768px) {
+          height: 30px;
+          width: 100%;
+          padding:0;
+          position: static;
+          background-color: #15161c;
+        }
+
+
+        >div {
+          align-items: center;
+          display: flex;
+
+            >svg {
+              margin-left: 10px;
+            }
+
+            >span {
+              margin-right: 10px;
+              font-weight: 700;
+              font-size: 13px;
+              color: #FFFFFF4D;
+            }
+
+            >div {
+              display: flex;
+              padding: 5px;
+              box-sizing: border-box;
+              align-items: center;
+              justify-content: center;
+              margin-left: 5px;
+              background-color: #36373c;
+              width: 52px;
+              height: 28px;
+              border-radius: 5px;
+
+                >span {
+                  margin-left: 5px;
+                  font-weight: 700;
+                  font-size: 9.38235px;
+                  color: #9d9ea0;
+                }
+            }
+        }
+    }
+
+    .statsContainer {
+      width: 100%;
+      // margin-bottom: 10px;
+
+        // &:nth-last-child(4) {
+        //   margin-top: 20px;
+        // }
         @media (max-width:768px) {
 
         }
 
-        > span {
+       &Label {
+            margin-top: 20px;
             font-size: 13px;
             font-weight: 700;
-            color: #FFFFFF4D;
+            color: #ffffff4d;
               @media (max-width:768px) {
+                margin-top: 20px;
                 width: fit-content;
                 display: block;
-                margin: auto;
+                margin-left: auto;
+                margin-right: auto;
                 height: 30px;
               }
         }
 
         .statItem {
-            width: 230px;
+            // width: 230px;
+            width: 100%;
             height: 81px;
             background-color: #FFFFFF0D;
             border-radius: 10px;
@@ -58,7 +127,8 @@
 
 
             &Container {
-                display: flex;
+                // display: flex;
+                width: 100%;
                 gap: 10px;
 
 
@@ -73,6 +143,20 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+
+                  >div{
+                    height: 26px;
+                    width: 62px;
+                    border-radius: 5px;
+                    background-color: #2c2d33;
+                    font-weight: 600;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #959699;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
             }
 
             > span {
@@ -84,20 +168,42 @@
             > div > p {
                 font-size: 12px;
                 font-weight: 700;
-                color: #FFFFFF80;
+                color: #FFF;
 
-                &::first-letter {
-                    color: white;
-                }
             }
         }
     }
 
-    .userInfo {
-        display: flex;
+    .userImage {
+      display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 13px;
-        margin-top: 20px;
+        margin-top: 40px;
+
+          @media (max-width:768px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 13px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+    }
+
+    .userInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        margin-top: 10px;
+
+          @media (max-width:768px) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 13px;
+            margin-top: 10px;}
     }
 
     .header {
@@ -115,6 +221,7 @@
     .nicknameContainer {
         grid-area: nickname;
         display: flex;
+        align-items: center;
         flex-direction: column;
         position: relative;
         margin-top: -10px;
@@ -131,6 +238,7 @@
             color: #FFFFFF4D;
             font-size: 10px;
             font-weight: 600;
+            margin-top: 20px;
 
             @media (max-width:768px) {
               margin-top: 20px;
@@ -145,13 +253,20 @@
         }
     }
 
+    .sumContainerHidden {
+      height: 22px;
+      width: 62px;
+      background-color: #6b5133;
+      color: blueviolet;
+    }
+
     .gamesSpan {
         margin-bottom: 17px;
     }
 
     .userActivity {
         width: 165px;
-        height: 61px;
+        height: 82px;
         background-color: #FFFFFF0D;
         border-radius: 10px;
         display: flex;
@@ -176,11 +291,11 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding-top: 8px;
+            padding-top: 13px;
         }
 
         &Stats > div {
-            background-color: #FFFFFF24;
+            background-color: inherit;
             width: 53px;
             height: 21px;
             border-radius: 100px;
@@ -201,6 +316,11 @@
         width: 500px;
         gap: 18px;
         margin-top: 17px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // justify-content: space-around;
+        width: 100%;
+        gap: 15px;
 
           @media (max-width:768px) {
             // width: 400px;
@@ -218,17 +338,16 @@
     }
 
     .emptyTab {
-        width: 111px;
-        height: 152px;
+        width: 100px;
+        height: 131px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         background-color: #FFFFFF0D;
         border-radius: 13px;
-        margin-left: 13px;
+
         gap: 15px;
-        margin-top: 17px;
 
           @media (max-width:768px) {
             margin: 0;
@@ -266,7 +385,45 @@
 }
 
 .mobileUserActivity {
+  justify-content: center;
   display: flex;
   width: 100%;
   gap:10px;
 }
+
+.statsContainerCase {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  // width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+}
+}
+
+.footerText {
+  margin-top: 22px;
+  display: flex;
+  justify-content: space-between;
+
+    >span {
+      font-weight: 400;
+      font-size: 13px;
+      color: #9d9ea0;
+    }
+}
+
+.dropdownButton {
+  width: 100%;
+}
+
+.statsContainerLabel {
+  margin-top: 10px;
+}
+
+// .mobileUserActivityStats {
+//   display: flex;
+//   justify-content: space-around !important;
+//   gap: 13px;
+// }
