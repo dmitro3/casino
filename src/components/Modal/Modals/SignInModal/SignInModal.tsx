@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Modal from 'src/components/Modal';
 import Image from 'next/image';
-import SignInImage from 'src/assets/images/SignInImage.png';
+import LoginBackground from 'src/assets/images/LoginBackground.png';
 import Input from 'src/components/Input';
 
 import Link from 'next/link';
@@ -34,7 +34,21 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
         <div className={styles.imageContainer}>
           <div className={styles.blurWrapper}>
             <div className={styles.blur} />
-            <Image src={SignInImage} width={204} height={118} layout="fixed" />
+            {isMobile ? (
+              <Image
+                src={LoginBackground}
+                width={260}
+                height={120}
+                layout="fixed"
+              />
+            ) : (
+              <Image
+                src={LoginBackground}
+                width={360}
+                height={180}
+                layout="fixed"
+              />
+            )}
           </div>
         </div>
         <div className={styles.inputContainer}>

@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { FC, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
@@ -17,40 +18,31 @@ type Props = {
   customStyles?: any;
 };
 
+enum Page {
+  withdraw = `withdraw`,
+  deposit = `deposit`,
+  exchange = `exchange`,
+  tip = `tip`,
+}
+
 const VaultWindow: FC<Props> = ({ customStyles }) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
-  const [isWithdrawOpen, setIsWithDrawOpen] = useState(false);
-  const [isDepositOpen, setIsDepositOpen] = useState(true);
-  const [isExchangeOpen, setIsExchangeOpen] = useState(false);
-  const [isTipsOpen, setIsTipsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState<keyof typeof Page>(`deposit`);
 
-  const toggleVaultWithdraw = () => {
-    setIsWithDrawOpen(true);
-    setIsDepositOpen(false);
-    setIsExchangeOpen(false);
-    setIsTipsOpen(false);
-  };
-
-  const toggleVaultDeposit = () => {
-    setIsDepositOpen(true);
-    setIsWithDrawOpen(false);
-    setIsTipsOpen(false);
-    setIsExchangeOpen(false);
-  };
-
-  const toggleVaultExchange = () => {
-    setIsExchangeOpen(true);
-    setIsWithDrawOpen(false);
-    setIsDepositOpen(false);
-    setIsTipsOpen(false);
-  };
-
-  const toggleVaultTips = () => {
-    setIsTipsOpen(true);
-    setIsExchangeOpen(false);
-    setIsWithDrawOpen(false);
-    setIsDepositOpen(false);
+  // eslint-disable-next-line consistent-return
+  const renderPage = () => {
+    switch (currentPage) {
+      case Page.withdraw:
+        return <VaultWithdraw />;
+      case Page.deposit:
+        return <VaultDeposit />;
+      case Page.exchange:
+        return <VaultExchange />;
+      case Page.tip:
+        return <VaultTips />;
+      default:
+    }
   };
 
   return (
@@ -64,36 +56,36 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
       <div className={styles.vaultContainer}>
         <div className={styles.buttonContainer}>
           <button
-            onClick={toggleVaultDeposit}
+            onClick={() => setCurrentPage(Page.deposit)}
             className={`${styles.button} ${
-              isDepositOpen ? styles.buttonBorder : ``
+              currentPage === Page.deposit ? styles.buttonBorder : ``
             }`}
           >
             <DepositIcon />
             <span>Deposit</span>
           </button>
           <button
-            onClick={toggleVaultWithdraw}
+            onClick={() => setCurrentPage(Page.withdraw)}
             className={`${styles.button} ${
-              isWithdrawOpen ? styles.buttonBorder : ``
+              currentPage === Page.withdraw ? styles.buttonBorder : ``
             }`}
           >
             <WithdrawIcon />
             <span>Withdraw</span>
           </button>
           <button
-            onClick={toggleVaultExchange}
+            onClick={() => setCurrentPage(Page.exchange)}
             className={`${styles.button} ${
-              isExchangeOpen ? styles.buttonBorder : ``
+              currentPage === Page.exchange ? styles.buttonBorder : ``
             }`}
           >
             <ExchangeIcon />
             <span>Exchange</span>
           </button>
           <button
-            onClick={toggleVaultTips}
+            onClick={() => setCurrentPage(Page.tip)}
             className={`${styles.button} ${
-              isTipsOpen ? styles.buttonBorder : ``
+              currentPage === Page.tip ? styles.buttonBorder : ``
             }`}
           >
             <TipsIcon />
@@ -105,38 +97,9 @@ const VaultWindow: FC<Props> = ({ customStyles }) => {
             <span>Wallet</span>
           </div>
         )}
-        {/* <div className={styles.buttonContainer}>
-          <Button
-            customStyles={
-              isDepositOpen || isDepositProcessOpen
-                ? styles.button
-                : styles.buttonPassive
-            }
-            leftIcon={
-              isDepositOpen || isDepositProcessOpen ? (
-                <DepositArrowIcon />
-              ) : (
-                <DepositPassiveIcon />
-              )
-            }
-            label="Deposit"
-            onClick={toggleVaultDeposit}
-          />
-          <Button
-            customStyles={isWithdrawOpen ? styles.button : styles.buttonPassive}
-            leftIcon={
-              isWithdrawOpen ? <DepositArrowIcon /> : <DepositPassiveIcon />
-            }
-            label="Withdraw"
-            onClick={toggleVaultWithdraw}
-          />
-        </div> */}
-        {isDepositOpen && <VaultDeposit /* onClick={toggleDepositProcess} */ />}
-        {isWithdrawOpen && <VaultWithdraw />}
-        {isExchangeOpen && <VaultExchange />}
-        {isTipsOpen && <VaultTips />}
-        {/* {isDepositProcessOpen && <VaultDepositProcess />} */}
+        {}
       </div>
+      {renderPage()}
     </section>
   );
 };
