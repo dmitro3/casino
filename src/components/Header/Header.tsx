@@ -107,6 +107,7 @@ const Header: FC<Props> = ({
             if (link.dropdown) {
               return (
                 <Dropdown
+                  key={link.id}
                   buttonComponent={
                     <li
                       key={link.id}
@@ -202,11 +203,6 @@ const Header: FC<Props> = ({
             />
           </>
         )}
-
-        {/* <div className={styles.selectLanguage}>
-          <Image src={usaFlag} height={24} width={24} />
-          <ArrowDownIcon />
-        </div> */}
         <Dropdown
           buttonComponent={
             <div className={styles.selectLanguageImage}>

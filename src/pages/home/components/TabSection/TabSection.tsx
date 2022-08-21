@@ -106,13 +106,13 @@ const TabSection: FC = () => {
         <nav className={styles.tabSectionNavbar}>
           {tabs.map((tab) => (
             <Button
+              key={tab.id}
               label={tab.label}
               leftIcon={
                 <tab.icon
                   color={selectedTab.id === tab.id ? `#1D2027` : `#5E6670`}
                 />
               }
-              key={tab.id}
               customStyles={`${
                 selectedTab.id === tab.id
                   ? styles.tabSectionButton
@@ -130,13 +130,8 @@ const TabSection: FC = () => {
       </div>
       <div className={styles.tabSectionImages}>
         {tabImages.map((tabImg) => (
-          <div className={styles.tabSectionSelectedImage}>
-            <Image
-              src={tabImg.image}
-              key={tabImg.id}
-              width={190}
-              height={260}
-            />
+          <div className={styles.tabSectionSelectedImage} key={tabImg.id}>
+            <Image src={tabImg.image} width={190} height={260} />
           </div>
         ))}
       </div>

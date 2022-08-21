@@ -20,56 +20,60 @@ const Navigation = () => {
     <section className={styles.accountNavBar}>
       <Link passHref href="/referral">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/referral` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={OverviewImage} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={OverviewImage} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/referral`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={OverviewImage} height={25} width={25} />
             <span>Overview</span>
           </div>
         </a>
       </Link>
       <Link passHref href="/referral/balance">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/referral/balance` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={BalanceImage} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={BalanceImage} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/referral/balance`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={BalanceImage} height={25} width={25} />
             <span>My balance</span>
           </div>
         </a>
       </Link>
       <Link passHref href="/referral/campaings">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/referral/campaings` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={CampaingsImage} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={CampaingsImage} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/referral/campaings`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={CampaingsImage} height={25} width={25} />
             <span>Campaings</span>
           </div>
         </a>
       </Link>
       <Link passHref href="/referral/ref">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/referral/ref` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={RefferalImage} height={40} width={58} />
-              </Blur>
-            ) : (
-              <Image src={RefferalImage} height={40} width={58} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/referral/ref`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={RefferalImage} height={17} width={25} />
             <span>Referral</span>
           </div>
         </a>

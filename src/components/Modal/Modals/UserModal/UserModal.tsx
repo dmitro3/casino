@@ -8,25 +8,19 @@ import Clever from 'src/assets/images/Clever.png';
 import ArrowDownRed from 'src/assets/images/ArrowDownRed.png';
 import CupYellow from 'src/assets/images/CupYellow.png';
 
-import TipButton from 'src/pages/account/components/ProfileInfo/components/TipButton';
 import { mockUser } from 'src/utils/mockData';
 import { topGames } from 'src/pages/account/components/Stats/StatsTop/StatsTop';
 import {
   CloseIcon,
   QuestionCircle,
   HeartIcon,
-  Rocket,
-  Stats,
   Controller,
   TetherToken,
   Gamepad,
 } from 'src/assets/svg';
 import Button from 'src/components/Button';
-import Dropdown from 'src/components/Dropdown';
 import ButtonDropdownComponents from 'src/components/Modal/Modals/UserModal/components/ButtonDropdownComponents';
 import styles from './UserModal.module.scss';
-
-CupYellow;
 
 type Props = {
   toggleModal: () => void;
@@ -51,21 +45,15 @@ const UserModal: FC<Props> = ({ toggleModal }) => {
           <CloseIcon width={18} height={18} />
         </div>
       </div>
-      <>
-        {/* <div className={styles.header}>
-          <span>User Profile</span>
-          <TipButton />
-        </div> */}
-        <div className={styles.userImage}>
-          <ProfileImg />
+      <div className={styles.userImage}>
+        <ProfileImg />
 
-          <div className={styles.nicknameContainer}>
-            {isMobile && <ButtonDropdownComponents />}
-            <span>18 days on the platform</span>
-            <p>User48376</p>
-          </div>
+        <div className={styles.nicknameContainer}>
+          {isMobile && <ButtonDropdownComponents />}
+          <span>18 days on the platform</span>
+          <p>User48376</p>
         </div>
-      </>
+      </div>
 
       <div className={styles.userInfo}>
         <div className={styles.mobileUserActivity}>
@@ -167,16 +155,18 @@ const UserModal: FC<Props> = ({ toggleModal }) => {
         </div>
         <div className={styles.statItemContainer}>
           <div className={styles.cardsContainer}>
-            {topGames.map((tabImg) => (
-              <div>
-                <Image
-                  src={tabImg.image}
-                  key={tabImg.id}
-                  width={100}
-                  height={130}
-                />
-              </div>
-            ))}
+            {topGames
+              .filter((tabImg) => tabImg.id !== 4)
+              .map((tabImg) => (
+                <div>
+                  <Image
+                    src={tabImg.image}
+                    key={tabImg.id}
+                    width={100}
+                    height={130}
+                  />
+                </div>
+              ))}
             {isMobile && (
               <div className={styles.emptyTab}>
                 <Gamepad />

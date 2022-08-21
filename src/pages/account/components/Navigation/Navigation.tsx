@@ -16,14 +16,15 @@ const Navigation = () => {
     <section className={styles.accountNavBar}>
       <Link passHref href="/account">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/account` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={AccountImage} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={AccountImage} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/account`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={AccountImage} height={25} width={25} />
 
             <span>My Account</span>
           </div>
@@ -31,42 +32,45 @@ const Navigation = () => {
       </Link>
       <Link passHref href="/account/transactions">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/account/transactions` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={Transactions} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={Transactions} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/account/transactions`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={Transactions} height={25} width={25} />
             <span>Transactions</span>
           </div>
         </a>
       </Link>
       <Link passHref href="/account/gameHistory">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/account/gameHistory` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={History} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={History} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/account/gameHistory`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={History} height={25} width={25} />
             <span>Game History</span>
           </div>
         </a>
       </Link>
       <Link passHref href="/account/sessions">
         <a href="/#">
-          <div className={styles.navTab}>
-            {router.pathname === `/account/sessions` ? (
-              <Blur color="#FCD535" bottom filterRadius={50}>
-                <Image src={Sessions} height={45} width={45} />
-              </Blur>
-            ) : (
-              <Image src={Sessions} height={45} width={45} />
-            )}
+          <div
+            className={styles.navTab}
+            style={
+              router.pathname === `/account/sessions`
+                ? { borderBottom: `1px solid #FCD535` }
+                : {}
+            }
+          >
+            <Image src={Sessions} height={25} width={25} />
             <span>Sessions</span>
           </div>
         </a>

@@ -224,6 +224,7 @@ const SliderContainer = () => {
       >
         {sliderItems.map((item) => (
           <SliderItem
+            key={item.id}
             image={item.image}
             text={item.text}
             color={item.color}

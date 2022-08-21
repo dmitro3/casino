@@ -1,5 +1,6 @@
 .root {
     width: 530px;
+    box-sizing: border-box;
     height: 800px;
     overflow: scroll;
     padding: 25px 40px;
@@ -320,6 +321,7 @@
             flex-wrap: wrap;
             width: 100%;
             gap: 15px;
+            justify-content: center;
           }
 
         > div:hover {

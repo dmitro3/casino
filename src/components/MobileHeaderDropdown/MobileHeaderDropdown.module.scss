@@ -129,7 +129,7 @@
     margin-right: 20px;
     border-radius: 10px;
     align-items: center;
-    position: relative; 
+    position: relative;
     justify-content: space-between;
 
     &Wallet {
@@ -179,15 +179,15 @@
     right: -150%;
     width: 370px;
   }
-  
+
   .notificationButton {
     background: none;
     width: unset !important;
-    
+
     > svg {
         height: 20px !important;
     }
-  
+
     svg:nth-child(2) {
       display: none;
     }
@@ -197,4 +197,8 @@
     right: -70%;
     width: 370px;
     top: 140%;
+
+    @media (max-width: 768px) {
+      width: 100vw;
+    }
   }
