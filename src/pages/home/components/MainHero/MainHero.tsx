@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Hero from 'src/assets/images/Hero.png';
+import HeroBackground from 'src/assets/images/HeroBackground.png';
 import Bitcoin from 'src/assets/images/Bitcoin.png';
 import Button from 'src/components/Button';
 import styles from './MainHero.module.scss';
@@ -27,7 +27,7 @@ const MainHero = () => {
         </div>
         <div className={styles.heroBlurWrapper}>
           <div className={styles.heroBlur} />
-          <Image src={Hero} width={500} height={500} />
+          <Image src={HeroBackground} width={911} height={450} />
         </div>
       </div>
     </section>
