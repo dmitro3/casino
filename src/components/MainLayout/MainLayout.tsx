@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
+import { SignInFormData } from 'src/types/formData';
 import {
   RegistrationModal,
   SignInModal,

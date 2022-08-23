@@ -9,6 +9,7 @@ type Props = {
   onClick?: () => void;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  type?: `submit` | `reset` | `button`;
 };
 
 const Button = ({
@@ -18,9 +19,14 @@ const Button = ({
   onClick,
   leftIcon,
   rightIcon,
+  type,
 }: Props) => {
   return (
-    <button onClick={onClick} className={`${styles.root} ${customStyles}`}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={`${styles.root} ${customStyles}`}
+    >
       {leftIcon}
       <span>{label}</span>
       {subText && <p>{subText}</p>}
