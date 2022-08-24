@@ -30,10 +30,11 @@ import styles from './SignInModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
+  onSuccess?: () => void;
   onError: (text: string) => void;
 };
 
-const SignInModal: FC<Props> = ({ toggleModal, onError }: Props) => {
+const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
   const onSignIn = async (values: SignInFormData) => {
