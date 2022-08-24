@@ -14,7 +14,7 @@ export const signUp = async (
   password: string,
   username: string,
 ) => {
-  const response = await axios.post(`${BASE_URL}/auth/signup`, {
+  const response = await axios.post(`${BASE_URL}/auth/register`, {
     email,
     password,
     username,

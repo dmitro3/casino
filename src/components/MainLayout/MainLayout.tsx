@@ -2,7 +2,6 @@ import React, { FC, useEffect, useState } from 'react';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
-import { SignInFormData } from 'src/types/formData';
 import {
   RegistrationModal,
   SignInModal,
@@ -24,7 +23,9 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userModalVisible, setUserModalVisible] = useState(false);
   const [isStatusModalSuccess, setIsStatusModalSuccess] = useState(false);
-  const [statusModalText, setStatusModalText] = useState(``);
+  const [statusModalText, setStatusModalText] = useState(
+    `` as string | undefined,
+  );
 
   const [mounted, setMounted] = useState(false);
 
@@ -51,10 +52,23 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
     setUserModalVisible(!userModalVisible);
   };
 
+  const toggleCloseModals = () => {
+    setStatusModalVisible(!statusModalVisible);
+    setRegistrationModalVisible(!registrationModalVisible);
+  };
+
   const onError = (error: string) => {
+    if (typeof error === `object`) {
+      setStatusModalText(undefined);
+    } else setStatusModalText(error);
     toggleStatusModal();
     setIsStatusModalSuccess(false);
-    setStatusModalText(error);
+  };
+
+  const onSuccess = () => {
+    toggleStatusModal();
+    setIsStatusModalSuccess(true);
+    setIsAuthenticated(true);
   };
 
   return (
@@ -69,10 +83,8 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
       {registrationModalVisible && (
         <RegistrationModal
           toggleModal={toggleRegistrationModal}
-          onSuccess={() => {
-            toggleRegistrationModal();
-            toggleStatusModal();
-          }}
+          onSuccess={onSuccess}
+          onError={onError}
         />
       )}
       {signInModalVisible && (
@@ -87,6 +99,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
       )}
       {statusModalVisible && (
         <StatusModal
+          toggleCloseModals={toggleCloseModals}
           toggleModal={toggleStatusModal}
           isSuccessful={isStatusModalSuccess}
           statusModalText={statusModalText}

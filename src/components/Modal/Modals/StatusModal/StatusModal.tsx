@@ -9,15 +9,18 @@ import styles from './StatusModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
+  toggleCloseModals: () => void;
   isSuccessful?: boolean;
   statusModalText?: string;
 };
 
 const StatusModal: FC<Props> = ({
   toggleModal,
+  toggleCloseModals,
   isSuccessful,
   statusModalText = `Try to register again and check the information you entered. Or, before that, try to refresh the page and check the stability of the network connection`,
 }: Props) => {
+  console.log(`statusModalText`, statusModalText);
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
@@ -45,7 +48,11 @@ const StatusModal: FC<Props> = ({
             : statusModalText}
         </p>
         {isSuccessful ? (
-          <Button label="Continue" customStyles={styles.successfulButton} />
+          <Button
+            onClick={toggleCloseModals}
+            label="Continue"
+            customStyles={styles.successfulButton}
+          />
         ) : (
           <Button
             onClick={toggleModal}
