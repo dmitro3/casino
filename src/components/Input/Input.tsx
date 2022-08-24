@@ -14,6 +14,7 @@ type Props = FieldRenderProps<string, any> & {
   value?: string;
   disabled?: boolean;
   additionalButton?: React.ReactNode;
+  onChange?: () => void;
 };
 
 const Input: FC<Props> = ({
@@ -28,6 +29,7 @@ const Input: FC<Props> = ({
   additionalButton,
   meta,
   input,
+  onChange,
 }) => {
   console.log(meta && meta.error);
   return (
@@ -48,9 +50,11 @@ const Input: FC<Props> = ({
           disabled={disabled}
           {...input}
         />
-        <div className={styles.inputIconRight}>
-          {password && <PasswordAyes />}
-        </div>
+        {password && (
+          <button onClick={onChange} className={styles.inputIconRight}>
+            {password && <PasswordAyes />}
+          </button>
+        )}
         {additionalButton && (
           <div className={styles.additionalButton}>{additionalButton}</div>
         )}

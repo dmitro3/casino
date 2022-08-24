@@ -1,5 +1,5 @@
-export const required = (value) =>
-  value ? undefined : `You forgot to enter your email!`;
+export const required = (inputType) => (value) =>
+  value ? undefined : `You forgot to enter your ${inputType}`;
 
 export const minLength = (min) => (value) =>
   value.length >= min ? undefined : `Should be longer than ${min} symbols`;

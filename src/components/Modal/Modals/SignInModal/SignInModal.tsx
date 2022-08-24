@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Form, Field } from 'react-final-form';
 import Modal from 'src/components/Modal';
@@ -9,7 +9,7 @@ import {
   required,
   composeValidators,
   isEmail,
-  minLenght,
+  minLength,
 } from 'src/utils/validation';
 import LoginBackground from 'src/assets/images/LoginBackground.png';
 import Input from 'src/components/Input';
@@ -34,7 +34,13 @@ type Props = {
 };
 
 const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
+  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
+  const handlePasswordChange = () => {
+    setIsPasswordHidden(!isPasswordHidden);
+  };
 
   const onSignIn = async (values: SignInFormData) => {
     console.log(values);
@@ -80,7 +86,7 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
                     name="email"
                     component={Input}
                     password={false}
-                    validate={composeValidators(required, isEmail)}
+                    validate={composeValidators(required(`email`), isEmail)}
                     customStyles={styles.inputContainerBlockInput}
                     icon={<EmailIcon />}
                     placeholder="Enter Your e-mail"
@@ -88,15 +94,21 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
                   />
                 </div>
                 <div className={styles.inputContainerBlock}>
-                  <p>Password</p>
                   <Field
+                    inputLabel="Password"
                     label="Password"
                     name="password"
                     component={Input}
+                    validate={composeValidators(
+                      required(`password`),
+                      minLength(6),
+                    )}
                     password
                     customStyles={styles.inputContainerBlockInput}
                     icon={<KeyIcon />}
                     placeholder="Enter your password"
+                    type={isPasswordHidden ? `password` : `text`}
+                    onChange={handlePasswordChange}
                   />
                 </div>
               </div>

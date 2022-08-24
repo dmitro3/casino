@@ -88,6 +88,13 @@
   top:  57%;
   transform: translateY(-50%);
   right: -10px;
+  background-color: inherit;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
 }
 
 .additionalButton {
