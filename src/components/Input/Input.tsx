@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { FieldInputProps, FieldMetaState } from 'react-final-form';
 import { PasswordAyes } from 'src/assets/svg';
 
@@ -24,7 +24,6 @@ type Props = FieldRenderProps<string, any> & {
   value?: string;
   disabled?: boolean;
   additionalButton?: React.ReactNode;
-  onHidePassword?: () => void;
 };
 
 const Input: FC<Props> = ({
@@ -39,8 +38,13 @@ const Input: FC<Props> = ({
   additionalButton,
   meta,
   input,
-  onHidePassword,
 }) => {
+  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+
+  const handlePasswordHidden = () => {
+    setIsPasswordHidden(!isPasswordHidden);
+  };
+
   return (
     <>
       {inputLabel && (
@@ -57,10 +61,14 @@ const Input: FC<Props> = ({
           className={`${styles.rootInput} ${customStyles}`}
           value={value}
           disabled={disabled}
+          type={isPasswordHidden && password ? `password` : `text`}
           {...input}
         />
         {password && (
-          <button onClick={onHidePassword} className={styles.inputIconRight}>
+          <button
+            onClick={handlePasswordHidden}
+            className={styles.inputIconRight}
+          >
             {password && <PasswordAyes />}
           </button>
         )}

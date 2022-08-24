@@ -30,29 +30,19 @@ import styles from './SignInModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
-  onSuccess?: () => void;
   onError: (text: string) => void;
 };
 
-const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
-  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
-
+const SignInModal: FC<Props> = ({ toggleModal, onError }: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
-  const handlePasswordChange = () => {
-    setIsPasswordHidden(!isPasswordHidden);
-  };
-
   const onSignIn = async (values: SignInFormData) => {
-    console.log(values);
     try {
       const response = await auth.signIn(values.email, values.password);
       if (response.error) {
         throw response.message;
       }
-      console.log(response);
     } catch (error: any) {
-      console.log(`cock`, error);
       onError(error);
     }
   };
@@ -86,11 +76,13 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
             <form onSubmit={handleSubmit}>
               <div className={styles.inputContainer}>
                 <div className={styles.inputContainerBlock}>
-                  <Field name="email">
+                  <Field
+                    name="email"
+                    validate={composeValidators(required(`email`), isEmail)}
+                  >
                     {({ input, meta }) => (
                       <Input
                         password={false}
-                        validate={composeValidators(required(`email`), isEmail)}
                         customStyles={styles.inputContainerBlockInput}
                         icon={<EmailIcon />}
                         placeholder="Enter Your e-mail"
@@ -102,20 +94,20 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
                   </Field>
                 </div>
                 <div className={styles.inputContainerBlock}>
-                  <Field name="password">
+                  <Field
+                    name="password"
+                    validate={composeValidators(
+                      required(`password`),
+                      minLength(6),
+                    )}
+                  >
                     {({ input, meta }) => (
                       <Input
                         inputLabel="Password"
-                        validate={composeValidators(
-                          required(`password`),
-                          minLength(6),
-                        )}
                         password
                         customStyles={styles.inputContainerBlockInput}
                         icon={<KeyIcon />}
                         placeholder="Enter your password"
-                        type={isPasswordHidden ? `password` : `text`}
-                        onHidePassword={handlePasswordChange}
                         input={input}
                         meta={meta}
                       />
