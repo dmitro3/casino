@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -23,6 +23,11 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const [statusModalVisible, setStatusModalVisible] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userModalVisible, setUserModalVisible] = useState(false);
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const toggleRegistrationModal = () => {
     setRegistrationModalVisible(!registrationModalVisible);

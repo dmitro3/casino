@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from 'src/pages/blog/components/Slider/Slider.module.scss';
 import Image from 'next/image';
-import Lake from 'src/assets/images/bitcoin-lake.png';
-import Blur from 'src/components/Blur';
-import BigBitcoinLake from 'src/assets/images/BigBitcoinLake.png';
+
+import { cardData } from 'src/utils/articleData';
 
 const Slider = () => {
+  const [currentCard, setCurrentCard] = useState(cardData[0]);
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const currentCardId = currentCard.id;
+  //     if (currentCardId < 5) {
+  //       setCurrentCard(cardData[currentCardId + 1]);
+  //     } else {
+  //       setCurrentCard(cardData[0]);
+  //     }
+  //   }, 1000); // in milliseconds
+  //   return () => clearInterval(intervalId);
+  // }, []);
+
   return (
     <div className={styles.sliderContainer}>
-      <Image src={BigBitcoinLake} />
+      <Image src={currentCard.imageUrl} />
       <div className={styles.sliderContainerDescription}>
-        <p>Поход Binobi к соблюдению требований</p>
+        <p>{currentCard.secondLabel}</p>
         <span>
           За последний год мы прошли долгий путь со взлетами и падениями,
           вызванными пандемией. В то время как большинство отраслей медленно
@@ -18,20 +31,24 @@ const Slider = () => {
           стал годом невероятного роста и...
         </span>
         <div>
-          <span>2022-03-16</span>
+          <span>{currentCard.postData}</span>
+
           <div>
-            <div>
-              <p className={styles.active} />
-            </div>
-            <div>
-              <p />
-            </div>
-            <div>
-              <p />
-            </div>
-            <div>
-              <p />
-            </div>
+            {cardData
+              .filter((card) => card.id < 5)
+              .map((card) => (
+                <div
+                  key={card.id}
+                  tabIndex={-1}
+                  role="button"
+                  onKeyDown={() => setCurrentCard(card)}
+                  onClick={() => setCurrentCard(card)}
+                >
+                  <p
+                    className={card.id === currentCard.id ? styles.active : ``}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>

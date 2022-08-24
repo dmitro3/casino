@@ -1,5 +1,11 @@
 .cardContainer {
       max-width: 402px;
+      margin-bottom: 40px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: .7;
+      }
 
       @media (max-width:768px) {
         margin-top: 20px;

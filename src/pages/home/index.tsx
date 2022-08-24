@@ -14,6 +14,7 @@ const HomeContainer: FC = () => {
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
+
   return (
     <>
       <MainHero />
