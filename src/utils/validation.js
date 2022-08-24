@@ -1,10 +1,11 @@
-export const required = (value) => (value ? undefined : `Empty field`);
+export const required = (value) =>
+  value ? undefined : `You forgot to enter your email!`;
 
 export const minLength = (min) => (value) =>
-  value.length >= min ? undefined : `Should be longer that ${min} symbols`;
+  value.length >= min ? undefined : `Should be longer than ${min} symbols`;
 
 export const maxLength = (max) => (value) =>
-  value.length <= max ? undefined : `Should be shorter that ${max} symbols`;
+  value.length <= max ? undefined : `Should be shorter than ${max} symbols`;
 
 export const composeValidators =
   (...validators) =>

@@ -71,10 +71,10 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
             <form onSubmit={handleSubmit}>
               <div className={styles.inputContainer}>
                 <div className={styles.inputContainerBlock}>
-                  <div className={styles.inputContainerBlockText}>
+                  {/* <div className={styles.inputContainerBlockText}>
                     <p>Your E-mail</p>
                     <span>You forgot to enter your email!</span>
-                  </div>
+                  </div> */}
                   <Field
                     label="Email"
                     name="email"
@@ -84,6 +84,7 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
                     customStyles={styles.inputContainerBlockInput}
                     icon={<EmailIcon />}
                     placeholder="Enter Your e-mail"
+                    inputLabel="Your e-mail"
                   />
                 </div>
                 <div className={styles.inputContainerBlock}>

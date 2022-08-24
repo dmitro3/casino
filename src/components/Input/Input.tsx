@@ -5,6 +5,7 @@ import { PasswordAyes } from 'src/assets/svg';
 import styles from './Input.module.scss';
 
 type Props = FieldRenderProps<string, any> & {
+  inputLabel?: string;
   placeholder?: string;
   icon?: React.ReactNode;
   customStyles?: any;
@@ -16,6 +17,7 @@ type Props = FieldRenderProps<string, any> & {
 };
 
 const Input: FC<Props> = ({
+  inputLabel,
   placeholder,
   icon,
   customStyles,
@@ -29,23 +31,32 @@ const Input: FC<Props> = ({
 }) => {
   console.log(meta && meta.error);
   return (
-    <div className={`${styles.inputContainer}  ${customContainerStyles}`}>
-      <div className={styles.inputIcon}>{icon}</div>
-      <input
-        placeholder={placeholder}
-        className={`${styles.rootInput} ${customStyles}`}
-        value={value}
-        disabled={disabled}
-        {...input}
-      />
-      <div className={styles.inputIconRight}>
-        {password && <PasswordAyes />}
-      </div>
-      {additionalButton && (
-        <div className={styles.additionalButton}>{additionalButton}</div>
+    <>
+      {inputLabel && (
+        <div className={styles.inputContainerBlockText}>
+          <p>{inputLabel}</p>
+
+          {meta && meta.error && meta.touched && <span>{meta.error}</span>}
+        </div>
       )}
-      {meta && meta.error && meta.touched && <div>{meta.error}</div>}
-    </div>
+      <div className={`${styles.inputContainer}  ${customContainerStyles}`}>
+        <div className={styles.inputIcon}>{icon}</div>
+        <input
+          placeholder={placeholder}
+          className={`${styles.rootInput} ${customStyles}`}
+          value={value}
+          disabled={disabled}
+          {...input}
+        />
+        <div className={styles.inputIconRight}>
+          {password && <PasswordAyes />}
+        </div>
+        {additionalButton && (
+          <div className={styles.additionalButton}>{additionalButton}</div>
+        )}
+      </div>
+      {` `}
+    </>
   );
 };
 
