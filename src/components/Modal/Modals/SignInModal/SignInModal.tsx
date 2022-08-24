@@ -31,9 +31,10 @@ import styles from './SignInModal.module.scss';
 type Props = {
   toggleModal: () => void;
   onSuccess?: () => void;
+  onError: (text: string) => void;
 };
 
-const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
+const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
@@ -44,8 +45,16 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
 
   const onSignIn = async (values: SignInFormData) => {
     console.log(values);
-    const response = await auth.signIn(values.email, values.password);
-    console.log(response);
+    try {
+      const response = await auth.signIn(values.email, values.password);
+      if (response.error) {
+        throw response.message;
+      }
+      console.log(response);
+    } catch (error: any) {
+      console.log(`cock`, error);
+      onError(error);
+    }
   };
 
   return (
@@ -77,39 +86,41 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess }: Props) => {
             <form onSubmit={handleSubmit}>
               <div className={styles.inputContainer}>
                 <div className={styles.inputContainerBlock}>
-                  {/* <div className={styles.inputContainerBlockText}>
-                    <p>Your E-mail</p>
-                    <span>You forgot to enter your email!</span>
-                  </div> */}
-                  <Field
-                    label="Email"
-                    name="email"
-                    component={Input}
-                    password={false}
-                    validate={composeValidators(required(`email`), isEmail)}
-                    customStyles={styles.inputContainerBlockInput}
-                    icon={<EmailIcon />}
-                    placeholder="Enter Your e-mail"
-                    inputLabel="Your e-mail"
-                  />
+                  <Field name="email">
+                    {({ input, meta }) => (
+                      <Input
+                        password={false}
+                        validate={composeValidators(required(`email`), isEmail)}
+                        customStyles={styles.inputContainerBlockInput}
+                        icon={<EmailIcon />}
+                        placeholder="Enter Your e-mail"
+                        inputLabel="Your e-mail"
+                        input={input}
+                        meta={meta}
+                      />
+                    )}
+                  </Field>
                 </div>
                 <div className={styles.inputContainerBlock}>
-                  <Field
-                    inputLabel="Password"
-                    label="Password"
-                    name="password"
-                    component={Input}
-                    validate={composeValidators(
-                      required(`password`),
-                      minLength(6),
+                  <Field name="password">
+                    {({ input, meta }) => (
+                      <Input
+                        inputLabel="Password"
+                        validate={composeValidators(
+                          required(`password`),
+                          minLength(6),
+                        )}
+                        password
+                        customStyles={styles.inputContainerBlockInput}
+                        icon={<KeyIcon />}
+                        placeholder="Enter your password"
+                        type={isPasswordHidden ? `password` : `text`}
+                        onHidePassword={handlePasswordChange}
+                        input={input}
+                        meta={meta}
+                      />
                     )}
-                    password
-                    customStyles={styles.inputContainerBlockInput}
-                    icon={<KeyIcon />}
-                    placeholder="Enter your password"
-                    type={isPasswordHidden ? `password` : `text`}
-                    onChange={handlePasswordChange}
-                  />
+                  </Field>
                 </div>
               </div>
               <div>

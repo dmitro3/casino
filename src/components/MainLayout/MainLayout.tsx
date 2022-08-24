@@ -23,6 +23,8 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const [statusModalVisible, setStatusModalVisible] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userModalVisible, setUserModalVisible] = useState(false);
+  const [isStatusModalSuccess, setIsStatusModalSuccess] = useState(false);
+  const [statusModalText, setStatusModalText] = useState(``);
 
   const [mounted, setMounted] = useState(false);
 
@@ -47,6 +49,12 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
 
   const toggleUserModal = () => {
     setUserModalVisible(!userModalVisible);
+  };
+
+  const onError = (error: string) => {
+    toggleStatusModal();
+    setIsStatusModalSuccess(false);
+    setStatusModalText(error);
   };
 
   return (
@@ -74,10 +82,15 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
             toggleSignInModal();
             setIsAuthenticated(true);
           }}
+          onError={onError}
         />
       )}
       {statusModalVisible && (
-        <StatusModal toggleModal={toggleStatusModal} isSuccessful={false} />
+        <StatusModal
+          toggleModal={toggleStatusModal}
+          isSuccessful={isStatusModalSuccess}
+          statusModalText={statusModalText}
+        />
       )}
       {userModalVisible && <UserModal toggleModal={toggleUserModal} />}
       <div

@@ -10,9 +10,14 @@ import styles from './StatusModal.module.scss';
 type Props = {
   toggleModal: () => void;
   isSuccessful?: boolean;
+  statusModalText?: string;
 };
 
-const StatusModal: FC<Props> = ({ toggleModal, isSuccessful }: Props) => {
+const StatusModal: FC<Props> = ({
+  toggleModal,
+  isSuccessful,
+  statusModalText = `Try to register again and check the information you entered. Or, before that, try to refresh the page and check the stability of the network connection`,
+}: Props) => {
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>
@@ -37,12 +42,16 @@ const StatusModal: FC<Props> = ({ toggleModal, isSuccessful }: Props) => {
         <p>
           {isSuccessful
             ? `Then click the continue button and go to your personal account. You can continue your activities there`
-            : `Try to register again and check the information you entered. Or, before that, try to refresh the page and check the stability of the network connection`}
+            : statusModalText}
         </p>
         {isSuccessful ? (
           <Button label="Continue" customStyles={styles.successfulButton} />
         ) : (
-          <Button label="Try again" customStyles={styles.successfulButton} />
+          <Button
+            onClick={toggleModal}
+            label="Try again"
+            customStyles={styles.successfulButton}
+          />
         )}
       </div>
     </Modal>

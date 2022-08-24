@@ -1,8 +1,18 @@
 import React, { FC } from 'react';
-import { FieldRenderProps } from 'react-final-form';
+import { FieldInputProps, FieldMetaState } from 'react-final-form';
 import { PasswordAyes } from 'src/assets/svg';
 
 import styles from './Input.module.scss';
+
+export interface FieldRenderProps<
+  FieldValue,
+  T extends HTMLElement = HTMLElement,
+  InputValue = FieldValue,
+> {
+  input?: FieldInputProps<InputValue, T>;
+  meta?: FieldMetaState<FieldValue>;
+  [otherProp: string]: any;
+}
 
 type Props = FieldRenderProps<string, any> & {
   inputLabel?: string;
@@ -14,7 +24,7 @@ type Props = FieldRenderProps<string, any> & {
   value?: string;
   disabled?: boolean;
   additionalButton?: React.ReactNode;
-  onChange?: () => void;
+  onHidePassword?: () => void;
 };
 
 const Input: FC<Props> = ({
@@ -29,9 +39,8 @@ const Input: FC<Props> = ({
   additionalButton,
   meta,
   input,
-  onChange,
+  onHidePassword,
 }) => {
-  console.log(meta && meta.error);
   return (
     <>
       {inputLabel && (
@@ -51,7 +60,7 @@ const Input: FC<Props> = ({
           {...input}
         />
         {password && (
-          <button onClick={onChange} className={styles.inputIconRight}>
+          <button onClick={onHidePassword} className={styles.inputIconRight}>
             {password && <PasswordAyes />}
           </button>
         )}
