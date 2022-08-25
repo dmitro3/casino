@@ -22,8 +22,23 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const [statusModalVisible, setStatusModalVisible] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userModalVisible, setUserModalVisible] = useState(false);
+  const [isStatusModalSuccess, setIsStatusModalSuccess] = useState(false);
+  const [statusModalText, setStatusModalText] = useState(
+    `` as string | undefined,
+  );
 
   const [mounted, setMounted] = useState(false);
+
+  const getAccessToken = () => {
+    return localStorage.getItem(`token`);
+  };
+
+  useEffect(() => {
+    const token = getAccessToken();
+    if (token) {
+      setIsAuthenticated(true);
+    } else setIsAuthenticated(false);
+  }, []);
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -40,12 +55,37 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
     setStatusModalVisible(!statusModalVisible);
   };
 
-  const toggleIsAuthenticated = () => {
-    setIsAuthenticated(!isAuthenticated);
+  const logout = () => {
+    setIsAuthenticated(false);
+    localStorage.clear();
   };
 
   const toggleUserModal = () => {
     setUserModalVisible(!userModalVisible);
+  };
+
+  const toggleCloseModals = () => {
+    setStatusModalVisible(!statusModalVisible);
+    setRegistrationModalVisible(!registrationModalVisible);
+  };
+
+  const onError = (error: string) => {
+    if (typeof error === `object`) {
+      setStatusModalText(undefined);
+    } else setStatusModalText(error);
+    toggleStatusModal();
+    setIsStatusModalSuccess(false);
+  };
+
+  const onSuccess = () => {
+    toggleStatusModal();
+    setIsStatusModalSuccess(true);
+    setSignInModalVisible(true);
+  };
+
+  const onLoginSuccess = () => {
+    setSignInModalVisible(false);
+    setIsAuthenticated(true);
   };
 
   return (
@@ -54,29 +94,30 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
         toggleRegistrationModal={toggleRegistrationModal}
         toggleSignInModal={toggleSignInModal}
         isAuthenticated={isAuthenticated}
-        toggleIsAuthenticated={toggleIsAuthenticated}
+        logout={logout}
         toggleUserModal={toggleUserModal}
       />
       {registrationModalVisible && (
         <RegistrationModal
           toggleModal={toggleRegistrationModal}
-          onSuccess={() => {
-            toggleRegistrationModal();
-            toggleStatusModal();
-          }}
+          onSuccess={onSuccess}
+          onError={onError}
         />
       )}
       {signInModalVisible && (
         <SignInModal
           toggleModal={toggleSignInModal}
-          onSuccess={() => {
-            toggleSignInModal();
-            setIsAuthenticated(true);
-          }}
+          onLoginSuccess={onLoginSuccess}
+          onError={onError}
         />
       )}
       {statusModalVisible && (
-        <StatusModal toggleModal={toggleStatusModal} isSuccessful={false} />
+        <StatusModal
+          toggleCloseModals={toggleCloseModals}
+          toggleModal={toggleStatusModal}
+          isSuccessful={isStatusModalSuccess}
+          statusModalText={statusModalText}
+        />
       )}
       {userModalVisible && <UserModal toggleModal={toggleUserModal} />}
       <div

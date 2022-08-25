@@ -81,7 +81,7 @@ type Props = {
   toggleRegistrationModal: () => void;
   toggleSignInModal: () => void;
   isAuthenticated?: boolean;
-  toggleIsAuthenticated: () => void;
+  logout: () => void;
   toggleUserModal: () => void;
 };
 
@@ -89,7 +89,7 @@ const Header: FC<Props> = ({
   isAuthenticated,
   toggleRegistrationModal,
   toggleSignInModal,
-  toggleIsAuthenticated,
+  logout,
   toggleUserModal,
 }) => {
   const isMobile = useMediaQuery({ query: `(max-width: 1160px)` });
@@ -181,7 +181,7 @@ const Header: FC<Props> = ({
               dropdownComponent={
                 <UserDropdownWindow
                   toggleUserModal={toggleUserModal}
-                  onLogout={toggleIsAuthenticated}
+                  onLogout={logout}
                 />
               }
               customDropdownContainerStyles={styles.userDropdown}
@@ -233,7 +233,7 @@ const Header: FC<Props> = ({
                 isAuthenticated={isAuthenticated}
                 toggleRegistrationModal={toggleRegistrationModal}
                 toggleUserModal={toggleUserModal}
-                toggleIsAuthenticated={toggleIsAuthenticated}
+                logout={logout}
               />
             }
             customWalletDropdownStyles={styles.windowDropdownHeader}

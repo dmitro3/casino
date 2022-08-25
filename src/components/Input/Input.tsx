@@ -1,9 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
+import { FieldInputProps, FieldMetaState } from 'react-final-form';
 import { PasswordAyes } from 'src/assets/svg';
 
 import styles from './Input.module.scss';
 
-type Props = {
+export interface FieldRenderProps<
+  FieldValue,
+  T extends HTMLElement = HTMLElement,
+  InputValue = FieldValue,
+> {
+  input?: FieldInputProps<InputValue, T>;
+  meta?: FieldMetaState<FieldValue>;
+  [otherProp: string]: any;
+}
+
+type Props = FieldRenderProps<string, any> & {
+  inputLabel?: string;
   placeholder?: string;
   icon?: React.ReactNode;
   customStyles?: any;
@@ -15,6 +27,7 @@ type Props = {
 };
 
 const Input: FC<Props> = ({
+  inputLabel,
   placeholder,
   icon,
   customStyles,
@@ -23,24 +36,49 @@ const Input: FC<Props> = ({
   value,
   disabled,
   additionalButton,
+  meta,
+  input,
 }) => {
-  return (
-    <div className={`${styles.inputContainer}  ${customContainerStyles}`}>
-      <div className={styles.inputIcon}>{icon}</div>
-      <input
-        placeholder={placeholder}
-        className={`${styles.rootInput} ${customStyles}`}
-        value={value}
-        disabled={disabled}
-      />
+  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
-      <div className={styles.inputIconRight}>
-        {password && <PasswordAyes />}
-      </div>
-      {additionalButton && (
-        <div className={styles.additionalButton}>{additionalButton}</div>
+  const handlePasswordHidden = () => {
+    setIsPasswordHidden(!isPasswordHidden);
+  };
+
+  return (
+    <>
+      {inputLabel && (
+        <div className={styles.inputContainerBlockText}>
+          <p>{inputLabel}</p>
+
+          {meta && meta.error && meta.touched && <span>{meta.error}</span>}
+        </div>
       )}
-    </div>
+      <div className={`${styles.inputContainer}  ${customContainerStyles}`}>
+        <div className={styles.inputIcon}>{icon}</div>
+        <input
+          placeholder={placeholder}
+          className={`${styles.rootInput} ${customStyles}`}
+          value={value}
+          disabled={disabled}
+          type={isPasswordHidden && password ? `password` : `text`}
+          {...input}
+        />
+        {password && (
+          <button
+            type="button"
+            onClick={handlePasswordHidden}
+            className={styles.inputIconRight}
+          >
+            {password && <PasswordAyes />}
+          </button>
+        )}
+        {additionalButton && (
+          <div className={styles.additionalButton}>{additionalButton}</div>
+        )}
+      </div>
+      {` `}
+    </>
   );
 };
 
