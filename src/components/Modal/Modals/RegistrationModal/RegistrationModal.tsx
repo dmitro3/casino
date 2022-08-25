@@ -45,10 +45,10 @@ const RegistrationModal: FC<Props> = ({
         values.password,
         values.username,
       );
-      onSuccess();
       if (response.error) {
         throw response.message;
       }
+      onSuccess();
     } catch (error: any) {
       onError(error);
     }
