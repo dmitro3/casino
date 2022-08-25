@@ -151,7 +151,6 @@ const RegistrationModal: FC<Props> = ({
                 type="submit"
                 label="Create an account"
                 customStyles={styles.createAccountButton}
-                /* onClick={onSuccess} */
               />
             </form>
           )}

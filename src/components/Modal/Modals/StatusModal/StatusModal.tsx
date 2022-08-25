@@ -20,7 +20,6 @@ const StatusModal: FC<Props> = ({
   isSuccessful,
   statusModalText = `Try to register again and check the information you entered. Or, before that, try to refresh the page and check the stability of the network connection`,
 }: Props) => {
-  console.log(`statusModalText`, statusModalText);
   return (
     <Modal toggleModal={toggleModal}>
       <div className={styles.root}>

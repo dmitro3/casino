@@ -15,7 +15,7 @@ export const composeValidators =
       undefined,
     );
 export const isEmail = (value) =>
-  value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i.test(value)
+  value && !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i.test(value)
     ? `Invalid email address`
     : undefined;
 
