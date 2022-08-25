@@ -24,7 +24,7 @@ type Props = {
   toggleSignInModal: () => void;
   toggleRegistrationModal: () => void;
   toggleUserModal: () => void;
-  toggleIsAuthenticated: () => void;
+  logout: () => void;
 };
 
 const MobileHeaderDropdown: FC<Props> = ({
@@ -32,7 +32,7 @@ const MobileHeaderDropdown: FC<Props> = ({
   toggleSignInModal,
   toggleRegistrationModal,
   toggleUserModal,
-  toggleIsAuthenticated,
+  logout,
 }) => {
   return (
     <>
@@ -58,7 +58,7 @@ const MobileHeaderDropdown: FC<Props> = ({
               dropdownComponent={
                 <UserDropdownWindow
                   toggleUserModal={toggleUserModal}
-                  onLogout={toggleIsAuthenticated}
+                  onLogout={logout}
                 />
               }
               customDropdownContainerStyles={

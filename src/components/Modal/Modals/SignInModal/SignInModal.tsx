@@ -30,11 +30,15 @@ import styles from './SignInModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
-  onSuccess?: () => void;
+  onLoginSuccess: () => void;
   onError: (text: string) => void;
 };
 
-const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
+const SignInModal: FC<Props> = ({
+  toggleModal,
+  onLoginSuccess,
+  onError,
+}: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
 
   const onSignIn = async (values: SignInFormData) => {
@@ -43,6 +47,10 @@ const SignInModal: FC<Props> = ({ toggleModal, onSuccess, onError }: Props) => {
       if (response.error) {
         throw response.message;
       }
+      // eslint-disable-next-line camelcase
+      const { access_token } = response;
+      localStorage.setItem(`token`, access_token);
+      onLoginSuccess();
     } catch (error: any) {
       onError(error);
     }

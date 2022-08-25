@@ -29,6 +29,17 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
 
   const [mounted, setMounted] = useState(false);
 
+  const getAccessToken = () => {
+    return localStorage.getItem(`token`);
+  };
+
+  useEffect(() => {
+    const token = getAccessToken();
+    if (token) {
+      setIsAuthenticated(true);
+    } else setIsAuthenticated(false);
+  }, []);
+
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
@@ -44,8 +55,9 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
     setStatusModalVisible(!statusModalVisible);
   };
 
-  const toggleIsAuthenticated = () => {
-    setIsAuthenticated(!isAuthenticated);
+  const logout = () => {
+    setIsAuthenticated(false);
+    localStorage.clear();
   };
 
   const toggleUserModal = () => {
@@ -68,6 +80,11 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
   const onSuccess = () => {
     toggleStatusModal();
     setIsStatusModalSuccess(true);
+    setSignInModalVisible(true);
+  };
+
+  const onLoginSuccess = () => {
+    setSignInModalVisible(false);
     setIsAuthenticated(true);
   };
 
@@ -77,7 +94,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
         toggleRegistrationModal={toggleRegistrationModal}
         toggleSignInModal={toggleSignInModal}
         isAuthenticated={isAuthenticated}
-        toggleIsAuthenticated={toggleIsAuthenticated}
+        logout={logout}
         toggleUserModal={toggleUserModal}
       />
       {registrationModalVisible && (
@@ -90,10 +107,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
       {signInModalVisible && (
         <SignInModal
           toggleModal={toggleSignInModal}
-          onSuccess={() => {
-            toggleSignInModal();
-            setIsAuthenticated(true);
-          }}
+          onLoginSuccess={onLoginSuccess}
           onError={onError}
         />
       )}

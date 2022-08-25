@@ -66,6 +66,7 @@ const Input: FC<Props> = ({
         />
         {password && (
           <button
+            type="button"
             onClick={handlePasswordHidden}
             className={styles.inputIconRight}
           >
