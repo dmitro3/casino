@@ -29,7 +29,7 @@ import styles from './RegistrationModal.module.scss';
 
 type Props = {
   toggleModal: () => void;
-  onSuccess?: () => void;
+  onSuccess: () => void;
   onError: (text: string) => void;
 };
 
