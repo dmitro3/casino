@@ -1,30 +1,43 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 
 import styles from 'src/pages/blog/components/Card/Card.module.scss';
+import moment from 'moment';
 
 type Props = {
   imageUrl: any;
   secondLabel: string;
-  postData: string;
-  customStyles?: any;
+  date: string;
+  text: string;
 };
 
-const Card = ({ imageUrl, secondLabel, postData, customStyles }: Props) => {
+const Card = ({ imageUrl, secondLabel, date, text }: Props) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
   return (
     <Link href="/article" passHref>
-      <div className={`${styles.cardContainer} ${styles.customStyles}`}>
+      <div className={styles.cardContainer}>
         <div className={styles.cardContainerImage}>
-          <Image src={imageUrl} />
+          {isMobile ? (
+            <Image
+              loader={() => imageUrl}
+              src={imageUrl}
+              width={360}
+              height={160}
+            />
+          ) : (
+            <Image
+              loader={() => imageUrl}
+              src={imageUrl}
+              width={400}
+              height={180}
+            />
+          )}
         </div>
         <span>{secondLabel}</span>
-        <p>
-          Знаетете ли вы, что существует более эффективный, безопасный и простой
-          способ получения дохода от криптовалют? В этой статье мы расскажем,
-          как...
-        </p>
-        <p>{postData}</p>
+        <p>{text.replace(/<[^>]+>/g, ``).substring(0, 145)}</p>
+        <p>{moment(date).format(`YYYY-MM-DD`)}</p>
       </div>
     </Link>
   );

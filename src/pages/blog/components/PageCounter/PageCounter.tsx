@@ -1,68 +1,39 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import leftArrow from 'src/assets/images/leftArrow.png';
 import rightArrow from 'src/assets/images/rightArrow.png';
 import Image from 'next/image';
 import styles from 'src/pages/blog/components/PageCounter/PageCounter.module.scss';
 
 type Props = {
-  item: number;
+  pageCount: number;
+  onPageChange: () => void;
 };
 
-export const cardsData = [
-  {
-    item: 1,
-    id: 1,
-  },
-  {
-    item: 2,
-    id: 2,
-  },
-  {
-    item: 3,
-    id: 3,
-  },
-  {
-    item: 4,
-    id: 4,
-  },
-  {
-    item: 5,
-    id: 5,
-  },
-  {
-    item: 6,
-    id: 6,
-  },
-  {
-    item: 7,
-    id: 7,
-  },
-];
-
-const PageCounter = () => {
-  const [isActive, setIsActive] = useState(cardsData[0]);
+const PageCounter: FC<Props> = ({ pageCount, onPageChange }) => {
+  const [isActive, setIsActive] = useState(0);
 
   const onChoice = (id: number) => {
-    const newSelectedPage = cardsData.find((card) => card.id === id);
-    setIsActive(newSelectedPage!);
+    setIsActive(id!);
+    onPageChange(id);
   };
+  pageCount = Math.ceil(pageCount);
   return (
     <div className={styles.pageCounterContainer}>
       <div>
         <Image src={leftArrow} />
       </div>
 
-      {cardsData.map((card) => (
-        <button className={styles.button} onClick={() => onChoice(card.id)}>
+      {[...Array(pageCount).keys()].map((card) => (
+        <button className={styles.button} onClick={() => onChoice(card)}>
           <div
-            key={card.id}
+            key={card}
             className={`${
-              isActive.id === card.id
+              isActive === card
                 ? styles.pageCounterContainerItemActive
                 : styles.pageCounterContainerItem
             }`}
           >
-            {card.item}
+            {card + 1}
           </div>
         </button>
       ))}

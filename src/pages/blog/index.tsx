@@ -3,13 +3,40 @@ import Slider from 'src/pages/blog/components/Slider';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/blog/index.module.scss';
 import Card from 'src/pages/blog/components/Card';
-import { cardData } from 'src/utils/articleData';
 import PageCounter from 'src/pages/blog/components/PageCounter';
 import SearchBar from 'src/pages/blog/components/SearchBar';
 import BackButton from 'src/components/BackButton';
+import { article } from 'src/api';
 
 const Blog = () => {
   const [mounted, setMounted] = useState(false);
+  const [articles, setArticles] = useState(
+    [] as {
+      title: string;
+      subtitle: string;
+      text: string;
+      imageUrl: string;
+      id: string;
+      created_at: string;
+    }[],
+  );
+  const [articlesCount, setArticlesCount] = useState(1);
+
+  const getAllArticles = async (cursor: number, take: number) => {
+    const res = await article.getArticles(cursor, take);
+    setArticles(res);
+  };
+
+  const getAllArticlesCount = async () => {
+    const res = await article.getArticlesCount();
+    setArticlesCount(res.data);
+  };
+  useEffect(() => {
+    getAllArticles(0, 9);
+    getAllArticlesCount();
+  }, []);
+
+  const onPageChange = (pageNumber) => {};
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -23,16 +50,20 @@ const Blog = () => {
         <Slider />
         <SearchBar />
         <div className={styles.cardContainer}>
-          {cardData.map((card) => (
+          {articles.map((article) => (
             <Card
-              imageUrl={card.imageUrl}
-              secondLabel={card.secondLabel}
-              postData={card.postData}
+              imageUrl={article.imageUrl}
+              secondLabel={article.title}
+              date={article.created_at}
+              text={article.text}
             />
           ))}
         </div>
 
-        <PageCounter />
+        <PageCounter
+          onPageChange={onPageChange}
+          pageCount={articlesCount / 9}
+        />
       </section>
     </MainLayout>
   );
