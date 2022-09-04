@@ -11,3 +11,8 @@ export const getArticlesCount = async () => {
   const res = await axios.get(`${BASE_URL}/article/count`);
   return res;
 };
+
+export const getSingleArticle = async (id: string) => {
+  const res = await axios.get(`${BASE_URL}/article/${id}`);
+  return res.data;
+};

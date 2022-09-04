@@ -7,16 +7,17 @@ import styles from 'src/pages/blog/components/Card/Card.module.scss';
 import moment from 'moment';
 
 type Props = {
-  imageUrl: any;
+  id: string;
+  imageUrl: string;
   secondLabel: string;
   date: string;
   text: string;
 };
 
-const Card = ({ imageUrl, secondLabel, date, text }: Props) => {
+const Card = ({ id, imageUrl, secondLabel, date, text }: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
   return (
-    <Link href="/article" passHref>
+    <Link href={`/article/${id}`} passHref>
       <div className={styles.cardContainer}>
         <div className={styles.cardContainerImage}>
           {isMobile ? (

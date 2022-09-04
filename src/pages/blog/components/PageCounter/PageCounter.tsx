@@ -6,25 +6,26 @@ import styles from 'src/pages/blog/components/PageCounter/PageCounter.module.scs
 
 type Props = {
   pageCount: number;
-  onPageChange: () => void;
+  onPageChange: (pageNumber: number) => void;
 };
 
 const PageCounter: FC<Props> = ({ pageCount, onPageChange }) => {
   const [isActive, setIsActive] = useState(0);
 
-  const onChoice = (id: number) => {
-    setIsActive(id!);
+  const onPageClick = (id: number) => {
+    setIsActive(id);
     onPageChange(id);
   };
-  pageCount = Math.ceil(pageCount);
+
   return (
     <div className={styles.pageCounterContainer}>
       <div>
         <Image src={leftArrow} />
       </div>
-
-      {[...Array(pageCount).keys()].map((card) => (
-        <button className={styles.button} onClick={() => onChoice(card)}>
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
+      {[...Array(Math.ceil(pageCount)).keys()].map((card) => (
+        <button className={styles.button} onClick={() => onPageClick(card)}>
           <div
             key={card}
             className={`${
