@@ -24,7 +24,7 @@ const PageCounter: FC<Props> = ({ pageCount, onPageChange }) => {
       </div>
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
       {/* @ts-ignore */}
-      {[...Array(Math.ceil(pageCount)).keys()].map((card) => (
+      {[...Array(Math.ceil(pageCount || 1)).keys()].map((card) => (
         <button className={styles.button} onClick={() => onPageClick(card)}>
           <div
             key={card}

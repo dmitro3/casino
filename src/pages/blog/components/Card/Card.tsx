@@ -37,7 +37,7 @@ const Card = ({ id, imageUrl, secondLabel, date, text }: Props) => {
           )}
         </div>
         <span>{secondLabel}</span>
-        <p>{text.replace(/<[^>]+>/g, ``).substring(0, 145)}</p>
+        <p>{text && text.replace(/<[^>]+>/g, ``).substring(0, 145)}</p>
         <p>{moment(date).format(`YYYY-MM-DD`)}</p>
       </div>
     </Link>

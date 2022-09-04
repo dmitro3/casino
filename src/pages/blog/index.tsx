@@ -20,7 +20,7 @@ const Blog = () => {
       created_at: string;
     }[],
   );
-  const [articlesCount, setArticlesCount] = useState(1);
+  const [articlesCount, setArticlesCount] = useState(9);
 
   const getArticles = async (cursor: number, take: number) => {
     const res = await articleApi.getArticles(cursor, take);
