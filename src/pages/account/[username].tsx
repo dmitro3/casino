@@ -14,10 +14,31 @@ import ProfileTabs from 'src/pages/account/components/ProfileTabs';
 import StatsRewards from 'src/pages/account/components/Stats/StatsRewards';
 import MainLayout from 'src/components/MainLayout';
 import styles from 'src/pages/account/index.module.scss';
+import { user as singleUser } from 'src/api';
+import { useRouter } from 'next/router';
 
 const Account: NextPage = () => {
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   const [mounted, setMounted] = useState(false);
+  const [user, setUser] = useState(
+    {} as {
+      username: string;
+      email: string;
+    },
+  );
+  const router = useRouter();
+  const { username } = router.query;
+
+  const getUser = async (nickname: string) => {
+    const res = await singleUser.getSingleUserByUsername(nickname);
+    setUser(res);
+  };
+
+  useEffect(() => {
+    if (username && typeof username === `string`) {
+      getUser(username);
+    }
+  }, [username]);
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -33,15 +54,15 @@ const Account: NextPage = () => {
             className={styles.userContainer}
             style={isMobile ? {} : { marginRight: `42px` }}
           >
-            <ProfileInfo />
+            <ProfileInfo username={user.username} />
             {isMobile ? (
               <>
-                <ProfileCards /> <ProfileEmail />
+                <ProfileCards /> <ProfileEmail email={user.email} />
                 <ProfileTabs />
               </>
             ) : (
               <>
-                <ProfileEmail />
+                <ProfileEmail email={user.email} />
                 <ProfileSettings />
               </>
             )}

@@ -44,6 +44,7 @@ const SignInModal: FC<Props> = ({
   const onSignIn = async (values: SignInFormData) => {
     try {
       const response = await auth.signIn(values.email, values.password);
+      localStorage.setItem(`username`, response.username);
       if (response.error) {
         throw response.message;
       }

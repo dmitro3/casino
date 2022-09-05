@@ -9,9 +9,10 @@ import styles from './ProfileInfo.module.scss';
 
 type Props = {
   customStyles?: any;
+  username: string;
 };
 
-const ProfileInfo: FC<Props> = ({ customStyles }) => {
+const ProfileInfo: FC<Props> = ({ customStyles, username }) => {
   const [isUserModalActive, setIsUserModalActive] = useState(true);
 
   const userModalToggle = () => {
@@ -29,7 +30,7 @@ const ProfileInfo: FC<Props> = ({ customStyles }) => {
           </div>
           <div className={styles.nicknameContainer}>
             <span>18 days on the platform</span>
-            <p>{mockUser.username}</p>
+            <p>{username}</p>
             <div className={styles.editButton}>
               <Link passHref href="sad">
                 <a href="/#" className={styles.editButtonText}>
