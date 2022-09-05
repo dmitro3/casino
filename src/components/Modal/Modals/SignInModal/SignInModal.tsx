@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Form, Field } from 'react-final-form';
 import Modal from 'src/components/Modal';

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 
 import { ArrowBackIcon, QuestionCircle, HeartIcon } from 'src/assets/svg';
@@ -13,12 +13,6 @@ type Props = {
 };
 
 const ProfileInfo: FC<Props> = ({ customStyles, username }) => {
-  const [isUserModalActive, setIsUserModalActive] = useState(true);
-
-  const userModalToggle = () => {
-    setIsUserModalActive(!isUserModalActive);
-  };
-
   return (
     <section>
       <section className={styles.sectionContainer}>
