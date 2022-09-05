@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import Link from 'next/link';
 
 import { ArrowBackIcon, QuestionCircle, HeartIcon } from 'src/assets/svg';
@@ -9,15 +9,10 @@ import styles from './ProfileInfo.module.scss';
 
 type Props = {
   customStyles?: any;
+  username: string;
 };
 
-const ProfileInfo: FC<Props> = ({ customStyles }) => {
-  const [isUserModalActive, setIsUserModalActive] = useState(true);
-
-  const userModalToggle = () => {
-    setIsUserModalActive(!isUserModalActive);
-  };
-
+const ProfileInfo: FC<Props> = ({ customStyles, username }) => {
   return (
     <section>
       <section className={styles.sectionContainer}>
@@ -29,7 +24,7 @@ const ProfileInfo: FC<Props> = ({ customStyles }) => {
           </div>
           <div className={styles.nicknameContainer}>
             <span>18 days on the platform</span>
-            <p>{mockUser.username}</p>
+            <p>{username}</p>
             <div className={styles.editButton}>
               <Link passHref href="sad">
                 <a href="/#" className={styles.editButtonText}>

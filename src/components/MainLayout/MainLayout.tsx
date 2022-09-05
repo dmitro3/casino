@@ -1,4 +1,5 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useEffect, useState, CSSProperties } from 'react';
+import ClipLoader from 'react-spinners/ClipLoader';
 
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';
@@ -13,9 +14,16 @@ import styles from './MainLayout.module.scss';
 type Props = {
   children: React.ReactNode;
   hasMaxWidth?: boolean;
+  isLoading?: boolean;
 };
 
-const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
+const override: CSSProperties = {
+  display: `block`,
+  margin: `0 auto`,
+  borderColor: `red`,
+};
+
+const MainLayout: FC<Props> = ({ children, hasMaxWidth, isLoading }) => {
   const [registrationModalVisible, setRegistrationModalVisible] =
     useState(false);
   const [signInModalVisible, setSignInModalVisible] = useState(false);
@@ -35,7 +43,6 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
 
   useEffect(() => {
     const token = getAccessToken();
-    console.log(token);
     if (token) {
       setIsAuthenticated(true);
     } else setIsAuthenticated(false);
@@ -125,8 +132,16 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
         className={styles.root}
         style={hasMaxWidth ? { maxWidth: `100%` } : {}}
       >
-        {children}
-        {` `}
+        {isLoading ? (
+          <ClipLoader
+            color="#fff"
+            loading={isLoading}
+            cssOverride={override}
+            size={150}
+          />
+        ) : (
+          children
+        )}
       </div>
       <Footer />
     </>

@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { BASE_URL } from '.';
 
-export const signIn = async (email: string, password: string) => {
+export const signIn = async (login: string, password: string) => {
   const response = await axios.post(`${BASE_URL}/auth/login`, {
-    email,
+    login,
     password,
   });
   return response.data;

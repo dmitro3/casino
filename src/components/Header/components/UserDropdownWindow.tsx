@@ -21,6 +21,7 @@ type Props = {
 };
 
 const UserDropdownWindow: FC<Props> = ({ onLogout, toggleUserModal }) => {
+  const username = localStorage.getItem(`username`);
   return (
     <div className={styles.dropdown}>
       <div className={styles.dropdownIcon}>
@@ -28,7 +29,7 @@ const UserDropdownWindow: FC<Props> = ({ onLogout, toggleUserModal }) => {
           <BlackPerson />
         </div>
         <div className={styles.userLevel}>1 lvl</div>
-        <span>User48376</span>
+        <span>{username}</span>
       </div>
       <div className={styles.levels}>
         <span>1 lvl</span>
@@ -55,8 +56,8 @@ const UserDropdownWindow: FC<Props> = ({ onLogout, toggleUserModal }) => {
             </li>
             <li>
               <Account />
-              <Link href="/account" passHref>
-                <a href="/account">Account</a>
+              <Link href={`/account/${username}`} passHref>
+                <a href={`/account/${username}`}>Account</a>
               </Link>
             </li>
             <li>
