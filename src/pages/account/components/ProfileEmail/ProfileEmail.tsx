@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { Checkmark, EmailIcon } from 'src/assets/svg';
 import TabTemplate from 'src/components/TabTemplate';
@@ -6,7 +6,11 @@ import Checkbox from 'src/components/Checkbox';
 import Input from 'src/components/Input';
 import styles from './ProfileEmail.module.scss';
 
-const ProfileEmail = () => {
+type Props = {
+  email: string;
+};
+
+const ProfileEmail: FC<Props> = ({ email }) => {
   return (
     <section>
       <TabTemplate
@@ -35,7 +39,7 @@ const ProfileEmail = () => {
               placeholder=""
               icon
               disabled
-              value="657897363999@gmail.com"
+              value={email}
               customStyles={styles.input}
             />
           </div>

@@ -28,6 +28,8 @@ type Props = {
 
 const UserModal: FC<Props> = ({ toggleModal }) => {
   const isMobile = useMediaQuery({ query: `(max-width: 768px)` });
+
+  const username = localStorage.getItem(`username`);
   return (
     <Modal customStyles={styles.root} toggleModal={toggleModal}>
       <div className={styles.headerContainer}>
@@ -51,7 +53,7 @@ const UserModal: FC<Props> = ({ toggleModal }) => {
         <div className={styles.nicknameContainer}>
           {isMobile && <ButtonDropdownComponents />}
           <span>18 days on the platform</span>
-          <p>User48376</p>
+          <p>{username}</p>
         </div>
       </div>
 
