@@ -35,6 +35,7 @@ const MainLayout: FC<Props> = ({ children, hasMaxWidth }) => {
 
   useEffect(() => {
     const token = getAccessToken();
+    console.log(token);
     if (token) {
       setIsAuthenticated(true);
     } else setIsAuthenticated(false);

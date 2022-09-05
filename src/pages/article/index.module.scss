@@ -31,24 +31,26 @@
     width: 30%;
   }
 
- .main {
+.main {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background-color: #15161c;
   border-radius: 20px;
 
-    @media (max-width:768px) {
-      width: 90%;
-    }
 
   &Container {
     padding-top: 40px;
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width:768px) {
+      padding-top: 0px;
     }
+  }
 
-
- }
+}
 
   &Label {
 
@@ -183,6 +185,13 @@
   font-size: 15px;
 }
 
+.text {
+  color:#d1d1d2;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  margin-top: 30px;
+}
 
 
 .cardContainer {
