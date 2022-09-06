@@ -38,8 +38,6 @@ const Blog = () => {
     setCategoryData([{ id: undefined, name: `No category` }, ...res]);
   };
 
-  // useEffect(() => {});
-
   const getArticles = async (
     cursor: number,
     take: number,

@@ -78,7 +78,7 @@ type Props = {
   categories: { id: string; name: string }[];
 };
 
-const SearchBar = ({ categories, onClick }: Props) => {
+const SearchBar = ({ categories = [], onClick }: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
   console.log(`categories`, categories);
   return (
