@@ -100,6 +100,23 @@
   }
 }
 
+.categoriesButton {
+  font-weight: 600;
+  font-size: 13px;
+  color: #8e8f93;
+  background-color: inherit;
+  border: none;
+
+    @media (max-width: 768px) {
+      height: 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+}
+
 .linkContainer {
   display: flex;
   width: 70%;
@@ -110,3 +127,38 @@
  height: 40px;
  border-radius: 12px;
 }
+
+.buttonDropdown {
+  width: 150px;
+  height: 40px;
+
+  > svg {
+   display: none;
+  }
+}
+
+.windowDropdown {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  width: 150px;
+  background-color: #1d1f25;
+
+    >div {
+      margin-top: 5px;
+      height: 30px;
+      align-self: center;
+
+      &:hover {
+        opacity: 0.9;
+      }
+  }
+    }
+
+
+
