@@ -5,6 +5,7 @@ import styles from 'src/pages/blog/components/SearchBar/SearchBar.module.scss';
 import { useMediaQuery } from 'react-responsive';
 import Input from 'src/components/Input';
 import { SearchIcon } from 'src/assets/svg';
+import Dropdown from 'src/components/Dropdown';
 
 export const links = [
   {
@@ -72,22 +73,42 @@ export const links = [
   },
 ];
 
-const SearchBar = () => {
-  const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
+type Props = {
+  onClick: (categoryId: string) => void;
+  categories: { id: string; name: string }[];
+};
 
+const SearchBar = ({ categories = [], onClick }: Props) => {
+  const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
+  console.log(`categories`, categories);
   return (
     <div className={styles.container}>
       {isMobile ? (
-        <Button customStyles={styles.button} label="Choose a category" />
+        <Dropdown
+          buttonComponent={
+            <Button customStyles={styles.button} label="Choose a category" />
+          }
+          dropdownComponent={categories.map((category) => (
+            <button
+              className={styles.categoriesButton}
+              onClick={() => onClick(category.id)}
+            >
+              {category.name}
+            </button>
+          ))}
+          customButtonStyles={styles.buttonDropdown}
+          customDropdownStyles={styles.windowDropdown}
+        />
       ) : (
         <div className={styles.linkContainer}>
-          {links.map((link) => (
-            <li key={link.id} className={styles.navigationContainerItem}>
-              <Link passHref href={link.url}>
-                <a href="/#" className={styles.navigationContainerItemLink}>
-                  {link.label}
-                </a>
-              </Link>
+          {categories.map((category) => (
+            <li className={styles.navigationContainerItem}>
+              <button
+                className={styles.categoriesButton}
+                onClick={() => onClick(category.id)}
+              >
+                {category.name}
+              </button>
             </li>
           ))}
         </div>
