@@ -1,19 +1,13 @@
 import React, { FC, useEffect, useState } from 'react';
 import { ArticleType } from 'src/types/articles';
-import Image, { StaticImageData } from 'next/image';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
 import { article } from 'src/api';
-import Blur from 'src/components/Blur';
-import bitcoinLake from 'src/assets/images/bitcoin-lake.png';
-import rocket from 'src/assets/images/rocket.png';
-import bitcoinIsland from 'src/assets/images/bitcoinIsland.png';
 import ShowButton from 'src/components/ShowButton';
 import { ArrowBackIcon, SliderArrow } from 'src/assets/svg';
-import styles from './Slider.module.scss';
 import 'react-multi-carousel/lib/styles.css';
-import { url } from 'inspector';
 import Link from 'next/link';
+import styles from './Slider.module.scss';
 
 const LeftArrow = ({ onClick }: { onClick?: () => void }) => {
   return (
@@ -146,8 +140,6 @@ const SliderContainer = () => {
     const res = await article.getArticles(cursor, take);
     setArticles(res);
   };
-
-  console.log(articles, `articles`);
 
   useEffect(() => {
     getArticles(0, 6);
