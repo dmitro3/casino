@@ -80,7 +80,7 @@ type Props = {
 
 const SearchBar = ({ categories = [], onClick }: Props) => {
   const isMobile = useMediaQuery({ query: `(max-width: 1100px)` });
-  console.log(`categories`, categories);
+
   return (
     <div className={styles.container}>
       {isMobile ? (

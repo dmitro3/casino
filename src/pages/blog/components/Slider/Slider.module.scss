@@ -21,9 +21,10 @@
     }
 
   &Description {
-
+    position: relative;
     padding: 46px;
     max-width: 45%;
+    height: 260px;
 
       @media (max-width:768px) {
         padding: 0;
@@ -35,8 +36,11 @@
       >div {
         margin-top: 16px;
 
+
+
         @media (max-width:768px) {
           margin-top: 40px;
+          margin-bottom: 30px;
         }
 
         >span {
@@ -47,9 +51,16 @@
         }
 
         >div {
+          position: absolute;
+          top: 240px;
           display: flex;
           margin-top: 38px;
           @media (max-width:768px) {
+
+            top: 180px;
+            // min-height: 1200px;
+            position: absolute;
+
             width: 182px;
             margin-top: 57px;
             margin-bottom: 30px;

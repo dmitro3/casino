@@ -1,16 +1,13 @@
 import React, { FC, useEffect, useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
+import { ArticleType } from 'src/types/articles';
 import Carousel from 'react-multi-carousel';
 import { useMediaQuery } from 'react-responsive';
-
-import Blur from 'src/components/Blur';
-import bitcoinLake from 'src/assets/images/bitcoin-lake.png';
-import rocket from 'src/assets/images/rocket.png';
-import bitcoinIsland from 'src/assets/images/bitcoinIsland.png';
+import { article } from 'src/api';
 import ShowButton from 'src/components/ShowButton';
 import { ArrowBackIcon, SliderArrow } from 'src/assets/svg';
-import styles from './Slider.module.scss';
 import 'react-multi-carousel/lib/styles.css';
+import Link from 'next/link';
+import styles from './Slider.module.scss';
 
 const LeftArrow = ({ onClick }: { onClick?: () => void }) => {
   return (
@@ -45,108 +42,56 @@ const CustomDot = ({
   );
 };
 
-const sliderItems = [
-  {
-    image: bitcoinLake,
-    text: (
-      <p className={styles.itemTextMain}>Mining & Staking up to 100% APY</p>
-    ),
-    color: `#C4E277`,
-    filterRadius: 100,
-    id: 1,
-    height: 120,
-    width: 170,
-  },
-  {
-    image: rocket,
-    text: (
-      <p className={styles.itemTextMain}>Leading Crypto Casino. Our Charge</p>
-    ),
-    color: `#D94D63`,
-    filterRadius: 90,
-    id: 2,
-    height: 180,
-    width: 210,
-  },
-  {
-    image: bitcoinIsland,
-    text: (
-      <p className={styles.itemTextMain}>
-        Cashback up to <span>25%</span>
-      </p>
-    ),
-    color: `#E9C600`,
-    filterRadius: 80,
-    id: 3,
-    height: 120,
-    width: 120,
-  },
-  {
-    image: bitcoinLake,
-    text: (
-      <p className={styles.itemTextMain}>Mining & Staking up to 100% APY</p>
-    ),
-    color: `#C4E277`,
-    filterRadius: 100,
-    id: 4,
-    height: 120,
-    width: 170,
-  },
-  {
-    image: rocket,
-    text: (
-      <p className={styles.itemTextMain}>Leading Crypto Casino. Our Charge</p>
-    ),
-    color: `#D94D63`,
-    filterRadius: 90,
-    id: 5,
-    height: 180,
-    width: 210,
-  },
-  {
-    image: bitcoinIsland,
-    text: (
-      <p className={styles.itemTextMain}>
-        Cashback up to <span>25%</span>
-      </p>
-    ),
-    color: `#E9C600`,
-    filterRadius: 80,
-    id: 6,
-    height: 120,
-    width: 120,
-  },
-];
-
 type SliderItemProps = {
-  image: StaticImageData;
+  imageUrl: string;
   text: React.ReactNode;
-  color: string;
-  filterRadius: number;
-  width: number;
-  height: number;
+  color?: string;
+  filterRadius?: number;
+  width?: number;
+  height?: number;
+  subtitle: string;
+  id: string;
 };
 
 const SliderItem: FC<SliderItemProps> = ({
-  image,
+  id,
+  imageUrl,
   text,
+  subtitle,
   color,
   filterRadius,
   width,
   height,
 }) => {
   return (
-    <div className={styles.item}>
-      <div className={styles.itemTextContainer}>
-        {text}
-        <p className={styles.itemTextSub}>binobi</p>
+    <Link href={`/article/${id}`} passHref>
+      <div
+        className={styles.item}
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      >
+        <div className={styles.itemTextContainer}>
+          {text}
+          <p className={styles.itemTextSub}>
+            {subtitle.length > 70
+              ? `${subtitle.substring(0, 70)}...`
+              : subtitle}
+          </p>
+        </div>
+        <div className={styles.itemImage}>
+          {/* <Blur color={color} right filterRadius={filterRadius}> */}
+          {/* <div>
+      {` `}
+      <Image
+        loader={() => imageUrl}
+        src={imageUrl}
+        width={427}
+        height={182}
+      />
+    </div> */}
+          {/* </Blur> */}
+        </div>
       </div>
-      <div className={styles.itemImage}>
-        <Blur color={color} right filterRadius={filterRadius}>
-          <Image src={image} width={width} height={height} />
-        </Blur>
-      </div>
-    </div>
+    </Link>
   );
 };
 
@@ -189,6 +134,17 @@ const SliderContainer = () => {
     }
   }, [isLaptop, isTablet]);
 
+  const [articles, setArticles] = useState([] as ArticleType[]);
+
+  const getArticles = async (cursor: number, take: number) => {
+    const res = await article.getArticles(cursor, take);
+    setArticles(res);
+  };
+
+  useEffect(() => {
+    getArticles(0, 6);
+  }, []);
+
   return (
     <div className={styles.slider}>
       <Carousel
@@ -222,15 +178,17 @@ const SliderContainer = () => {
         slidesToSlide={1}
         swipeable
       >
-        {sliderItems.map((item) => (
+        {articles.map((articleItem) => (
           <SliderItem
-            key={item.id}
-            image={item.image}
-            text={item.text}
-            color={item.color}
-            filterRadius={item.filterRadius}
-            width={item.width}
-            height={item.height}
+            id={articleItem.id}
+            subtitle={articleItem.subtitle}
+            key={articleItem.id}
+            imageUrl={articleItem.imageUrl}
+            text={articleItem.title}
+            // color={articles.color}
+            // filterRadius={articles.filterRadius}
+            // width={articles.width}
+            // height={articles.height}
           />
         ))}
       </Carousel>

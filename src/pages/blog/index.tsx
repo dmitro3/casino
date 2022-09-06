@@ -26,16 +26,15 @@ const Blog = () => {
   );
   const [articlesCount, setArticlesCount] = useState(9);
 
-  const selectCategory = (categoryId: string) => {
-    setSelectCategoryId(categoryId);
-    getArticles(0, 9, categoryId);
-  };
-  console.log(selectCategoryId, `selectCategoryId`);
-
   const getCategory = async () => {
     const res = await category.getCategory();
 
     setCategoryData([{ id: undefined, name: `No category` }, ...res]);
+  };
+
+  const selectCategory = (categoryId: string) => {
+    setSelectCategoryId(categoryId);
+    getArticles(0, 9, categoryId);
   };
 
   const getArticles = async (
@@ -51,8 +50,6 @@ const Blog = () => {
     const res = await articleApi.getArticlesCount();
     setArticlesCount(res.data);
   };
-
-  console.log(`categoryData`, categoryData);
 
   useEffect(() => {
     getCategory();

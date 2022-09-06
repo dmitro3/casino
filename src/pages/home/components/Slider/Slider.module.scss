@@ -56,6 +56,10 @@
 }
 
 .item {
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  background-size: cover;
   width: 402px;
   height: 182px;
   background-color: #1c1d23;
@@ -64,12 +68,17 @@
   overflow: hidden;
   margin: auto;
 
+    &:hover {
+      opacity: 0.8;
+    }
+
+
   &Text {
     &Container {
       margin-top: 41px;
       color: #fff;
       margin-bottom: 28px;
-      margin-left: 39px;
+      margin-left: 30px;
       font-size: 15px;
       display: flex;
       flex-direction: column;
