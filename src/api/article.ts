@@ -1,8 +1,16 @@
 import axios from 'axios';
 import { BASE_URL } from '.';
 
-export const getArticles = async (cursor: number, take: number) => {
-  const res = await axios.post(`${BASE_URL}/article`, { cursor, take });
+export const getArticles = async (
+  cursor: number,
+  take: number,
+  category?: string,
+) => {
+  const res = await axios.post(`${BASE_URL}/article`, {
+    cursor,
+    take,
+    category,
+  });
 
   return res.data;
 };
